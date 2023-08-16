@@ -1,0 +1,25 @@
+.footer{
+    /* min-height: 360px; */
+    display: grid;
+    grid-template-columns: min-content minmax(min-content,310px) minmax(min-content,427px) minmax(min-content,310px);
+    gap: 40px;
+    padding: 80px 40px;
+    background-color: #EBE9ED;
+    justify-content: center;
+}
+
+@media screen  and (max-width:1280px){
+    .footer{
+        grid-template-columns: repeat(auto-fit, minmax(min-content,310px));
+    }
+}
+
+
+@media screen  and (max-width:760px){
+    .footer{
+        background-color: #FFD400;
+        grid-template-columns: repeat(auto-fit, minmax(min-content,310px));
+        column-gap: 48px;
+        padding: 40px 20px;
+    }
+}

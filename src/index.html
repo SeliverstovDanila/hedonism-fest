@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hedonism-fest</title>
-    <!-- <link rel="stylesheet" href="./pages/index.css"> -->
+    <link rel="stylesheet" href="./pages/index.css">
 </head>
-
 <body>
-
+  <header class="header">
+    <div class="header__logo-location">
+      <a href="#"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест" class="header__logo"></a>
+      <button class="header__location-button" type="button">
+        <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
+        <p class="header__button-text">Санкт-Петербург</p>
+      </button>
+    </div>
+    <nav>
+      <ul class="header__menu-links">
+        <li class="header__menu-item"><a href="#" class="header__menu-link">куда пойти</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">о фестивале</a></li>
+      </ul>
+    </nav>
+    <div class="header__user-action">
+      <button class="header__agree-button" type="button">
+        <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
+        <p class="header__button-text">хочу пойти</p>
+      </button>
+      <button class="button" type="button">поддержать</button>
+      <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>" alt="иконка меню"></img></button>
+    </div>
+  </header>
+  <footer class="footer">
+    <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
+    <nav class="footer__info">
+      <h2 class="footer__title">организатор:</h2>
+      <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">Ночлежка<img src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+          <li class="footer__list-item"><a href="info@hedonismfest.ru" class="footer__link footer__link_email">info@hedonismfest.ru</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="footer__title">сделано с любовью:</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__link">Fastsol Digital<img src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">shishki.collective<img src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">студентами Яндекс.Практикума<img src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="footer__title">мы в соцсетях:</h2>
+      <ul class="footer__list footer__list-social">
+          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img src="<%=require('./images/facebook.svg')%>" alt="иконка facebook" class="footer__icon-social"></a></li>
+          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img src="<%=require('./images/instagram.svg')%>" alt="иконка instagram" class="footer__icon-social"></a></li>
+          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img src="<%=require('./images/vk.svg')%>" alt="иконка vk" class="footer__icon-social"></a></li>
+      </ul>
+    </nav>
+  </footer>
     <!-- <script type="module" src="./pages/index.js"></script> -->
 </body>
-
 </html>

@@ -1,0 +1,13 @@
+.header{
+  background-color: #FFD400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+@media screen and (max-width:1280px){
+  .header{
+      padding: 20px 20px;
+  }
+}
