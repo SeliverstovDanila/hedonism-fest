@@ -1,0 +1,9 @@
+.hedonism__text {
+  margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 360px) {
+  .hedonism__text {
+    margin: 0 0 8px 0;
+  }
+}

@@ -1,0 +1,29 @@
+.hedonism {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 720px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .hedonism {
+    grid-template-columns: 440px 1fr;
+    column-gap: 32px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .hedonism {
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .hedonism {
+    min-height: 530px;
+  }
+}

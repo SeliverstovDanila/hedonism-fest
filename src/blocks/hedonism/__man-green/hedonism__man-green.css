@@ -1,0 +1,21 @@
+.hedonism__man-green {
+  background-image: url(../../../images/man-green.svg);
+  background-size: cover;
+  width: 347px;
+  height: 239px;
+  position: absolute;
+  z-index: 1;
+  bottom: 30px;
+  left: 84px;
+  transform: rotate(29.77deg);
+}
+
+
+@media screen and (max-width: 360px) {
+  .hedonism__man-green {
+    width: 244px;
+    height: 168px;
+    bottom: 565px;
+    left: 7px;
+  }
+}

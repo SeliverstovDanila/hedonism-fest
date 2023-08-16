@@ -1,0 +1,14 @@
+.hedonism__logo {
+  margin: auto;
+  max-width: 315px;
+  max-height: 228px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 360px) {
+  .hedonism__logo {
+    margin: 175px auto 235px;
+    max-width: 210px;
+    max-height: 152px;
+  }
+}

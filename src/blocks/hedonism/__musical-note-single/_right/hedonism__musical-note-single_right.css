@@ -1,0 +1,13 @@
+.hedonism__musical-note-single_right {
+  top: 137px;
+  right: 370px;
+}
+
+@media screen and (max-width: 360px) {
+  .hedonism__musical-note-single_right {
+    width: 21px;
+    height: 24px;
+    top: 189px;
+    right: 26px;
+  }
+}

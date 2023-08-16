@@ -1,0 +1,14 @@
+.about__button {
+width: 204px;
+height: 48px;
+border-radius: 26px;
+font-size: 18px;
+border: 2px, solid, red;
+}
+
+@media screen and (max-width: 360px) {
+  .about__button {
+  width: 179px;
+  height: 44px;
+  }
+}

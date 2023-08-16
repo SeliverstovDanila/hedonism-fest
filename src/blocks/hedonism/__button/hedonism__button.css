@@ -1,0 +1,13 @@
+.hedonism__button {
+  width: 44px;
+  height: 44px;
+  border: 1px, solid, red;
+  border-radius: 50%;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 360px) {
+  .hedonism__button {
+    margin-bottom: 0;
+  }
+}

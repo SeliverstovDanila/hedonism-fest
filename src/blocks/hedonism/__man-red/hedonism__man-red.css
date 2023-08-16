@@ -1,0 +1,19 @@
+.hedonism__man-red {
+  background-image: url(../../../images/man-red.svg);
+  background-size: cover;
+  width: 240px;
+  height: 275px;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 175px;
+}
+
+@media screen and (max-width: 360px) {
+  .hedonism__man-red {
+    width: 160px;
+    height: 184px;
+    bottom: 93px;
+    right: 16px;
+  }
+}

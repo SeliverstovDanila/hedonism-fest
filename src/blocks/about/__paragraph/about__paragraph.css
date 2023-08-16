@@ -1,0 +1,15 @@
+.about__paragraph {
+  margin: 0 0 32px 0;
+}
+
+.about__paragraph:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 470px) {
+  .about__paragraph {
+    font-size: 32px;
+    line-height: 36px;
+    text-transform: lowercase;
+  }
+}

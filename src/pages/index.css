@@ -9,3 +9,39 @@
 @import url('../blocks/text/text.css');
     @import url('../blocks/text/_type/text_type_main.css');
     @import url('../blocks/text/_type/text_type_optional.css');
+
+@import url('../blocks/page/page.css');
+@import url('../blocks/container/container.css');
+@import url('../blocks/centering/centering.css');
+@import url('../blocks/rotation/rotation.css');
+
+@import url('../blocks/hedonism/hedonism.css');
+  @import url('../blocks/hedonism/__logo/hedonism__logo.css');
+
+  @import url('../blocks/hedonism/__musical-note-violet/hedonism__musical-note-violet.css');
+    @import url('../blocks/hedonism/__musical-note-violet/_left/hedonism__musical-note-violet_left.css');
+    @import url('../blocks/hedonism/__musical-note-violet/_right/hedonism__musical-note-violet_right.css');
+  @import url('../blocks/hedonism/__musical-note-single/hedonism__musical-note-single.css');
+    @import url('../blocks/hedonism/__musical-note-single/_left/hedonism__musical-note-single_left.css');
+    @import url('../blocks/hedonism/__musical-note-single/_right/hedonism__musical-note-single_right.css');
+  @import url('../blocks/hedonism/__musical-note-single-reverse/hedonism__musical-note-single-reverse.css');
+  @import url('../blocks/hedonism/__musical-note-yellow/hedonism__musical-note-yellow.css');
+  @import url('../blocks/hedonism/__squiggle/hedonism__squiggle.css');
+  @import url('../blocks/hedonism/__arc/hedonism__arc.css');
+    @import url('../blocks/hedonism/__arc/_left/hedonism__arc_left.css');
+    @import url('../blocks/hedonism/__arc/_top/hedonism__arc_top.css');
+  @import url('../blocks/hedonism/__man-violet/hedonism__man-violet.css');
+  @import url('../blocks/hedonism/__man-green/hedonism__man-green.css');
+  @import url('../blocks/hedonism/__man-red/hedonism__man-red.css');
+
+  @import url('../blocks/hedonism/__text/hedonism__text.css');
+  @import url('../blocks/hedonism/__button/hedonism__button.css');
+
+@import url('../blocks/about/about.css');
+  @import url('../blocks/about/__title/about__title.css');
+  @import url('../blocks/about/__description/about__description.css');
+  @import url('../blocks/about/__paragraph/about__paragraph.css');
+  @import url('../blocks/about/__button/about__button.css');
+
+
+  * { outline: 1px solid yellow; }
