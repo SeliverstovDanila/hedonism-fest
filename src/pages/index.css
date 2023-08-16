@@ -1,0 +1,11 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts/fonts.css');
+
+@import url('../blocks/title/title.css');
+    @import url('../blocks/title/_type/title_type_page.css');
+    @import url('../blocks/title/_type/title_type_section.css');
+    @import url('../blocks/title/_type/title_type_block.css');
+    @import url('../blocks/title/_type/title_type_card.css');
+@import url('../blocks/text/text.css');
+    @import url('../blocks/text/_type/text_type_main.css');
+    @import url('../blocks/text/_type/text_type_optional.css');
