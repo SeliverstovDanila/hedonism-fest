@@ -1,0 +1,10 @@
+.round-card__back_type_flower {
+  background-image: url('../../../../images/girl-with-flower.svg'),
+                    url('../../../../images/circle-yellow.svg');
+}
+
+@media (max-width: 767.98px) {
+  .round-card__back_type_flower {
+    background-image: url('../../../../images/girl-with-flower-circled.svg');
+  }
+}
