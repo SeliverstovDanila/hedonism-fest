@@ -3,11 +3,18 @@
   right: 45px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 960px) {
   .hedonism__musical-note-violet_right {
-    width: 37px;
-    height: 33px;
-    bottom: 584px;
-    right: 36px;
+    bottom: 680px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hedonism__musical-note-violet_right {
+    width: 38px;
+    height: 39px;
+    bottom: 265px;
+    right: 136px;
+    transform: rotate(-2.77deg);
   }
 }

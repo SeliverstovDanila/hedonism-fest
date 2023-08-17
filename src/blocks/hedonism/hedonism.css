@@ -9,21 +9,8 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 360px) {
   .hedonism {
-    grid-template-columns: 440px 1fr;
-    column-gap: 32px;
-  }
-}
-
-@media screen and (max-width: 930px) {
-  .hedonism {
-  }
-}
-
-
-@media screen and (max-width: 320px) {
-  .hedonism {
-    min-height: 530px;
+    min-height: 655px;
   }
 }

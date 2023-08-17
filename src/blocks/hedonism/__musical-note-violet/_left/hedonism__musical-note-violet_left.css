@@ -3,8 +3,18 @@
   left: 119px;
 }
 
+@media screen and (max-width: 620px) {
+  .hedonism__musical-note-violet_left {
+    left: 20px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .hedonism__musical-note-violet_left {
-    visibility: hidden;
+    top: 34px;
+    left: 293px;
+    width: 36px;
+    height: 33px;
+    transform: rotate(44.23deg);
   }
 }

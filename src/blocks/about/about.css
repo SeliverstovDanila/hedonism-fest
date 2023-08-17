@@ -14,8 +14,11 @@
 
 @media screen and (max-width: 470px) {
   .about {
+    padding-top: 36px;
     max-width: 320px;
     grid-template-columns: 1fr;
+    grid-template-rows: 63px 1fr 48px;
+    gap: 12px;
     grid-template-areas:
   "title"
   "description"

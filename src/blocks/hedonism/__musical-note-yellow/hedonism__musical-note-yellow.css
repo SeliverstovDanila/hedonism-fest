@@ -8,3 +8,9 @@
   top: 225px;
   right: 61px;
 }
+
+@media screen and (max-width: 360px) {
+  .hedonism__musical-note-yellow {
+    visibility: hidden;
+  }
+}

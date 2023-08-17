@@ -5,6 +5,22 @@
   height: 132px;
   position: absolute;
   z-index: 1;
-  top: 253px;
+  top: 270px;
   right: 344px;
+}
+
+@media screen and (max-width: 1115px) {
+  .hedonism__squiggle {
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .hedonism__squiggle {
+    top: 260px;
+    right: -31px;
+    width: 117px;
+    height: 83px;
+    transform: rotate(-75.77deg);
+  }
 }

@@ -3,7 +3,13 @@
   left: 374px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 995px) {
+  .hedonism__musical-note-single_left {
+    left: 200px;
+  }
+}
+
+@media screen and (max-width: 660px) {
   .hedonism__musical-note-single_left {
     visibility: hidden;
   }

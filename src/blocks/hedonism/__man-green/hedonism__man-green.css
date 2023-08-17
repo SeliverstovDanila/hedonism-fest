@@ -1,21 +1,35 @@
 .hedonism__man-green {
   background-image: url(../../../images/man-green.svg);
   background-size: cover;
-  width: 347px;
-  height: 239px;
+  width: 420px;
+  height: 250px;
   position: absolute;
   z-index: 1;
-  bottom: 30px;
+  bottom: 160px;
   left: 84px;
-  transform: rotate(29.77deg);
+  transform: rotate(2.23deg);
 }
 
+@media screen and (max-width: 865px) {
+  .hedonism__man-green {
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hedonism__man-green {
+    left: -50px;
+    transform: rotate(0.77deg);
+    width: 280px;
+    bottom: 69px;
+  }
+}
 
 @media screen and (max-width: 360px) {
   .hedonism__man-green {
-    width: 244px;
+    width: 302px;
     height: 168px;
-    bottom: 565px;
-    left: 7px;
+    bottom: 528px;
+    left: 3px;
   }
 }

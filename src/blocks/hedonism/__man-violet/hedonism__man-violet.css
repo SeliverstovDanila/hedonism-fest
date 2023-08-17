@@ -1,19 +1,27 @@
 .hedonism__man-violet {
   background-image: url(../../../images/man-violet.svg);
   background-size: cover;
-  width: 219px;
+  width: 267px;
   height: 217px;
   position: absolute;
   z-index: 1;
-  top: 33px;
+  top: 31px;
   left: 255px;
+}
+
+@media screen and (max-width: 580px) {
+  .hedonism__man-violet {
+    top: -6px;
+    left: 105px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .hedonism__man-violet {
-    width: 156px;
-    height: 155px;
-    top: 352px;
-    left: 9px;
+    width: 189px;
+    height: 167px;
+    top: 334px;
+    left: -14px;
+    transform: rotate(-14.77deg);
   }
 }
