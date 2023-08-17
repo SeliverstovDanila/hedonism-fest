@@ -16,7 +16,7 @@
   .digits__wrapper {
     margin: 0 auto;
     max-width: 320px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 40px;
     background-image: none;
   }
