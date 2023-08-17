@@ -43,5 +43,3 @@
   @import url('../blocks/about/__paragraph/about__paragraph.css');
   @import url('../blocks/about/__button/about__button.css');
 
-
-  * { outline: 1px solid yellow; }
