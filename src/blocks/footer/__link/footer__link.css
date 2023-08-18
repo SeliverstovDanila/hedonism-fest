@@ -1,0 +1,23 @@
+.footer__link{
+    font-family: 'TT Firs Neue';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #3B3748;
+}
+
+.footer__link:hover{
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+}
+
+@media screen  and (max-width:760px){
+    .footer__link{
+        font-size: 16px;
+        line-height: 20px;
+        justify-content: space-between;
+    }
+}

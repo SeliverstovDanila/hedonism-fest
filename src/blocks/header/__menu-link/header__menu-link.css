@@ -1,0 +1,20 @@
+.header__menu-link{
+  font-family: 'TT Firs Neue';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #3B3748;
+  text-decoration: none;
+  padding: 12px 24px 12px 12px;
+}
+
+.header__menu-link:hover{
+  opacity: 0.5;
+  transition: all 0.5s ease 0s;
+}
+
+@media screen and (max-width:1280px){
+  .header__menu-link{
+      padding: 6px 12px 6px 6px;
+  }
+}
