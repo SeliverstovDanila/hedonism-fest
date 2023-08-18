@@ -1,0 +1,17 @@
+.offer-promo {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1440px;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #FFD400;
+}
+
+@media (max-width: 767.98px) {
+  .offer-promo {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #F40934;
+  }
+}
