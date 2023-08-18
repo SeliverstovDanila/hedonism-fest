@@ -1,14 +1,10 @@
 .round-card__back {
   width: 100%;
-  /* margin-right: 63px; */
   padding-bottom: 100%;
 
   background-position: top 18px center, center;
   background-size: contain;
   background-repeat: no-repeat;
-
-/* background: url('../../../images/girl-with-flower.svg') top 18px center / contain no-repeat,
-               url('../../../images/circle-yellow.svg') center / contain no-repeat; */
 }
 
 @media (max-width: 767.98px) {
