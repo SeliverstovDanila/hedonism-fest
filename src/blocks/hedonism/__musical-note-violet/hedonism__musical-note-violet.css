@@ -1,0 +1,8 @@
+.hedonism__musical-note-violet {
+  background-image: url(../../../images/musical-note-violet.svg);
+  background-size: cover;
+  width: 58px;
+  height: 53px;
+  position: absolute;
+  z-index: 1;
+}

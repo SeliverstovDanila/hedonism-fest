@@ -1,5 +1,7 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts.css');
+@import url('../blocks/page/page.css');
+
 /*UI-kit*/
 @import url('../blocks/title/title.css');
 @import url('../blocks/title/_type/title_type_page.css');
@@ -25,11 +27,41 @@
 @import url('../blocks/header/__icon-like/header__icon-like.css');
 @import url('../blocks/header/__menu-icon/header__menu-icon.css');
 
+/*HEDONISM*/
+@import url('../blocks/container/container.css');
+@import url('../blocks/centering/centering.css');
+@import url('../blocks/rotation/rotation.css');
+@import url('../blocks/hedonism/hedonism.css');
+@import url('../blocks/hedonism/__logo/hedonism__logo.css');
+@import url('../blocks/hedonism/__musical-note-violet/hedonism__musical-note-violet.css');
+@import url('../blocks/hedonism/__musical-note-violet/_left/hedonism__musical-note-violet_left.css');
+@import url('../blocks/hedonism/__musical-note-violet/_right/hedonism__musical-note-violet_right.css');
+@import url('../blocks/hedonism/__musical-note-single/hedonism__musical-note-single.css');
+@import url('../blocks/hedonism/__musical-note-single/_left/hedonism__musical-note-single_left.css');
+@import url('../blocks/hedonism/__musical-note-single/_right/hedonism__musical-note-single_right.css');
+@import url('../blocks/hedonism/__musical-note-single-reverse/hedonism__musical-note-single-reverse.css');
+@import url('../blocks/hedonism/__musical-note-yellow/hedonism__musical-note-yellow.css');
+@import url('../blocks/hedonism/__squiggle/hedonism__squiggle.css');
+@import url('../blocks/hedonism/__arc/hedonism__arc.css');
+@import url('../blocks/hedonism/__arc/_left/hedonism__arc_left.css');
+@import url('../blocks/hedonism/__arc/_top/hedonism__arc_top.css');
+@import url('../blocks/hedonism/__man-violet/hedonism__man-violet.css');
+@import url('../blocks/hedonism/__man-green/hedonism__man-green.css');
+@import url('../blocks/hedonism/__man-red/hedonism__man-red.css');
+@import url('../blocks/hedonism/__text/hedonism__text.css');
+@import url('../blocks/hedonism/__button/hedonism__button.css');
+@import url('../blocks/about/about.css');
+@import url('../blocks/about/__title/about__title.css');
+@import url('../blocks/about/__description/about__description.css');
+@import url('../blocks/about/__paragraph/about__paragraph.css');
+@import url('../blocks/about/__button/about__button.css');
+
 /*DIGITS*/
 @import url('../blocks/digits/digits.css');
 @import url('../blocks/digits/__title/digits__title.css');
 @import url('../blocks/digits/__wrapper/digits__wrapper.css');
-@import url('../blocks/round-card/round-card.css'); /* возможно потребуется перенести выше, перед первой секцией страницы*/
+@import url('../blocks/round-card/round-card.css');
+/* возможно потребуется перенести выше, перед первой секцией страницы*/
 @import url('../blocks/round-card/__back/round-card__back.css');
 @import url('../blocks/round-card/__back/_type/round-card__back_type_flower.css');
 @import url('../blocks/round-card/__back/_type/round-card__back_type_drinks.css');
@@ -38,6 +70,7 @@
 @import url('../blocks/round-card/__info/round-card__info.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_right.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_left.css');
+
 /*PROMO*/
 @import url('../blocks/offer-promo/offer-promo.css');
 @import url('../blocks/offer-promo/__title/offer-promo__title.css');

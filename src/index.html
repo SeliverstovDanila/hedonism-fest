@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="./pages/index.css"> -->
 </head>
 
-<body>
+<body class="page">
   <header class="header">
     <div class="header__logo-location">
       <a href="#"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
@@ -35,6 +35,42 @@
           alt="иконка меню"></img></button>
     </div>
   </header>
+  <!-- секция hedonism -->
+  <div class="container">
+    <main class="content">
+      <section class="hedonism">
+        <img class="hedonism__logo" src="<%=require('./images/logo.svg')%>" alt="логотип">
+
+        <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left rotation"></div>
+        <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right rotation"></div>
+        <div class="hedonism__musical-note-single hedonism__musical-note-single_left rotation"></div>
+        <div class="hedonism__musical-note-single hedonism__musical-note-single_right rotation"></div>
+        <div class="hedonism__musical-note-yellow rotation"></div>
+        <div class="hedonism__musical-note-single-reverse rotation"></div>
+        <div class="hedonism__squiggle rotation"></div>
+        <div class="hedonism__man-violet rotation"></div>
+        <div class="hedonism__man-green rotation"></div>
+        <div class="hedonism__man-red rotation"></div>
+        <div class="hedonism__arc hedonism__arc_left rotation"></div>
+        <div class="hedonism__arc hedonism__arc_top rotation"></div>
+
+        <p class="hedonism__text text text_type_main">узнать больше</p>
+        <button class="hedonism__button" aria-label="кнопка к блоку о фестивале"></button>
+      </section>
+      <section class="about centering">
+        <h2 class="about__title title title_type_section">просто приятно помогать</h2>
+        <div class="about__description">
+          <p class="about__paragraph text text_type_main">Пейте кофе в любимых заведениях, посещайте интересные
+            мероприятия, устраивайте домашние посиделки с друзьями — и помогайте бездомным!</p>
+          <p class="about__paragraph text text_type_main">Целую неделю 26 апреля — 2 мая вся выручка будет перечислена в
+            пользу бездомных.</p>
+        </div>
+        <button class="about__button title title_type_card" aria-label="кнопка к странице о фестивале">узнать
+          подробнее</button>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
   <!-- секция digits -->
   <section class="digits">
     <h2 class="title title_type_section digits__title">цифры дня</h2>
@@ -49,8 +85,7 @@
       <article class="round-card round-card_align_left">
         <div class="round-card__back round-card__back_type_drinks"></div>
         <div class="round-card__info round-card__info_align_left">
-          <h3 class="title
-                     title_type_section">15 000</h3>
+          <h3 class="title title_type_section">15 000</h3>
           <p class="text text_type_main">cтолько печенья продали в&nbsp;поддержку акции</p>
         </div>
       </article>
@@ -106,6 +141,7 @@
     </nav>
   </footer>
 
-  <!-- <script type="module" src="./pages/index.js"></scr </body>
+</body>
+<!-- <script type="module" src="./pages/index.js"> -->
 
 </html>
