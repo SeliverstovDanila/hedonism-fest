@@ -56,6 +56,24 @@
 @import url('../blocks/about/__paragraph/about__paragraph.css');
 @import url('../blocks/about/__button/about__button.css');
 
+
+    @import url('../blocks/text/_type/text_type_button.css');
+    @import url('../blocks/text/_color/text_color_white.css');
+@import url('../blocks/button/button.css');
+    @import url('../blocks/button/__arrow/button__arrow.css');
+    @import url('../blocks/button/_type/button_type_transparent.css');
+    @import url('../blocks/button/_type/button_type_violet.css');
+@import url('../blocks/events/events.css');
+    @import url('../blocks/events/__heading-container/events__heading-container.css');
+    @import url('../blocks/events/__button-container/events__button-container.css');
+    @import url('../blocks/events/__cards-container/events__cards-container.css');
+@import url('../blocks/card/card.css');
+    @import url('../blocks/card/__image/card__image.css');
+    @import url('../blocks/card/__content/card__content.css');
+    @import url('../blocks/card/__optional-container/card__optional-container.css');
+    @import url('../blocks/card/__content-container/card__content-container.css');
+    @import url('../blocks/card/__like/card__like.css');
+
 /*DIGITS*/
 @import url('../blocks/digits/digits.css');
 @import url('../blocks/digits/__title/digits__title.css');

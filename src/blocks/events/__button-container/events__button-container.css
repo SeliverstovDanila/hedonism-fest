@@ -1,0 +1,14 @@
+.events__button-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 60%;
+  column-gap: 12px;
+  row-gap: 16px;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .events__button-container {
+    width: 100%;
+  }
+}

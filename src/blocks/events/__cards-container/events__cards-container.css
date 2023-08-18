@@ -1,0 +1,37 @@
+.events__cards-container {
+  width: calc(100% + 40px);
+  margin-bottom: 32px;
+  padding: 40px 0 24px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 20px;
+  overflow-x: auto;
+}
+
+.events__cards-container::-webkit-scrollbar-thumb {
+  background-color: #7100FF;
+  border-radius: 15px;
+}
+
+.events__cards-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.events__cards-container::-webkit-scrollbar-track {
+  background-color: #FCFAF7;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .events__cards-container {
+    position: relative;
+    top: 0;
+    left: -20px;
+    padding: 20px 0 20px;
+  }
+
+  .events__cards-container::-webkit-scrollbar-track {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
