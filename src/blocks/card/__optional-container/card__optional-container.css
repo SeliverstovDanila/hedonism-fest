@@ -1,0 +1,5 @@
+.card__optional-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

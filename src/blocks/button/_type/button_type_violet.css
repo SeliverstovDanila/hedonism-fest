@@ -1,0 +1,8 @@
+.button_type_violet {
+  background-color: #7100FF;
+  border: none;
+}
+
+.button_type_violet:hover {
+  background-color: #5100B8;
+}

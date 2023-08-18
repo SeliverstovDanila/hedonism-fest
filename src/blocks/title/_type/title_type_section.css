@@ -4,3 +4,10 @@
     letter-spacing: -0.48px;
     text-transform: lowercase;
 }
+
+@media screen and (max-width: 768px) {
+  .title_type_section {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

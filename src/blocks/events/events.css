@@ -1,0 +1,10 @@
+.events {
+  padding: 80px 40px;
+  background-color: #EBE9ED;
+}
+
+@media screen and (max-width: 768px) {
+  .events {
+    padding: 40px 20px;;
+  }
+}

@@ -1,0 +1,13 @@
+.button__arrow {
+  width: 24px;
+  height: 24px;
+  padding-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .button__arrow {
+    width: 20px;
+    height: 20px;
+    padding-left: 4px;
+  }
+}

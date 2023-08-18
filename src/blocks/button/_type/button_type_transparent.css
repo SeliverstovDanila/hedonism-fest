@@ -1,0 +1,16 @@
+.button_type_transparent {
+  border: 2px #3B3748 solid;
+  background-color: #EBE9ED;
+}
+
+.button_type_transparent:hover {
+  border-color: #5100B8;
+}
+
+.button_type_transparent:hover .text_type_button {
+  color: #5100B8;
+}
+
+.button_type_transparent:hover .button__arrow {
+  color: #5100B8;
+}
