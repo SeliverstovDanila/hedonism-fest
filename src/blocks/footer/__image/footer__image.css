@@ -1,0 +1,12 @@
+.footer__image{
+    width: 193px;
+    height: 193px;
+    object-fit: cover;
+}
+
+@media screen  and (max-width:768px){
+    .footer__image{
+        display: none;
+    }
+}
+

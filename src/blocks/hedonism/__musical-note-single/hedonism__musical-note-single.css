@@ -1,0 +1,8 @@
+.hedonism__musical-note-single {
+  background-image: url(../../../images/musical-note-single.svg);
+  background-size: cover;
+  width: 31px;
+  height: 36px;
+  position: absolute;
+  z-index: 1;
+}

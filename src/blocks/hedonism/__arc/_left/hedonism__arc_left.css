@@ -1,0 +1,11 @@
+.hedonism__arc_left {
+  top: 198px;
+  left: 100px;
+}
+
+@media screen and (max-width: 580px) {
+  .hedonism__arc_left {
+    top: 143px;
+    left: -30px;
+  }
+}

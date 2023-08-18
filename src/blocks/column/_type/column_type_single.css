@@ -1,0 +1,12 @@
+.column_type_single {
+  grid-template-columns: auto;
+  min-width: 320px;
+  max-width: 537px;
+  gap: 24px;
+}
+
+@media (max-width: 767.98px) {
+  .column_type_single {
+    gap: 12px;
+  }
+}

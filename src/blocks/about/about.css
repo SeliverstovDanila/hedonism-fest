@@ -1,0 +1,27 @@
+.about {
+  display: grid;
+  max-width: 880px;
+  min-height: 250px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 104px 1fr 48px;
+  gap: 24px 40px;
+  grid-template-areas:
+  "title description"
+  "title description"
+  "title button";
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 470px) {
+  .about {
+    padding-top: 36px;
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 63px 1fr 48px;
+    gap: 12px;
+    grid-template-areas:
+  "title"
+  "description"
+  "button";
+  }
+}
