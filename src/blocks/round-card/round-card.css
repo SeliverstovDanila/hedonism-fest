@@ -1,0 +1,14 @@
+.round-card {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  min-height: 480px;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .round-card {
+    max-width: 320px;
+    min-height: 320px;
+  }
+}

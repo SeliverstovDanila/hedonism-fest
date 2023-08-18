@@ -1,7 +1,8 @@
 .text {
+  margin: 0;
     color: #3B3748;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: 'TT Firs Neue';
+    font-family: 'TT Firs Neue', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
 }
