@@ -1,0 +1,9 @@
+.digits__title {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .digits__title {
+    margin-bottom: 20px;
+  }
+}
