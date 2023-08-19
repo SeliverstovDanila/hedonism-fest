@@ -113,3 +113,16 @@
 @import url('../blocks/footer/__list-social/footer__list-social.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
+
+
+/* POPUP */
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/__choise-city/popup__choise-city.css');
+@import url('../blocks/popup/__container/popup__container.css');
+
+
+/* FORM-CITY */
+@import url('../blocks/form-city/form-city.css');
+@import url('../blocks/form-city/__list/form-city__list.css');
+@import url('../blocks/form-city/__list-name/footer-city__list-name.css');
+@import url('../blocks/form-city/__list-item/form-city__list-item.css');
