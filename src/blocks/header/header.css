@@ -11,5 +11,6 @@
   .header {
     min-width: 360px;
     padding: 20px 20px;
+    width: 100%;
   }
 }

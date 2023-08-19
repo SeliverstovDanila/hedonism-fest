@@ -6,3 +6,9 @@
   min-height: 48px;
   cursor: pointer;
 }
+
+@media screen and (max-width:1090px){
+  .button_type_vanish {
+      display: none;
+  }
+}

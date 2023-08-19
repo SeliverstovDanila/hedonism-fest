@@ -26,6 +26,7 @@
 @import url('../blocks/header/__agree-button/header__agree-button.css');
 @import url('../blocks/header/__icon-like/header__icon-like.css');
 @import url('../blocks/header/__menu-icon/header__menu-icon.css');
+@import url('../blocks/button/_type/button_type_vanish.css');
 
 /*HEDONISM*/
 @import url('../blocks/container/container.css');
