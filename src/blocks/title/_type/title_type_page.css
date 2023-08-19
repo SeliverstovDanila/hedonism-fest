@@ -5,7 +5,7 @@
     text-transform: lowercase;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .title_type_page {
     font-size: 44px;
     line-height: 44px;

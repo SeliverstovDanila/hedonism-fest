@@ -8,10 +8,10 @@
   background-color: #FFD400;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .offer-promo {
-    width: 100%;
     padding: 40px 20px;
+    color: #fff;
     background-color: #F40934;
   }
 }

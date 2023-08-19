@@ -5,7 +5,7 @@
   max-width: 303px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .round-card__info {
     margin-top: 12px;
     display: flex;

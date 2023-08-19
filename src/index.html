@@ -31,7 +31,7 @@
         <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
         <p class="header__button-text">хочу пойти</p>
       </button>
-      <button class="button button_type_vanish button_type_violet" type="button"><span class="text text_type_button text_color_white">поддержать</span></button>
+      <button class="btn btn_type_violet text text_type_button" type="button">поддержать</button>
       <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
           alt="иконка меню"></img></button>
     </div>
@@ -56,19 +56,16 @@
         <p class="hedonism__text text text_type_main">узнать больше</p>
         <button class="hedonism__button" aria-label="кнопка к блоку о фестивале"></button>
       </section>
-      <section class="about centering">
-        <h2 class="about__title title title_type_section">просто приятно помогать</h2>
-        <div class="about__description">
-          <p class="about__paragraph text text_type_main">Пейте кофе в любимых заведениях, посещайте интересные
-            мероприятия, устраивайте домашние посиделки с друзьями — и помогайте бездомным!</p>
-          <p class="about__paragraph text text_type_main">Целую неделю 26 апреля — 2 мая вся выручка будет перечислена в
-            пользу бездомных.</p>
+
+      <article class="column column_type_double hedonism__about">
+        <h2 class="title title_type_section column__text">просто приятно помогать</h2>
+        <div class="column column_type_single">
+          <p class="text text_type_main column__text column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях, посещайте интересные мероприятия, устраивайте домашние посиделки с&nbsp;друзьями&nbsp;&mdash; и&nbsp;помогайте бездомным!</p>
+          <p class="text text_type_main column__text">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена в&nbsp;пользу бездомных.</p>
+          <button class="btn btn_type_bordered text text_type_button column__btn" type="button">стать участником</button>
         </div>
-        <button class="about__button title title_type_card" aria-label="кнопка к странице о фестивале">узнать
-          подробнее</button>
-      </section>
+      </article>
     </main>
-    <footer></footer>
   </div>
   <!-- секция events -->
   <section class="events">
@@ -76,45 +73,40 @@
       <h2 class="title title_type_section">гедонизм-фест — это целая неделя, во время которой просто приятно</h2>
     </div>
     <div class="events__button-container">
-      <button class="button button_type_transparent">
-        <span class=" text text_type_button">посетить мастер-класс</span>
-        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="btn btn_type_bordered text text_type_button">посетить мастер-класс
+        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="button button_type_transparent">
-        <span class=" text text_type_button">выпить кофе</span>
-        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="btn btn_type_bordered text text_type_button">выпить кофе
+        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="button button_type_transparent">
-        <span class=" text text_type_button">не выходить из дома</span>
-        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="btn btn_type_bordered text text_type_button">не выходить из дома
+        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="button button_type_transparent">
-        <span class=" text text_type_button">сходить на экскурсию</span>
-        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="btn btn_type_bordered text text_type_button">сходить на экскурсию
+        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="button button_type_transparent">
-        <span class=" text text_type_button">побывать в музее</span>
-        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="btn btn_type_bordered text text_type_button">побывать в музее
+        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
@@ -214,7 +206,7 @@
         </div>
       </article>
     </div>
-    <button class="button button_type_violet"><span class="text text_type_button text_color_white">смотреть все
+    <button class="btn btn_type_violet text text_type_button">смотреть все
         события</span></button>
   </section>
   <!-- секция digits -->
@@ -239,16 +231,16 @@
   </section>
   <!-- секция offer-promo -->
   <section class="offer-promo" aria-label="Принять участие">
-    <article class="column column_type_double">
-      <h2 class="title title_type_section offer-promo__title">примите акцию у&nbsp;себя</h2>
+    <article class="column column_type_double offer-promo__about">
+      <h2 class="title title_type_section column__text">примите акцию у&nbsp;себя</h2>
       <div class="column column_type_single">
-        <p class="text text_type_main column__paragraph column__paragraph_shifted">Кто может принять участие
+        <p class="text text_type_main column__text column__shifted-paragraph">Кто может принять участие
           в&nbsp;акции?</p>
-        <p class="text text_type_main column__paragraph">Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте
+        <p class="text text_type_main column__text">Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте
           мастер-класс
           по&nbsp;вязанию
           или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
-        <button class="" type="button">стать участником</button>
+        <button class="btn btn_type_bordered text text_type_button column__btn" type="button">стать участником</button>
       </div>
     </article>
   </section>

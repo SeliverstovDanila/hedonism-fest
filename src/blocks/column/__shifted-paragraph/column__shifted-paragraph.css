@@ -2,7 +2,7 @@
   margin-top: 8px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .column__paragraph_shifted {
     margin-top: 0;
   }
