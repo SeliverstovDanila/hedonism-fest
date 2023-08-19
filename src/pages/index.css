@@ -17,6 +17,7 @@
     @import url('../blocks/btn/_type/btn_type_violet.css');
     @import url('../blocks/btn/_type/btn_type_bordered.css');
     @import url('../blocks/btn/_type/btn_type_non-bordered.css');
+    @import url('../blocks/btn/_type/btn_type_hide.css');
   @import url('../blocks/btn/__arrow/btn__arrow.css');
 
 /*HEADER*/
@@ -33,6 +34,7 @@
 @import url('../blocks/header/__agree-button/header__agree-button.css');
 @import url('../blocks/header/__icon-like/header__icon-like.css');
 @import url('../blocks/header/__menu-icon/header__menu-icon.css');
+
 
 /*HEDONISM*/
 @import url('../blocks/container/container.css');
