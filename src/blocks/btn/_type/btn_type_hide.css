@@ -1,0 +1,6 @@
+
+@media screen and (max-width:1024px) {
+  .btn_type_hide {
+    display: none;
+  }
+}

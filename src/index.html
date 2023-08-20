@@ -16,7 +16,7 @@
           class="header__logo"></a>
       <button class="header__location-button" type="button">
         <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
-        <p class="header__button-text">Санкт-Петербург</p>
+        <span class="text text_type_button">Санкт-Петербург</span>
       </button>
     </div>
     <nav>
@@ -29,11 +29,15 @@
     <div class="header__user-action">
       <button class="header__agree-button" type="button">
         <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
-        <p class="header__button-text">хочу пойти</p>
+        <span class="text text_type_button">хочу пойти</span>
       </button>
-      <button class="btn btn_type_violet text text_type_button" type="button">поддержать</button>
-      <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
-          alt="иконка меню"></img></button>
+      <button class="button button_type_vanish button_type_violet" type="button"><span class="text text_type_button text_color_white">поддержать</span></button>
+      <!-- <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
+          alt="иконка меню"></img>
+      </button> -->
+      <div class="menu-burger-icon">
+        <span></span>
+      </div>
     </div>
   </header>
   <!-- секция hedonism -->
@@ -60,9 +64,13 @@
       <article class="column column_type_double hedonism__about">
         <h2 class="title title_type_section column__text">просто приятно помогать</h2>
         <div class="column column_type_single">
-          <p class="text text_type_main column__text column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях, посещайте интересные мероприятия, устраивайте домашние посиделки с&nbsp;друзьями&nbsp;&mdash; и&nbsp;помогайте бездомным!</p>
-          <p class="text text_type_main column__text">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена в&nbsp;пользу бездомных.</p>
-          <button class="btn btn_type_bordered text text_type_button column__btn" type="button">стать участником</button>
+          <p class="text text_type_main column__text column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях,
+            посещайте интересные мероприятия, устраивайте домашние посиделки с&nbsp;друзьями&nbsp;&mdash;
+            и&nbsp;помогайте бездомным!</p>
+          <p class="text text_type_main column__text">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка
+            будет перечислена в&nbsp;пользу бездомных.</p>
+          <button class="btn btn_type_bordered text text_type_button column__btn" type="button">стать
+            участником</button>
         </div>
       </article>
     </main>
@@ -73,40 +81,45 @@
       <h2 class="title title_type_section">гедонизм-фест — это целая неделя, во время которой просто приятно</h2>
     </div>
     <div class="events__button-container">
-      <button class="btn btn_type_bordered text text_type_button">посетить мастер-класс
-        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">посетить мастер-класс</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="btn btn_type_bordered text text_type_button">выпить кофе
-        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">выпить кофе</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="btn btn_type_bordered text text_type_button">не выходить из дома
-        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">не выходить из дома</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="btn btn_type_bordered text text_type_button">сходить на экскурсию
-        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">сходить на экскурсию</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
             fill="currentColor" />
         </svg>
       </button>
-      <button class="btn btn_type_bordered text text_type_button">побывать в музее
-        <svg class="btn__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">побывать в музее</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
@@ -114,99 +127,8 @@
         </svg>
       </button>
     </div>
-    <div class="events__cards-container">
-      <article class="card">
-        <img class="card__image" src="<%=require('./images/card1.jpg')%>" alt="Идентичность">
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
-            <p class="text text_type_main">лектор: Мария Бархатова</p>
-          </div>
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <img class="card__image" src="<%=require('./images/card1.jpg')%>" alt="Идентичность">
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
-            <p class="text text_type_main">лектор: Мария Бархатова</p>
-          </div>
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <img class="card__image" src="<%=require('./images/card1.jpg')%>" alt="Идентичность">
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
-            <p class="text text_type_main">лектор: Мария Бархатова</p>
-          </div>
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <img class="card__image" src="<%=require('./images/card1.jpg')%>" alt="Идентичность">
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
-            <p class="text text_type_main">лектор: Мария Бархатова</p>
-          </div>
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <img class="card__image" src="<%=require('./images/card1.jpg')%>" alt="Идентичность">
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
-            <p class="text text_type_main">лектор: Мария Бархатова</p>
-          </div>
-          <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
-          </div>
-        </div>
-      </article>
-    </div>
-    <button class="btn btn_type_violet text text_type_button">смотреть все
+    <div class="events__cards-container"></div>
+    <button class="button button_type_violet"><span class="text text_type_button text_color_white">смотреть все
         события</span></button>
   </section>
   <!-- секция digits -->
@@ -303,7 +225,84 @@
       </ul>
     </nav>
   </footer>
-
+  <!-- модальное окно -->
+  <div class="popup popup__choise-city">
+    <div class="popup__choise-city-container">
+      <form name="сhoise-city" class="form-city" novalidate>
+        <label class="form-city__list" for="moscow">
+          <span>Moсква</span>
+          <input type="checkbox" name="city" id="moscow" class="form-city__list-item">
+        </label>
+        <label class="form-city__list" for="saint-Petersburg">
+          <span>Санкт-Петербург</span>
+          <input type="checkbox" name="city" id="saint-Petersburg" class="form-city__list-item">
+        </label>
+        <label class="form-city__list" for="sochi">
+          <span>Сочи</span>
+          <input type="checkbox" name="city" id="sochi" class="form-city__list-item">
+        </label>
+        <label class="form-city__list" for="kaluga">
+          <span>Калуга</span>
+          <input type="checkbox" name="city" id="kaluga" class="form-city__list-item">
+        </label>
+        <label class="form-city__list" for="ekaterinburg">
+          <span>Екатеринбург</span>
+          <input type="checkbox" name="city" id="ekaterinburg" class="form-city__list-item">
+        </label>
+      </form>
+    </div>
+  </div>
+  <!-- бургер меню -->
+  <div class="popup popup__menu-burger">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <p class="text text_type_optional text_color_grey">ваш город:</p>
+        <button type="button" class="burger-menu__button-location">
+          <span class="burger-menu__text">Санкт-Петербург</span>
+          <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город"
+            class="burger-menu__change-icon">
+        </button>
+        <p class="text text_type_optional text_color_grey">навигация</p>
+        <nav class="burger-menu__navigation">
+          <ul class="burger-menu__navigation-links">
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a>
+            </li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать
+                участником</a></li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">о фестивале</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger-menu__container-logo">
+          <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
+          <p class="text text_type_optional text_color_grey">благотворительная организация</p>
+        </div>
+        <button class="button button_type_violet" type="button"><span
+            class="text text_type_button text_color_white">пожертвовать</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- Template карточки -->
+  <template id="card-template">
+    <article class="card">
+      <img class="card__image" src="" alt="">
+      <button type="button" class="card__like"></button>
+      <div class="card__content">
+        <div class="card__optional-container">
+          <p class="text text_type_optional text_type_card-optional" id="card-type"></p>
+          <p class="text text_type_optional text_type_card-optional" id="card-date"></p>
+        </div>
+        <div class="card__content-container">
+          <h4 class="title title_type_card" id="card-title"></h4>
+          <p class="text text_type_main text_type_card" id="card-lector"></p>
+        </div>
+        <div class="card__optional-container">
+          <p class="text text_type_optional text_type_card-optional" id="card-address"></p>
+          <p class="text text_type_optional text_type_card-optional" id="card-additional"></p>
+        </div>
+      </div>
+    </article>
+  </template>
 </body>
 <!-- <script type="module" src="./pages/index.js"> -->
 
