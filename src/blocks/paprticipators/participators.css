@@ -1,0 +1,21 @@
+.participators {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .participators {
+    background-color: rgba(235, 233, 237, 1);
+    max-width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .participators {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

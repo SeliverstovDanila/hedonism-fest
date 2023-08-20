@@ -1,0 +1,8 @@
+.fest-images__title {
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .fest-images__title {
+    margin-bottom: 12px;
+  }
+}
