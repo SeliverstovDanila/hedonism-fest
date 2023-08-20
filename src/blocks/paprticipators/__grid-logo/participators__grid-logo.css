@@ -1,0 +1,15 @@
+.participators__grid-logo {
+  display: grid;
+  grid-template-columns: repeat(8, max-content);
+  grid-template-rows: 170px;
+  gap: 24px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .participators__grid-logo {
+    grid-template-rows: 170px;
+    overflow: hidden;
+    gap: 20px;
+  }
+}

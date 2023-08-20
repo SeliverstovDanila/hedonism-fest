@@ -1,9 +1,0 @@
-.column__paragraph_shifted {
-  margin-top: 8px;
-}
-
-@media (max-width: 767.98px) {
-  .column__paragraph_shifted {
-    margin-top: 0;
-  }
-}

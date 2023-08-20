@@ -1,0 +1,9 @@
+.btn_type_violet {
+  color: #FCFAF7;
+  background-color: #7100FF;
+}
+
+.btn_type_violet:hover {
+  color: #FFF;
+  background-color: #5100B8;
+}

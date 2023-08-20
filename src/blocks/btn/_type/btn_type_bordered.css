@@ -1,0 +1,10 @@
+.btn_type_bordered {
+  color: #3B3748;
+  background-color: transparent;
+  border: 2px #3B3748 solid;
+}
+
+.btn_type_bordered:hover {
+  color: #5100B8;
+  border-color: #5100B8;
+}

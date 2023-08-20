@@ -11,9 +11,14 @@
 @import url('../blocks/text/text.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
-@import url('../blocks/text/_type/text_type_button.css');
-@import url('../blocks/text/_color/text_color_white.css');
-@import url('../blocks/text/_color/text_color_grey.css');
+
+
+/* buttons */
+@import url('../blocks/btn/btn.css');
+    @import url('../blocks/btn/_type/btn_type_violet.css');
+    @import url('../blocks/btn/_type/btn_type_bordered.css');
+    @import url('../blocks/btn/_type/btn_type_non-bordered.css');
+  @import url('../blocks/btn/__arrow/btn__arrow.css');
 
 /*HEADER*/
 @import url('../blocks/header/header.css');
@@ -28,7 +33,6 @@
 @import url('../blocks/header/__agree-button/header__agree-button.css');
 @import url('../blocks/header/__icon-like/header__icon-like.css');
 @import url('../blocks/header/__menu-icon/header__menu-icon.css');
-@import url('../blocks/button/_type/button_type_vanish.css');
 
 /*HEDONISM*/
 @import url('../blocks/container/container.css');
@@ -53,17 +57,12 @@
 @import url('../blocks/hedonism/__man-red/hedonism__man-red.css');
 @import url('../blocks/hedonism/__text/hedonism__text.css');
 @import url('../blocks/hedonism/__button/hedonism__button.css');
-@import url('../blocks/about/about.css');
-@import url('../blocks/about/__title/about__title.css');
-@import url('../blocks/about/__description/about__description.css');
-@import url('../blocks/about/__paragraph/about__paragraph.css');
-@import url('../blocks/about/__button/about__button.css');
+@import url('../blocks/hedonism/__about/hedonism__about.css');
 
 
 @import url('../blocks/button/button.css');
-    @import url('../blocks/button/__arrow/button__arrow.css');
-    @import url('../blocks/button/_type/button_type_transparent.css');
-    @import url('../blocks/button/_type/button_type_violet.css');
+    /* @import url('../blocks/button/_type/button_type_transparent.css'); */
+    /* @import url('../blocks/button/_type/button_type_violet.css'); */
 @import url('../blocks/events/events.css');
     @import url('../blocks/events/__heading-container/events__heading-container.css');
     @import url('../blocks/events/__button-container/events__button-container.css');
@@ -90,14 +89,33 @@
 @import url('../blocks/round-card/__info/_align/round-card__info_align_right.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_left.css');
 
+/* HEDONSIMFEST */
+@import url('../blocks/fest-images/__grid/fest-images__grid.css');
+@import url('../blocks/fest-images/__image/fest-images__image.css');
+@import url('../blocks/fest-images/fest-images.css');
+@import url('../blocks/paprticipators/participators.css');
+@import url('../blocks/paprticipators/__item/participators__item.css');
+@import url('../blocks/paprticipators/__grid-logo/participators__grid-logo.css');
+@import url('../blocks/fest-images/fest-images__image_box1.css');
+@import url('../blocks/fest-images/fest-images__image_box2.css');
+@import url('../blocks/fest-images/fest-images__image_box3.css');
+@import url('../blocks/fest-images/fest-images__image_box4.css');
+@import url('../blocks/fest-images/fest-images__image_box5.css');
+@import url('../blocks/fest-images/__nav/fest-images__nav.css');
+@import url('../blocks/fest-images/__button/fest-images__button.css');
+@import url('../blocks/fest-images/__button/fest-images__button_selected.css');
+@import url('../blocks/fest-images/__image/fest-images__image__selected.css');
+@import url('../blocks/fest-images/__title/fest-images__title.css');
+
 /*PROMO*/
 @import url('../blocks/offer-promo/offer-promo.css');
-@import url('../blocks/offer-promo/__title/offer-promo__title.css');
+  @import url('../blocks/offer-promo/__about/offer-promo__about.css');
 @import url('../blocks/column/column.css');
 @import url('../blocks/column/_type/column_type_double.css');
 @import url('../blocks/column/_type/column_type_single.css');
-@import url('../blocks/column/__paragraph/column__paragraph.css');
-@import url('../blocks/column/__paragraph/_shifted/column__paragraph_shifted.css');
+@import url('../blocks/column/__text/column__text.css');
+@import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
+@import url('../blocks/column/__btn/column__btn.css');
 
 /* FOOTER */
 @import url('../blocks/footer/footer.css');
@@ -111,8 +129,6 @@
 @import url('../blocks/footer/__link/footer__link.css');
 @import url('../blocks/footer/__link/_email/footer__link_email.css');
 @import url('../blocks/footer/__list-social/footer__list-social.css');
-@import url('../blocks/text/_type/text_type_main.css');
-@import url('../blocks/text/_type/text_type_optional.css');
 
 
 /* POPUP */

@@ -2,8 +2,9 @@
   margin-bottom: 40px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .digits__title {
-    margin-bottom: 20px;
+    padding: 40px 20px 20px;
+    margin-bottom: 0;
   }
 }

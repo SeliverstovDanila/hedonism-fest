@@ -5,7 +5,7 @@
   gap: 24px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .column_type_single {
     gap: 12px;
   }

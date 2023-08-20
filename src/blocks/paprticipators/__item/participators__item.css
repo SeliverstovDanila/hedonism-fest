@@ -1,0 +1,12 @@
+.participators__item {
+  object-fit: contain;
+  opacity: 40%;
+}
+.participators__item:last-of-type {
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .participators__item {
+    opacity: 100%;
+  }
+}

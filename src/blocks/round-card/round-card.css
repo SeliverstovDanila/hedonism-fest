@@ -6,7 +6,7 @@
   position: relative;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .round-card {
     max-width: 320px;
     min-height: 320px;
