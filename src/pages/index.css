@@ -1,9 +1,15 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts.css');
 @import url('../blocks/page/page.css');
+@import url('../vendor/fonts.css');
+@import url('../blocks/page/page.css');
 
 /*UI-kit*/
 @import url('../blocks/title/title.css');
+@import url('../blocks/title/_type/title_type_page.css');
+@import url('../blocks/title/_type/title_type_section.css');
+@import url('../blocks/title/_type/title_type_block.css');
+@import url('../blocks/title/_type/title_type_card.css');
 @import url('../blocks/title/_type/title_type_page.css');
 @import url('../blocks/title/_type/title_type_section.css');
 @import url('../blocks/title/_type/title_type_block.css');
@@ -88,6 +94,31 @@
 @import url('../blocks/round-card/__info/_align/round-card__info_align_right.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_left.css');
 
+/* HEDONSIMFEST */
+@import url("../blocks/title/title.css");
+@import url("../blocks/title/_type/title_type_page.css");
+@import url("../blocks/title/_type/title_type_section.css");
+@import url("../blocks/title/_type/title_type_block.css");
+@import url("../blocks/title/_type/title_type_card.css");
+@import url("../blocks/text/text.css");
+@import url("../blocks/text/_type/text_type_main.css");
+@import url("../blocks/text/_type/text_type_optional.css");
+@import url('../blocks/fest-images/__grid/fest-images__grid.css');
+@import url('../blocks/fest-images/__image/fest-images__image.css');
+@import url('../blocks/fest-images/fest-images.css');
+@import url('../blocks/paprticipators/participators.css');
+@import url('../blocks/paprticipators/__item/participators__item.css');
+@import url('../blocks/paprticipators/__grid-logo/participators__grid-logo.css');
+@import url('../blocks/fest-images/fest-images__image_box1.css');
+@import url('../blocks/fest-images/fest-images__image_box2.css');
+@import url('../blocks/fest-images/fest-images__image_box3.css');
+@import url('../blocks/fest-images/fest-images__image_box4.css');
+@import url('../blocks/fest-images/fest-images__image_box5.css');
+@import url('../blocks/fest-images/__nav/fest-images__nav.css');
+@import url('../blocks/fest-images/__button/fest-images__button.css');
+@import url('../blocks/fest-images/__button/fest-images__button_selected.css');
+@import url('../blocks/fest-images/__image/fest-images__image__selected.css');
+
 /*PROMO*/
 @import url('../blocks/offer-promo/offer-promo.css');
   @import url('../blocks/offer-promo/__about/offer-promo__about.css');
@@ -112,28 +143,3 @@
 @import url('../blocks/footer/__list-social/footer__list-social.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
-
-/* HEDONSIMFEST */
-@import url("../blocks/title/title.css");
-@import url("../blocks/title/_type/title_type_page.css");
-@import url("../blocks/title/_type/title_type_section.css");
-@import url("../blocks/title/_type/title_type_block.css");
-@import url("../blocks/title/_type/title_type_card.css");
-@import url("../blocks/text/text.css");
-@import url("../blocks/text/_type/text_type_main.css");
-@import url("../blocks/text/_type/text_type_optional.css");
-@import url('../blocks/fest-images/__grid/fest-images__grid.css');
-@import url('../blocks/fest-images/__image/fest-images__image.css');
-@import url('../blocks/fest-images/fest-images.css');
-@import url('../blocks/paprticipators/participators.css');
-@import url('../blocks/paprticipators/__item/participators__item.css');
-@import url('../blocks/paprticipators/__grid-logo/participators__grid-logo.css');
-@import url('../blocks/fest-images/fest-images__image_box1.css');
-@import url('../blocks/fest-images/fest-images__image_box2.css');
-@import url('../blocks/fest-images/fest-images__image_box3.css');
-@import url('../blocks/fest-images/fest-images__image_box4.css');
-@import url('../blocks/fest-images/fest-images__image_box5.css');
-@import url('../blocks/fest-images/__nav/fest-images__nav.css');
-@import url('../blocks/fest-images/__button/fest-images__button.css');
-@import url('../blocks/fest-images/__button/fest-images__button_selected.css');
-@import url('../blocks/fest-images/__image/fest-images__image__selected.css')
