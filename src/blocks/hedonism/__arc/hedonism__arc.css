@@ -1,0 +1,16 @@
+.hedonism__arc {
+  background-image: url(../../../images/arc-yellow.svg);
+  background-size: cover;
+  width: 90px;
+  height: 170px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 360px) {
+  .hedonism__arc {
+    width: 84px;
+    height: 100px;
+  }
+}

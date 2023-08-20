@@ -1,0 +1,11 @@
+.header__user-action{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (max-width:1090px){
+  .header__user-action{
+      gap: 16px;
+  }
+}

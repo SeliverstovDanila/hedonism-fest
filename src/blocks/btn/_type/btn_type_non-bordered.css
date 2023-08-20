@@ -1,0 +1,8 @@
+.btn_type_non-bordered {
+  color: #3B3748;
+  background-color: transparent;
+}
+
+.btn_type_non-bordered:hover {
+  color: #5100B8;
+}

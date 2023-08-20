@@ -1,0 +1,13 @@
+.column_type_double {
+  grid-template-columns: repeat(2, 1fr);
+  min-width: 320px;
+  max-width: 880px;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .column_type_double {
+    grid-template-columns: auto;
+    gap: 12px;
+  }
+}

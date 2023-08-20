@@ -4,3 +4,10 @@
     letter-spacing: -1.92px;
     text-transform: lowercase;
 }
+
+@media (max-width: 768px) {
+  .title_type_page {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}

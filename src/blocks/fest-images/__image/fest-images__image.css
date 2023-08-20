@@ -1,6 +1,6 @@
 .fest-images__image {
   box-sizing: content-box;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -11,31 +11,4 @@
     min-width: 320px;
     min-height: 320px;
   }
-
-.carousel__nav {
-  width: 100%;
-  padding: 12px 0 0 0;
-  position: absolute;
- 
-  text-align: center;
-}
-
-.carousel__button {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  background: rgba(150, 148, 158, 1);
-  ;
-  border-radius: 50%;
-  margin: 0 12px 0 0;
-  cursor: pointer;
-}
-
-.carousel__button--selected {
-  background: rgba(59, 55, 72, 1);
-  ;
-}
-}
-.carousel__item--selected {
-  display: block;
 }

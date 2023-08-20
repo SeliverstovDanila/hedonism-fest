@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 26px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  color: #96949E;
+  background-color: #EBE9ED;
+}
+
+@media (max-width: 768px){
+  .btn {
+    padding: 12px 20px;
+  }
+}

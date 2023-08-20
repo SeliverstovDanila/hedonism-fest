@@ -1,0 +1,9 @@
+.round-card__info_align_left {
+  left: -63px;
+}
+
+@media (max-width: 1090px) {
+  .round-card__info_align_left {
+    left: 0;
+  }
+}

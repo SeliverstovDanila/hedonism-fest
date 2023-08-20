@@ -1,0 +1,19 @@
+.hedonism__musical-note-single-reverse {
+  background-image: url(../../../images/musical-note-single-reverse.svg);
+  background-size: cover;
+  width: 31px;
+  height: 36px;
+  position: absolute;
+  z-index: 1;
+  top: 76px;
+  left: 563px;
+}
+
+@media screen and (max-width: 600px) {
+  .hedonism__musical-note-single-reverse {
+    width: 25px;
+    height: 26px;
+    top: 185px;
+    left: 310px;
+  }
+}

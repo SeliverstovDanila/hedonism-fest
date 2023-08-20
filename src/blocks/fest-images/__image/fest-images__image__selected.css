@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .fest-images__image_selected {
+    display: block;
+  }
+}

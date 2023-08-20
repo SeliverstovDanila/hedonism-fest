@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+    .fest-images__button {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      background: rgba(150, 148, 158, 1);
+      border-radius: 50%;
+      margin: 0 12px 0 0;
+      cursor: pointer;
+    }
+  }
+  

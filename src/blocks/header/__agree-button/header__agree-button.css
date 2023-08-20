@@ -1,0 +1,21 @@
+.header__agree-button{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__agree-button:hover{
+  opacity: 0.5;
+  transition: all 0.5s ease 0s;
+}
+
+
+@media screen and (max-width:1280px){
+  .header__agree-button{
+      padding: 6px 12px;
+  }
+}

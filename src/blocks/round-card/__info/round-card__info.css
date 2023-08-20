@@ -1,0 +1,19 @@
+.round-card__info {
+  position: absolute;
+  bottom: 40px;
+
+  max-width: 303px;
+}
+
+@media (max-width: 768px) {
+  .round-card__info {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+}
+
