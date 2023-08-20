@@ -1,7 +1,7 @@
 .card__content-container {
+  max-width: 280px;
   height: 96px;
   padding: 16px 0 16px;
   display: flex;
-  flex-flow: column wrap;
-  row-gap: 8px;
+  flex-flow: column nowrap;
 }
