@@ -1,10 +1,10 @@
 .hedonism__about {
   margin: 0 auto 80px;
-  color: #3B3748;
+  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
   .hedonism__about {
-    margin: 0 20px 40px;
+    margin-bottom: 40px;
   }
 }

@@ -1,0 +1,5 @@
+@media (min-width: 800px) {
+  .festival__single-column {
+    gap: 18px;
+  }
+}

@@ -1,0 +1,9 @@
+.festival__btn {
+  min-width: 240px;
+}
+
+@media (max-width: 768px) {
+  .festival__btn {
+    min-width: auto;
+  }
+}

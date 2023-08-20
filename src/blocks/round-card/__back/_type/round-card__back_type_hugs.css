@@ -1,0 +1,12 @@
+.round-card__back_type_hugs {
+  background-image: url('../../../../images/hugs.svg'),
+                    url('../../../../images/circle-yellow.svg');
+  background-position: top 50px center, center;
+}
+
+@media (max-width: 768px) {
+  .round-card__back_type_hugs {
+    background-image: url('../../../../images/hugs-mobile.svg');
+    background-position: center;
+  }
+}

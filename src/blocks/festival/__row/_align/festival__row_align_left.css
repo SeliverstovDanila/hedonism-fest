@@ -1,0 +1,4 @@
+.festival__row_align_left {
+  flex-direction: row-reverse;
+  justify-content: start;
+}

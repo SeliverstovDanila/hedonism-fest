@@ -77,24 +77,28 @@
 @import url('../blocks/digits/digits.css');
 @import url('../blocks/digits/__title/digits__title.css');
 @import url('../blocks/digits/__wrapper/digits__wrapper.css');
+  @import url('../blocks/digits/__child/digits__child.css');
+    @import url('../blocks/digits/__child/_align/digits__child_align_left.css');
+    @import url('../blocks/digits/__child/_align/digits__child_align_right.css');
 @import url('../blocks/round-card/round-card.css');
 /* возможно потребуется перенести выше, перед первой секцией страницы*/
 @import url('../blocks/round-card/__back/round-card__back.css');
-@import url('../blocks/round-card/__back/_type/round-card__back_type_flower.css');
-@import url('../blocks/round-card/__back/_type/round-card__back_type_drinks.css');
-@import url('../blocks/round-card/_align/round-card_align_right.css');
-@import url('../blocks/round-card/_align/round-card_align_left.css');
+  @import url('../blocks/round-card/__back/_type/round-card__back_type_flower.css');
+  @import url('../blocks/round-card/__back/_type/round-card__back_type_flower-left.css');
+  @import url('../blocks/round-card/__back/_type/round-card__back_type_drinks.css');
+  @import url('../blocks/round-card/__back/_type/round-card__back_type_cup.css');
+  @import url('../blocks/round-card/__back/_type/round-card__back_type_hugs.css');
 @import url('../blocks/round-card/__info/round-card__info.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_right.css');
 @import url('../blocks/round-card/__info/_align/round-card__info_align_left.css');
 
 /*PROMO*/
 @import url('../blocks/offer-promo/offer-promo.css');
-  @import url('../blocks/offer-promo/__about/offer-promo__about.css');
+  @import url('../blocks/offer-promo/__text-style/offer-promo__text-style.css');
+  @import url('../blocks/offer-promo/__btn/offer-promo__btn.css');
 @import url('../blocks/column/column.css');
 @import url('../blocks/column/_type/column_type_double.css');
 @import url('../blocks/column/_type/column_type_single.css');
-@import url('../blocks/column/__text/column__text.css');
 @import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
 @import url('../blocks/column/__btn/column__btn.css');
 
@@ -112,3 +116,20 @@
 @import url('../blocks/footer/__list-social/footer__list-social.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
+
+
+/* СТРАНИЦА FESTIVAL */
+/* #todo - поменять структуру файлов в blocks: отдельные папки common (общие блоки), index (блоки страницы index), festival (блоки страницы festival) - удобнее чтоб блоки других страниц лежали в разных папках) */
+@import url('../blocks/festival/festival.css');
+  @import url('../blocks/festival/__row/festival__row.css');
+    @import url('../blocks/festival/__row/_narrow-gap/festival__row_narrow-gap.css');
+    @import url('../blocks/festival/__row/_align/festival__row_align_centered.css');
+    @import url('../blocks/festival/__row/_align/festival__row_align_right.css');
+    @import url('../blocks/festival/__row/_align/festival__row_align_left.css');
+  @import url('../blocks/festival/__double-column/festival__double-column.css');
+  @import url('../blocks/festival/__single-column/festival__single-column.css');
+  @import url('../blocks/festival/__desktop-card/festival__desktop-card.css');
+  @import url('../blocks/festival/__mobile-card/festival__mobile-card.css');
+  @import url('../blocks/festival/__btn/festival__btn.css');
+  @import url('../blocks/festival/__wide-img/festival__wide-img.css');
+
