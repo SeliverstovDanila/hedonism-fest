@@ -17,5 +17,6 @@
 @media screen and (max-width:1280px){
   .header__agree-button{
       padding: 6px 12px;
+      gap: 4px;
   }
 }
