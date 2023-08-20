@@ -6,6 +6,7 @@
 }
 @media (max-width: 767px) {
   .participators {
-    max-width: 320px;
+    max-width: 90%;
+    background-color: rgba(235, 233, 237, 1);
   }
 }

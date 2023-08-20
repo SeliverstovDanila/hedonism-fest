@@ -10,9 +10,6 @@
 }
 @media (max-width: 767px) {
     .fest-images__grid {
-      grid-template-rows: 320px;
-      grid-template-columns: repeat(5, 320px);
-      grid-template-areas: 'nature beuty cock img streetart';
-      overflow: hidden;
+      display:block
     }
   }
