@@ -16,7 +16,7 @@
           class="header__logo"></a>
       <button class="header__location-button" type="button">
         <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
-        <p class="header__button-text">Санкт-Петербург</p>
+        <span class="text text_type_button">Санкт-Петербург</span>
       </button>
     </div>
     <nav>
@@ -29,11 +29,15 @@
     <div class="header__user-action">
       <button class="header__agree-button" type="button">
         <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
-        <p class="header__button-text">хочу пойти</p>
+        <span class="text text_type_button">хочу пойти</span>
       </button>
       <button class="button button_type_vanish button_type_violet" type="button"><span class="text text_type_button text_color_white">поддержать</span></button>
-      <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
-          alt="иконка меню"></img></button>
+      <!-- <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
+          alt="иконка меню"></img>
+      </button> -->
+      <div class="menu-burger-icon">
+        <span></span>
+      </div>
     </div>
   </header>
   <!-- секция hedonism -->
@@ -128,16 +132,16 @@
         <button type="button" class="card__like"></button>
         <div class="card__content">
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
+            <p class="text text_type_optional text_color_grey">лекция</p>
+            <p class="text text_type_optional text_color_grey">1 мая, 12:30-13:50</p>
           </div>
           <div class="card__content-container">
             <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
             <p class="text text_type_main">лектор: Мария Бархатова</p>
           </div>
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
+            <p class="text text_type_optional text_color_grey">улица Блохина, 22</p>
+            <p class="text text_type_optional text_color_grey">+ ещё 3</p>
           </div>
         </div>
       </article>
@@ -146,16 +150,16 @@
         <button type="button" class="card__like"></button>
         <div class="card__content">
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
+            <p class="text text_type_optional text_color_grey">лекция</p>
+            <p class="text text_type_optional text_color_grey">1 мая, 12:30-13:50</p>
           </div>
           <div class="card__content-container">
             <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
             <p class="text text_type_main">лектор: Мария Бархатова</p>
           </div>
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
+            <p class="text text_type_optional text_color_grey">улица Блохина, 22</p>
+            <p class="text text_type_optional text_color_grey">+ ещё 3</p>
           </div>
         </div>
       </article>
@@ -164,16 +168,16 @@
         <button type="button" class="card__like"></button>
         <div class="card__content">
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
+            <p class="text text_type_optional text_color_grey">лекция</p>
+            <p class="text text_type_optional text_color_grey">1 мая, 12:30-13:50</p>
           </div>
           <div class="card__content-container">
             <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
             <p class="text text_type_main">лектор: Мария Бархатова</p>
           </div>
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
+            <p class="text text_type_optional text_color_grey">улица Блохина, 22</p>
+            <p class="text text_type_optional text_color_grey">+ ещё 3</p>
           </div>
         </div>
       </article>
@@ -182,16 +186,16 @@
         <button type="button" class="card__like"></button>
         <div class="card__content">
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
+            <p class="text text_type_optional text_color_grey">лекция</p>
+            <p class="text text_type_optional text_color_grey">1 мая, 12:30-13:50</p>
           </div>
           <div class="card__content-container">
             <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
             <p class="text text_type_main">лектор: Мария Бархатова</p>
           </div>
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
+            <p class="text text_type_optional text_color_grey">улица Блохина, 22</p>
+            <p class="text text_type_optional text_color_grey">+ ещё 3</p>
           </div>
         </div>
       </article>
@@ -200,16 +204,16 @@
         <button type="button" class="card__like"></button>
         <div class="card__content">
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">лекция</p>
-            <p class="text text_type_optional text_type_card-optional">1 мая, 12:30-13:50</p>
+            <p class="text text_type_optional text_color_grey">лекция</p>
+            <p class="text text_type_optional text_color_grey">1 мая, 12:30-13:50</p>
           </div>
           <div class="card__content-container">
             <h4 class="title title_type_card">идентичность: почему нам сложно меняться?</h4>
             <p class="text text_type_main">лектор: Мария Бархатова</p>
           </div>
           <div class="card__optional-container">
-            <p class="text text_type_optional text_type_card-optional">улица Блохина, 22</p>
-            <p class="text text_type_optional text_type_card-optional">+ ещё 3</p>
+            <p class="text text_type_optional text_color_grey">улица Блохина, 22</p>
+            <p class="text text_type_optional text_color_grey">+ ещё 3</p>
           </div>
         </div>
       </article>
@@ -288,32 +292,56 @@
   </footer>
   <!-- модальное окно -->
   <div class="popup popup__choise-city">
-    <div class="popup__container">
+    <div class="popup__choise-city-container">
         <form name="сhoise-city" class="form-city" novalidate>
             <label class="form-city__list" for="moscow">
-                <span class="form-city__list-name">Moсква</span>
+                <span>Moсква</span>
                 <input  type="checkbox" name="city" id="moscow" class="form-city__list-item">
             </label>
             <label class="form-city__list" for="saint-Petersburg">
-                <span class="form-city__list-name">Санкт-Петербург</span>
+                <span>Санкт-Петербург</span>
                 <input  type="checkbox" name="city" id="saint-Petersburg" class="form-city__list-item">
             </label>
             <label class="form-city__list" for="sochi">
-                <span class="form-city__list-name">Сочи</span>
+                <span>Сочи</span>
                 <input  type="checkbox" name="city" id="sochi" class="form-city__list-item">
             </label>
-            <label class="form__city__list" for="kaluga">
-                <span class="form-city-list__list-name">Калуга</span>
-                <input  type="checkbox" name="city" id="kaluga" class="form-city-list__list-item">
+            <label class="form-city__list" for="kaluga">
+                <span>Калуга</span>
+                <input  type="checkbox" name="city" id="kaluga" class="form-city__list-item">
             </label>
             <label class="form-city__list" for="ekaterinburg">
-                <span class="form-city__list-name">Екатеринбург</span>
+                <span>Екатеринбург</span>
                 <input  type="checkbox" name="city" id="ekaterinburg" class="form-city__list-item">
             </label>
         </form>
     </div>
   </div>
+  <!-- бургер меню -->
+  <div class="popup popup__menu-burger">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <p class="text text_type_optional text_color_grey">ваш город:</p>
+      <button type="button" class="burger-menu__button-location">
+        <span class="burger-menu__text">Санкт-Петербург</span>
+        <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город" class="burger-menu__change-icon">
+      </button>
+      <p class="text text_type_optional text_color_grey">навигация</p>
+      <nav class="burger-menu__navigation">
+        <ul class="burger-menu__navigation-links">
+          <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a></li>
+          <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать участником</a></li>
+          <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">о фестивале</a></li>
+        </ul>
+      </nav>
+      <div class="burger-menu__container-logo">
+        <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
+        <p class="text text_type_optional text_color_grey">благотворительная организация</p>
+      </div>
+      <button class="button button_type_violet" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- <script type="module" src="./pages/index.js"></script> -->
 </body>
-<!-- <script type="module" src="./pages/index.js"> -->
-
 </html>

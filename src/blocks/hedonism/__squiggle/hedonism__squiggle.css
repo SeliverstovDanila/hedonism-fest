@@ -4,7 +4,8 @@
   width: 150px;
   height: 132px;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
+  z-index: 0;
   top: 270px;
   right: 344px;
 }

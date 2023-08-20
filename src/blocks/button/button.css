@@ -1,13 +1,14 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 24px 0;
   border-radius: 26px;
   min-height: 48px;
   cursor: pointer;
 }
 
-@media screen and (max-width:1090px){
+@media screen and (max-width:1024px){
   .button_type_vanish {
       display: none;
   }

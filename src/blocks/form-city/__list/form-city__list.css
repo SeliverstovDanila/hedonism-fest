@@ -1,0 +1,27 @@
+.form-city__list{
+  padding: 12px 24px;
+  display: flex;
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "TT Firs Neue";
+}
+
+.form-city__list:hover{
+  background-color: #EBE9ED;
+  transition: all 0.3s ease 0s;
+}
+
+.form-city__list:active {
+  background-color: #7100FF;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:1280px){
+  .form-city__list{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,10 @@
+.burger-menu__navigation-link{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3B3748;
+  padding: 12px 0;
+  font-family: "TT Firs Neue";
+  width: 100%;
+  text-decoration: none;
+}
