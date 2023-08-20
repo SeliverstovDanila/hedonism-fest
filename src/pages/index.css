@@ -118,6 +118,7 @@
 @import url('../blocks/fest-images/__button/fest-images__button.css');
 @import url('../blocks/fest-images/__button/fest-images__button_selected.css');
 @import url('../blocks/fest-images/__image/fest-images__image__selected.css');
+@import url('../blocks/fest-images/__title/fest-images__title.css');
 
 /*PROMO*/
 @import url('../blocks/offer-promo/offer-promo.css');
