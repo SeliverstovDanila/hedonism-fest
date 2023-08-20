@@ -2,6 +2,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

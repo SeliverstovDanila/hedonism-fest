@@ -11,6 +11,10 @@
 @import url('../blocks/text/text.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
+@import url('../blocks/text/_type/text_type_card-optional.css');
+@import url('../blocks/text/_type/text_type_button.css');
+@import url('../blocks/text/_type/text_type_card.css');
+@import url('../blocks/text/_color/text_color_white.css');
 
 /*HEADER*/
 @import url('../blocks/header/header.css');
@@ -57,22 +61,26 @@
 @import url('../blocks/about/__button/about__button.css');
 
 
-    @import url('../blocks/text/_type/text_type_button.css');
-    @import url('../blocks/text/_color/text_color_white.css');
+/*BUTTON*/
 @import url('../blocks/button/button.css');
-    @import url('../blocks/button/__arrow/button__arrow.css');
-    @import url('../blocks/button/_type/button_type_transparent.css');
-    @import url('../blocks/button/_type/button_type_violet.css');
+@import url('../blocks/button/__arrow/button__arrow.css');
+@import url('../blocks/button/_type/button_type_transparent.css');
+@import url('../blocks/button/_type/button_type_violet.css');
+
+/*EVENTS*/
 @import url('../blocks/events/events.css');
-    @import url('../blocks/events/__heading-container/events__heading-container.css');
-    @import url('../blocks/events/__button-container/events__button-container.css');
-    @import url('../blocks/events/__cards-container/events__cards-container.css');
+@import url('../blocks/events/__heading-container/events__heading-container.css');
+@import url('../blocks/events/__button-container/events__button-container.css');
+@import url('../blocks/events/__cards-container/events__cards-container.css');
+
+/*CARDS*/
 @import url('../blocks/card/card.css');
-    @import url('../blocks/card/__image/card__image.css');
-    @import url('../blocks/card/__content/card__content.css');
-    @import url('../blocks/card/__optional-container/card__optional-container.css');
-    @import url('../blocks/card/__content-container/card__content-container.css');
-    @import url('../blocks/card/__like/card__like.css');
+@import url('../blocks/card/__image/card__image.css');
+@import url('../blocks/card/__content/card__content.css');
+@import url('../blocks/card/__optional-container/card__optional-container.css');
+@import url('../blocks/card/__content-container/card__content-container.css');
+@import url('../blocks/card/__like/card__like.css');
+@import url('../blocks/card/__like/_active/card__like_active.css');
 
 /*DIGITS*/
 @import url('../blocks/digits/digits.css');

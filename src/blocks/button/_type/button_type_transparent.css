@@ -5,12 +5,5 @@
 
 .button_type_transparent:hover {
   border-color: #5100B8;
-}
-
-.button_type_transparent:hover .text_type_button {
-  color: #5100B8;
-}
-
-.button_type_transparent:hover .button__arrow {
   color: #5100B8;
 }

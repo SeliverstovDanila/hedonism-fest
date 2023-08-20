@@ -3,9 +3,6 @@
     src: local('Medium');
     src: url('../fonts/woff2/TT_Firs_Neue_Medium.woff2') format('woff2');
     src: url('../fonts/woff/TT_Firs_Neue_Medium.woff') format('woff');
-    src: url('../fonts/eot/TT_Firs_Neue_Medium.eot') format('eot');
-    src: url('../fonts/ttf/TT_Firs_Neue_Medium.ttf') format('ttf');
-    src: url('../fonts/otf/TT_Firs_Neue_Medium.otf') format('otf');
     font-weight: 500;
 }
 
@@ -14,8 +11,5 @@
     src: local('Regular');
     src: url('../fonts/woff2/TT_Firs_Neue_Regular.woff2') format('woff2');
     src: url('../fonts/woff/TT_Firs_Neue_Regular.woff') format('woff');
-    src: url('../fonts/eot/TT_Firs_Neue_Regular.eot') format('eot');
-    src: url('../fonts/ttf/TT_Firs_Neue_Regular.ttf') format('ttf');
-    src: url('../fonts/otf/TT_Firs_Neue_Regular.otf') format('otf');
     font-weight: 400;
 }
