@@ -51,6 +51,18 @@ module.exports = {
       filename: "festival.html",
       template: './src/festival.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: "error.html",
+      template: './src/error.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "help.html",
+      template: './src/help.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "application.html",
+      template: './src/application.html'
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
 
