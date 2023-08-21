@@ -70,12 +70,36 @@ burgerMenu.addEventListener("click", function () {
 
 import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
+const eventDuration = document.querySelector(".duration");
+const eventCost = document.querySelector(".cost");
+const eventPlace = document.querySelector(".place");
+const eventAddress = document.querySelector(".address");
+const eventNumber = document.querySelector(".number");
+const eventSocials = document.querySelector(".socials");
+const eventImage = document.querySelector(".popup__cover");
+const eventType = document.querySelector(".name");
+const eventTitle = document.querySelector(".Title");
 
 const cardTemplate = document.querySelector("#card-template").content;
 const eventsCardsContainer = document.querySelector(".events__cards-container");
 
+function cardFormData(data) {
+  eventDuration.textContent = data.duration;
+  eventCost.textContent = data.cost;
+  eventPlace.textContent = data.place;
+  eventAddress.textContent = data.address;
+  eventNumber.textContent = data.number;
+  eventSocials.textContent = data.socials;
+  eventImage.src = data.photo;
+  eventType.textContent = data.type;
+  eventTitle.textContent = data.title;
+}
 for (const cardElement of cardsArray) {
-  const card = new Card(cardElement, cardTemplate).createCard();
+  const card = new Card(cardElement, cardTemplate, {
+    zoomCard: () => {
+      cardFormData(cardElement)
+    },
+  }).createCard();
   eventsCardsContainer.append(card);
 }
 
