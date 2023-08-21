@@ -4,19 +4,11 @@
   width: 150px;
   height: 132px;
   position: absolute;
-  /* z-index: 1; */
-  z-index: 0;
   top: 270px;
   right: 344px;
 }
 
-@media screen and (max-width: 1115px) {
-  .hedonism__squiggle {
-    right: 100px;
-  }
-}
-
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 1280px) {
   .hedonism__squiggle {
     top: 260px;
     right: -31px;

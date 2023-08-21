@@ -2,8 +2,6 @@
   margin: 260px auto 110px;
   max-width: 247px;
   min-height: 230px;
-  /* z-index: 2; */
-  z-index: 0;
 }
 
 @media screen and (max-width: 360px) {
