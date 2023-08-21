@@ -2,9 +2,9 @@
   background-image: url(../../../images/arc-yellow.svg);
   background-size: cover;
   width: 90px;
-  height: 170px;
+  height: 169px;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
 

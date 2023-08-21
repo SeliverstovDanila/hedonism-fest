@@ -1,9 +1,8 @@
 .hedonism__button {
-  width: 44px;
-  height: 44px;
-  border: 1px, solid, red;
-  border-radius: 50%;
   margin-bottom: 70px;
+  border-radius: 50%;
+  padding: 24px 24px;
+  background: url(../../../images/arrow-to-down.svg) 50% 50% no-repeat;
 }
 
 @media screen and (max-width: 360px) {

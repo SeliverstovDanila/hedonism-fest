@@ -1,5 +1,4 @@
 .column__btn {
-  border-color: inherit;
-  color: inherit;
+  margin-top: 8px;
   justify-self: flex-start;
 }

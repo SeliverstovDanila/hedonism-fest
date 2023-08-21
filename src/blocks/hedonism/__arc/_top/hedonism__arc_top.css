@@ -1,16 +1,10 @@
 .hedonism__arc_top {
-  top: 67px;
+  top: 75px;
   right: 650px;
   transform: rotate(-88deg);
 }
 
-@media screen and (max-width: 1375px) {
-  .hedonism__arc_top {
-    transform: rotate(16deg);
-  }
-}
-
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 1280px) {
   .hedonism__arc_top {
     visibility: hidden;
   }

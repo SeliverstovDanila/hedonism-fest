@@ -1,20 +1,4 @@
 import "../pages/index.css";
-
-
-const cardForm = document.querySelector(".popup");
-const closeButton = document.querySelector(".popup__close");
-
-const cardList = document.querySelectorAll(".card");
-cardList.forEach((card) => {
-  card.addEventListener('click', () => {
-    cardForm.classList.add('popup__opened')
-  })
-});
-
-closeButton.addEventListener("click", () => {
-  cardForm.classList.remove('popup__opened')
-});
-
 document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   const items = carousel.querySelectorAll(".fest-images__image");
   const buttonsHtml = Array.from(items, () => {
@@ -50,4 +34,59 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   // Select the first item on page load
   items[0].classList.add("fest-images__image_selected");
   buttons[0].classList.add("fest-images__button_selected");
+});
+
+const locationBtn = document.querySelector(".header__location-button");
+const popupChoiseCity = document.querySelector(".popup__choise-city");
+const popupBurgerMenu = document.querySelector(".popup__menu-burger");
+const burgerMenu = document.querySelector(".menu-burger-icon");
+// const btnBurgerChangeCity = document.querySelector('.burger-menu__button-location')
+
+//  Открытие popup
+function openPopup(popup) {
+  popup.classList.add("popup_opened");
+}
+
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
+}
+
+locationBtn.addEventListener("click", function () {
+  openPopup(popupChoiseCity);
+});
+
+burgerMenu.addEventListener("click", function () {
+  if (burgerMenu.classList.toggle("menu-burger-icon_active")) {
+    openPopup(popupBurgerMenu);
+  } else {
+    closePopup(popupBurgerMenu);
+  }
+});
+
+// btnBurgerChangeCity.addEventListener('click', function () {
+//   closePopup(burgerMenu);
+//   openPopup(popupChoiseCity)
+// })
+
+import cardsArray from "../components/cards.json";
+import Card from "../components/card.js";
+
+const cardTemplate = document.querySelector("#card-template").content;
+const eventsCardsContainer = document.querySelector(".events__cards-container");
+
+for (const cardElement of cardsArray) {
+  const card = new Card(cardElement, cardTemplate).createCard();
+  eventsCardsContainer.append(card);
+}
+
+const cardForm = document.querySelector(".popup__cardform");
+const cardList = document.querySelectorAll(".card");
+cardList.forEach((card) => {
+  card.addEventListener("click", () => {
+    cardForm.classList.add("popup__opened");
+  });
+});
+const closeButton = document.querySelector(".popup__close");
+closeButton.addEventListener("click", () => {
+  cardForm.classList.remove("popup__opened");
 });

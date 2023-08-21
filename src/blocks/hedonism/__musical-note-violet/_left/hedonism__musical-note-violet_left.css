@@ -3,9 +3,9 @@
   left: 119px;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1024px) {
   .hedonism__musical-note-violet_left {
-    left: 20px;
+    left: 63px;
   }
 }
 

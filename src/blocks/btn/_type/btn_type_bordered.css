@@ -2,9 +2,16 @@
   color: #3B3748;
   background-color: transparent;
   border: 2px #3B3748 solid;
+  padding: 10px 22px; /* в макете посчитали с учетом bordera 2px*/
 }
 
 .btn_type_bordered:hover {
   color: #5100B8;
   border-color: #5100B8;
+}
+
+@media (max-width: 768px){
+  .btn_type_bordered {
+    padding: 10px 18px;
+  }
 }
