@@ -11,9 +11,7 @@
 @import url('../blocks/text/text.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
-@import url('../blocks/text/_type/text_type_card-optional.css');
 @import url('../blocks/text/_type/text_type_button.css');
-@import url('../blocks/text/_type/text_type_card.css');
 @import url('../blocks/text/_color/text_color_white.css');
 
 
@@ -96,6 +94,8 @@
 @import url('../blocks/card/__content-container/card__content-container.css');
 @import url('../blocks/card/__like/card__like.css');
 @import url('../blocks/card/__like/_active/card__like_active.css');
+@import url('../blocks/card/__text/card__text.css');
+@import url('../blocks/card/__text-optional/card__text-optional.css');
 
 /*DIGITS*/
 @import url('../blocks/digits/digits.css');

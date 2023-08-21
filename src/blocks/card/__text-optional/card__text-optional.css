@@ -1,4 +1,4 @@
-.text_type_card-optional {
+.card__text-optional {
   max-width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
