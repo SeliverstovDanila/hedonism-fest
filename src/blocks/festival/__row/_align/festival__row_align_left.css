@@ -2,3 +2,9 @@
   flex-direction: row-reverse;
   justify-content: start;
 }
+
+@media (max-width: 768px){
+  .festival__row_align_left {
+    flex-direction: column;
+  }
+}
