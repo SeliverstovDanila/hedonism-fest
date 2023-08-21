@@ -238,3 +238,12 @@
 /* СТРАНИЦА UI KIT */
 /* в процессе работы, структура css-файлов будет создана чуть позже */
 @import url('../blocks/ui-kit/ui-kit.css');
+/* СТРАНИЦЫ ERROR HELP AND APPLICATION */
+@import url('../blocks/information/information.css');
+@import url('../blocks/information/_background/information_background_violet.css');
+@import url('../blocks/information/__column/information__column.css');
+@import url('../blocks/information/__text/information__text.css');
+@import url('../blocks/information/__button/information__button.css');
+@import url('../blocks/information/__button/_color/information__button_color_white.css');
+@import url('../blocks/information/__image/information__image.css');
+@import url('../blocks/information/__image/_transform/information__image_transform_scale.css');
