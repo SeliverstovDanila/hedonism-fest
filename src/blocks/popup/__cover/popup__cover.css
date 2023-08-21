@@ -1,0 +1,5 @@
+.popup__cover {
+    object-fit: cover;
+    width: 700px;
+    height: 320px;
+  }

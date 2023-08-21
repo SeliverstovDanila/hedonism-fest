@@ -1,0 +1,12 @@
+.popup__close {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url('../../../images/clost.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

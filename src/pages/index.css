@@ -144,3 +144,18 @@
 @import url('../blocks/footer/__list-social/footer__list-social.css');
 @import url('../blocks/text/_type/text_type_main.css');
 @import url('../blocks/text/_type/text_type_optional.css');
+
+/* карточка события */
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/__container/popup__container.css');
+@import url('../blocks/popup/__yellow-line/popup__yellow-line.css');
+@import url('../blocks/popup/__text-field/popup__text-field.css');
+@import url('../blocks/popup/__links/popup__links.css');
+@import url('../blocks/popup/popup__opened.css');
+@import url('../blocks/popup/__close/popup__close.css');
+@import url('../blocks/popup/__cover/popup__cover.css');
+@import url('../blocks/popup/__grey-row/popup__grey-row.css');
+@import url('../blocks/popup/__social/popup__social.css');
+@import url('../blocks/popup/__icons/popup__icons.css');
+@import url('../blocks/popup/__copy/popup__copy.css');
+@import url('../blocks/popup/__button-container/popup__button-container.css')

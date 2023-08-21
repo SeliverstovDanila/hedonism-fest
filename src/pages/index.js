@@ -1,4 +1,20 @@
-import '../pages/index.css';
+import "../pages/index.css";
+
+
+const cardForm = document.querySelector(".popup");
+const closeButton = document.querySelector(".popup__close");
+
+const cardList = document.querySelectorAll(".card");
+cardList.forEach((card) => {
+  card.addEventListener('click', () => {
+    cardForm.classList.add('popup__opened')
+  })
+});
+
+closeButton.addEventListener("click", () => {
+  cardForm.classList.remove('popup__opened')
+});
+
 document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   const items = carousel.querySelectorAll(".fest-images__image");
   const buttonsHtml = Array.from(items, () => {
@@ -35,4 +51,3 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   items[0].classList.add("fest-images__image_selected");
   buttons[0].classList.add("fest-images__button_selected");
 });
-

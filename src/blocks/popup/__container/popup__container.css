@@ -1,0 +1,12 @@
+.popup__container {
+  position: inherit;
+  z-index: 2;
+  background-color: rgba(252, 250, 247, 1);
+  color: black;
+  width: 700px;
+  position: relative;
+  z-index: 3;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}

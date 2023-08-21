@@ -1,0 +1,22 @@
+.popup__links {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+td {
+  text-align: end;
+}
+.formbutton {
+  width: 304px;
+}
+.white {
+  color: white;
+}
+.popup__table {
+    margin-top: 32px;
+}

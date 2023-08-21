@@ -1,0 +1,8 @@
+.popup__button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  
