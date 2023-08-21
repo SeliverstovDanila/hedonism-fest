@@ -1,0 +1,25 @@
+.form-city__list-item{
+  height: 0;
+  width: 0;
+}
+
+.form-city__list-item::before{
+  content: "";
+  display: none;
+  position: absolute;
+  right: 24px;
+  background-image: url('../../../images/check-mark.svg');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-city__list-item:checked::before{
+  display: inline-block;
+}
+
+.form-city__list-item:active::before{
+  display: inline-block;
+  background-image: url('../../../images/check-mark-white.svg');
+}

@@ -1,0 +1,12 @@
+.round-card__back_type_cup {
+  background-image: url('../../../../images/man-with-cup.svg'),
+                    url('../../../../images/circle-yellow.svg');
+  background-position: top 48px center, center;
+}
+
+@media (max-width: 768px) {
+  .round-card__back_type_cup {
+    background-image: url('../../../../images/man-with-cup-mobile.svg');
+    background-position: center;
+  }
+}

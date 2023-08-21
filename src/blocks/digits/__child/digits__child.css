@@ -1,0 +1,4 @@
+.digits__child {
+  display: flex;
+  flex-direction: column;
+}

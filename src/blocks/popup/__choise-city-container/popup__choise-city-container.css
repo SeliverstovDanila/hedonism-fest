@@ -1,0 +1,16 @@
+.popup__choise-city-container{
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 12px 0px #3B37481F;
+  box-sizing: border-box;
+  padding: 24px 0;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 320px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .popup__choise-city-container{
+    display: none;
+  }
+}

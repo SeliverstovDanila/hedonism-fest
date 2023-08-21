@@ -1,0 +1,9 @@
+.festival {
+  padding: 40px 40px 80px;
+}
+
+@media (max-width: 768px) {
+  .festival {
+    padding: 20px;
+  }
+}

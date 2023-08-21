@@ -1,0 +1,9 @@
+.festival__desktop-card {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .festival__desktop-card {
+    display: none;
+  }
+}

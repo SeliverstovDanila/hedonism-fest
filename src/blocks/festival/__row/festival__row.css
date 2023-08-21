@@ -1,0 +1,19 @@
+.festival__row {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 103px;
+}
+
+@media (max-width: 1090px) {
+  .festival__row {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .festival__row {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+}
