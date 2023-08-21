@@ -1,3 +1,7 @@
 .text_type_card-optional {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #96949E;
 }

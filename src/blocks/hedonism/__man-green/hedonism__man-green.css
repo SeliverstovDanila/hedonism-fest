@@ -4,7 +4,8 @@
   width: 420px;
   height: 250px;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
+  z-index: 0;
   bottom: 160px;
   left: 84px;
   transform: rotate(2.23deg);

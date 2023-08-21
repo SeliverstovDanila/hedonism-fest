@@ -1,5 +1,6 @@
 .card__optional-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  max-width: 280px;
   justify-content: space-between;
 }

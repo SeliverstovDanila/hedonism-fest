@@ -1,0 +1,9 @@
+.burger-menu__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 88px auto 0;
+  padding: 20px 20px;
+  max-width: 360px;
+  width: 100%;
+}
