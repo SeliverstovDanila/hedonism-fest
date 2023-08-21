@@ -41,8 +41,8 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
 const locationBtn = document.querySelector('.header__location-button');
 const popupChoiseCity = document.querySelector('.popup__choise-city');
 const popupBurgerMenu = document.querySelector('.popup__menu-burger');
-const burgerMenu = document.querySelector('.menu-burger-icon');
-// const btnBurgerChangeCity = document.querySelector('.burger-menu__button-location')
+const burgerMenuBtn = document.querySelector('.menu-burger-icon');
+const btnBurgerChangeCity = document.querySelector('.burger-menu__button-location')
 
 //  Открытие popup
 function openPopup(popup){
@@ -57,15 +57,37 @@ locationBtn.addEventListener('click',function(){
     openPopup(popupChoiseCity)
 })
 
-burgerMenu.addEventListener('click', function(){
-  if(burgerMenu.classList.toggle('menu-burger-icon_active')){
-    openPopup(popupBurgerMenu)
-  }else{
-    closePopup(popupBurgerMenu)
+// burgerMenu.addEventListener('click', function(){
+//   if(burgerMenu.classList.toggle('menu-burger-icon_active')){
+//     openPopup(popupBurgerMenu)
+//   }else{
+//     closePopup(popupBurgerMenu)
+//   }
+// })
+
+
+burgerMenuBtn.addEventListener('click', function () {
+  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
+  popupBurgerMenu.classList.toggle('popup_opened')
+  if (popupChoiseCity.classList.contains('popup_opened')) {
+    closePopup(popupChoiseCity);
+    closePopup(popupBurgerMenu);
+    // getCheckedRadio()
   }
 })
 
+btnBurgerChangeCity.addEventListener('click', function () {
+  closePopup(popupBurgerMenu);
+  openPopup(popupChoiseCity)
+})
 
+// function getCheckedRadio () {
+//   labelCity.forEach(function (item) {
+//     if (item.checked) {
+//       cityName.textContent = item.value;
+//     }
+//   })
+// }
 // btnBurgerChangeCity.addEventListener('click', function () {
 //   closePopup(burgerMenu);
 //   openPopup(popupChoiseCity)

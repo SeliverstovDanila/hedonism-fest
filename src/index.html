@@ -221,29 +221,37 @@
   </footer>
   <!-- модальное окно -->
   <div class="popup popup__choise-city">
-    <div class="popup__choise-city-container">
-      <form name="сhoise-city" class="form-city" novalidate>
-        <label class="form-city__list" for="moscow">
-          <span>Moсква</span>
-          <input type="checkbox" name="city" id="moscow" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="saint-Petersburg">
-          <span>Санкт-Петербург</span>
-          <input type="checkbox" name="city" id="saint-Petersburg" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="sochi">
-          <span>Сочи</span>
-          <input type="checkbox" name="city" id="sochi" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="kaluga">
-          <span>Калуга</span>
-          <input type="checkbox" name="city" id="kaluga" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="ekaterinburg">
-          <span>Екатеринбург</span>
-          <input type="checkbox" name="city" id="ekaterinburg" class="form-city__list-item">
-        </label>
-      </form>
+    <div class="choise-city choise-city_type_burger">
+      <div class="choise-city__content">
+        <button type="button" class="choise-city__button-back">
+          <img src="<%=require('./images/popup-icon-change-back.svg')%>" alt="кнопка вернуться назад"
+            class="choise-city__change-icon">
+          <span class="text text_type_optional text_type_none">назад</span>
+        </button>
+        <p class="text text_type_optional text_color_grey text_type_none">ваш город:</p>
+        <form name="сhoise-city" class="form-city" novalidate>
+          <label class="form-city__list" for="moscow">
+            <span>Moсква</span>
+            <input type="checkbox" name="city" id="moscow" class="form-city__list-item">
+          </label>
+          <label class="form-city__list" for="saint-Petersburg">
+            <span>Санкт-Петербург</span>
+            <input type="checkbox" name="city" id="saint-Petersburg" class="form-city__list-item">
+          </label>
+          <label class="form-city__list" for="sochi">
+            <span>Сочи</span>
+            <input type="checkbox" name="city" id="sochi" class="form-city__list-item">
+          </label>
+          <label class="form-city__list" for="kaluga">
+            <span>Калуга</span>
+            <input type="checkbox" name="city" id="kaluga" class="form-city__list-item">
+          </label>
+          <label class="form-city__list" for="ekaterinburg">
+            <span>Екатеринбург</span>
+            <input type="checkbox" name="city" id="ekaterinburg" class="form-city__list-item">
+          </label>
+        </form>
+      </div>
     </div>
   </div>
   <!-- бургер меню -->

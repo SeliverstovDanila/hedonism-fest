@@ -14,7 +14,9 @@
 @import url('../blocks/text/_type/text_type_card-optional.css');
 @import url('../blocks/text/_type/text_type_button.css');
 @import url('../blocks/text/_type/text_type_card.css');
+@import url('../blocks/text/_type/text_type_none.css');
 @import url('../blocks/text/_color/text_color_white.css');
+@import url('../blocks/text/_color/text_color_grey.css');
 
 
 /* buttons */
@@ -163,8 +165,15 @@
 @import url('../blocks/popup/popup.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
 @import url('../blocks/popup/__choise-city/popup__choise-city.css');
-@import url('../blocks/popup/__choise-city-container/popup__choise-city-container.css');
+/* @import url('../blocks/popup/__choise-city-container/popup__choise-city-container.css'); */
 @import url('../blocks/popup/__menu-burger/popup__menu-burger.css');
+@import url('../blocks/popup/__container/popup__container.css');
+
+/* CHOISE-CITY */
+@import url('../blocks/choise-city/choise-city.css');
+@import url('../blocks/choise-city/__content/choise-city__content.css');
+@import url('../blocks/choise-city/__button-back/choise-city__button-back.css');
+@import url('../blocks/choise-city/_type/choise-city_type_burger.css');
 
 /* FORM-CITY */
 @import url('../blocks/form-city/form-city.css');

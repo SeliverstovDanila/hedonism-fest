@@ -25,3 +25,9 @@
     line-height: 28px;
   }
 }
+
+@media screen and (max-width:1280px){
+  .form-city__list{
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,15 @@
+.choise-city__content{
+
+}
+
+ @media screen and (max-width: 1024px) {
+  .choise-city__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 88px auto 0;
+    padding: 20px 0;
+    max-width: 360px;
+    width: 100%;
+  }
+}
