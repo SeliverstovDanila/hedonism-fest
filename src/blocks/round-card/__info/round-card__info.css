@@ -1,13 +1,16 @@
 .round-card__info {
   position: absolute;
   bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   max-width: 303px;
 }
 
 @media (max-width: 768px) {
   .round-card__info {
-    margin-top: 12px;
+    margin: 12px auto 0;
     display: flex;
     flex-direction: column;
     gap: 4px;

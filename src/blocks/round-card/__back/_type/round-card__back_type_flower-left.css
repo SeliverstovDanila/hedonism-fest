@@ -1,0 +1,11 @@
+.round-card__back_type_flower-left {
+  background-image: url('../../../../images/girl-with-flower-left.svg');
+  background-position: top 99px center;
+  background-size: 500px;
+}
+
+@media (max-width: 768px) {
+  .round-card__back_type_flower-left {
+    background-image: url('../../../../images/girl-with-flower-circled.svg');
+  }
+}

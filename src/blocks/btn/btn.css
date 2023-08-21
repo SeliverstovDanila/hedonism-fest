@@ -1,9 +1,12 @@
 .btn {
+  box-sizing: border-box;
   display: flex;
+  gap: 8px; /* тогда не нужен элемент arrow и любые другие для паддинга*/
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
   border: none;
+  text-decoration: none;
   border-radius: 26px;
   min-height: 44px;
   cursor: pointer;

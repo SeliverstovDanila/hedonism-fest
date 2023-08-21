@@ -1,9 +1,0 @@
-.offer-promo__about {
-  color: #3B3748;
-}
-
-@media (max-width: 768px) {
-  .offer-promo__about {
-    color: #FFF;
-  }
-}

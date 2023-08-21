@@ -1,0 +1,7 @@
+@media (min-width: 800px) {
+  .festival__double-column {
+    max-width: 894px;
+    margin-left: 12px;
+    gap: 28px;
+  }
+}

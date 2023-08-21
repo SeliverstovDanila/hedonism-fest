@@ -1,0 +1,11 @@
+.festival__mobile-card {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .festival__mobile-card {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 0;
+  }
+}
