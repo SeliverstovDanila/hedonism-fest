@@ -7,22 +7,3 @@
     padding: 20px;
   }
 }
-
-
-
-
-
-
-
-
-/* тест скролла */
-@media (max-width: 360px) {
-  .festival {
-    background-color: black;
-  }
-}
-
-
-
-
-
