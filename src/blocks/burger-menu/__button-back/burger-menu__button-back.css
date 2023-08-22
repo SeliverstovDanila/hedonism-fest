@@ -1,0 +1,8 @@
+.burger-menu__button-back{
+  background-color: transparent;
+  padding: 10px 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+}

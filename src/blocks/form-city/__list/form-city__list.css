@@ -18,7 +18,7 @@
   color: #FFFFFF;
 }
 
-@media screen and (max-width:1280px){
+@media screen and (max-width:1024px){
   .form-city__list{
     font-weight: 500;
     font-size: 24px;
@@ -28,6 +28,8 @@
 
 @media screen and (max-width:1280px){
   .form-city__list{
-    padding: 12px 0;
+    padding: 12px 20px;
   }
 }
+
+

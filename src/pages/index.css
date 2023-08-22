@@ -14,7 +14,6 @@
 @import url('../blocks/text/_type/text_type_card-optional.css');
 @import url('../blocks/text/_type/text_type_button.css');
 @import url('../blocks/text/_type/text_type_card.css');
-@import url('../blocks/text/_type/text_type_none.css');
 @import url('../blocks/text/_color/text_color_white.css');
 @import url('../blocks/text/_color/text_color_grey.css');
 
@@ -37,6 +36,8 @@
 
 /*HEADER*/
 @import url('../blocks/header/header.css');
+@import url('../blocks/header/__dropdown/header__dropdown.css');
+@import url('../blocks/header/__dropdown/_active/header__dropdown_active.css');
 @import url('../blocks/header/__logo-location/header__logo-location.css');
 @import url('../blocks/header/__logo/header__logo.css');
 @import url('../blocks/header/__icon-location/header__icon-location.css');
@@ -47,7 +48,7 @@
 @import url('../blocks/header/__user-action/header__user-action.css');
 @import url('../blocks/header/__agree-button/header__agree-button.css');
 @import url('../blocks/header/__icon-like/header__icon-like.css');
-@import url('../blocks/header/__menu-icon/header__menu-icon.css');
+
 
 
 /*HEDONISM*/
@@ -83,6 +84,7 @@
 /* @import url('../blocks/button/__arrow/button__arrow.css'); */
 @import url('../blocks/button/_type/button_type_transparent.css');
 @import url('../blocks/button/_type/button_type_violet.css');
+@import url('../blocks/button/__donate/button__donate.css');
 
 /*EVENTS*/
 @import url('../blocks/events/events.css');
@@ -164,16 +166,9 @@
 /* POPUP */
 @import url('../blocks/popup/popup.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
-@import url('../blocks/popup/__choise-city/popup__choise-city.css');
-/* @import url('../blocks/popup/__choise-city-container/popup__choise-city-container.css'); */
 @import url('../blocks/popup/__menu-burger/popup__menu-burger.css');
+@import url('../blocks/popup/__choise-city/popup__choise-city.css');
 @import url('../blocks/popup/__container/popup__container.css');
-
-/* CHOISE-CITY */
-@import url('../blocks/choise-city/choise-city.css');
-@import url('../blocks/choise-city/__content/choise-city__content.css');
-@import url('../blocks/choise-city/__button-back/choise-city__button-back.css');
-@import url('../blocks/choise-city/_type/choise-city_type_burger.css');
 
 /* FORM-CITY */
 @import url('../blocks/form-city/form-city.css');
@@ -193,6 +188,9 @@
 @import url('../blocks/burger-menu/__button-location/burger-menu__button-location.css');
 @import url('../blocks/burger-menu/__text/burger-menu__text.css');
 @import url('../blocks/burger-menu/menu-burger-icon/menu-burger-icon.css');
+@import url('../blocks/burger-menu/__city-name/burger-menu__city-name.css');
+@import url('../blocks/burger-menu/__button-back/burger-menu__button-back.css');
+
 
 /* СТРАНИЦА FESTIVAL */
 /* #todo - поменять структуру файлов в blocks: отдельные папки common (общие блоки), index (блоки страницы index), festival (блоки страницы festival) - удобнее чтоб блоки других страниц лежали в разных папках) */

@@ -1,12 +1,3 @@
 .popup__choise-city{
-  top: 72px;
-  left: 172px;
-}
-
-@media screen and (max-width: 1024px) {
-  .popup__choise-city{
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
+  z-index: 0;
 }
