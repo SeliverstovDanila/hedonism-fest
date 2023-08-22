@@ -240,7 +240,7 @@
   </footer>
   <!-- cardform modal -->
   <div class=" popup__cardform">
-    <div class="popup__container">
+    <div class="popup__container popup__container_type_cardform">
       <button
         type="button"
         class="popup__close"
@@ -253,8 +253,8 @@
         </p>
       </div>
       <div class="popup__text-field">
-        <p class="text text_type_main name"></p>
-        <h2 class="title title_type_block Title">
+        <p class="text text_type_main text_color_grey popup__name"></p>
+        <h2 class="title title_type_block popup__title">
         </h2>
         <p class="text text_type_main">
           Мы думаем и общаемся с помощью нарратива - историй. Вся наша жизнь
@@ -274,28 +274,28 @@
         </p>
         <table class="popup__table">
           <tr class="popup__grey-row">
-            <th width="200px" class="text text_type_main">длительность</th>
-            <td width="400px" class="text text_type_main duration"></td>
+            <th  class="text text_type_main">длительность</th>
+            <td  class="text text_type_main popup__duration"></td>
           </tr>
           <tr>
             <th class="text text_type_main">стоимость</th>
-            <td class="text text_type_main cost"></td>
+            <td class="text text_type_main popup__cost"></td>
           </tr>
           <tr class="popup__grey-row">
             <th class="text text_type_main">площадка</th>
-            <td class="text text_type_main place"></td>
+            <td class="text text_type_main popup__place"></td>
           </tr>
           <tr>
             <th class="text text_type_main">адрес</th>
-            <td class="text text_type_main address"></td>
+            <td class="text text_type_main popup__address"></td>
           </tr>
           <tr class="popup__grey-row">
             <th class="text text_type_main">телефон</th>
-            <td class="text text_type_main number"></td>
+            <td class="text text_type_main popup__number"></td>
           </tr>
           <tr>
             <th class="text text_type_main">соц.сети</th>
-            <td class="text text_type_main socials"></td>
+            <td class="text text_type_main popup__socials"></td>
           </tr>
         </table>
         <article class="popup__social">
@@ -307,22 +307,24 @@
               <img src="<%=require('./images/twitter.png')%>" />
               <img src="<%=require('./images/tg.png')%>" />
             </div>
+            <div class="dddd">
             <img
               class="popup__copy"
               src="<%=require('./images/Vector.png')%>"
             />
             <p class="text text_type_main">скопировать ссылку</p>
           </div>
+          </div>
         </article>
         <div class="popup__button-container">
           <button
-            class="btn btn_type_bordered text text_type_button formbutton"
+            class="btn btn_type_bordered text text_type_button btn_type_formButton"
             type="button"
           >
             <img class='' src="<%=require('./images/heart.png')%>"">хочу пойти
           </button>
           <button
-            class="btn btn_type_violet text text_type_button formbutton white"
+            class="btn btn_type_violet text text_type_button btn_type_formButton white"
             type="button"
           >
             поддержать

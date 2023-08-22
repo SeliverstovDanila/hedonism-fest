@@ -221,3 +221,5 @@
 @import url('../blocks/popup/__icons/popup__icons.css');
 @import url('../blocks/popup/__copy/popup__copy.css');
 @import url('../blocks/popup/__button-container/popup__button-container.css');
+@import url('../blocks/btn/_type/btn_type_formButton.css');
+@import url('../blocks/popup/__container/_type/popup__container_type_cardform.css')

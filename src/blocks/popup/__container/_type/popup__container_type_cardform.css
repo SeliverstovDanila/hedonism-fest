@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .popup__container_type_cardform {
+    width: 100%;
+  }
+}
