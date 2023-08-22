@@ -19,7 +19,7 @@
   display: inline-block;
 }
 
-.form-city__list-item:active::before{
+.form-city__list-item:active::before {
   display: inline-block;
   background-image: url('../../../images/check-mark-white.svg');
 }

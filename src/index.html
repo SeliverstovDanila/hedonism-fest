@@ -9,21 +9,45 @@
 </head>
 
 <body class="page">
-
   <header class="header">
     <div class="header__logo-location">
-      <a href="#"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
+      <a href="index.html"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
           class="header__logo"></a>
       <button class="header__location-button" type="button">
         <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
-        <span class="text text_type_button">Санкт-Петербург</span>
+        <span class="text text_type_button header__text">Санкт-Петербург</span>
       </button>
+      <!-- всплывающее окно -->
+      <div class="header__dropdown">
+        <form name="сhoise-city" class="form-city">
+          <label class="form-city__list" for="moscow">
+            <span>Moсква</span>
+            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
+          </label>
+          <label class="form-city__list" for="saint-Petersburg">
+            <span>Санкт-Петербург</span>
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
+          </label>
+          <label class="form-city__list" for="sochi">
+            <span>Сочи</span>
+            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
+          </label>
+          <label class="form-city__list" for="kaluga">
+            <span>Калуга</span>
+            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
+          </label>
+          <label class="form-city__list" for="ekaterinburg">
+            <span>Екатеринбург</span>
+            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
+          </label>
+        </form>
+      </div>
     </div>
     <nav>
       <ul class="header__menu-links">
         <li class="header__menu-item"><a href="#" class="header__menu-link">куда пойти</a></li>
         <li class="header__menu-item"><a href="#" class="header__menu-link">стать участником</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link">о фестивале</a></li>
+        <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
       </ul>
     </nav>
     <div class="header__user-action">
@@ -32,9 +56,6 @@
         <span class="text text_type_button">хочу пойти</span>
       </button>
       <button class="button button_type_vanish button_type_violet" type="button"><span class="text text_type_button text_color_white">поддержать</span></button>
-      <!-- <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
-          alt="иконка меню"></img>
-      </button> -->
       <div class="menu-burger-icon">
         <span></span>
       </div>
@@ -217,60 +238,61 @@
       </ul>
     </nav>
   </footer>
-  <!-- модальное окно -->
-  <div class="popup popup__choise-city">
-    <div class="popup__choise-city-container">
-      <form name="сhoise-city" class="form-city" novalidate>
-        <label class="form-city__list" for="moscow">
-          <span>Moсква</span>
-          <input type="checkbox" name="city" id="moscow" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="saint-Petersburg">
-          <span>Санкт-Петербург</span>
-          <input type="checkbox" name="city" id="saint-Petersburg" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="sochi">
-          <span>Сочи</span>
-          <input type="checkbox" name="city" id="sochi" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="kaluga">
-          <span>Калуга</span>
-          <input type="checkbox" name="city" id="kaluga" class="form-city__list-item">
-        </label>
-        <label class="form-city__list" for="ekaterinburg">
-          <span>Екатеринбург</span>
-          <input type="checkbox" name="city" id="ekaterinburg" class="form-city__list-item">
-        </label>
-      </form>
-    </div>
-  </div>
   <!-- бургер меню -->
   <div class="popup popup__menu-burger">
     <div class="burger-menu">
       <div class="burger-menu__content">
-        <p class="text text_type_optional text_color_grey">ваш город:</p>
-        <button type="button" class="burger-menu__button-location">
-          <span class="burger-menu__text">Санкт-Петербург</span>
-          <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город"
-            class="burger-menu__change-icon">
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <button type="button" class="burger-menu__button-location ">
+          <span class="burger-menu__city-name">Санкт-Петербург</span>
+          <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город"class="burger-menu__change-icon">
         </button>
-        <p class="text text_type_optional text_color_grey">навигация</p>
+        <p class="text text_type_optional text_color_grey burger-menu__text">навигация</p>
         <nav class="burger-menu__navigation">
           <ul class="burger-menu__navigation-links">
-            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a>
-            </li>
-            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать
-                участником</a></li>
-            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">о фестивале</a>
-            </li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a></li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать участником</a></li>
+            <li class="burger-menu__navigation-item"><a href="festival.html" class="burger-menu__navigation-link">о фестивале</a></li>
           </ul>
         </nav>
         <div class="burger-menu__container-logo">
           <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
           <p class="text text_type_optional text_color_grey">благотворительная организация</p>
         </div>
-        <button class="button button_type_violet" type="button"><span
-            class="text text_type_button text_color_white">пожертвовать</span></button>
+        <button class="button button_type_violet button__donate" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup__choise-city">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <button type="button" class="burger-menu__button-back">
+          <img src="<%=require('./images/popup-icon-change-back.svg')%>" alt="кнопка вернуться назад"class="burger-menu__change-">
+          <span class="text text_type_optional burger-menu__text-back">назад</span>
+        </button>
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <form name="сhoise-city" class="form-city">
+          <label class="form-city__list" for="moscow">
+            <span>Moсква</span>
+            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
+          </label>
+          <label class="form-city__list" for="saint-Petersburg">
+            <span>Санкт-Петербург</span>
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Санкт-Петербург">
+          </label>
+          <label class="form-city__list" for="sochi">
+            <span>Сочи</span>
+            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
+          </label>
+          <label class="form-city__list" for="kaluga">
+            <span>Калуга</span>
+            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
+          </label>
+          <label class="form-city__list" for="ekaterinburg">
+            <span>Екатеринбург</span>
+            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
+          </label>
+        </form>
       </div>
     </div>
   </div>

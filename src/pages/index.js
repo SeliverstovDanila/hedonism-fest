@@ -39,10 +39,24 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
 
 
 const locationBtn = document.querySelector('.header__location-button');
-const popupChoiseCity = document.querySelector('.popup__choise-city');
+
 const popupBurgerMenu = document.querySelector('.popup__menu-burger');
-const burgerMenu = document.querySelector('.menu-burger-icon');
-// const btnBurgerChangeCity = document.querySelector('.burger-menu__button-location')
+const popupChoiseCity = document.querySelector('.popup__choise-city')
+const burgerMenuBtn = document.querySelector('.menu-burger-icon');
+const btnChoiseCity = document.querySelector('.burger-menu__button-location')
+const btnChoiseCityBack = document.querySelector('.burger-menu__button-back')
+const burgerCityText = document.querySelector('.burger-menu__city-name')
+const headerDropdown = document.querySelector('.header__dropdown')
+const headerText = document.querySelector('.header__text')
+const labelCity = document.querySelectorAll('.form-city__list');
+
+//изменить город
+function changeCity(e) {
+ if(headerText.textContent = e.target.closest('label').querySelector('span').textContent);
+ if(burgerCityText.textContent = e.target.closest('label').querySelector('span').textContent);
+}
+  labelCity.forEach((item) => item.addEventListener('change', changeCity))
+
 
 //  Открытие popup
 function openPopup(popup){
@@ -53,23 +67,31 @@ function closePopup(popup){
   popup.classList.remove('popup_opened')
 }
 
+// всплывающее окно
 locationBtn.addEventListener('click',function(){
-    openPopup(popupChoiseCity)
+  headerDropdown.classList.toggle('header__dropdown_active');
 })
 
-burgerMenu.addEventListener('click', function(){
-  if(burgerMenu.classList.toggle('menu-burger-icon_active')){
-    openPopup(popupBurgerMenu)
-  }else{
-    closePopup(popupBurgerMenu)
+
+
+burgerMenuBtn.addEventListener('click', function () {
+  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
+  popupBurgerMenu.classList.toggle('popup_opened')
+  if (popupChoiseCity.classList.contains('popup_opened')) {
+    closePopup(popupChoiseCity);
+    closePopup(popupBurgerMenu);
   }
 })
 
+btnChoiseCity.addEventListener('click', function() {
+  closePopup(popupBurgerMenu);
+  openPopup(popupChoiseCity);
+})
 
-// btnBurgerChangeCity.addEventListener('click', function () {
-//   closePopup(burgerMenu);
-//   openPopup(popupChoiseCity)
-// })
+btnChoiseCityBack.addEventListener('click', function() {
+  closePopup(popupChoiseCity);
+  openPopup(popupBurgerMenu);
+})
 
 
 import cardsArray from '../components/cards.json';
