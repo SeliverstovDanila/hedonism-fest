@@ -1,0 +1,14 @@
+.controller_el_nav {
+  width: 44px;
+  height: 44px;
+  background-color: #FCFAF7;
+  background-image: url('../../../images/icons/navigation-sign.svg');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 12px 0px rgba(59, 55, 72, 0.12);
+}
+
+.controller_el_nav:hover {
+  opacity: .6;
+}

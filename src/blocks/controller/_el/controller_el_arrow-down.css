@@ -1,0 +1,16 @@
+/* стрелка вниз */
+.controller_el_arrow-down {
+  width: 44px;
+  height: 44px;
+  color: #FCFAF7;
+  background-color: #7100FF;
+  background-image: url('../../../images/arrow-to-down.svg');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.controller_el_arrow-down:hover {
+  color: #FFF;
+  background-color: #5100B8;
+}

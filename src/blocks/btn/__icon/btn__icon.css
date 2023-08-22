@@ -1,0 +1,11 @@
+.btn__icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .btn__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -15,6 +15,7 @@
 .btn:disabled {
   color: #96949E;
   background-color: #EBE9ED;
+  border-color: transparent;
 }
 
 @media (max-width: 768px){

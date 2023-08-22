@@ -1,0 +1,14 @@
+.controller_el_amount-minus {
+  background-color: #7100FF;
+  width: 44px;
+  height: 44px;
+  background-image: url('../../../images/icons/minus_color_white.svg');
+  background-position: left 12px center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 50% 0 0 50%;
+}
+
+.controller_el_amount-minus:hover {
+  background-color: #5100B8;
+}
