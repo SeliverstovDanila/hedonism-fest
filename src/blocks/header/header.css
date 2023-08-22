@@ -7,6 +7,7 @@
   padding: 20px 40px;
   top: 0;
   z-index: 1;
+  position: sticky;
 }
 
 @media screen and (max-width:1280px) {

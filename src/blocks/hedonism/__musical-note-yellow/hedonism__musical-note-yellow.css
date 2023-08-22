@@ -4,8 +4,6 @@
   width: 55px;
   height: 48px;
   position: absolute;
-  /* z-index: 1; */
-  z-index: 0;
   top: 225px;
   right: 61px;
 }
