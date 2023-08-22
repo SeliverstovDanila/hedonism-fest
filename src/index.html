@@ -1,642 +1,416 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hedonism-fest</title>
-    <!-- <link rel="stylesheet" href="./pages/index.css"> -->
-  </head>
 
-  <body class="page">
-    <header class="header">
-      <div class="header__logo-location">
-        <a href="#"
-          ><img
-            src="<%=require('./images/header-logo.svg')%>"
-            alt="логотип гедонизм-фест"
-            class="header__logo"
-        /></a>
-        <button class="header__location-button" type="button">
-          <img
-            src="<%=require('./images/location-icon.svg')%>"
-            alt="кнопка локации"
-            class="header__icon-location"
-          />
-          <span class="text text_type_button">Санкт-Петербург</span>
-        </button>
-      </div>
-      <nav>
-        <ul class="header__menu-links">
-          <li class="header__menu-item">
-            <a href="#" class="header__menu-link">куда пойти</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#" class="header__menu-link">стать участником</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#" class="header__menu-link">о фестивале</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__user-action">
-        <button class="header__agree-button" type="button">
-          <img
-            src="<%=require('./images/like-icon.svg')%>"
-            alt="кнопка лайк"
-            class="header__icon-like"
-          />
-          <span class="text text_type_button">хочу пойти</span>
-        </button>
-        <button
-          class="button button_type_vanish button_type_violet"
-          type="button"
-        >
-          <span class="text text_type_button text_color_white">поддержать</span>
-        </button>
-        <!-- <button type="button" class="header__menu-icon"><img src="<%=require('./images/header-menu-icon.svg')%>"
-          alt="иконка меню"></img>
-      </button> -->
-        <div class="menu-burger-icon">
-          <span></span>
-        </div>
-      </div>
-    </header>
-    <!-- секция hedonism -->
-    <section class="hedonism">
-      <img
-        class="hedonism__logo"
-        src="<%=require('./images/logo.svg')%>"
-        alt="логотип"
-      />
-      <div
-        class="hedonism__musical-note-violet hedonism__musical-note-violet_left"
-      ></div>
-      <div
-        class="hedonism__musical-note-violet hedonism__musical-note-violet_right"
-      ></div>
-      <div
-        class="hedonism__musical-note-single hedonism__musical-note-single_left"
-      ></div>
-      <div
-        class="hedonism__musical-note-single hedonism__musical-note-single_right"
-      ></div>
-      <div class="hedonism__musical-note-yellow"></div>
-      <div class="hedonism__musical-note-single-reverse"></div>
-      <div class="hedonism__squiggle"></div>
-      <div class="hedonism__man-violet"></div>
-      <div class="hedonism__man-green"></div>
-      <div class="hedonism__man-red"></div>
-      <div class="hedonism__arc hedonism__arc_left"></div>
-      <div class="hedonism__arc hedonism__arc_top"></div>
-      <p class="hedonism__text text text_type_main">узнать больше</p>
-      <a
-        class="btn button_type_violet hedonism__button"
-        href="#about"
-        aria-label="кнопка к блоку о фестивале"
-      ></a>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hedonism-fest</title>
+  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
+</head>
 
-    <article class="column column_type_double hedonism__about">
-      <h2 class="title title_type_section">просто приятно помогать</h2>
-      <div class="column column_type_single">
-        <p class="text text_type_main column__shifted-paragraph">
-          Пейте кофе в&nbsp;любимых заведениях, посещайте интересные
-          мероприятия, устраивайте домашние посиделки
-          с&nbsp;друзьями&nbsp;&mdash; и&nbsp;помогайте бездомным!
-        </p>
-        <p class="text text_type_main">
-          Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет
-          перечислена в&nbsp;пользу бездомных.
-        </p>
-        <!-- перейти на страницу festival -->
-        <a
-          class="btn btn_type_bordered text text_type_button column__btn"
-          href="./festival.html"
-          target="_blank"
-          >стать участником</a
-        >
-      </div>
-    </article>
-    <!-- секция events -->
-    <section class="events">
-      <div class="events__heading-container">
-        <h2 class="title title_type_section">
-          гедонизм-фест — это целая неделя, во время которой просто приятно
-        </h2>
-      </div>
-      <div class="events__button-container">
-        <button class="button button_type_transparent">
-          <span class="text text_type_button">посетить мастер-класс</span>
-          <svg
-            class="button__arrow"
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-        <button class="button button_type_transparent">
-          <span class="text text_type_button">выпить кофе</span>
-          <svg
-            class="button__arrow"
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-        <button class="button button_type_transparent">
-          <span class="text text_type_button">не выходить из дома</span>
-          <svg
-            class="button__arrow"
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-        <button class="button button_type_transparent">
-          <span class="text text_type_button">сходить на экскурсию</span>
-          <svg
-            class="button__arrow"
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-        <button class="button button_type_transparent">
-          <span class="text text_type_button">побывать в музее</span>
-          <svg
-            class="button__arrow"
-            width="24"
-            height="14"
-            viewBox="0 0 24 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="events__cards-container"></div>
-      <button class="button button_type_violet">
-        <span class="text text_type_button text_color_white"
-          >смотреть все события</span
-        >
+<body class="page">
+  <header class="header">
+    <div class="header__logo-location">
+      <a href="index.html"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
+          class="header__logo"></a>
+      <button class="header__location-button" type="button">
+        <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
+        <span class="text text_type_button header__text">Санкт-Петербург</span>
       </button>
-    </section>
-    <!-- секция digits -->
-    <section class="digits">
-      <h2 class="title title_type_section digits__title">цифры дня</h2>
-      <div class="digits__wrapper">
-        <article class="round-card digits__child digits__child_align_right">
-          <div class="round-card__back round-card__back_type_flower"></div>
-          <div class="round-card__info round-card__info_align_right">
-            <h3 class="title title_type_section">2 500</h3>
-            <p class="text text_type_main">
-              cтолько обедов приготовили для нуждающихся
-            </p>
-          </div>
-        </article>
-        <article class="round-card digits__child digits__child_align_left">
-          <div class="round-card__back round-card__back_type_drinks"></div>
-          <div class="round-card__info round-card__info_align_left">
-            <h3 class="title title_type_section">15 000</h3>
-            <p class="text text_type_main">
-              cтолько печенья продали в&nbsp;поддержку акции
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- секция offer-promo -->
-    <section class="offer-promo" aria-label="Принять участие">
-      <article class="column column_type_double">
-        <h2 class="title title_type_section offer-promo__text-style">
-          примите акцию у&nbsp;себя
-        </h2>
-        <div class="column column_type_single">
-          <p
-            class="text text_type_main column__shifted-paragraph offer-promo__text-style"
-          >
-            Кто может принять участие в&nbsp;акции?
-          </p>
-          <p class="text text_type_main offer-promo__text-style">
-            Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте
-            мастер-класс по&nbsp;вязанию или соберите друзей у&nbsp;себя дома.
-            Помогать просто, узнайте подробности и&nbsp;заполните форму
-          </p>
-          <!-- переход на страницу стать участником -->
-          <a
-            class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn"
-            href="./festival.html"
-            >стать участником</a
-          >
-        </div>
-      </article>
-      <!-- HEDONISMFEST -->
-    </section>
-    <section class="fest-images">
-      <h1 class="title title_type_section fest-images__title">#hedonismfest</h1>
-      <p class="text text_type_main">Ставь хештег и попади в ленту на сайте</p>
-      <div class="fest-images__grid">
-        <img
-          class="fest-images__image fest-images__image_box1"
-          src="<%=require('./images/nature.jpg')%>"
-        />
-        <img
-          class="fest-images__image fest-images__image_box2"
-          src="<%=require('./images/beauty.jpg')%>"
-        />
-        <img
-          class="fest-images__image fest-images__image_box3"
-          src="<%=require('./images/cocktails.jpg')%>"
-        />
-        <img
-          class="fest-images__image fest-images__image_box4"
-          src="<%=require('./images/images.jpg')%>"
-        />
-        <img
-          class="fest-images__image fest-images__image_box5"
-          src="<%=require('./images/streetart.jpg')%>"
-        />
-      </div>
-    </section>
-    <section class="participators">
-      <h1 class="title title_type_section">уже в комманде</h1>
-      <div class="participators__grid-logo">
-        <img
-          class="participators__item"
-          src="<%=require('./images/surf лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/Галерея лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/Рынок лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/surf лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/Галерея лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/Рынок лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/surf лого.svg')%>"
-        />
-        <img
-          class="participators__item"
-          src="<%=require('./images/Галерея лого.svg')%>"
-        />
-      </div>
-    </section>
-    <footer class="footer">
-      <img
-        src="<%=require('./images/footer-illustration.svg')%>"
-        alt="Иллюстрация"
-        class="footer__image"
-      />
-      <nav class="footer__info">
-        <h2 class="title title_type_block">организатор:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <a href="#" class="footer__link"
-              >Ночлежка<img
-                src="<%=require('./images/footer-icon.svg')%>"
-                alt="иконка перехода"
-                class="footer__icon"
-            /></a>
-          </li>
-          <li class="footer__list-item">
-            <a
-              href="info@hedonismfest.ru"
-              class="footer__link footer__link_email"
-              >info@hedonismfest.ru</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">сделано с любовью:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <a href="#" class="footer__link"
-              >Fastsol Digital<img
-                src="<%=require('./images/footer-icon.svg')%>"
-                alt="иконка перехода"
-                class="footer__icon"
-            /></a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#" class="footer__link"
-              >shishki.collective<img
-                src="<%=require('./images/footer-icon.svg')%>"
-                alt="иконка перехода"
-                class="footer__icon"
-            /></a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#" class="footer__link"
-              >студентами Яндекс.Практикума<img
-                src="<%=require('./images/footer-icon.svg')%>"
-                alt="иконка перехода"
-                class="footer__icon"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">мы в соцсетях:</h2>
-        <ul class="footer__list footer__list-social">
-          <li class="footer__list-item footer__list-item-social">
-            <a href="#" class="footer__link"
-              ><img
-                src="<%=require('./images/facebook.svg')%>"
-                alt="иконка facebook"
-                class="footer__icon-social"
-            /></a>
-          </li>
-          <li class="footer__list-item footer__list-item-social">
-            <a href="#" class="footer__link"
-              ><img
-                src="<%=require('./images/instagram.svg')%>"
-                alt="иконка instagram"
-                class="footer__icon-social"
-            /></a>
-          </li>
-          <li class="footer__list-item footer__list-item-social">
-            <a href="#" class="footer__link"
-              ><img
-                src="<%=require('./images/vk.svg')%>"
-                alt="иконка vk"
-                class="footer__icon-social"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-    </footer>
-
-    <div class=" popup__cardform">
-      <div class="popup__container">
-        <button
-          type="button"
-          class="popup__close"
-          aria-label="закрыть"
-        ></button>
-        <img class="popup__cover" src="" />
-        <div class="popup__yellow-line">
-          <p class="text text_type_optional">
-            перечисляем в пользу Ночлежки 10% от выручки
-          </p>
-        </div>
-        <div class="popup__text-field">
-          <p class="text text_type_main name"></p>
-          <h2 class="title title_type_block Title">
-          </h2>
-          <p class="text text_type_main">
-            Мы думаем и общаемся с помощью нарратива - историй. Вся наша жизнь
-            состоит из их множества, каждая из них совершенно по разному влияет
-            на нас, какие-то из них легко заметить, а какие-то могут годами
-            прятаться. Далеко не в каждой из этих историй мы являемся авторами,
-            но никогда не поздно обратить на это внимание и переписать их,
-            сделав подлинно своими.
-          </p>
-          <p class="text text_type_main">
-            С психологом Марией Бархатовой рассмотрим идентичность с позиции
-            нарративной практики:
-          </p>
-          <p class="text text_type_main">
-            На встрече поищем ваши желаемые черты и сделаем первые шаги к их
-            укреплению. А домой заберём инструменты для успешного продолжения.
-          </p>
-          <table class="popup__table">
-            <tr class="popup__grey-row">
-              <th width="200px" class="text text_type_main">длительность</th>
-              <td width="400px" class="text text_type_main duration"></td>
-            </tr>
-            <tr>
-              <th class="text text_type_main">стоимость</th>
-              <td class="text text_type_main cost"></td>
-            </tr>
-            <tr class="popup__grey-row">
-              <th class="text text_type_main">площадка</th>
-              <td class="text text_type_main place"></td>
-            </tr>
-            <tr>
-              <th class="text text_type_main">адрес</th>
-              <td class="text text_type_main address"></td>
-            </tr>
-            <tr class="popup__grey-row">
-              <th class="text text_type_main">телефон</th>
-              <td class="text text_type_main number"></td>
-            </tr>
-            <tr>
-              <th class="text text_type_main">соц.сети</th>
-              <td class="text text_type_main socials"></td>
-            </tr>
-          </table>
-          <article class="popup__social">
-            <p class="text text_type_main">поделитесь событием в соцсетях:</p>
-            <div class="popup__links">
-              <div class="popup__icons">
-                <img src="<%=require('./images/facebook.png')%>" />
-                <img src="<%=require('./images/vk.png')%>" />
-                <img src="<%=require('./images/twitter.png')%>" />
-                <img src="<%=require('./images/tg.png')%>" />
-              </div>
-              <img
-                class="popup__copy"
-                src="<%=require('./images/Vector.png')%>"
-              />
-              <p class="text text_type_main">скопировать ссылку</p>
-            </div>
-          </article>
-          <div class="popup__button-container">
-            <button
-              class="btn btn_type_bordered text text_type_button formbutton"
-              type="button"
-            >
-              <img class='' src="<%=require('./images/heart.png')%>"">хочу пойти
-            </button>
-            <button
-              class="btn btn_type_violet text text_type_button formbutton white"
-              type="button"
-            >
-              поддержать
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- модальное окно -->
-    <div class="popup popup__choise-city">
-      <div class="popup__choise-city-container">
-        <form name="сhoise-city" class="form-city" novalidate>
+      <!-- всплывающее окно -->
+      <div class="header__dropdown">
+        <form name="сhoise-city" class="form-city">
           <label class="form-city__list" for="moscow">
             <span>Moсква</span>
-            <input
-              type="checkbox"
-              name="city"
-              id="moscow"
-              class="form-city__list-item"
-            />
+            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
           </label>
           <label class="form-city__list" for="saint-Petersburg">
             <span>Санкт-Петербург</span>
-            <input
-              type="checkbox"
-              name="city"
-              id="saint-Petersburg"
-              class="form-city__list-item"
-            />
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
           </label>
           <label class="form-city__list" for="sochi">
             <span>Сочи</span>
-            <input
-              type="checkbox"
-              name="city"
-              id="sochi"
-              class="form-city__list-item"
-            />
+            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
           </label>
           <label class="form-city__list" for="kaluga">
             <span>Калуга</span>
-            <input
-              type="checkbox"
-              name="city"
-              id="kaluga"
-              class="form-city__list-item"
-            />
+            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
           </label>
           <label class="form-city__list" for="ekaterinburg">
             <span>Екатеринбург</span>
-            <input
-              type="checkbox"
-              name="city"
-              id="ekaterinburg"
-              class="form-city__list-item"
-            />
+            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
           </label>
         </form>
       </div>
     </div>
-    <!-- бургер меню -->
-    <div class="popup popup__menu-burger">
-      <div class="burger-menu">
-        <div class="burger-menu__content">
-          <p class="text text_type_optional text_color_grey">ваш город:</p>
-          <button type="button" class="burger-menu__button-location">
-            <span class="burger-menu__text">Санкт-Петербург</span>
+    <nav>
+      <ul class="header__menu-links">
+        <li class="header__menu-item"><a href="#" class="header__menu-link">куда пойти</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
+      </ul>
+    </nav>
+    <div class="header__user-action">
+      <button class="header__agree-button" type="button">
+        <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
+        <span class="text text_type_button">хочу пойти</span>
+      </button>
+      <button class="button button_type_vanish button_type_violet" type="button"><span class="text text_type_button text_color_white">поддержать</span></button>
+      <div class="menu-burger-icon">
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <!-- секция hedonism -->
+      <section class="hedonism">
+        <img class="hedonism__logo" src="<%=require('./images/logo.svg')%>" alt="логотип">
+        <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left"></div>
+        <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right"></div>
+        <div class="hedonism__musical-note-single hedonism__musical-note-single_left"></div>
+        <div class="hedonism__musical-note-single hedonism__musical-note-single_right"></div>
+        <div class="hedonism__musical-note-yellow"></div>
+        <div class="hedonism__musical-note-single-reverse"></div>
+        <div class="hedonism__squiggle"></div>
+        <div class="hedonism__man-violet"></div>
+        <div class="hedonism__man-green"></div>
+        <div class="hedonism__man-red"></div>
+        <div class="hedonism__arc hedonism__arc_left"></div>
+        <div class="hedonism__arc hedonism__arc_top"></div>
+        <p class="hedonism__text text text_type_main">узнать больше</p>
+        <a class="btn button_type_violet  hedonism__button" href="#about" aria-label="кнопка к блоку о фестивале"></a>
+      </section>
+
+      <article class="column column_type_double hedonism__about">
+        <h2 class="title title_type_section">просто приятно помогать</h2>
+        <div class="column column_type_single">
+          <p class="text text_type_main column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях, посещайте интересные мероприятия,
+            устраивайте домашние посиделки с&nbsp;друзьями&nbsp;&mdash; и&nbsp;помогайте бездомным!</p>
+          <p class="text text_type_main">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена в&nbsp;пользу бездомных.</p>
+          <!-- перейти на страницу festival -->
+          <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html" target="_blank">стать участником</a>
+        </div>
+      </article>
+  <!-- секция events -->
+  <section class="events">
+    <div class="events__heading-container">
+      <h2 class="title title_type_section">гедонизм-фест — это целая неделя, во время которой просто приятно</h2>
+    </div>
+    <div class="events__button-container">
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">посетить мастер-класс</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">выпить кофе</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">не выходить из дома</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">сходить на экскурсию</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <button class="button button_type_transparent">
+        <span class=" text text_type_button">побывать в музее</span>
+        <svg class="button__arrow" width="24" height="14" viewBox="0 0 24 14" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+    <div class="events__cards-container"></div>
+    <button class="button button_type_violet"><span class="text text_type_button text_color_white">смотреть все
+        события</span></button>
+  </section>
+  <!-- секция digits -->
+  <section class="digits">
+    <h2 class="title title_type_section digits__title">цифры дня</h2>
+    <div class="digits__wrapper">
+      <article class="round-card digits__child digits__child_align_right">
+        <div class="round-card__back round-card__back_type_flower"></div>
+        <div class="round-card__info round-card__info_align_right">
+          <h3 class="title title_type_section">2 500</h3>
+          <p class="text text_type_main">cтолько обедов приготовили для нуждающихся</p>
+        </div>
+      </article>
+      <article class="round-card digits__child digits__child_align_left">
+        <div class="round-card__back round-card__back_type_drinks"></div>
+        <div class="round-card__info round-card__info_align_left">
+          <h3 class="title title_type_section">15 000</h3>
+          <p class="text text_type_main">cтолько печенья продали в&nbsp;поддержку акции</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- секция offer-promo -->
+  <section class="offer-promo" aria-label="Принять участие">
+    <article class="column column_type_double">
+      <h2 class="title title_type_section offer-promo__text-style">примите акцию у&nbsp;себя</h2>
+      <div class="column column_type_single">
+        <p class="text text_type_main column__shifted-paragraph offer-promo__text-style">Кто может принять участие в&nbsp;акции?</p>
+        <p class="text text_type_main offer-promo__text-style">Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте мастер-класс по&nbsp;вязанию
+          или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
+          <!-- переход на страницу стать участником -->
+        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./festival.html">стать участником</a>
+      </div>
+    </article>
+    <!-- HEDONISMFEST -->
+  </section>
+  <section class="fest-images">
+    <h1 class="title title_type_section fest-images__title">#hedonismfest</h1>
+    <p class="text text_type_main">Ставь хештег и попади в ленту на сайте</p>
+    <div class="fest-images__grid">
+      <img class="fest-images__image fest-images__image_box1" src="<%=require('./images/nature.jpg')%>" />
+      <img class="fest-images__image fest-images__image_box2" src="<%=require('./images/beauty.jpg')%>" />
+      <img class="fest-images__image fest-images__image_box3" src="<%=require('./images/cocktails.jpg')%>" />
+      <img class="fest-images__image fest-images__image_box4" src="<%=require('./images/images.jpg')%>" />
+      <img class="fest-images__image fest-images__image_box5" src="<%=require('./images/streetart.jpg')%>" />
+    </div>
+  </section>
+  <section class="participators">
+    <h1 class="title title_type_section">уже в комманде</h1>
+    <div class="participators__grid-logo">
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+    </div>
+  </section>
+  <footer class="footer">
+    <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
+    <nav class="footer__info">
+      <h2 class="title title_type_block">организатор:</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__link">Ночлежка<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="info@hedonismfest.ru"
+            class="footer__link footer__link_email">info@hedonismfest.ru</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="title title_type_block">сделано с любовью:</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__link">Fastsol Digital<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">shishki.collective<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">студентами Яндекс.Практикума<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="title title_type_block">мы в соцсетях:</h2>
+      <ul class="footer__list footer__list-social">
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/facebook.svg')%>" alt="иконка facebook" class="footer__icon-social"></a></li>
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/instagram.svg')%>" alt="иконка instagram" class="footer__icon-social"></a></li>
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/vk.svg')%>" alt="иконка vk" class="footer__icon-social"></a></li>
+      </ul>
+    </nav>
+  </footer>
+  <!-- cardform modal -->
+  <div class=" popup__cardform">
+    <div class="popup__container">
+      <button
+        type="button"
+        class="popup__close"
+        aria-label="закрыть"
+      ></button>
+      <img class="popup__cover" src="" />
+      <div class="popup__yellow-line">
+        <p class="text text_type_optional">
+          перечисляем в пользу Ночлежки 10% от выручки
+        </p>
+      </div>
+      <div class="popup__text-field">
+        <p class="text text_type_main name"></p>
+        <h2 class="title title_type_block Title">
+        </h2>
+        <p class="text text_type_main">
+          Мы думаем и общаемся с помощью нарратива - историй. Вся наша жизнь
+          состоит из их множества, каждая из них совершенно по разному влияет
+          на нас, какие-то из них легко заметить, а какие-то могут годами
+          прятаться. Далеко не в каждой из этих историй мы являемся авторами,
+          но никогда не поздно обратить на это внимание и переписать их,
+          сделав подлинно своими.
+        </p>
+        <p class="text text_type_main">
+          С психологом Марией Бархатовой рассмотрим идентичность с позиции
+          нарративной практики:
+        </p>
+        <p class="text text_type_main">
+          На встрече поищем ваши желаемые черты и сделаем первые шаги к их
+          укреплению. А домой заберём инструменты для успешного продолжения.
+        </p>
+        <table class="popup__table">
+          <tr class="popup__grey-row">
+            <th width="200px" class="text text_type_main">длительность</th>
+            <td width="400px" class="text text_type_main duration"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main">стоимость</th>
+            <td class="text text_type_main cost"></td>
+          </tr>
+          <tr class="popup__grey-row">
+            <th class="text text_type_main">площадка</th>
+            <td class="text text_type_main place"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main">адрес</th>
+            <td class="text text_type_main address"></td>
+          </tr>
+          <tr class="popup__grey-row">
+            <th class="text text_type_main">телефон</th>
+            <td class="text text_type_main number"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main">соц.сети</th>
+            <td class="text text_type_main socials"></td>
+          </tr>
+        </table>
+        <article class="popup__social">
+          <p class="text text_type_main">поделитесь событием в соцсетях:</p>
+          <div class="popup__links">
+            <div class="popup__icons">
+              <img src="<%=require('./images/facebook.png')%>" />
+              <img src="<%=require('./images/vk.png')%>" />
+              <img src="<%=require('./images/twitter.png')%>" />
+              <img src="<%=require('./images/tg.png')%>" />
+            </div>
             <img
-              src="<%=require('./images/popup-icon-change.svg')%>"
-              alt="кнопка сменить город"
-              class="burger-menu__change-icon"
+              class="popup__copy"
+              src="<%=require('./images/Vector.png')%>"
             />
-          </button>
-          <p class="text text_type_optional text_color_grey">навигация</p>
-          <nav class="burger-menu__navigation">
-            <ul class="burger-menu__navigation-links">
-              <li class="burger-menu__navigation-item">
-                <a href="#" class="burger-menu__navigation-link">куда пойти</a>
-              </li>
-              <li class="burger-menu__navigation-item">
-                <a href="#" class="burger-menu__navigation-link"
-                  >стать участником</a
-                >
-              </li>
-              <li class="burger-menu__navigation-item">
-                <a href="#" class="burger-menu__navigation-link">о фестивале</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="burger-menu__container-logo">
-            <img
-              src="<%=require('./images/popup-logo.svg')%>"
-              alt="логотип Ночлежка"
-              class="burger-menu__logo"
-            />
-            <p class="text text_type_optional text_color_grey">
-              благотворительная организация
-            </p>
+            <p class="text text_type_main">скопировать ссылку</p>
           </div>
-          <button class="button button_type_violet" type="button">
-            <span class="text text_type_button text_color_white"
-              >пожертвовать</span
-            >
+        </article>
+        <div class="popup__button-container">
+          <button
+            class="btn btn_type_bordered text text_type_button formbutton"
+            type="button"
+          >
+            <img class='' src="<%=require('./images/heart.png')%>"">хочу пойти
+          </button>
+          <button
+            class="btn btn_type_violet text text_type_button formbutton white"
+            type="button"
+          >
+            поддержать
           </button>
         </div>
       </div>
     </div>
-    <!-- Template карточки -->
-    <template id="card-template">
-      <article class="card">
-        <img class="card__image" src="" alt="" />
-        <button type="button" class="card__like"></button>
-        <div class="card__content">
-          <div class="card__optional-container">
-            <p
-              class="text text_type_optional card__text-optional"
-              id="card-type"
-            ></p>
-            <p
-              class="text text_type_optional card__text-optional"
-              id="card-date"
-            ></p>
-          </div>
-          <div class="card__content-container">
-            <h4 class="title title_type_card" id="card-title"></h4>
-            <p class="text text_type_main card__text" id="card-lector"></p>
-          </div>
-          <div class="card__optional-container">
-            <p
-              class="text text_type_optional card__text-optional"
-              id="card-address"
-            ></p>
-            <p
-              class="text text_type_optional card__text-optional"
-              id="card-additional"
-            ></p>
-          </div>
+  </div>
+  <!-- бургер меню -->
+  <div class="popup popup__menu-burger">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <button type="button" class="burger-menu__button-location ">
+          <span class="burger-menu__city-name">Санкт-Петербург</span>
+          <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город"class="burger-menu__change-icon">
+        </button>
+        <p class="text text_type_optional text_color_grey burger-menu__text">навигация</p>
+        <nav class="burger-menu__navigation">
+          <ul class="burger-menu__navigation-links">
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a></li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать участником</a></li>
+            <li class="burger-menu__navigation-item"><a href="festival.html" class="burger-menu__navigation-link">о фестивале</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu__container-logo">
+          <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
+          <p class="text text_type_optional text_color_grey">благотворительная организация</p>
         </div>
-      </article>
-    </template>
-  </body>
-  <!-- <script type="module" src="./pages/index.js"> -->
+        <button class="button button_type_violet button__donate" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup__choise-city">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <button type="button" class="burger-menu__button-back">
+          <img src="<%=require('./images/popup-icon-change-back.svg')%>" alt="кнопка вернуться назад"class="burger-menu__change-">
+          <span class="text text_type_optional burger-menu__text-back">назад</span>
+        </button>
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <form name="сhoise-city" class="form-city">
+          <label class="form-city__list" for="moscow">
+            <span>Moсква</span>
+            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
+          </label>
+          <label class="form-city__list" for="saint-Petersburg">
+            <span>Санкт-Петербург</span>
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Санкт-Петербург">
+          </label>
+          <label class="form-city__list" for="sochi">
+            <span>Сочи</span>
+            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
+          </label>
+          <label class="form-city__list" for="kaluga">
+            <span>Калуга</span>
+            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
+          </label>
+          <label class="form-city__list" for="ekaterinburg">
+            <span>Екатеринбург</span>
+            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Template карточки -->
+  <template id="card-template">
+    <article class="card">
+      <img class="card__image" src="" alt="">
+      <button type="button" class="card__like"></button>
+      <div class="card__content">
+        <div class="card__optional-container">
+          <p class="text text_type_optional card__text-optional" id="card-type"></p>
+          <p class="text text_type_optional card__text-optional" id="card-date"></p>
+        </div>
+        <div class="card__content-container">
+          <h4 class="title title_type_card" id="card-title"></h4>
+          <p class="text text_type_main card__text" id="card-lector"></p>
+        </div>
+        <div class="card__optional-container">
+          <p class="text text_type_optional card__text-optional" id="card-address"></p>
+          <p class="text text_type_optional card__text-optional" id="card-additional"></p>
+        </div>
+      </div>
+    </article>
+  </template>
+</body>
+<!-- <script type="module" src="./pages/index.js"> -->
+
 </html>
