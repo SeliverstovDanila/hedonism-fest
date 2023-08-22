@@ -20,7 +20,9 @@
     @import url('../blocks/btn/_type/btn_type_violet.css');
     @import url('../blocks/btn/_type/btn_type_bordered.css');
     @import url('../blocks/btn/_type/btn_type_non-bordered.css');
+    @import url('../blocks/btn/_type/btn_type_violet-border.css');
     @import url('../blocks/btn/_type/btn_type_hide.css');
+    @import url('../blocks/btn/_size/btn_size_small.css');
   @import url('../blocks/btn/__arrow/btn__arrow.css');
 
 /* controllers */

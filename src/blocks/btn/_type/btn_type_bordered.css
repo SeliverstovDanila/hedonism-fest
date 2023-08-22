@@ -1,7 +1,7 @@
 .btn_type_bordered {
   color: #3B3748;
   background-color: transparent;
-  border: 2px #3B3748 solid;
+  border: 2px solid #3B3748;
   padding: 10px 22px; /* в макете посчитали с учетом bordera 2px*/
 }
 
