@@ -14,8 +14,10 @@
 
 .btn:disabled {
   color: #96949E;
-  background-color: #EBE9ED;
-  border-color: transparent;
+  background-color: #FFFFFF;
+  /* border-color: transparent; */
+  border: 2px solid #96949E;
+  /* background-color: #FFFFFF; */
   cursor: default;
 }
 
