@@ -8,13 +8,22 @@
   border: none;
   text-decoration: none;
   border-radius: 26px;
-  min-height: 44px;
+  min-height: 40px;
   cursor: pointer;
 }
 
 .btn:disabled {
   color: #96949E;
   background-color: #EBE9ED;
+  border-color: transparent;
+  cursor: default;
+}
+
+.btn:disabled:hover {
+  color: #96949E;
+  background-color: #EBE9ED;
+  border-color: transparent;
+  cursor: default;
 }
 
 @media (max-width: 768px){

@@ -1,0 +1,7 @@
+.controller__wrapper_type_zoom {
+  flex-direction: column;
+  width: 44px;
+  height: 88px;
+  background-color: #EBE9ED;
+  box-shadow: 0px 4px 12px 0px rgba(59, 55, 72, 0.12);
+}
