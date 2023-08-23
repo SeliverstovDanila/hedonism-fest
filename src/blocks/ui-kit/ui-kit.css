@@ -22,7 +22,6 @@
 
 .ui-kit {
   outline: 2px solid var(--warning-error);
-  /* background-color: var(--color-accident); */
   max-width: 1440px;
   min-width: 360px;
   padding: 40px;
@@ -72,25 +71,3 @@
 .ui-kit__grid-title {
   grid-column: 1 / -1;
 }
-
-
-
-
-
-
-
-
-/* белый квадратик <span> с текстом внутри кнопки amount */
-/* .controller__amount-square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 46px;
-  height: 42px;
-  color: #96949E;
-  background-color: #fff;
-} */
-
-
-
-

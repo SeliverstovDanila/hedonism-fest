@@ -1,0 +1,19 @@
+.controller_floating-btn {
+  z-index: 10;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+@media (max-width: 1200px) {
+  .controller_floating-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .controller_floating-btn {
+    left: calc(50% - 22px);
+  }
+}

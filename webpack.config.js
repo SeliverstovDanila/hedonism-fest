@@ -52,6 +52,10 @@ module.exports = {
       template: './src/festival.html'
     }),
     new HtmlWebpackPlugin({
+      filename: "membership.html",
+      template: './src/membership.html'
+    }),
+    new HtmlWebpackPlugin({
       filename: "ui-kit.html",
       template: './src/ui-kit.html'
     }),

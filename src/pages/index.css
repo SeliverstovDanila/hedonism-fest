@@ -32,6 +32,7 @@
   @import url('../blocks/controller/__amount-square/controller__amount-square.css');
     @import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_amount.css');
     @import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_zoom.css');
+    @import url('../blocks/controller/_floating-btn/controller_floating-btn.css');
   @import url('../blocks/controller/_el/controller_el_arrow-up.css');
   @import url('../blocks/controller/_el/controller_el_arrow-down.css');
   @import url('../blocks/controller/_el/controller_el_nav.css');
@@ -40,6 +41,12 @@
   @import url('../blocks/controller/_el/controller_el_zoom-minus.css');
   @import url('../blocks/controller/_el/controller_el_zoom-plus.css');
 
+/* columns */
+@import url('../blocks/column/column.css');
+  @import url('../blocks/column/_type/column_type_double.css');
+  @import url('../blocks/column/_type/column_type_single.css');
+@import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
+@import url('../blocks/column/__btn/column__btn.css');
 
 /*HEADER*/
 @import url('../blocks/header/header.css');
@@ -117,8 +124,8 @@
   @import url('../blocks/digits/__child/digits__child.css');
     @import url('../blocks/digits/__child/_align/digits__child_align_left.css');
     @import url('../blocks/digits/__child/_align/digits__child_align_right.css');
+
 @import url('../blocks/round-card/round-card.css');
-/* возможно потребуется перенести выше, перед первой секцией страницы*/
 @import url('../blocks/round-card/__back/round-card__back.css');
   @import url('../blocks/round-card/__back/_type/round-card__back_type_flower.css');
   @import url('../blocks/round-card/__back/_type/round-card__back_type_flower-left.css');
@@ -151,11 +158,7 @@
 @import url('../blocks/offer-promo/offer-promo.css');
   @import url('../blocks/offer-promo/__text-style/offer-promo__text-style.css');
   @import url('../blocks/offer-promo/__btn/offer-promo__btn.css');
-@import url('../blocks/column/column.css');
-@import url('../blocks/column/_type/column_type_double.css');
-@import url('../blocks/column/_type/column_type_single.css');
-@import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
-@import url('../blocks/column/__btn/column__btn.css');
+
 
 /* FOOTER */
 @import url('../blocks/footer/footer.css');
