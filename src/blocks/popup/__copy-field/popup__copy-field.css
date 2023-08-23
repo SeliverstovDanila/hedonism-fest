@@ -1,0 +1,8 @@
+.popup__copy-field {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .popup__copy-field {
+    margin-top: 24px;
+  }
+}

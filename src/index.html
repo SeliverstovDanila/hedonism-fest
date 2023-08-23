@@ -248,7 +248,7 @@
       ></button>
       <img class="popup__cover" src="" />
       <div class="popup__yellow-line">
-        <p class="text text_type_optional">
+        <p class="text text_type_optional"><img src="<%=require('./images/icon.png')%>">
           перечисляем в пользу Ночлежки 10% от выручки
         </p>
       </div>
@@ -274,28 +274,32 @@
         </p>
         <table class="popup__table">
           <tr class="popup__grey-row">
-            <th  class="text text_type_main">длительность</th>
-            <td  class="text text_type_main popup__duration"></td>
+            <th  class="text text_type_main tex_location_left">длительность</th>
+            <td  class="text text_type_main tex_location_right popup__duration"></td>
           </tr>
           <tr>
-            <th class="text text_type_main">стоимость</th>
-            <td class="text text_type_main popup__cost"></td>
+            <th class="text text_type_main tex_location_left">стоимость</th>
+            <td class="text text_type_main popup__cost tex_location_right"></td>
           </tr>
           <tr class="popup__grey-row">
-            <th class="text text_type_main">площадка</th>
-            <td class="text text_type_main popup__place"></td>
+            <th class="text text_type_main tex_location_left">площадка</th>
+            <td class="text text_type_main popup__place tex_location_right"></td>
           </tr>
           <tr>
-            <th class="text text_type_main">адрес</th>
-            <td class="text text_type_main popup__address"></td>
+            <th class="text text_type_main tex_location_left">адрес</th>
+            <td class="text text_type_main popup__address tex_location_right"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main tex_location_left"></th>
+            <td class="text text_type_main popup__additional tex_location_right"></td>
           </tr>
           <tr class="popup__grey-row">
-            <th class="text text_type_main">телефон</th>
-            <td class="text text_type_main popup__number"></td>
+            <th class="text text_type_main tex_location_left">телефон</th>
+            <td class="text text_type_main popup__number tex_location_right"></td>
           </tr>
           <tr>
-            <th class="text text_type_main">соц.сети</th>
-            <td class="text text_type_main popup__socials"></td>
+            <th class="text text_type_main tex_location_left">соц.сети</th>
+            <td class="text text_type_main popup__socials tex_location_right"></td>
           </tr>
         </table>
         <article class="popup__social">
@@ -307,7 +311,7 @@
               <img src="<%=require('./images/twitter.png')%>" />
               <img src="<%=require('./images/tg.png')%>" />
             </div>
-            <div class="dddd">
+            <div class="popup__copy-field">
             <img
               class="popup__copy"
               src="<%=require('./images/Vector.png')%>"
@@ -324,7 +328,7 @@
             <img class='' src="<%=require('./images/heart.png')%>"">хочу пойти
           </button>
           <button
-            class="btn btn_type_violet text text_type_button btn_type_formButton white"
+            class="btn btn_type_violet text text_type_button btn_type_formButton text_color_white"
             type="button"
           >
             поддержать

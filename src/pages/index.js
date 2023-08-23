@@ -8,6 +8,7 @@ const eventSocials = document.querySelector(".popup__socials");
 const eventImage = document.querySelector(".popup__cover");
 const eventType = document.querySelector(".popup__name");
 const eventTitle = document.querySelector(".popup__title");
+const eventAdditonal = document.querySelector('.popup__additional')
 import cardsArray from '../components/cards.json';
 import Card from '../components/card.js';
 const cardTemplate = document.querySelector("#card-template").content;
@@ -24,6 +25,7 @@ function cardFormData(data) {
   eventImage.src = data.photo;
   eventType.textContent = data.type;
   eventTitle.textContent = data.title;
+  eventAdditonal.textContent = data.additional
 }
 for (const cardElement of cardsArray) {
   const card = new Card(cardElement, cardTemplate, {

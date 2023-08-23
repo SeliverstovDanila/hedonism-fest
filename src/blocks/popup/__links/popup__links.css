@@ -13,23 +13,6 @@
     justify-content: center;
     flex-direction: column;
   }
-  .dddd {
-    display: flex;
-    flex-direction: row;
-    margin-top: 24px;
-  }
 }
 
-td {
-  text-align: end;
-  width: 80%;
-}
-th {
-  text-align: start;
-}
-.white {
-  color: white;
-}
-.popup__table {
-  margin-top: 32px;
-}
+
