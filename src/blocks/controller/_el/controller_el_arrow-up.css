@@ -1,0 +1,17 @@
+/* стрелка вверх */
+.controller_el_arrow-up {
+  width: 44px;
+  height: 44px;
+  color: #FCFAF7;
+  background-color: #7100FF;
+  background-image: url('../../../images/icons/arrow-to-up.svg');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+/* убрать, если hover не нужен */
+.controller_el_arrow-up:hover {
+  color: #FFF;
+  background-color: #5100B8;
+}

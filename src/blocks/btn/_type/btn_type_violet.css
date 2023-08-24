@@ -7,3 +7,8 @@
   color: #FFF;
   background-color: #5100B8;
 }
+
+.btn_type_violet:active {
+  color: #FCFAF7;
+  background-color: #7100FF;
+}

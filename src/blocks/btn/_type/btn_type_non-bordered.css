@@ -6,3 +6,7 @@
 .btn_type_non-bordered:hover {
   color: #5100B8;
 }
+
+.btn_type_non-bordered:active {
+  color: #3B3748;
+}

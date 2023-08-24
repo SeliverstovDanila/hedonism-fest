@@ -1,0 +1,11 @@
+.popup__sum-options{
+  margin: 16px 0 32px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-height: 108px;
+  max-width: 532px;
+}
+
+

@@ -1,0 +1,11 @@
+.controller {
+  margin: 0;
+  padding: 12px;
+
+  cursor: pointer;
+  gap: 24px;
+  border: none;
+  text-decoration: none;
+  border-radius: 100px;
+  cursor: pointer;
+}

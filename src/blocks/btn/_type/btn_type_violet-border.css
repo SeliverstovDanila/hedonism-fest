@@ -1,0 +1,21 @@
+.btn_type_violet-border {
+  color: #5100B8;
+  border: 1px solid #5100B8;
+  background-color: transparent;
+}
+
+.btn_type_violet-border:hover {
+  color: #FFF;
+  background-color: #5100B8;
+}
+
+.btn_type_violet-border:active {
+  color: #5100B8;
+  border-color: #5100B8;
+}
+
+@media (max-width: 768px){
+  .btn_type_violet-border {
+    padding: 10px 18px;
+  }
+}
