@@ -219,6 +219,18 @@
   @import url('../blocks/festival/__btn/festival__btn.css');
   @import url('../blocks/festival/__wide-img/festival__wide-img.css');
 
+
+/* СТРАНИЦА FESTIVAL */
+@import url('../blocks/membership/membership.css');
+  @import url('../blocks/membership/__title/membership__title.css');
+  @import url('../blocks/membership/__content/membership__content.css');
+  @import url('../blocks/membership/__table/membership__table.css');
+  @import url('../blocks/membership/__table-text/membership__table-text.css');
+    @import url('../blocks/membership/__table-text/_last/membership__table-text_last.css');
+  @import url('../blocks/membership/__btn/membership__btn.css');
+
+
+
 /* СТРАНИЦА UI KIT */
 /* в процессе работы, структура css-файлов будет создана чуть позже */
 @import url('../blocks/ui-kit/ui-kit.css');

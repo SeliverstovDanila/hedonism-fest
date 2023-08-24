@@ -1,0 +1,6 @@
+@media (min-width: 768.02px) {
+  .membership__btn {
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+}
