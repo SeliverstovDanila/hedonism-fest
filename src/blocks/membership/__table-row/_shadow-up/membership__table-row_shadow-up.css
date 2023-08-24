@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .membership__table-row_shadow-up {
+    box-shadow: 0px 1px 0px 0px #EBE9ED inset, 0px -1px 0px 0px #EBE9ED inset;
+  }
+}

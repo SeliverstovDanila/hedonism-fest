@@ -3,13 +3,6 @@
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
   min-width: 320px;
   max-width: 880px;
-}
-
-@media (max-width: 768px) {
-  .membership__content {
-    gap: 20px;
-  }
 }
