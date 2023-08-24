@@ -1,4 +1,5 @@
 .participators__item {
+  background-color: transparent;
   object-fit: contain;
   opacity: 40%;
 }

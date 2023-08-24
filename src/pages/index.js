@@ -1,4 +1,4 @@
-import '../pages/index.css';
+import "../pages/index.css";
 const eventDuration = document.querySelector(".popup__duration");
 const eventCost = document.querySelector(".popup__cost");
 const eventPlace = document.querySelector(".popup__place");
@@ -7,13 +7,12 @@ const eventNumber = document.querySelector(".popup__number");
 const eventSocials = document.querySelector(".popup__socials");
 const eventImage = document.querySelector(".popup__cover");
 const eventType = document.querySelector(".popup__name");
-const eventTitle = document.querySelector(".popup__title");
-const eventAdditonal = document.querySelector('.popup__additional')
-import cardsArray from '../components/cards.json';
-import Card from '../components/card.js';
+const eventTitle = document.querySelector(".title_type_cardform");
+const eventAdditonal = document.querySelector(".popup__additional");
+import cardsArray from "../components/cards.json";
+import Card from "../components/card.js";
 const cardTemplate = document.querySelector("#card-template").content;
 const eventsCardsContainer = document.querySelector(".events__cards-container");
-
 
 function cardFormData(data) {
   eventDuration.textContent = data.duration;
@@ -25,12 +24,12 @@ function cardFormData(data) {
   eventImage.src = data.photo;
   eventType.textContent = data.type;
   eventTitle.textContent = data.title;
-  eventAdditonal.textContent = data.additional
+  eventAdditonal.textContent = data.additional;
 }
 for (const cardElement of cardsArray) {
   const card = new Card(cardElement, cardTemplate, {
     zoomCard: () => {
-      cardFormData(cardElement)
+      cardFormData(cardElement);
     },
   }).createCard();
   eventsCardsContainer.append(card);
@@ -39,8 +38,10 @@ for (const cardElement of cardsArray) {
 const cardForm = document.querySelector(".popup__cardform");
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {
-  card.addEventListener("click", () => {
-    cardForm.classList.add("popup__opened");
+  card.addEventListener("click", (event) => {
+    if (!event.target.classList.contains('card__like')) {
+      cardForm.classList.add("popup__opened");
+    }
   });
 });
 const closeButton = document.querySelector(".popup__close");
@@ -85,61 +86,62 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   buttons[0].classList.add("fest-images__button_selected");
 });
 
+const locationBtn = document.querySelector(".header__location-button");
 
-
-const locationBtn = document.querySelector('.header__location-button');
-
-const popupBurgerMenu = document.querySelector('.popup__menu-burger');
-const popupChoiseCity = document.querySelector('.popup__choise-city')
-const burgerMenuBtn = document.querySelector('.menu-burger-icon');
-const btnChoiseCity = document.querySelector('.burger-menu__button-location')
-const btnChoiseCityBack = document.querySelector('.burger-menu__button-back')
-const burgerCityText = document.querySelector('.burger-menu__city-name')
-const headerDropdown = document.querySelector('.header__dropdown')
-const headerText = document.querySelector('.header__text')
-const labelCity = document.querySelectorAll('.form-city__list');
+const popupBurgerMenu = document.querySelector(".popup__menu-burger");
+const popupChoiseCity = document.querySelector(".popup__choise-city");
+const burgerMenuBtn = document.querySelector(".menu-burger-icon");
+const btnChoiseCity = document.querySelector(".burger-menu__button-location");
+const btnChoiseCityBack = document.querySelector(".burger-menu__button-back");
+const burgerCityText = document.querySelector(".burger-menu__city-name");
+const headerDropdown = document.querySelector(".header__dropdown");
+const headerText = document.querySelector(".header__text");
+const labelCity = document.querySelectorAll(".form-city__list");
 
 //изменить город
 function changeCity(e) {
- if(headerText.textContent = e.target.closest('label').querySelector('span').textContent);
- if(burgerCityText.textContent = e.target.closest('label').querySelector('span').textContent);
+  if (
+    (headerText.textContent = e.target
+      .closest("label")
+      .querySelector("span").textContent)
+  );
+  if (
+    (burgerCityText.textContent = e.target
+      .closest("label")
+      .querySelector("span").textContent)
+  );
 }
-  labelCity.forEach((item) => item.addEventListener('change', changeCity))
-
+labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 //  Открытие popup
-function openPopup(popup){
-    popup.classList.add('popup_opened')
+function openPopup(popup) {
+  popup.classList.add("popup_opened");
 }
 
-function closePopup(popup){
-  popup.classList.remove('popup_opened')
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
 }
 
 // всплывающее окно
-locationBtn.addEventListener('click',function(){
-  headerDropdown.classList.toggle('header__dropdown_active');
-})
+locationBtn.addEventListener("click", function () {
+  headerDropdown.classList.toggle("header__dropdown_active");
+});
 
-
-
-burgerMenuBtn.addEventListener('click', function () {
-  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
-  popupBurgerMenu.classList.toggle('popup_opened')
-  if (popupChoiseCity.classList.contains('popup_opened')) {
+burgerMenuBtn.addEventListener("click", function () {
+  burgerMenuBtn.classList.toggle("menu-burger-icon_active");
+  popupBurgerMenu.classList.toggle("popup_opened");
+  if (popupChoiseCity.classList.contains("popup_opened")) {
     closePopup(popupChoiseCity);
     closePopup(popupBurgerMenu);
   }
-})
+});
 
-btnChoiseCity.addEventListener('click', function() {
+btnChoiseCity.addEventListener("click", function () {
   closePopup(popupBurgerMenu);
   openPopup(popupChoiseCity);
-})
+});
 
-btnChoiseCityBack.addEventListener('click', function() {
+btnChoiseCityBack.addEventListener("click", function () {
   closePopup(popupChoiseCity);
   openPopup(popupBurgerMenu);
-})
-
-
+});

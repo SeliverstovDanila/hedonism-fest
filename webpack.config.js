@@ -51,6 +51,10 @@ module.exports = {
       filename: "festival.html",
       template: './src/festival.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: "ui-kit.html",
+      template: './src/ui-kit.html'
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
 
