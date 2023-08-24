@@ -1,0 +1,9 @@
+.form-payment__item{
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.form-payment__item:checked + .form-payment__icon{
+  background-image: url('../../../images/active-icon-radio.svg');
+}

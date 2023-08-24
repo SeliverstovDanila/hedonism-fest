@@ -144,4 +144,4 @@ btnChoiseCity.addEventListener("click", function () {
 btnChoiseCityBack.addEventListener("click", function () {
   closePopup(popupChoiseCity);
   openPopup(popupBurgerMenu);
-});
+})

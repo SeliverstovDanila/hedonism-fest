@@ -1,0 +1,9 @@
+.controller__amount-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 42px;
+  color: #96949E;
+  background-color: #fff;
+}
