@@ -59,27 +59,23 @@ function changeCity(e) {
 
 
 //  Открытие popup
-function openPopup(popup){
-    popup.classList.add('popup_opened')
+function openPopup(popup) {
+  popup.classList.add('popup_opened')
 }
 
-function closePopup(popup){
+function closePopup(popup) {
   popup.classList.remove('popup_opened')
 }
 
-// всплывающее окно
-locationBtn.addEventListener('click',function(){
-  headerDropdown.classList.toggle('header__dropdown_active');
+locationBtn.addEventListener('click', function () {
+  openPopup(popupChoiseCity)
 })
 
-
-
-burgerMenuBtn.addEventListener('click', function () {
-  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
-  popupBurgerMenu.classList.toggle('popup_opened')
-  if (popupChoiseCity.classList.contains('popup_opened')) {
-    closePopup(popupChoiseCity);
-    closePopup(popupBurgerMenu);
+burgerMenu.addEventListener('click', function(){
+  if(burgerMenu.classList.toggle('menu-burger-icon_active')){
+    openPopup(popupBurgerMenu)
+  }else{
+    closePopup(popupBurgerMenu)
   }
 })
 

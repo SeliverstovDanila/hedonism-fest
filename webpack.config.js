@@ -10,15 +10,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '',
+    publicPath: '/',
   },
   mode: 'development',
   devServer: {
     static: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
-    port: 8080
+    port: 8080,
+    historyApiFallback: true,
   },
+  devtool: 'eval-source-map',
   module: {
     rules: [{
         test: /\.js$/,
