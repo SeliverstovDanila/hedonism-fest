@@ -1,0 +1,6 @@
+.form-payment__list{
+  padding: 12px 0;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
