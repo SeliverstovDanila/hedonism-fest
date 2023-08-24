@@ -13,6 +13,44 @@ import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
 const cardTemplate = document.querySelector("#card-template").content;
 const eventsCardsContainer = document.querySelector(".events__cards-container");
+const locationBtn = document.querySelector(".header__location-button");
+
+const popupBurgerMenu = document.querySelector(".popup__menu-burger");
+const popupChoiseCity = document.querySelector(".popup__choise-city");
+const burgerMenuBtn = document.querySelector(".menu-burger-icon");
+const btnChoiseCity = document.querySelector(".burger-menu__button-location");
+const btnChoiseCityBack = document.querySelector(".burger-menu__button-back");
+const burgerCityText = document.querySelector(".burger-menu__city-name");
+const headerDropdown = document.querySelector(".header__dropdown");
+const headerText = document.querySelector(".header__text");
+const labelCity = document.querySelectorAll(".form-city__list");
+
+
+// всплывающее окно
+locationBtn.addEventListener("click", function () {
+  headerDropdown.classList.toggle("header__dropdown_active");
+});
+
+burgerMenuBtn.addEventListener("click", function () {
+  burgerMenuBtn.classList.toggle("menu-burger-icon_active");
+  popupBurgerMenu.classList.toggle("popup_opened");
+  if (popupChoiseCity.classList.contains("popup_opened")) {
+    closePopup(popupChoiseCity);
+    closePopup(popupBurgerMenu);
+  }
+});
+
+btnChoiseCity.addEventListener("click", function () {
+  closePopup(popupBurgerMenu);
+  openPopup(popupChoiseCity);
+});
+
+btnChoiseCityBack.addEventListener("click", function () {
+  closePopup(popupChoiseCity);
+  openPopup(popupBurgerMenu);
+});
+
+
 
 function cardFormData(data) {
   eventDuration.textContent = data.duration;
@@ -39,7 +77,7 @@ const cardForm = document.querySelector(".popup__cardform");
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {
   card.addEventListener("click", (event) => {
-    if (!event.target.classList.contains('card__like')) {
+    if (!event.target.classList.contains("card__like")) {
       cardForm.classList.add("popup__opened");
     }
   });
@@ -86,18 +124,6 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
   buttons[0].classList.add("fest-images__button_selected");
 });
 
-const locationBtn = document.querySelector(".header__location-button");
-
-const popupBurgerMenu = document.querySelector(".popup__menu-burger");
-const popupChoiseCity = document.querySelector(".popup__choise-city");
-const burgerMenuBtn = document.querySelector(".menu-burger-icon");
-const btnChoiseCity = document.querySelector(".burger-menu__button-location");
-const btnChoiseCityBack = document.querySelector(".burger-menu__button-back");
-const burgerCityText = document.querySelector(".burger-menu__city-name");
-const headerDropdown = document.querySelector(".header__dropdown");
-const headerText = document.querySelector(".header__text");
-const labelCity = document.querySelectorAll(".form-city__list");
-
 //изменить город
 function changeCity(e) {
   if (
@@ -113,35 +139,3 @@ function changeCity(e) {
 }
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
-//  Открытие popup
-function openPopup(popup) {
-  popup.classList.add("popup_opened");
-}
-
-function closePopup(popup) {
-  popup.classList.remove("popup_opened");
-}
-
-// всплывающее окно
-locationBtn.addEventListener("click", function () {
-  headerDropdown.classList.toggle("header__dropdown_active");
-});
-
-burgerMenuBtn.addEventListener("click", function () {
-  burgerMenuBtn.classList.toggle("menu-burger-icon_active");
-  popupBurgerMenu.classList.toggle("popup_opened");
-  if (popupChoiseCity.classList.contains("popup_opened")) {
-    closePopup(popupChoiseCity);
-    closePopup(popupBurgerMenu);
-  }
-});
-
-btnChoiseCity.addEventListener("click", function () {
-  closePopup(popupBurgerMenu);
-  openPopup(popupChoiseCity);
-});
-
-btnChoiseCityBack.addEventListener("click", function () {
-  closePopup(popupChoiseCity);
-  openPopup(popupBurgerMenu);
-})
