@@ -1,4 +1,4 @@
-.popup__container-donate{
+.popup__container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   max-height: 780px;
   width: 100%;
   max-width: 612px;
-  margin: 110px auto 0;
+  margin: 80px auto 0;
   box-sizing: border-box;
   padding: 40px 40px;
   overflow-y: scroll;

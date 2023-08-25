@@ -1,0 +1,6 @@
+.popup__amount-control{
+  display: flex;
+  align-items: center;
+  height: 48px;
+  max-width: 192px;
+}

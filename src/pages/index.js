@@ -42,6 +42,7 @@ const locationBtn = document.querySelector('.header__location-button');
 
 const popupBurgerMenu = document.querySelector('.popup__menu-burger');
 const popupChoiseCity = document.querySelector('.popup__choise-city')
+const popupDonate = document.querySelector('.popup__donate-form');
 const burgerMenuBtn = document.querySelector('.menu-burger-icon');
 const btnChoiseCity = document.querySelector('.burger-menu__button-location')
 const btnChoiseCityBack = document.querySelector('.burger-menu__button-back')
@@ -49,6 +50,8 @@ const burgerCityText = document.querySelector('.burger-menu__city-name')
 const headerDropdown = document.querySelector('.header__dropdown')
 const headerText = document.querySelector('.header__text')
 const labelCity = document.querySelectorAll('.form-city__list');
+const btnDonate = document.querySelector('.btn__donate');
+const closeBtnDonate = document.querySelector('.popup__close-donate');
 
 //изменить город
 function changeCity(e) {
@@ -92,6 +95,16 @@ btnChoiseCityBack.addEventListener('click', function() {
   closePopup(popupChoiseCity);
   openPopup(popupBurgerMenu);
 })
+
+btnDonate.addEventListener('click', function(){
+  openPopup(popupDonate)
+})
+
+closeBtnDonate.addEventListener('click', function(){
+  closePopup(popupDonate)
+})
+
+
 
 
 import cardsArray from '../components/cards.json';
