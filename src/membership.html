@@ -65,8 +65,10 @@
   <!-- секция festival -->
   <main class="membership">
 
+    <!-- когда открывается форма - membership__title_hidden -->
     <h1 class="title title_type_page membership__title">стать участником</h1>
 
+    <!-- когда открывается форма - membership__content_hidden -->
     <section class="membership__content">
       <h2 class="title title_type_section membership__subtitle">как участвовать?</h2>
 
@@ -113,8 +115,46 @@
       <div class="membership__btn-wrapper">
         <button class="text text_type_button btn btn_type_violet membership__btn" type="button">заполнить форму</button>
       </div>
-
     </section>
+
+    <!-- НАЧАЛО ФОРМЫ -->
+      <div class="membership__popup"> <!-- контейнер попапа, для открытия - membership__popup_opened -->
+      <form class="membership__form">
+
+        <fieldset class="membership__fieldset"> <!-- 1й филдсет -->
+          <p class="text text_type_main membership__subtitle">шаг 1 из 4</p>
+
+          <div class="membership__fieldset-row">
+            <div class="membership__fieldset-column membership__fieldset-column_type_left">
+              <h2 class="title title_type_section">выберите категорию</h2>
+            </div>
+
+            <div class="membership__fieldset-column membership__fieldset-column_type_right">
+              <!-- form__preudo-item_type_radio -->
+              <!-- btn_type_bordered - для обычных кнопок -->
+              <!-- btn_type_violet btn_checked - для выбранной кнопки (переписать общий стиль в radio:checked + .radio-fake и radio:focus + .radio-fake - чтоб менять с помощью css, а не js) -->
+              <span class="text text_type_button btn btn_type_bordered form__preudo-item">кафе/бар/ресторан</span>
+              <span class="text text_type_button btn btn_type_violet btn_checked form__preudo-item">мастер-класс/лекция</span>
+              <span class="text text_type_button btn btn_type_bordered form__preudo-item">посиделки/вечеринка</span>
+              <span class="text text_type_button btn btn_type_bordered form__preudo-item">другое</span>
+            </div>
+          </div>
+
+
+        </fieldset>
+
+        <fieldset class="membership__fieldset"></fieldset> <!-- 2й филдсет -->
+        <fieldset class="membership__fieldset"></fieldset> <!-- 3й филдсет -->
+        <fieldset class="membership__fieldset"></fieldset> <!-- 41й филдсет -->
+
+        <div class="membership__btn-wrapper">
+          <button class="text text_type_button btn btn_type_bordered form__btn form__btn_type_close" type="button">отмена</button>
+          <button class="text text_type_button btn btn_type_violet form__btn" type="button">далее</button>
+        </div>
+
+      </form>
+    </div>
+
 
     <!-- <footer class="footer">
       <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">

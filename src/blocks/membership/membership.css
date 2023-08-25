@@ -7,3 +7,133 @@
     padding: 0;
   }
 }
+
+.membership__popup {
+  /* если делать через fixed, если содержимое не влезет на экран, не появится scroll */
+  /* position: fixed;
+  top: 176px;
+  left: 0;
+  width: 100vw;
+  height: 100vh; */
+  background-color: #FCFAF7;
+
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .3s, opacity .3s linear;
+}
+
+.membership__popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.membership__form {
+  /* position: relative; */
+  box-sizing: border-box;
+  max-width: 880px;
+  /* min-width: 360px; */
+  min-width: 320px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .membership__form {
+    padding: 20px 0 0;
+    width: 100%;
+  }
+}
+
+.membership__fieldset-row {
+  margin-top: 12px;
+  display: grid;
+  /* max-width: 880px; */
+  grid-template-columns: 2fr 3.6fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-row {
+    min-height: 516px;
+    grid-template-columns: auto;
+    align-content: start;
+    gap: 0;
+  }
+}
+
+.membership__fieldset-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* display: grid;
+  grid-template-columns: auto; */
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column {
+    padding: 0 20px;
+  }
+}
+
+.membership__fieldset-column_type_left {
+  /* justify-content: flex-start; */
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_left {
+    padding-bottom: 20px;
+    box-shadow: 0px -1px 0px 0px #EBE9ED inset;
+  }
+}
+
+.membership__fieldset-column_type_right {
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_right {
+    margin-top: 20px;
+  }
+}
+
+.membership__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@media (max-width: 863px) {
+  .membership__popup {
+    /* top: 272px; */
+  }
+}
+
+@media (max-width: 768px) {
+  .membership__popup {
+    /* top: 0; */
+    margin-top: 0;
+  }
+}
+
+.form__preudo-item {
+
+}
+
+.form__btn {
+  min-width: 204px;
+}
+
+@media (max-width: 768px) {
+  .form__btn {
+    min-width: 140px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .membership__fieldset-row {
+    background-color: black;
+  }
+}

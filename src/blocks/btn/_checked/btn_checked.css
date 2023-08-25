@@ -1,0 +1,6 @@
+/* белая галка справа */
+.btn_checked {
+  background-image: url('../../../images/check-mark-white.svg');
+  background-position: right 24px center;
+  background-repeat: no-repeat;
+}

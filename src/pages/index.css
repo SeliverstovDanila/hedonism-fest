@@ -24,6 +24,7 @@
     @import url('../blocks/btn/_type/btn_type_violet-border.css');
     @import url('../blocks/btn/_type/btn_type_hide.css');
     @import url('../blocks/btn/_size/btn_size_small.css');
+    @import url('../blocks/btn/_checked/btn_checked.css');
   @import url('../blocks/btn/__arrow/btn__arrow.css');
 
 /* controllers */
@@ -220,16 +221,17 @@
   @import url('../blocks/festival/__wide-img/festival__wide-img.css');
 
 
-/* СТРАНИЦА FESTIVAL */
+/* СТРАНИЦА MEMBERSHIP */
 @import url('../blocks/membership/membership.css');
   @import url('../blocks/membership/__title/membership__title.css');
-  @import url('../blocks/membership/__subtitle/membership__subtitle.css');
+    @import url('../blocks/membership/__title/_hidden/membership__title_hidden.css');
   @import url('../blocks/membership/__content/membership__content.css');
+    @import url('../blocks/membership/__content/_hidden/membership__content_hidden.css');
+  @import url('../blocks/membership/__subtitle/membership__subtitle.css');
   @import url('../blocks/membership/__table/membership__table.css');
   @import url('../blocks/membership/__table-row/membership__table-row.css');
     @import url('../blocks/membership/__table-row/_shadow-up/membership__table-row_shadow-up.css');
   @import url('../blocks/membership/__table-text/membership__table-text.css');
-    @import url('../blocks/membership/__table-text/_last/membership__table-text_last.css');
   @import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
   @import url('../blocks/membership/__btn/membership__btn.css');
 
