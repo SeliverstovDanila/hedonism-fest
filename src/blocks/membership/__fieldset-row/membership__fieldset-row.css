@@ -1,0 +1,15 @@
+.membership__fieldset-row {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 2fr 3.6fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-row {
+    min-height: 516px;
+    grid-template-columns: auto;
+    align-content: start;
+    gap: 0;
+  }
+}

@@ -1,0 +1,22 @@
+/* стили для радио-кнопок и элементов, которые под них косят (тесно связаны) */
+.membership__form-input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.membership__form-input[type="radio"]:checked + .btn {
+  color: #FCFAF7;
+  background-color: #7100FF;
+  background-image: url('../../../images/check-mark-white.svg');
+  background-position: right 24px center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}
+
+.membership__form-input[type="radio"]:hover + .btn {
+  color: #FFF;
+  background-color: #5100B8;
+}

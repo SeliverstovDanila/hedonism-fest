@@ -1,0 +1,10 @@
+.membership__form-btn {
+  min-width: 204px;
+}
+
+@media (max-width: 768px) {
+  .membership__form-btn {
+    min-width: 140px;
+    width: 50%;
+  }
+}

@@ -8,8 +8,8 @@
   <meta name="keywords" content="гедонизм-фест, стать участником гедонизм, ночлежка, помощь бездомным, просто приятно помогать">
 </head>
 
-<body class="page"> <!--
-  <header class="header">
+<body class="page" id="#membership">
+  <!-- <header class="header">
     <div class="header__logo-location">
       <a href="index.html"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
           class="header__logo"></a>
@@ -121,7 +121,9 @@
       <div class="membership__popup"> <!-- контейнер попапа, для открытия - membership__popup_opened -->
       <form class="membership__form">
 
-        <fieldset class="membership__fieldset"> <!-- 1й филдсет -->
+        <!-- membership__fieldset_selected - для текущего слайда -->
+        <!-- 1й филдсет -->
+        <fieldset class="membership__fieldset membership__fieldset_selected">
           <p class="text text_type_main membership__subtitle">шаг 1 из 4</p>
 
           <div class="membership__fieldset-row">
@@ -129,27 +131,103 @@
               <h2 class="title title_type_section">выберите категорию</h2>
             </div>
 
+
             <div class="membership__fieldset-column membership__fieldset-column_type_right">
-              <!-- form__preudo-item_type_radio -->
-              <!-- btn_type_bordered - для обычных кнопок -->
-              <!-- btn_type_violet btn_checked - для выбранной кнопки (переписать общий стиль в radio:checked + .radio-fake и radio:focus + .radio-fake - чтоб менять с помощью css, а не js) -->
-              <span class="text text_type_button btn btn_type_bordered form__preudo-item">кафе/бар/ресторан</span>
-              <span class="text text_type_button btn btn_type_violet btn_checked form__preudo-item">мастер-класс/лекция</span>
-              <span class="text text_type_button btn btn_type_bordered form__preudo-item">посиделки/вечеринка</span>
-              <span class="text text_type_button btn btn_type_bordered form__preudo-item">другое</span>
+              <label class="membership__form-label">
+                <input class="membership__form-input" type="radio" name="category" checked>
+                <span class="text text_type_button btn btn_type_bordered membership__pseudo-input">кафе/бар/ресторан</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__form-input" type="radio" name="category">
+                <span class="text text_type_button btn btn_type_bordered membership__pseudo-input">мастер-класс/лекция</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__form-input" type="radio" name="category">
+                <span class="text text_type_button btn btn_type_bordered membership__pseudo-input">посиделки/вечеринка</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__form-input" type="radio" name="category">
+                <span class="text text_type_button btn btn_type_bordered membership__pseudo-input">другое</span><form>
+              </label>
             </div>
           </div>
 
+        </fieldset>
+
+        <!-- 2й филдсет -->
+        <fieldset class="membership__fieldset">
+          <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
+
+          <div class="membership__fieldset-row">
+            <div class="membership__fieldset-column membership__fieldset-column_type_left">
+              <h2 class="title title_type_section">заполните форму</h2>
+
+              <!-- это тоже меняется ! -->
+              <p class="text text_type_main">Для участия вы можете выбрать:</p>
+              <ul class="membership__list">
+                <li class="text text_type_main membership__list-item">определенную позицию из меню</li>
+                <li class="text text_type_main membership__list-item">группу позиций</li>
+                <li class="text text_type_main membership__list-item">процент от продаж определенных позиций или всего меню</li>
+              </ul>
+            </div>
+
+            <div class="membership__fieldset-column membership__fieldset-column_type_right">
+              <p class="text text_type_main"> -- тут какой-то контент 2-го филдсета -- </p>
+            </div>
+          </div>
 
         </fieldset>
 
-        <fieldset class="membership__fieldset"></fieldset> <!-- 2й филдсет -->
-        <fieldset class="membership__fieldset"></fieldset> <!-- 3й филдсет -->
-        <fieldset class="membership__fieldset"></fieldset> <!-- 41й филдсет -->
+        <!-- 3й филдсет -->
+        <fieldset class="membership__fieldset">
+          <p class="text text_type_main membership__subtitle">шаг 3 из 4</p>
+
+          <div class="membership__fieldset-row">
+            <div class="membership__fieldset-column membership__fieldset-column_type_left">
+              <h2 class="title title_type_section">укажите контакты и часы работы</h2>
+
+              <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
+            </div>
+
+            <div class="membership__fieldset-column membership__fieldset-column_type_right">
+              <p class="text text_type_main"> -- тут какой-то контент 3-го филдсета -- </p>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- 4й филдсет -->
+        <fieldset class="membership__fieldset">
+          <p class="text text_type_main membership__subtitle">шаг 4 из 4</p>
+
+          <div class="membership__fieldset-row">
+            <div class="membership__fieldset-column membership__fieldset-column_type_left">
+              <h2 class="title title_type_section">добавьте фото</h2>
+
+              <p class="text text_type_main">Как правило, профессиональные фото выглядят более привлекательно.</p>
+              <p class="text text_type_main">Технические требования:</p>
+              <ul class="membership__list">
+                <li class="text text_type_main membership__list-item">формат: jpeg, png</li>
+                <li class="text text_type_main membership__list-item">вес: не более 5 МБ</li>
+                <li class="text text_type_main membership__list-item">альбомная ориентация</li>
+                <li class="text text_type_main membership__list-item">соотношение сторон: 16:9</li>
+                <li class="text text_type_main membership__list-item">ширина не менее 1600 пикселей</li>
+              </ul>
+            </div>
+
+            <div class="membership__fieldset-column membership__fieldset-column_type_right">
+              <p class="text text_type_main"> -- тут контент 4-го филдсета (фото-рамка) -- </p>
+            </div>
+          </div>
+
+        </fieldset>
 
         <div class="membership__btn-wrapper">
-          <button class="text text_type_button btn btn_type_bordered form__btn form__btn_type_close" type="button">отмена</button>
-          <button class="text text_type_button btn btn_type_violet form__btn" type="button">далее</button>
+          <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_close" type="button">отмена</button>
+          <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_left" type="button">назад</button>
+
+          <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_right" type="button">далее</button>
+          <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_submit" type="submit">завершить</button>
         </div>
 
       </form>
@@ -190,7 +268,89 @@
         </ul>
       </nav>
     </footer> -->
-  </main>
+
+    <!-- бургер меню -->
+  <!-- <div class="popup popup__menu-burger">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <button type="button" class="burger-menu__button-location ">
+          <span class="burger-menu__city-name">Санкт-Петербург</span>
+          <img src="<%=require('./images/popup-icon-change.svg')%>" alt="кнопка сменить город"class="burger-menu__change-icon">
+        </button>
+        <p class="text text_type_optional text_color_grey burger-menu__text">навигация</p>
+        <nav class="burger-menu__navigation">
+          <ul class="burger-menu__navigation-links">
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">куда пойти</a></li>
+            <li class="burger-menu__navigation-item"><a href="#" class="burger-menu__navigation-link">стать участником</a></li>
+            <li class="burger-menu__navigation-item"><a href="festival.html" class="burger-menu__navigation-link">о фестивале</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu__container-logo">
+          <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
+          <p class="text text_type_optional text_color_grey">благотворительная организация</p>
+        </div>
+        <button class="button button_type_violet button__donate" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup__choise-city">
+    <div class="burger-menu">
+      <div class="burger-menu__content">
+        <button type="button" class="burger-menu__button-back">
+          <img src="<%=require('./images/popup-icon-change-back.svg')%>" alt="кнопка вернуться назад"class="burger-menu__change-">
+          <span class="text text_type_optional burger-menu__text-back">назад</span>
+        </button>
+        <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
+        <form name="сhoise-city" class="form-city">
+          <label class="form-city__list" for="moscow">
+            <span>Moсква</span>
+            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
+          </label>
+          <label class="form-city__list" for="saint-Petersburg">
+            <span>Санкт-Петербург</span>
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Санкт-Петербург">
+          </label>
+          <label class="form-city__list" for="sochi">
+            <span>Сочи</span>
+            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
+          </label>
+          <label class="form-city__list" for="kaluga">
+            <span>Калуга</span>
+            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
+          </label>
+          <label class="form-city__list" for="ekaterinburg">
+            <span>Екатеринбург</span>
+            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
+          </label>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Template карточки -->
+  <!-- <template id="card-template">
+    <article class="card">
+      <img class="card__image" src="" alt="">
+      <button type="button" class="card__like"></button>
+      <div class="card__content">
+        <div class="card__optional-container">
+          <p class="text text_type_optional card__text-optional" id="card-type"></p>
+          <p class="text text_type_optional card__text-optional" id="card-date"></p>
+        </div>
+        <div class="card__content-container">
+          <h4 class="title title_type_card" id="card-title"></h4>
+          <p class="text text_type_main card__text" id="card-lector"></p>
+        </div>
+        <div class="card__optional-container">
+          <p class="text text_type_optional card__text-optional" id="card-address"></p>
+          <p class="text text_type_optional card__text-optional" id="card-additional"></p>
+        </div>
+      </div>
+    </article>
+  </template>
+  </main> -->
 
 </body>
 <!-- <script type="module" src="./pages/index.js"> -->

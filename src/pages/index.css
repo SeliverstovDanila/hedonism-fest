@@ -234,7 +234,20 @@
   @import url('../blocks/membership/__table-text/membership__table-text.css');
   @import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
   @import url('../blocks/membership/__btn/membership__btn.css');
-
+  /* membership__popup */
+@import url('../blocks/membership/__popup/membership__popup.css');
+  @import url('../blocks/membership/__popup/_opened/membership__popup_opened.css');
+@import url('../blocks/membership/__form/membership__form.css');
+@import url('../blocks/membership/__fieldset/membership__fieldset.css');
+  @import url('../blocks/membership/__fieldset/_selected/membership__fieldset_selected.css');
+@import url('../blocks/membership/__fieldset-row/membership__fieldset-row.css');
+@import url('../blocks/membership/__fieldset-column/membership__fieldset-column.css');
+  @import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_left.css');
+  @import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_right.css');
+@import url('../blocks/membership/__list/membership__list.css');
+@import url('../blocks/membership/__list-item/membership__list-item.css');
+@import url('../blocks/membership/__form-input/membership__form-input.css');
+@import url('../blocks/membership/__form-btn/membership__form-btn.css');
 
 
 /* СТРАНИЦА UI KIT */
