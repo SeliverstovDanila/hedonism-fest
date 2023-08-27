@@ -1,8 +1,9 @@
 .popup__table {
   margin-top: 32px;
   border-spacing: 0;
+  width: 100%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   .popup__table {
     margin-top: 16px;
   }
