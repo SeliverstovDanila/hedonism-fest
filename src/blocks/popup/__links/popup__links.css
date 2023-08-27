@@ -1,7 +1,6 @@
 .popup__links {
   display: flex;
   flex-direction: row;
-  text-align: left;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;

@@ -1,14 +1,7 @@
 import "../pages/index.css";
-const eventDuration = document.querySelector(".popup__duration");
-const eventCost = document.querySelector(".popup__cost");
-const eventPlace = document.querySelector(".popup__place");
-const eventAddress = document.querySelector(".popup__address");
-const eventNumber = document.querySelector(".popup__number");
-const eventSocials = document.querySelector(".popup__socials");
-const eventImage = document.querySelector(".popup__cover");
-const eventType = document.querySelector(".popup__name");
-const eventTitle = document.querySelector(".title_type_cardform");
-const eventAdditonal = document.querySelector(".popup__additional");
+import { cardFormData, cardForm, likeBTN, participateButton } from "../components/carform";
+import { openPopup, closePopup } from "../components/popup";
+
 import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
 const cardTemplate = document.querySelector("#card-template").content;
@@ -25,7 +18,16 @@ const headerDropdown = document.querySelector(".header__dropdown");
 const headerText = document.querySelector(".header__text");
 const labelCity = document.querySelectorAll(".form-city__list");
 
+// открытие карты события
 
+const closeButton = document.querySelector(".popup__close");
+closeButton.addEventListener("click", () => {
+  closePopup(cardForm);
+});
+
+participateButton.addEventListener("click", () => {
+  likeBTN.classList.toggle("card__like_active");
+});
 // всплывающее окно
 locationBtn.addEventListener("click", function () {
   headerDropdown.classList.toggle("header__dropdown_active");
@@ -50,20 +52,6 @@ btnChoiseCityBack.addEventListener("click", function () {
   openPopup(popupBurgerMenu);
 });
 
-
-
-function cardFormData(data) {
-  eventDuration.textContent = data.duration;
-  eventCost.textContent = data.cost;
-  eventPlace.textContent = data.place;
-  eventAddress.textContent = data.address;
-  eventNumber.textContent = data.number;
-  eventSocials.textContent = data.socials;
-  eventImage.src = data.photo;
-  eventType.textContent = data.type;
-  eventTitle.textContent = data.title;
-  eventAdditonal.textContent = data.additional;
-}
 for (const cardElement of cardsArray) {
   const card = new Card(cardElement, cardTemplate, {
     zoomCard: () => {
@@ -73,18 +61,13 @@ for (const cardElement of cardsArray) {
   eventsCardsContainer.append(card);
 }
 
-const cardForm = document.querySelector(".popup__cardform");
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {
   card.addEventListener("click", (event) => {
     if (!event.target.classList.contains("card__like")) {
-      cardForm.classList.add("popup__opened");
+      openPopup(cardForm);
     }
   });
-});
-const closeButton = document.querySelector(".popup__close");
-closeButton.addEventListener("click", () => {
-  cardForm.classList.remove("popup__opened");
 });
 
 document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
@@ -106,7 +89,6 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
 
   buttons.forEach((button, i) => {
     button.addEventListener("click", () => {
-      // un-select all the items
       items.forEach((item) =>
         item.classList.remove("fest-images__image_selected")
       );
@@ -119,7 +101,6 @@ document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
     });
   });
 
-  // Select the first item on page load
   items[0].classList.add("fest-images__image_selected");
   buttons[0].classList.add("fest-images__button_selected");
 });
@@ -138,4 +119,3 @@ function changeCity(e) {
   );
 }
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
-

@@ -12,23 +12,11 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.popup__cardform {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.3s linear;
-  justify-content: flex-end;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  display: flex;
-
-  z-index: 2;
-}
 @media screen and (max-width: 1024px) {
   .popup {
     background-color: rgba(0, 0, 0, 0.6);
   }
+}
+br {
+  margin-bottom: 100px;
 }

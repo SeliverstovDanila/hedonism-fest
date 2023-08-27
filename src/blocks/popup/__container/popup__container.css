@@ -10,3 +10,7 @@
   overflow-y: scroll;
 
 }
+
+.popup__container::-webkit-scrollbar {
+  width: 0;
+}
