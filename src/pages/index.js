@@ -98,13 +98,12 @@ btnChoiseCityBack.addEventListener('click', function() {
 
 btnDonate.addEventListener('click', function(){
   openPopup(popupDonate)
+  closePopup(popupBurgerMenu)
 })
 
 closeBtnDonate.addEventListener('click', function(){
   closePopup(popupDonate)
 })
-
-
 
 
 import cardsArray from '../components/cards.json';
@@ -117,3 +116,6 @@ for (const cardElement of cardsArray) {
   const card = new Card(cardElement, cardTemplate).createCard();
   eventsCardsContainer.append(card);
 }
+
+
+
