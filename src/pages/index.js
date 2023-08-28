@@ -63,46 +63,46 @@ function changeCity(e) {
 
 //  Открытие popup
 function openPopup(popup){
-    popup.classList.add('popup_opened')
+  popup.classList.add('popup_opened')
 }
 
 function closePopup(popup){
-  popup.classList.remove('popup_opened')
+popup.classList.remove('popup_opened')
 }
 
 // всплывающее окно
 locationBtn.addEventListener('click',function(){
-  headerDropdown.classList.toggle('header__dropdown_active');
+headerDropdown.classList.toggle('header__dropdown_active');
 })
 
 
 
 burgerMenuBtn.addEventListener('click', function () {
-  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
-  popupBurgerMenu.classList.toggle('popup_opened')
-  if (popupChoiseCity.classList.contains('popup_opened')) {
-    closePopup(popupChoiseCity);
-    closePopup(popupBurgerMenu);
-  }
+burgerMenuBtn.classList.toggle('menu-burger-icon_active')
+popupBurgerMenu.classList.toggle('popup_opened')
+if (popupChoiseCity.classList.contains('popup_opened')) {
+  closePopup(popupChoiseCity);
+  closePopup(popupBurgerMenu);
+}
 })
 
 btnChoiseCity.addEventListener('click', function() {
-  closePopup(popupBurgerMenu);
-  openPopup(popupChoiseCity);
+closePopup(popupBurgerMenu);
+openPopup(popupChoiseCity);
 })
 
 btnChoiseCityBack.addEventListener('click', function() {
-  closePopup(popupChoiseCity);
-  openPopup(popupBurgerMenu);
+closePopup(popupChoiseCity);
+openPopup(popupBurgerMenu);
 })
 
 btnDonate.addEventListener('click', function(){
-  openPopup(popupDonate)
-  closePopup(popupBurgerMenu)
+openPopup(popupDonate)
+closePopup(popupBurgerMenu)
 })
 
 closeBtnDonate.addEventListener('click', function(){
-  closePopup(popupDonate)
+closePopup(popupDonate)
 })
 
 

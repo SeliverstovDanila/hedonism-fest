@@ -1,0 +1,14 @@
+.information {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 160px 40px;
+}
+
+@media (max-width: 768px) {
+  .information {
+    padding: 40px 20px;
+  }
+}
