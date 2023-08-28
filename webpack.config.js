@@ -3,24 +3,31 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const pages = ['index', /* 'catalog', 'ui-kit', 'festival',*/ 'error',  'help', 'application'];
+
+
 module.exports = {
-  entry: {
-    main: './src/pages/index.js'
-  },
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/pages/${page}.js`;
+    return config;
+  }, {}),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    publicPath: '/',
+    filename: '[name].js',
+    publicPath: '',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
   mode: 'development',
   devServer: {
     static: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
-    port: 8080,
-    historyApiFallback: true,
+    port: 8080
   },
-  devtool: 'eval-source-map',
   module: {
     rules: [{
         test: /\.js$/,
@@ -44,33 +51,19 @@ module.exports = {
       },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: './src/index.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: "festival.html",
-      template: './src/festival.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: "ui-kit.html",
-      template: './src/ui-kit.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: "error.html",
-      template: './src/error.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: "help.html",
-      template: './src/help.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: "application.html",
-      template: './src/application.html'
-    }),
+  plugins: [].concat(
+    pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: `./src/${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+        })
+    ),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+  ),
+};
 
-  ]
-}
+
