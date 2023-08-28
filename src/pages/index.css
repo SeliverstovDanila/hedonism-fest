@@ -28,6 +28,8 @@
   @import url('../blocks/btn/__arrow/btn__arrow.css');
   @import url('../blocks/btn/_type/btn_type_width.css');
 
+  @import url('../blocks/btn/__donate/btn__donate.css');
+
 /* controllers */
 @import url('../blocks/controller/controller.css');
   @import url('../blocks/controller/__wrapper/controller__wrapper.css');
@@ -177,16 +179,24 @@
 @import url('../blocks/popup/_opened/popup_opened.css');
 @import url('../blocks/popup/__menu-burger/popup__menu-burger.css');
 @import url('../blocks/popup/__choise-city/popup__choise-city.css');
+@import url('../blocks/popup/__close/popup__close.css');
+@import url('../blocks/popup/__sticky-part/popup__sticky-part.css');
 
 
 
-@import url('../blocks/popup/__container-donate/popup__container-donate.css');
-@import url('../blocks/popup/__button-donate/popup__button-donate.css');
+@import url('../blocks/popup/__container/popup__container.css');
 @import url('../blocks/popup/__wrapper/popup__wrapper.css');
 @import url('../blocks/popup/__sum-options/popup__sum-options.css');
 @import url('../blocks/popup/__inactive-input/popup__inactive-input.css');
 @import url('../blocks/popup/__inactive-input/_email/popup__inactive-input_email.css');
+@import url('../blocks/popup/__sum-amount/popup__sum-amount.css');
+@import url('../blocks/popup/__sum-ticket/popup__sum-ticket.css');
+@import url('../blocks/popup/__fieldset/popup__fieldset.css');
+@import url('../blocks/popup/__payment-window/popup__payment-window.css');
 
+
+@import url('../blocks/popup/__button/popup__button.css');
+@import url('../blocks/popup/__text/popup__text.css');
 
 
 /* FORM-CITY */

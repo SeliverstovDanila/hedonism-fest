@@ -1,7 +1,7 @@
 .controller_el_amount-plus {
   background-color: #7100FF;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background-image: url('../../../images/icons/plus_color_white.svg');
   background-position: right 12px center;
   background-size: 20px;
@@ -11,4 +11,12 @@
 
 .controller_el_amount-plus:hover {
   background-color: #5100B8;
+}
+
+
+@media screen and (max-width:768px){
+  .controller_el_amount-plus{
+    width: 44px;
+    height: 44px;
+  }
 }
