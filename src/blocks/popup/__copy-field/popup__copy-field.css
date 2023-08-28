@@ -1,5 +1,10 @@
 .popup__copy-field {
   display: flex;
+  opacity: 1;
+}
+.popup__copy-field:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 @media (max-width: 767px) {
   .popup__copy-field {

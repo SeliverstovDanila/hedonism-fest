@@ -1,5 +1,5 @@
 import "../pages/index.css";
-import { cardFormData, cardForm, likeBTN, participateButton } from "../components/carform";
+import { cardFormData, cardForm, likeBTN, participateButton } from "../components/CardForm";
 import { openPopup, closePopup } from "../components/popup";
 
 import cardsArray from "../components/cards.json";
