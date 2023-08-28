@@ -20,7 +20,7 @@ const labelCity = document.querySelectorAll(".form-city__list");
 
 // открытие карты события
 
-const closeButton = document.querySelector(".popup__close");
+const closeButton = document.querySelector(".popup__close-cardform");
 closeButton.addEventListener("click", () => {
   closePopup(cardForm);
 });

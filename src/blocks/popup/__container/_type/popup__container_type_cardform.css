@@ -1,6 +1,21 @@
+.popup__container_type_cardform {
+  position: inherit;
+  background-color: rgba(252, 250, 247, 1);
+  color: black;
+  width: 700px;
+  position: relative;
+  z-index: 3;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+.popup__container_type_cardform::-webkit-scrollbar {
+  width: 0;
+}
+
 @media (max-width: 767px) {
   .popup__container_type_cardform {
     width: 100%;
   }
 }
-background: rgba(252, 250, 247, 1);
