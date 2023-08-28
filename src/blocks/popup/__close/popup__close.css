@@ -1,18 +1,4 @@
 .popup__close {
-  opacity: 1;
-  width: 48px;
-  height: 48px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-image: url("../../../images/clost.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.popup__close:hover {
-  cursor: pointer;
-  opacity: 0.5;
+  border: none;
+  background-color: transparent;
 }

@@ -28,6 +28,10 @@
 @import url("../blocks/btn/__arrow/btn__arrow.css");
 @import url("../blocks/btn/_type/btn_type_width.css");
 
+  @import url('../blocks/btn/__donate/btn__donate.css');
+
+  @import url('../blocks/btn/__donate/btn__donate.css');
+
 /* controllers */
 @import url("../blocks/controller/controller.css");
 @import url("../blocks/controller/__wrapper/controller__wrapper.css");
@@ -169,8 +173,8 @@
 @import url("../blocks/text/_type/text_type_main.css");
 @import url("../blocks/text/_type/text_type_optional.css");
 
-@import url("../blocks/popup/__container-donate/popup__container-donate.css");
-@import url("../blocks/popup/__button-donate/popup__button-donate.css");
+/* @import url("../blocks/popup/__container-donate/popup__container-donate.css"); // Этих файлов нет в папке blocks
+@import url("../blocks/popup/__button-donate/popup__button-donate.css"); */
 @import url("../blocks/popup/__wrapper/popup__wrapper.css");
 @import url("../blocks/popup/__sum-options/popup__sum-options.css");
 @import url("../blocks/popup/__inactive-input/popup__inactive-input.css");
