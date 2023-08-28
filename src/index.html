@@ -259,7 +259,7 @@
           <img src="<%=require('./images/popup-logo.svg')%>" alt="логотип Ночлежка" class="burger-menu__logo">
           <p class="text text_type_optional text_color_grey">благотворительная организация</p>
         </div>
-        <button class="button button_type_violet button__donate" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
+        <button class="btn btn_type_violet  btn__donate" type="button"><span class="text text_type_button text_color_white">пожертвовать</span></button>
       </div>
     </div>
   </div>
@@ -273,43 +273,46 @@
         </button>
         <p class="text text_type_optional text_color_grey burger-menu__text">ваш город:</p>
         <form name="сhoise-city" class="form-city">
-          <label class="form-city__list" for="moscow">
+          <label class="form-city__list" for="moscow-burger">
             <span>Moсква</span>
-            <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
+            <input type="radio" name="city" id="moscow-burger" class="form-city__list-item" value="Moсква">
           </label>
-          <label class="form-city__list" for="saint-Petersburg">
+          <label class="form-city__list" for="saint-Petersburg-burger">
             <span>Санкт-Петербург</span>
-            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Санкт-Петербург">
+            <input type="radio" name="city" id="saint-Petersburg-burger" class="form-city__list-item" value="Санкт-Петербург">
           </label>
-          <label class="form-city__list" for="sochi">
+          <label class="form-city__list" for="sochi-burger">
             <span>Сочи</span>
-            <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
+            <input type="radio" name="city" id="sochi-burger" class="form-city__list-item" value="Сочи">
           </label>
-          <label class="form-city__list" for="kaluga">
+          <label class="form-city__list" for="kaluga-burger">
             <span>Калуга</span>
-            <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
+            <input type="radio" name="city" id="kaluga-burger" class="form-city__list-item" value="Калуга">
           </label>
-          <label class="form-city__list" for="ekaterinburg">
+          <label class="form-city__list" for="ekaterinburg-burger">
             <span>Екатеринбург</span>
-            <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
+            <input type="radio" name="city" id="ekaterinburg-burger" class="form-city__list-item" value="Екатеринбург">
           </label>
         </form>
       </div>
     </div>
   </div>
   <!-- форма пожертвования -->
-  <div class="popup popup__donate-form popup_opened">
-    <div class="popup__container-donate">
-      <button class="popup__button-donate" aria-label="Закрыть" type="button">
-        <h2 class="title title_type_section">пожертвовать</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
-            fill="currentColor"/>
+  <div class="popup popup__donate-form">
+    <div class="popup__container">
+      <form class="popup__wrapper" name="payment-method" id="form-payment">
+        <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="4" rx="2" fill="#96949E"/>
         </svg>
-      </button>
-      <div class="popup__wrapper">
-        <h3 class="title title_type_block">сумма</h3>
+        <div class="popup__payment-window">
+          <h2 class="title title_type_section">пожертвовать</h2>
+          <button class="popup__close popup__close-donate" aria-label="Закрыть" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
+              fill="currentColor"/>
+          </svg></button>
+        </div>
+        <h3 class="title title_type_block popup__text">сумма</h3>
         <div class="popup__sum-options">
           <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
             <span>100 ₽</span>
@@ -328,12 +331,12 @@
           </button>
           <input type="text" disabled class="btn btn_type_bordered text text_type_main btn_type_width" placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
-        <h3 class="title title_type_block">email</h3>
+        <h3 class="title title_type_block popup__text">email</h3>
         <input type="email" disabled class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email" placeholder="укажите почту для отправки чека" name="email" id="input-email">
-        <h3 class="title title_type_block">способ оплаты</h3>
-        <form name="payment-method" class="form-payment">
+        <h3 class="title title_type_block popup__text">способ оплаты</h3>
+        <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="input-card-bank">
-            <input type="radio" class="form-payment__item form-payment__item_active" name="payment" id="input-card-bank">
+            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank">
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -342,10 +345,56 @@
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>PayPal</span>
           </label>
-        </form>
+        </fieldset>
         <p class="text text_type_optional text_color_grey popup__text">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#" class="text_type_link">оферты</a>, <a href="#" class="text_type_link">политики</a> в отношении обработки и защиты персональных данных и даёте <a href="#" class="text_type_link">согласие</a> на их обработку</p>
-      </div>
-      <button type="button" aria-label="Перейдите к оплате" class="btn btn_type_violet btn_type_width text text_type_button">
+      </form>
+      <button type="button" aria-label="Перейдите к оплате" class="btn btn_type_violet btn_type_width text text_type_button popup__button">
+        <span>перейти к оплате</span>
+      </button>
+    </div>
+  </div>
+  <!-- форма купить билет -->
+  <div class="popup popup__buy-ticket">
+    <div class="popup__container">
+      <form class="popup__wrapper" name="payment-method" id="form-buy-ticket">
+        <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="4" rx="2" fill="#96949E"/>
+        </svg>
+        <div class="popup__payment-window">
+          <h2 class="title title_type_section">купить билет</h2>
+          <button class="popup__close popup__close-buy-ticket" aria-label="Закрыть" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
+              fill="currentColor"/>
+          </svg></button>
+        </div>
+        <h3 class="title title_type_block popup__text">сумма и количество</h3>
+        <div class="popup__sum-amount">
+          <p class="popup__sum-ticket title title_type_section">500 ₽</p>
+          <div class="controller__wrapper controller__wrapper_type_amount">
+            <button class="controller controller_el_amount-minus"></button>
+            <p class="controller__amount-square text text_type_optional">1</p>
+            <button class="controller controller_el_amount-plus"></button>
+          </div>
+        </div>
+        <h3 class="title title_type_block popup__text">email</h3>
+        <input type="email" disabled class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email" placeholder="укажите почту для отправки чека" name="email" id="input-email">
+        <h3 class="title title_type_block popup__text">способ оплаты</h3>
+        <fieldset class="popup__fieldset">
+          <label class="form-payment__list text text_type_button" for="card-buy-ticket">
+            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket">
+            <span class="form-payment__icon form-payment__icon-active"></span>
+            <span>банковской картой</span>
+          </label>
+          <label for="paypal-buy-ticket" class="form-payment__list text text_type_button">
+            <input type="radio" class="form-payment__item" name="payment" id="paypal-buy-ticket">
+            <span class="form-payment__icon form-payment__icon-active"></span>
+            <span>PayPal</span>
+          </label>
+        </fieldset>
+        <p class="text text_type_optional text_color_grey popup__text">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#" class="text_type_link">оферты</a>, <a href="#" class="text_type_link">политики</a> в отношении обработки и защиты персональных данных и даёте <a href="#" class="text_type_link">согласие</a> на их обработку</p>
+      </form>
+      <button type="button" aria-label="Перейдите к оплате" class="btn btn_type_violet btn_type_width text text_type_button popup__button">
         <span>перейти к оплате</span>
       </button>
     </div>

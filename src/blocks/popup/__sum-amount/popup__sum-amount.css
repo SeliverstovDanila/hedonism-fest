@@ -1,0 +1,14 @@
+.popup__sum-amount{
+  margin: 16px auto 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media screen and (max-width:768px){
+  .popup__sum-amount{
+    margin-bottom: 16px;
+    max-width: 320px;
+  }
+}

@@ -1,3 +1,10 @@
 .popup__inactive-input_email{
-  margin: 16px 0 32px;
+  margin: 16px auto 32px;
+}
+
+
+@media screen  and (max-width:768px){
+  .popup__inactive-input_email{
+    max-width: 320px;
+  }
 }
