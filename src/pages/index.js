@@ -71,10 +71,10 @@ locationBtn.addEventListener('click', function () {
   openPopup(popupChoiseCity)
 })
 
-burgerMenu.addEventListener('click', function(){
-  if(burgerMenu.classList.toggle('menu-burger-icon_active')){
+burgerMenu.addEventListener('click', function () {
+  if (burgerMenu.classList.toggle('menu-burger-icon_active')) {
     openPopup(popupBurgerMenu)
-  }else{
+  } else {
     closePopup(popupBurgerMenu)
   }
 })

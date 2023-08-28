@@ -26,8 +26,10 @@ module.exports = {
     static: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
-    port: 8080
+    port: 8080,
+    historyApiFallback: true,
   },
+  devtool: 'eval-source-map',
   module: {
     rules: [{
         test: /\.js$/,
@@ -51,16 +53,15 @@ module.exports = {
       },
     ]
   },
-  plugins: [].concat(
-    pages.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          inject: true,
-          template: `./src/${page}.html`,
-          filename: `${page}.html`,
-          chunks: [page],
-        })
-    ),
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "festival.html",
+      template: './src/festival.html'
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ),
