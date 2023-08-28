@@ -1,0 +1,7 @@
+.input__select-option {
+  color: #3b3748;
+}
+
+.input__select-option[value=""][disabled] {
+  color: #96949E;
+}

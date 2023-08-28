@@ -27,9 +27,20 @@
   padding: 40px;
 }
 
+.ui-kit__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ui-kit__flex_column {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 
 .ui-kit__grid {
-  padding: 20px;
+  padding: 10px 20px 40px;
   display: grid;
   justify-content: center;
   align-items: center;

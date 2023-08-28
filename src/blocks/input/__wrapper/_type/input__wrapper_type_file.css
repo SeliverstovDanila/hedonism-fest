@@ -1,0 +1,13 @@
+.input__wrapper_type_file::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  border: 2px solid #96949e;
+  width: 100%;
+  min-height: 298px;
+  border-radius: 22px
+}
+
+.input__wrapper_type_file:hover::before {
+  border-color: #7100FF;
+}

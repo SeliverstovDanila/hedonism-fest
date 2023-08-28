@@ -27,6 +27,22 @@
     @import url('../blocks/btn/_checked/btn_checked.css');
   @import url('../blocks/btn/__arrow/btn__arrow.css');
 
+/* inputs */
+@import url('../blocks/input/input.css');
+    @import url('../blocks/input/_invalid/input_invalid.css');
+    @import url('../blocks/input/_type/input_type_textarea.css');
+    @import url('../blocks/input/_type/input_type_select.css');
+    @import url('../blocks/input/_type/input_type_file.css');
+  @import url('../blocks/input/__wrapper/input__wrapper.css');
+    @import url('../blocks/input/__wrapper/_type/input__wrapper_type_select.css');
+    @import url('../blocks/input/__wrapper/_type/input__wrapper_type_file.css');
+  @import url('../blocks/input/__label/input__label.css');
+  @import url('../blocks/input/__select-option/input__select-option.css');
+  @import url('../blocks/input/__context/input__context.css');
+    @import url('../blocks/input/__context/_type/input__context_type_file.css');
+  @import url('../blocks/input/__error/input__error.css');
+
+
 /* controllers */
 @import url('../blocks/controller/controller.css');
   @import url('../blocks/controller/__wrapper/controller__wrapper.css');
@@ -232,6 +248,7 @@
   @import url('../blocks/membership/__table-row/membership__table-row.css');
     @import url('../blocks/membership/__table-row/_shadow-up/membership__table-row_shadow-up.css');
   @import url('../blocks/membership/__table-text/membership__table-text.css');
+  @import url('../blocks/membership/__selected-item/membership__selected-item.css');
   @import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
   @import url('../blocks/membership/__btn/membership__btn.css');
   /* membership__popup */
@@ -248,6 +265,7 @@
 @import url('../blocks/membership/__list-item/membership__list-item.css');
 @import url('../blocks/membership/__form-input/membership__form-input.css');
 @import url('../blocks/membership/__form-btn/membership__form-btn.css');
+  @import url('../blocks/membership/__form-btn/_active/membership__form-btn_active.css');
 
 
 /* СТРАНИЦА UI KIT */

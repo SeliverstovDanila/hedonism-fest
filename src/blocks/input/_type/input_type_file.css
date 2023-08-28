@@ -1,0 +1,8 @@
+.input_type_file {
+  border-radius: 22px;
+  min-height: 298px;
+  background-color: transparent;
+  cursor: pointer;
+
+  opacity: 0;
+}

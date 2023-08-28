@@ -1,0 +1,17 @@
+.input_type_select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 56px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input_type_select:required:invalid {
+  color: #96949E;
+}
+
+@media (max-width: 768px) {
+  .input_type_select {
+    padding-right: 44px;
+  }
+}

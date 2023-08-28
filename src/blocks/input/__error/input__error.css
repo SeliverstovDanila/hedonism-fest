@@ -1,0 +1,12 @@
+.input__error {
+  display: flex;
+  gap: 12px;
+  padding: 0 24px;
+  color: #F40934;
+}
+
+@media (max-width: 768px) {
+  .input__error {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,7 @@
+.input__context_type_file {
+  position: absolute;
+  top: 119px;
+  left: 20px;
+  flex-direction: column;
+  align-items: center;
+}
