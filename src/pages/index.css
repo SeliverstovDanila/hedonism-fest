@@ -246,6 +246,8 @@
 @import url("../blocks/card/__like/_active/card__like_active.css");
 @import url("../blocks/text/_location/tex_location_left.css");
 @import url("../blocks/text/_location/tex_location_right.css");
+@import url('../blocks/text/_type/text_type_yellow.css');
+@import url('../blocks/popup/__sign/popup__sign.css');
 
 
 /* POPUP */
