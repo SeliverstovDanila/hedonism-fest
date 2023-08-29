@@ -4,4 +4,5 @@
   flex-flow: column wrap;
   max-width: 320px;
   border-radius: 24px;
+  cursor: pointer;
 }

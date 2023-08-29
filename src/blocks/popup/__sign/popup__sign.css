@@ -1,0 +1,9 @@
+.popup__sign {
+    margin-right: 12px;
+  }
+  
+  @media (max-width: 487px) {
+    .popup__sign {
+      margin: 0 8px 5% 0
+    }
+  }

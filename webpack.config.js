@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const pages = ['index', /* 'catalog', 'ui-kit', 'festival',*/ 'error',  'help', 'application'];
+const pages = ['index', /* 'catalog', 'ui-kit',*/ 'festival', 'error',  'help', 'application'];
 
 
 module.exports = {
@@ -65,5 +65,4 @@ module.exports = {
     new MiniCssExtractPlugin(),
   ),
 };
-
 

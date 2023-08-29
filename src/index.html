@@ -197,14 +197,14 @@
   <section class="participators">
     <h1 class="title title_type_section">уже в комманде</h1>
     <div class="participators__grid-logo">
-      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
     </div>
   </section>
   <footer class="footer">
@@ -400,6 +400,100 @@
       <button type="button" aria-label="Перейдите к оплате" class="btn btn_type_violet btn_type_width text text_type_button popup__button">
         <span>перейти к оплате</span>
       </button>
+    </div>
+  </div>
+  <!-- cardform modal -->
+  <div class=" popup__cardform">
+    <div class="popup__container_type_cardform">
+      <button
+        type="button"
+        class="popup__close-cardform"
+        aria-label="закрыть"
+      ></button>
+      <img class="popup__cover" src="" />
+      <div class="popup__yellow-line">
+        <img class='popup__sign'src="<%=require('./images/icon.png')%>">
+        <p class="text text_type_optional text_type_yellow">
+          перечисляем в пользу Ночлежки 10% от выручки
+        </p>
+      </div>
+      <div class="popup__text-field">
+        <p class="text text_type_main text_color_grey popup__name"></p>
+        <h2 class="title title_type_block title_type_cardform">
+        </h2>
+        <p class="text text_type_main">
+          Мы думаем и общаемся с помощью нарратива - историй. Вся наша жизнь
+          состоит из их множества, каждая из них совершенно по разному влияет
+          на нас, какие-то из них легко заметить, а какие-то могут годами
+          прятаться. Далеко не в каждой из этих историй мы являемся авторами,
+          но никогда не поздно обратить на это внимание и переписать их,
+          сделав подлинно своими. <br></br>
+          С психологом Марией Бархатовой рассмотрим идентичность с позиции
+          нарративной практики:<br></br>
+          На встрече поищем ваши желаемые черты и сделаем первые шаги к их
+          укреплению. А домой заберём инструменты для успешного продолжения.
+        </p>
+        <table class="popup__table">
+          <tr class="popup__grey-row">
+            <th  class="text text_type_main tex_location_left">длительность</th>
+            <td  class="text text_type_main tex_location_right popup__duration"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main tex_location_left">стоимость</th>
+            <td class="text text_type_main popup__cost tex_location_right"></td>
+          </tr>
+          <tr class="popup__grey-row">
+            <th class="text text_type_main tex_location_left">площадка</th>
+            <td class="text text_type_main popup__place tex_location_right"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main tex_location_left">адрес</th>
+            <td class="text text_type_main popup__address tex_location_right"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main tex_location_left"></th>
+            <td class="text text_type_main tex_location_right"><a class='popup__additional' href="#"></a></td>
+          </tr>
+          <tr class="popup__grey-row">
+            <th class="text text_type_main tex_location_left">телефон</th>
+            <td class="text text_type_main popup__number tex_location_right"></td>
+          </tr>
+          <tr>
+            <th class="text text_type_main tex_location_left">соц.сети</th>
+            <td class="text text_type_main popup__socials tex_location_right"></td>
+          </tr>
+        </table>
+        <article class="popup__social">
+          <p class="text text_type_main">поделитесь событием в соцсетях:</p>
+          <div class="popup__links">
+            <div class="popup__icons">
+              <a href="#"><img src="<%=require('./images/facebook.png')%>" /></a>
+              <a href="#"><img src="<%=require('./images/vk.png')%>" /></a>
+              <a href="#"><img src="<%=require('./images/twitter.png')%>" /></a>
+              <a href="#"><img src="<%=require('./images/tg.png')%>" /></a>
+            </div>
+            <div class="popup__copy-field">
+            <img
+              class="popup__copy"
+              src="<%=require('./images/Vector.png')%>"
+            />
+            <p class="text text_type_main">скопировать ссылку</p>
+          </div>
+          </div>
+        </article>
+        <div class="popup__button-container">
+          <button
+            class="btn btn_type_bordered text text_type_button btn_type_formButton"
+            type="button"
+          ><div class='btn_type_like'></div>хочу пойти</button>
+          <button
+            class="btn btn_type_violet text text_type_button btn_type_formButton text_color_white"
+            type="button"
+          >
+            поддержать
+          </button>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Template карточки -->
