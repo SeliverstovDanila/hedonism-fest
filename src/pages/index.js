@@ -58,78 +58,98 @@ const closeBtnDonate = document.querySelector('.popup__close-donate');
 const closeBtnTickets = document.querySelector('.popup__close-buy-ticket');
 //изменить город
 function changeCity(e) {
- if(headerText.textContent = e.target.closest('label').querySelector('span').textContent);
- if(burgerCityText.textContent = e.target.closest('label').querySelector('span').textContent);
+  if (headerText.textContent = e.target.closest('label').querySelector('span').textContent);
+  if (burgerCityText.textContent = e.target.closest('label').querySelector('span').textContent);
 }
-  labelCity.forEach((item) => item.addEventListener('change', changeCity))
+labelCity.forEach((item) => item.addEventListener('change', changeCity))
 
 
 //  Открытие popup
-function openPopup(popup){
+function openPopup(popup) {
   popup.classList.add(popupOpenedSelector)
   popup.addEventListener('click', keyHandlerOverlay)
-  document.addEventListener('keydown', keyHandlerEsc)
+  document.addEventListener('keydown', handlePopupCloseEsc)
 }
 
-function closePopup(popup){
+function closePopup(popup) {
   popup.classList.remove(popupOpenedSelector)
   popup.removeEventListener('click', keyHandlerOverlay)
-  document.removeEventListener('keydown',  keyHandlerEsc)
+  document.removeEventListener('keydown', handlePopupCloseEsc)
 }
 
 // всплывающее окно
-locationBtn.addEventListener('click',function(){
-headerDropdown.classList.toggle('header__dropdown_active');
+locationBtn.addEventListener('click', function () {
+  headerDropdown.classList.toggle('header__dropdown_active');
 })
 
 
 
 burgerMenuBtn.addEventListener('click', function () {
-burgerMenuBtn.classList.toggle('menu-burger-icon_active')
-popupBurgerMenu.classList.toggle(popupOpenedSelector)
-if (popupChoiseCity.classList.contains(popupOpenedSelector)) {
-  closePopup(popupChoiseCity);
+  burgerMenuBtn.classList.toggle('menu-burger-icon_active')
+  popupBurgerMenu.classList.toggle(popupOpenedSelector)
+  if (popupChoiseCity.classList.contains(popupOpenedSelector)) {
+    closePopup(popupChoiseCity);
+    closePopup(popupBurgerMenu);
+  }
+})
+
+btnChoiseCity.addEventListener('click', function () {
   closePopup(popupBurgerMenu);
-}
+  openPopup(popupChoiseCity);
 })
 
-btnChoiseCity.addEventListener('click', function() {
-closePopup(popupBurgerMenu);
-openPopup(popupChoiseCity);
+btnChoiseCityBack.addEventListener('click', function () {
+  closePopup(popupChoiseCity);
+  openPopup(popupBurgerMenu);
 })
 
-btnChoiseCityBack.addEventListener('click', function() {
-closePopup(popupChoiseCity);
-openPopup(popupBurgerMenu);
+btnDonate & btnSupport.addEventListener('click', function () {
+  openPopup(popupDonate)
+  closePopup(popupBurgerMenu)
 })
 
-btnDonate & btnSupport.addEventListener('click', function(){
-openPopup(popupDonate)
-closePopup(popupBurgerMenu)
+closeBtnDonate.addEventListener('click', function () {
+  closePopup(popupDonate)
 })
 
-closeBtnDonate.addEventListener('click', function(){
-closePopup(popupDonate)
-})
-
-closeBtnTickets.addEventListener('click', function(){
+closeBtnTickets.addEventListener('click', function () {
   closePopup(popupBuyTickets)
 })
 
 // Закрытие по нажатию на оверлей
-export function keyHandlerOverlay(evt) {
-  const popupActive = document.querySelector(`.${popupOpenedSelector}`)
-  if (!evt.target.closest(popupContainerSelector) && popupActive) closePopup(popupActive)
-}
+// export function keyHandlerOverlay(evt) {
+//   const popupActive = document.querySelector(`.${popupOpenedSelector}`)
+//   if (!evt.target.closest(popupContainerSelector) && popupActive) closePopup(popupActive)
+// }
 
-// Закрытие по нажатию на Esc
-export function  keyHandlerEsc(evt) {
-  if (evt.key === 'Escape') {
-      const popupActive = document.querySelector(`.${popupOpenedSelector}`)
-      popupActive && closePopup(popupActive)
+export function keyHandlerOverlay(evt) {
+  if (evt.target.classList.remove('popup_opened')) {
+    closePopup()
   }
 }
 
+// Закрытие по нажатию на Esc
+// export function keyHandlerEsc(evt) {
+//   if (evt.key === 'Escape') {
+//     const popupActive = document.querySelector(`.${popupOpenedSelector}`)
+//     popupActive && closePopup(popupActive)
+//   }
+// }
+
+// function handlePopupCloseEsc(evt) { // Альтернатива для ESC
+//   if (evt.key === 'Escape') {
+//       const openedPopup = document.querySelector('.popup_opened');
+//       if (openedPopup) {
+//           openedPopup.classList.remove('popup_opened');
+//       }
+//   }
+// } 
+
+export function keyHandlerEsc(evt) {
+  if (evt.key === 'Escape') {
+    closePopup()
+  }
+}
 
 import cardsArray from '../components/cards.json';
 import Card from '../components/card.js';
@@ -151,17 +171,17 @@ let amount = document.querySelector('.controller__amount-square');
 let sumTickets = document.querySelector('.popup__sum-ticket');
 
 // счетчик (покупка билетов)
-btnMinus.addEventListener('click', function(){
-    let result = Number(amount.textContent) - 1;
-    if(result > 0){
-      amount.textContent = result;
-      sumTickets.textContent = 500 * result + '₽';
-    }
-})
-
-btnPlus.addEventListener('click', function(){
-    let result = Number(amount.textContent) + 1;
+btnMinus.addEventListener('click', function () {
+  let result = Number(amount.textContent) - 1;
+  if (result > 0) {
     amount.textContent = result;
     sumTickets.textContent = 500 * result + '₽';
+  }
+})
+
+btnPlus.addEventListener('click', function () {
+  let result = Number(amount.textContent) + 1;
+  amount.textContent = result;
+  sumTickets.textContent = 500 * result + '₽';
 })
 
