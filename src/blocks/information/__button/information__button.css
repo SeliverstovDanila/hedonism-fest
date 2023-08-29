@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .information__button {
+    padding: 10px 28px;
+  }
+}
