@@ -1,0 +1,21 @@
+.membership__radio-input_type_ellipse:checked + .input__pseudo-el {
+  color: #FCFAF7;
+  background-color: #7100FF;
+  background-image: url('../../../../images/check-mark-white.svg');
+  background-position: right 24px center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}
+
+@media (max-width: 768px){
+  .membership__radio-input_type_ellipse:checked + .input__pseudo-el {
+    background-image: url('../../../../images/icons/check-mark-white-mobile.svg');
+    background-position: right 20px center;
+  }
+}
+
+.membership__radio-input_type_ellipse:hover + .input__pseudo-el {
+  color: #FFF;
+  background-color: #5100B8;
+  border-color: #5100B8;
+}

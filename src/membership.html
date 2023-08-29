@@ -119,7 +119,7 @@
 
     <!-- НАЧАЛО ФОРМЫ -->
       <div class="membership__popup"> <!-- контейнер попапа, для открытия - membership__popup_opened -->
-      <form class="membership__form">
+      <form class="membership__form" name="membership-request">
 
         <!-- membership__fieldset_selected - для текущего слайда -->
         <!-- 1й филдсет -->
@@ -131,23 +131,23 @@
               <h2 class="title title_type_section">выберите категорию</h2>
             </div>
 
-
+        <!-- выбор категории -->
             <div class="membership__fieldset-column membership__fieldset-column_type_right">
               <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан" checked>
-                <span class="text text_type_button btn btn_type_bordered">кафе/бар/ресторан</span>
+                <input class="membership__radio-input membership__radio-input_type_ellipse" id="food" type="radio" name="category" value="кафе/бар/ресторан" checked>
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">кафе/бар/ресторан</span>
               </label>
               <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="мастер-класс/лекция">
-                <span class="text text_type_button btn btn_type_bordered">мастер-класс/лекция</span>
+                <input class="membership__radio-input membership__radio-input_type_ellipse" id="study" type="radio" name="category" value="мастер-класс/лекция">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">мастер-класс/лекция</span>
               </label>
               <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="посиделки/вечеринка">
-                <span class="text text_type_button btn btn_type_bordered">посиделки/вечеринка</span>
+                <input class="membership__radio-input membership__radio-input_type_ellipse" id="party" type="radio" name="category" value="посиделки/вечеринка">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">посиделки/вечеринка</span>
               </label>
               <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="другое">
-                <span class="text text_type_button btn btn_type_bordered">другое</span><form>
+                <input class="membership__radio-input membership__radio-input_type_ellipse" id="another" type="radio" name="category" value="другое">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">другое</span><form>
               </label>
             </div>
           </div>
@@ -156,7 +156,7 @@
 
         <!-- заменяющийся контейнер с филдсетами -->
 
-        <div class="membership__fieldset-container membership__fieldset-container_selected">
+        <div class="membership__fieldset-container membership__fieldset-container_type_food">
           <!-- 2й филдсет -->
           <fieldset class="membership__fieldset">
             <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
@@ -165,7 +165,6 @@
               <div class="membership__fieldset-column membership__fieldset-column_type_left">
                 <h2 class="title title_type_section">заполните форму</h2>
 
-                <!-- это тоже меняется ! -->
                 <p class="text text_type_main">Для участия вы можете выбрать:</p>
                 <ul class="membership__list">
                   <li class="text text_type_main membership__list-item">определенную позицию из меню</li>
@@ -174,217 +173,76 @@
                 </ul>
               </div>
 
-              <div class="membership__fieldset-column membership__fieldset-column_type_right">
+              <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
-                <!-- оформить визуально похоже на кнопку с предыдущего филдсета (textContent копировать js-ом) -->
-                <!-- иначе не может быть двух checked -->
-                <div class="membership__selected-item">
-                  <label class="membership__form-label">
-                    <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан" checked>
-                    <span class="text text_type_button btn btn_type_bordered">кафе/бар/ресторан</span>
-                  </label>
+              <!-- выбранная категория с предыдущего филдсета -->
+              <div class="membership__selected-item membership__selected-item_box-shadow">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">кафе/бар/ресторан</span>
+              </div>
+
+              <label class="text text_type_main">
+                <span class="input__label">город</span>
+                <div class="input__wrapper input__wrapper_type_select">
+                  <select
+                    class="input input_type_select"
+                    name="city"
+                    required>
+                    <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                    <option class="input__select-option" value="Москва">Москва</option>
+                    <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option class="input__select-option" value="Сочи">Сочи</option>
+                    <option class="input__select-option" value="Калуга">Калуга</option>
+                    <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                </select>
                 </div>
+              </label>
 
-                <label class="text text_type_main">
-                  <span class="input__label">город</span>
-                  <div class="input__wrapper input__wrapper_type_select">
-                    <select
-                      class="input input_type_select"
-                      name="city"
-                      required>
-                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                      <option class="input__select-option" value="Москва">Москва</option>
-                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                      <option class="input__select-option" value="Сочи">Сочи</option>
-                      <option class="input__select-option" value="Калуга">Калуга</option>
-                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                  </select>
-                  </div>
-                </label>
+              <label class="text text_type_main">
+                <span class="input__label">название заведения</span>
+                <input
+                  class="input"
+                  name="place-name"
+                  type="text"
+                  value=""
+                  placeholder="введите название заведения"
+                  minlength="2" maxlength="30">
+              </label>
 
-                <label class="text text_type_main">
-                  <span class="input__label">название заведения</span>
-                  <input
-                    class="input"
-                    name="place-name"
-                    type="text"
-                    value=""
-                    placeholder="введите название заведения"
-                    minlength="2" maxlength="30">
-                </label>
+              <label class="text text_type_main">
+                <span class="input__label">контактное лицо</span>
+                <input
+                  class="input"
+                  name="full-name"
+                  type="text"
+                  value=""
+                  placeholder="введите ФИО"
+                  minlength="5" maxlength="50"
+                  pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                  data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+              </label>
 
-                <label class="text text_type_main">
-                  <span class="input__label">контактное лицо</span>
-                  <input
-                    class="input"
-                    name="full-name"
-                    type="text"
-                    value=""
-                    placeholder="введите ФИО"
-                    minlength="5" maxlength="50"
-                    pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
-                    data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                </label>
+              <label class="text text_type_main">
+                <span class="input__label">телефон для связи с организатором</span>
+                <input
+                  class="input"
+                  name="organizer-phone"
+                  type="tel"
+                  value="+7("
+                  placeholder="введите номер телефона"
+                  minlength="17" maxlength="17"
+                  pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
+              </label>
 
-                <label class="text text_type_main">
-                  <span class="input__label">телефон для связи с организатором</span>
-                  <input
-                    class="input"
-                    name="organizer-phone"
-                    type="tel"
-                    value="+7("
-                    placeholder="введите номер телефона"
-                    minlength="17" maxlength="17"
-                    pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                    data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">описание</span>
-                  <textarea
-                    class="input input_type_textarea"
-                    name="about_menu"
-                    type="text"
-                    value=""
-                    placeholder="Укажите, что из меню будет принимать участие в акции"
-                    minlength="2" maxlength="255"></textarea>
-                </label>
-
-              </div>
-            </div>
-
-          </fieldset>
-
-          <!-- 3й филдсет -->
-          <fieldset class="membership__fieldset">
-            <p class="text text_type_main membership__subtitle">шаг 3 из 4</p>
-
-            <div class="membership__fieldset-row">
-              <div class="membership__fieldset-column membership__fieldset-column_type_left">
-                <h2 class="title title_type_section">укажите контакты и часы работы</h2>
-
-                <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
-              </div>
-
-              <div class="membership__fieldset-column membership__fieldset-column_type_right">
-                <label class="text text_type_main">
-                  <span class="input__label">часы работы заведения</span>
-                  <input
-                    class="input"
-                    name="place-hours"
-                    type="text"
-                    value=""
-                    placeholder="например: 10:00-13:00, 13:00-19:00"
-                    minlength="11" maxlength="11"
-                    pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
-                    data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">адрес заведения</span>
-                  <input
-                    class="input"
-                    name="adress"
-                    type="text"
-                    value=""
-                    placeholder="каждый адрес с новой строки"
-                    minlength="10" maxlength="255"
-                    pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
-                    data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">номер телефона заведения</span>
-                  <input
-                    class="input"
-                    name="place-phone"
-                    type="text"
-                    value="+7("
-                    placeholder="введите номер телефона"
-                    minlength="17" maxlength="17"
-                    pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                    data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">ссылка на сайт</span>
-                  <input
-                    class="input"
-                    name="website"
-                    type="url"
-                    value="https://"
-                    placeholder="введите ссылку">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">ссылки на соцсети</span>
-                  <input
-                    class="input"
-                    name="social-network-list"
-                    type="url"
-                    value=""
-                    placeholder="каждую ссылку с новой строки">
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">описание</span>
-                  <textarea
-                    class="input input_type_textarea"
-                    name="about"
-                    type="text"
-                    value=""
-                    placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
-                    minlength="30" maxlength="255"></textarea>
-                </label>
-
-
-              </div>
-            </div>
-
-          </fieldset>
-        </div>
-
-
-
-        <!-- 4й филдсет -->
-        <fieldset class="membership__fieldset">
-          <p class="text text_type_main membership__subtitle">шаг 4 из 4</p>
-
-          <div class="membership__fieldset-row">
-            <div class="membership__fieldset-column membership__fieldset-column_type_left">
-              <h2 class="title title_type_section">добавьте фото</h2>
-
-              <p class="text text_type_main">Как правило, профессиональные фото выглядят более привлекательно.</p>
-              <p class="text text_type_main">Технические требования:</p>
-              <ul class="membership__list">
-                <li class="text text_type_main membership__list-item">формат: jpeg, png</li>
-                <li class="text text_type_main membership__list-item">вес: не более 5 МБ</li>
-                <li class="text text_type_main membership__list-item">альбомная ориентация</li>
-                <li class="text text_type_main membership__list-item">соотношение сторон: 16:9</li>
-                <li class="text text_type_main membership__list-item">ширина не менее 1600 пикселей</li>
-              </ul>
-            </div>
-
-            <div class="membership__fieldset-column membership__fieldset-column_type_right">
-
-              <label class="text text_type_main input__wrapper input__wrapper_type_file">
-                  <input
-                    class="input input_type_file"
-                    name="images"
-                    type="file"
-                    accept=".png, .jpg, .jpeg"
-                    multiple>
-                    <span class="text text_type_main input__context input__context_type_file">
-                      <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="M18.4 7.37599C18.2194 7.32416 18.0545 7.22806 17.9204 7.09639C17.7863 6.96472 17.6872 6.80166 17.632 6.62199C17.3254 5.58447 16.8114 4.61993 16.1213 3.78671C15.4313 2.95349 14.5793 2.2689 13.6171 1.77434C12.6548 1.27979 11.6023 0.985551 10.5231 0.90942C9.44387 0.833288 8.36043 0.976847 7.33829 1.33141C6.31615 1.68598 5.37655 2.24419 4.57632 2.97228C3.77608 3.70036 3.13184 4.5832 2.68256 5.56739C2.23328 6.55159 1.98829 7.61668 1.96242 8.69826C1.93654 9.77984 2.13032 10.8554 2.53202 11.86C2.62505 12.0718 2.64507 12.3085 2.58896 12.533C2.53285 12.7574 2.40378 12.9569 2.22202 13.1C1.42557 13.6909 0.803692 14.4861 0.422218 15.4015C0.0407445 16.3169 -0.0861302 17.3184 0.055024 18.3C0.275915 19.627 0.965185 20.8309 1.99777 21.6933C3.03036 22.5556 4.33786 23.0192 5.68302 23H11C11.2652 23 11.5196 22.8946 11.7071 22.7071C11.8947 22.5196 12 22.2652 12 22C12 21.7348 11.8947 21.4804 11.7071 21.2929C11.5196 21.1053 11.2652 21 11 21H5.68302C4.81919 21.021 3.9764 20.7319 3.30737 20.185C2.63833 19.6381 2.18731 18.8697 2.03602 18.019C1.93929 17.3928 2.01647 16.7521 2.25913 16.1667C2.50179 15.5814 2.9006 15.074 3.41202 14.7C3.94772 14.2993 4.33535 13.7323 4.51415 13.0877C4.69294 12.4431 4.65281 11.7573 4.40002 11.138C3.89835 9.81271 3.87219 8.3544 4.32602 7.01199C4.68975 5.96061 5.3404 5.03197 6.20439 4.33109C7.06838 3.63022 8.11123 3.18507 9.21502 3.04599C9.47118 3.01489 9.72899 2.99953 9.98702 2.99999C11.2803 2.99573 12.5402 3.41053 13.5781 4.18228C14.6159 4.95402 15.3758 6.04119 15.744 7.28099C15.8878 7.75336 16.1467 8.18256 16.4976 8.52994C16.8485 8.87733 17.2802 9.13199 17.754 9.27099C18.9138 9.61384 19.9412 10.3028 20.6985 11.2457C21.4559 12.1885 21.9072 13.3403 21.9919 14.5467C22.0767 15.7531 21.7908 16.9566 21.1726 17.9961C20.5545 19.0356 19.6335 19.8614 18.533 20.363C18.3703 20.4465 18.2342 20.5739 18.1403 20.7309C18.0465 20.8879 17.9985 21.0681 18.002 21.251C18.0002 21.4165 18.0399 21.5797 18.1175 21.7259C18.1951 21.872 18.3081 21.9964 18.4462 22.0875C18.5843 22.1787 18.7431 22.2337 18.908 22.2476C19.0729 22.2615 19.2386 22.2338 19.39 22.167C23.525 20.179 25.771 14.951 22.27 9.90099C21.3063 8.64202 19.9405 7.75095 18.4 7.37599Z"
-                          fill="#96949E" />
-                        <path
-                          d="M18.709 15.291L15.709 12.291C15.5214 12.1035 15.2671 11.9982 15.002 11.9982C14.7368 11.9982 14.4825 12.1035 14.295 12.291L11.295 15.291C11.1073 15.4785 11.0019 15.7329 11.0018 15.9981C11.0017 16.2634 11.107 16.5178 11.2945 16.7055C11.482 16.8931 11.7363 16.9986 12.0016 16.9987C12.2669 16.9988 12.5213 16.8935 12.709 16.706L14 15.413V23C14 23.2652 14.1053 23.5196 14.2929 23.7071C14.4804 23.8946 14.7348 24 15 24C15.2652 24 15.5195 23.8946 15.7071 23.7071C15.8946 23.5196 16 23.2652 16 23V15.413L17.3 16.706C17.3929 16.7988 17.5032 16.8725 17.6245 16.9227C17.7459 16.9729 17.876 16.9987 18.0073 16.9987C18.1387 16.9986 18.2687 16.9727 18.3901 16.9224C18.5114 16.8721 18.6216 16.7984 18.7145 16.7055C18.8073 16.6126 18.881 16.5023 18.9312 16.3809C18.9814 16.2596 19.0072 16.1295 19.0072 15.9981C19.0071 15.8668 18.9812 15.7367 18.9309 15.6154C18.8806 15.4941 18.8069 15.3838 18.714 15.291H18.709Z"
-                          fill="#96949E" />
-                      </svg>
-                      перетащите фото сюда или загрузите с устройства
-                    </span>
+              <label class="text text_type_main">
+                <span class="input__label">описание</span>
+                <textarea
+                  class="input input_type_textarea"
+                  name="about_menu"
+                  type="text"
+                  value=""
+                  placeholder="Укажите, что из меню будет принимать участие в акции"
+                  minlength="2" maxlength="255"></textarea>
               </label>
 
             </div>
@@ -392,16 +250,153 @@
 
         </fieldset>
 
-        <div class="membership__btn-wrapper">
-          <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_close membership__form-btn_active" type="button">отмена</button>
-          <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_left" type="button">назад</button>
+        <!-- 3й филдсет -->
+        <fieldset class="membership__fieldset">
+          <p class="text text_type_main membership__subtitle">шаг 3 из 4</p>
 
-          <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_right membership__form-btn_active" type="button">далее</button>
-          <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_submit" type="submit">завершить</button>
+          <div class="membership__fieldset-row">
+            <div class="membership__fieldset-column membership__fieldset-column_type_left">
+              <h2 class="title title_type_section">укажите контакты и часы работы</h2>
+
+              <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
+            </div>
+
+            <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
+              <label class="text text_type_main">
+                <span class="input__label">часы работы заведения</span>
+                <input
+                  class="input"
+                  name="place-hours"
+                  type="text"
+                  value=""
+                  placeholder="например: 10:00-13:00, 13:00-19:00"
+                  minlength="11" maxlength="11"
+                  pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
+                  data-custom-message="Укажите время в формате хх:хх-хх:хх">
+              </label>
+
+              <label class="text text_type_main">
+                <span class="input__label">адрес заведения</span>
+                <input
+                  class="input"
+                  name="adress"
+                  type="text"
+                  value=""
+                  placeholder="каждый адрес с новой строки"
+                  minlength="10" maxlength="255"
+                  pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
+                  data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы">
+              </label>
+
+              <label class="text text_type_main">
+                <span class="input__label">номер телефона заведения</span>
+                <input
+                  class="input"
+                  name="place-phone"
+                  type="text"
+                  value="+7("
+                  placeholder="введите номер телефона"
+                  minlength="17" maxlength="17"
+                  pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
+              </label>
+
+              <label class="text text_type_main">
+                <span class="input__label">ссылка на сайт</span>
+                <input
+                  class="input"
+                  name="website"
+                  type="url"
+                  value="https://"
+                  placeholder="введите ссылку">
+              </label>
+
+              <label class="text text_type_main">
+                <span class="input__label">ссылки на соцсети</span>
+                <input
+                  class="input"
+                  name="social-network-list"
+                  type="url"
+                  value=""
+                  placeholder="каждую ссылку с новой строки">
+              </label>
+
+              <label class="text text_type_main">
+                <span class="input__label">описание</span>
+                <textarea
+                  class="input input_type_textarea"
+                  name="about"
+                  type="text"
+                  value=""
+                  placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
+                  minlength="30" maxlength="255"></textarea>
+              </label>
+
+
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+      <!-- 4й филдсет -->
+      <fieldset class="membership__fieldset">
+        <p class="text text_type_main membership__subtitle">шаг 4 из 4</p>
+
+        <div class="membership__fieldset-row">
+          <div class="membership__fieldset-column membership__fieldset-column_type_left">
+            <h2 class="title title_type_section">добавьте фото</h2>
+
+            <p class="text text_type_main">Как правило, профессиональные фото выглядят более привлекательно.</p>
+            <p class="text text_type_main">Технические требования:</p>
+            <ul class="membership__list">
+              <li class="text text_type_main membership__list-item">формат: jpeg, png</li>
+              <li class="text text_type_main membership__list-item">вес: не более 5 МБ</li>
+              <li class="text text_type_main membership__list-item">альбомная ориентация</li>
+              <li class="text text_type_main membership__list-item">соотношение сторон: 16:9</li>
+              <li class="text text_type_main membership__list-item">ширина не менее 1600 пикселей</li>
+            </ul>
+          </div>
+
+          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+
+            <label class="text text_type_main input__wrapper input__wrapper_type_file">
+                <input
+                  class="input input_type_file"
+                  name="images"
+                  type="file"
+                  accept=".png, .jpg, .jpeg"
+                  multiple>
+                  <span class="text text_type_main input__context input__context_type_file">
+                    <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M18.4 7.37599C18.2194 7.32416 18.0545 7.22806 17.9204 7.09639C17.7863 6.96472 17.6872 6.80166 17.632 6.62199C17.3254 5.58447 16.8114 4.61993 16.1213 3.78671C15.4313 2.95349 14.5793 2.2689 13.6171 1.77434C12.6548 1.27979 11.6023 0.985551 10.5231 0.90942C9.44387 0.833288 8.36043 0.976847 7.33829 1.33141C6.31615 1.68598 5.37655 2.24419 4.57632 2.97228C3.77608 3.70036 3.13184 4.5832 2.68256 5.56739C2.23328 6.55159 1.98829 7.61668 1.96242 8.69826C1.93654 9.77984 2.13032 10.8554 2.53202 11.86C2.62505 12.0718 2.64507 12.3085 2.58896 12.533C2.53285 12.7574 2.40378 12.9569 2.22202 13.1C1.42557 13.6909 0.803692 14.4861 0.422218 15.4015C0.0407445 16.3169 -0.0861302 17.3184 0.055024 18.3C0.275915 19.627 0.965185 20.8309 1.99777 21.6933C3.03036 22.5556 4.33786 23.0192 5.68302 23H11C11.2652 23 11.5196 22.8946 11.7071 22.7071C11.8947 22.5196 12 22.2652 12 22C12 21.7348 11.8947 21.4804 11.7071 21.2929C11.5196 21.1053 11.2652 21 11 21H5.68302C4.81919 21.021 3.9764 20.7319 3.30737 20.185C2.63833 19.6381 2.18731 18.8697 2.03602 18.019C1.93929 17.3928 2.01647 16.7521 2.25913 16.1667C2.50179 15.5814 2.9006 15.074 3.41202 14.7C3.94772 14.2993 4.33535 13.7323 4.51415 13.0877C4.69294 12.4431 4.65281 11.7573 4.40002 11.138C3.89835 9.81271 3.87219 8.3544 4.32602 7.01199C4.68975 5.96061 5.3404 5.03197 6.20439 4.33109C7.06838 3.63022 8.11123 3.18507 9.21502 3.04599C9.47118 3.01489 9.72899 2.99953 9.98702 2.99999C11.2803 2.99573 12.5402 3.41053 13.5781 4.18228C14.6159 4.95402 15.3758 6.04119 15.744 7.28099C15.8878 7.75336 16.1467 8.18256 16.4976 8.52994C16.8485 8.87733 17.2802 9.13199 17.754 9.27099C18.9138 9.61384 19.9412 10.3028 20.6985 11.2457C21.4559 12.1885 21.9072 13.3403 21.9919 14.5467C22.0767 15.7531 21.7908 16.9566 21.1726 17.9961C20.5545 19.0356 19.6335 19.8614 18.533 20.363C18.3703 20.4465 18.2342 20.5739 18.1403 20.7309C18.0465 20.8879 17.9985 21.0681 18.002 21.251C18.0002 21.4165 18.0399 21.5797 18.1175 21.7259C18.1951 21.872 18.3081 21.9964 18.4462 22.0875C18.5843 22.1787 18.7431 22.2337 18.908 22.2476C19.0729 22.2615 19.2386 22.2338 19.39 22.167C23.525 20.179 25.771 14.951 22.27 9.90099C21.3063 8.64202 19.9405 7.75095 18.4 7.37599Z"
+                        fill="#96949E" />
+                      <path
+                        d="M18.709 15.291L15.709 12.291C15.5214 12.1035 15.2671 11.9982 15.002 11.9982C14.7368 11.9982 14.4825 12.1035 14.295 12.291L11.295 15.291C11.1073 15.4785 11.0019 15.7329 11.0018 15.9981C11.0017 16.2634 11.107 16.5178 11.2945 16.7055C11.482 16.8931 11.7363 16.9986 12.0016 16.9987C12.2669 16.9988 12.5213 16.8935 12.709 16.706L14 15.413V23C14 23.2652 14.1053 23.5196 14.2929 23.7071C14.4804 23.8946 14.7348 24 15 24C15.2652 24 15.5195 23.8946 15.7071 23.7071C15.8946 23.5196 16 23.2652 16 23V15.413L17.3 16.706C17.3929 16.7988 17.5032 16.8725 17.6245 16.9227C17.7459 16.9729 17.876 16.9987 18.0073 16.9987C18.1387 16.9986 18.2687 16.9727 18.3901 16.9224C18.5114 16.8721 18.6216 16.7984 18.7145 16.7055C18.8073 16.6126 18.881 16.5023 18.9312 16.3809C18.9814 16.2596 19.0072 16.1295 19.0072 15.9981C19.0071 15.8668 18.9812 15.7367 18.9309 15.6154C18.8806 15.4941 18.8069 15.3838 18.714 15.291H18.709Z"
+                        fill="#96949E" />
+                    </svg>
+                    перетащите фото сюда или загрузите с устройства
+                  </span>
+            </label>
+
+          </div>
         </div>
 
-      </form>
-    </div>
+      </fieldset>
+
+      <div class="membership__btn-wrapper">
+        <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_close membership__form-btn_active" type="button">отмена</button>
+        <button class="text text_type_button btn btn_type_bordered membership__form-btn membership__form-btn_type_left" type="button">назад</button>
+
+        <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_right membership__form-btn_active" type="button">далее</button>
+        <button class="text text_type_button btn btn_type_violet membership__form-btn membership__form-btn_type_submit" type="submit">завершить</button>
+      </div>
+
+    </form>
+  </div>
 
 
     <!-- <footer class="footer">
@@ -533,8 +528,8 @@
   <!-- 1й ШАБЛОН филдсетов (кафе/бар/ресторан) -->
   <!-- membership__fieldset-container_type_food -->
 
-  <template id="food">
-    <div class="membership__fieldset-container">
+  <template id="template-food">
+    <div class="membership__fieldset-container membership__fieldset-container_type_food">
       <!-- 2й филдсет -->
       <fieldset class="membership__fieldset">
         <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
@@ -552,15 +547,11 @@
             </ul>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
-            <!-- оформить визуально похоже на кнопку с предыдущего филдсета (textContent копировать js-ом) -->
-            <!-- иначе не может быть двух checked -->
-            <div class="membership__selected-item">
-              <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан">
-                <span class="text text_type_button btn btn_type_bordered">кафе/бар/ресторан</span>
-              </label>
+            <!-- выбранная категория с предыдущего филдсета -->
+            <div class="membership__selected-item membership__selected-item_box-shadow">
+              <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">кафе/бар/ресторан</span>
             </div>
 
             <label class="text text_type_main">
@@ -644,7 +635,7 @@
             <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
             <label class="text text_type_main">
               <span class="input__label">часы работы заведения</span>
               <input
@@ -726,8 +717,8 @@
   <!-- 2й ШАБЛОН филдсетов (мастер-класс/лекция) -->
   <!-- membership__fieldset-container_type_study -->
 
-  <template id="study">
-    <div class="membership__fieldset-container">
+  <template id="template-study">
+    <div class="membership__fieldset-container membership__fieldset-container_type_study">
       <!-- 2й филдсет -->
       <fieldset class="membership__fieldset">
         <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
@@ -740,18 +731,24 @@
             <p class="text text_type_main">Когда люди удут покупать билеты, вам будут приходить уведомления на&nbsp;электронную почту</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
-            <!-- оформить визуально похоже на кнопку с предыдущего филдсета (textContent копировать js-ом) -->
-            <!-- иначе не может быть двух checked -->
+            <!-- выбранная категория с предыдущего филдсета -->
             <div class="membership__selected-item">
-              <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан">
-                <span class="text text_type_button btn btn_type_bordered">мастер-класс/лекция</span>
-              </label>
+              <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">мастер-класс/лекция</span>
             </div>
 
-            <p class="text text_type_main">-- тут будут радиокнопки --</p>
+            <!-- радиокнопки (онлайн/офлайн) -->
+            <div class="membership__radio-wrapper">
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="онлайн">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="оффлайн">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+              </label>
+            </div>
 
             <label class="text text_type_main">
               <span class="input__label">город</span>
@@ -836,7 +833,7 @@
             <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
             <label class="text text_type_main">
               <span class="input__label">время проведения</span>
@@ -911,8 +908,8 @@
   <!-- 3й ШАБЛОН филдсетов (посиделки/вечеринка) -->
   <!-- membership__fieldset-container_type_party -->
 
-  <template id="party">
-    <div class="membership__fieldset-container">
+  <template id="template-party">
+    <div class="membership__fieldset-container membership__fieldset-container_type_party">
       <!-- 2й филдсет -->
       <fieldset class="membership__fieldset">
         <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
@@ -926,15 +923,11 @@
             <p class="text text_type_main">Установите пожертвование, например кусочек пирога за&nbsp;любую комфортную сумму</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
-            <!-- оформить визуально похоже на кнопку с предыдущего филдсета (textContent копировать js-ом) -->
-            <!-- иначе не может быть двух checked -->
-            <div class="membership__selected-item">
-              <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан">
-                <span class="text text_type_button btn btn_type_bordered">посиделки/вечеринка</span>
-              </label>
+            <!-- выбранная категория с предыдущего филдсета -->
+            <div class="membership__selected-item membership__selected-item_box-shadow">
+              <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">посиделки/вечеринка</span>
             </div>
 
             <label class="text text_type_main">
@@ -965,7 +958,20 @@
                 minlength="2" maxlength="30">
             </label>
 
-            <p class="text text_type_main">-- тут будут радиокнопки --</p>
+            <!-- радиокнопки (открытое/закрытое мероприятие) -->
+            <div class="membership__radio-wrapper membership__radio-wrapper_party">
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="открытое мероприятие">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">открытое мероприятие</span>
+                <span class="text text_type_main input__label">адрес отобразим в карточке события</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="закрытое мероприятие">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">закрытое мероприятие</span>
+                <span class="text text_type_main input__label">адрес увидят только, те кому вы оправите ссылку на событие</span>
+              </label>
+            </div>
+
 
             <label class="text text_type_main">
               <span class="input__label">дата проведения</span>
@@ -1022,7 +1028,7 @@
             <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
             <label class="text text_type_main">
               <span class="input__label">время проведения</span>
@@ -1117,8 +1123,8 @@
   <!-- 4й ШАБЛОН филдсетов (другое) -->
   <!-- membership__fieldset-container_type_another -->
 
-  <template id="another">
-    <div class="membership__fieldset-container">
+  <template id="template-another">
+    <div class="membership__fieldset-container membership__fieldset-container_type_another">
       <!-- 2й филдсет -->
       <fieldset class="membership__fieldset">
         <p class="text text_type_main membership__subtitle">шаг 2 из 4</p>
@@ -1132,18 +1138,24 @@
             <p class="text text_type_main">Установите пожертвование, например кусочек пирога за&nbsp;любую комфортную сумму</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
-            <!-- оформить визуально похоже на кнопку с предыдущего филдсета (textContent копировать js-ом) -->
-            <!-- иначе не может быть двух checked -->
+            <!-- выбранная категория с предыдущего филдсета -->
             <div class="membership__selected-item">
-              <label class="membership__form-label">
-                <input class="membership__form-input" type="radio" name="category" value="кафе/бар/ресторан">
-                <span class="text text_type_button btn btn_type_bordered">другое</span>
-              </label>
+              <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">другое</span>
             </div>
 
-            <p class="text text_type_main">-- тут будут радиокнопки --</p>
+            <!-- радиокнопки (онлайн/офлайн) -->
+            <div class="membership__radio-wrapper">
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="онлайн">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+              </label>
+              <label class="membership__form-label">
+                <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="оффлайн">
+                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+              </label>
+            </div>
 
             <label class="text text_type_main">
               <span class="input__label">город</span>
@@ -1228,7 +1240,7 @@
             <p class="text text_type_main">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
           </div>
 
-          <div class="membership__fieldset-column membership__fieldset-column_type_right">
+          <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
             <label class="text text_type_main">
               <span class="input__label">время проведения</span>

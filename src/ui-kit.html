@@ -1496,7 +1496,27 @@
           </label>
 
         <!-- недостающие варианты 2-4 разновидностей 2 шага -->
-          <p class="text text_type_main">-- тут будут радиокнопки --</p>
+        <!-- радиокнопки (онлайн/офлайн) -->
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="онлайн">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+          </label>
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="оффлайн">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+          </label>
+
+          <!-- радиокнопки (открытое/закрытое мероприятие) -->
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="открытое мероприятие">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">открытое мероприятие</span>
+            <span class="text text_type_main input__label">адрес отобразим в карточке события</span>
+          </label>
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="закрытое мероприятие">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">закрытое мероприятие</span>
+            <span class="text text_type_main input__label">адрес увидят только, те кому вы оправите ссылку на событие</span>
+          </label>
 
           <label class="text text_type_main">
             <span class="input__label">название мероприятия</span>

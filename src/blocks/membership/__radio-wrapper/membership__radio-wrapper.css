@@ -1,0 +1,36 @@
+.membership__radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 0;
+  box-shadow: 0px 1px 0px 0px #EBE9ED inset, 0px -1px 0px 0px #EBE9ED inset;
+}
+
+@media (max-width: 768px){
+  .membership__radio-wrapper {
+    box-shadow: none;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* чтобы на мобильном растянулись на всю ширину несмотря на паддинги */
+.membership__radio-wrapper::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 0px -1px 0px 0px #EBE9ED inset;
+}
+
+.membership__radio-wrapper::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 162px;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 0px -1px 0px 0px #EBE9ED inset;
+}
+}

@@ -1,0 +1,27 @@
+.membership__radio-input_type_circle:checked + .input__pseudo-el {
+  background-image: url('../../../../images/icons/radio_filled.svg');
+}
+
+.membership__radio-input_type_circle:hover + .input__pseudo-el {
+  background-image: url('../../../../images/icons/radio_filled.svg');
+  color: #5100B8;
+}
+
+.membership__radio-input_type_circle:active + .input__pseudo-el {
+  background-image: url('../../../../images/icons/radio.svg');
+  color: #3b3748;
+}
+
+@media (max-width: 768px){
+  .membership__radio-input_type_circle:checked + .input__pseudo-el {
+    background-image: url('../../../../images/icons/radio_filled-mobile.svg');
+  }
+
+  .membership__radio-input_type_circle:hover + .input__pseudo-el {
+    background-image: url('../../../../images/icons/radio_filled-mobile.svg');
+  }
+
+  .membership__radio-input_type_circle:active + .input__pseudo-el {
+    background-image: url('../../../../images/icons/radio-mobile.svg');
+  }
+}

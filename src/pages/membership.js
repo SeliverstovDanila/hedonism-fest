@@ -1,5 +1,5 @@
 import '../pages/index.css';
-import {openPopup, closePopup} from './index.js';
+import {openPopup, closePopup} from '../components/utils.js';
 
 const pageMembership = document.querySelector('.membership');
 const btnOpenMemberForm = pageMembership.querySelector('.membership__btn'); // заполнить форму
@@ -30,7 +30,8 @@ const formRequestInfo = {
   "price": '', // стоимость участия
   "website": '', // ссылка на сайт
   "social-network-list": [], // ссылки на соцсети
-  "images": []
+  "images": [], // input[type="file"]
+  "type": '', // тип мероприятия (онлайн/оффлайн или открытое/закрытое)
 };
 
 // ф-я открытия формы на странице membership
@@ -48,11 +49,11 @@ function closeMembershipPopup() {
 }
 
 // ф-я, выбирающая нужный филдсет
-function activateFieldset() {
+function activateFieldset(currFieldsetList) {
   // снимаем со всех филдсетов выделение
-  fieldsetList.forEach(item => item.classList.remove('membership__fieldset_selected'));
+  currFieldsetList.forEach(item => item.classList.remove('membership__fieldset_selected'));
   // добавляем текущему элементу выделение
-  fieldsetList[currentFieldsetIndex].classList.add('membership__fieldset_selected');
+  currFieldsetList[currentFieldsetIndex].classList.add('membership__fieldset_selected');
 }
 
   // ф-я для добавления класса элементу
@@ -67,20 +68,22 @@ function activateFieldset() {
 
  // ф-я сабмита формы на странице membership
  function submitMembershipPopup(evt) {
-  // выполнить отправку формы
-  // handleSubmit(evt);
-  // пока что не работает evt.submitter (из-за того что нет полей формы или отправки формы?)
-  // мб renderLoading и handleSubmit не понадобятся, просто остановить перезагрузку страницы (?)
   evt.preventDefault();
-  // #todo - сохранить объект с данными формами (new FormData)
-  // обновить форму reset()
-  // evt.target.reset();
+
+  const formData = new FormData(formMembership);
+  // выводим данные заполненной формы (в реальности тут должен быть fetch-запрос отправки данных)
+  for (let [key, value] of formData) {
+    console.log(`${key} - ${value}`)
+  }
+
+  // очищаем форму перед закрытием
+  formMembership.reset();
 
   // подготавливаем всё для того, чтоб при повторном открытии снова был 1й филдсет с нужными кнопками:
   // обновляем счетчик
   currentFieldsetIndex = 0;
-  // активируем нужный филдсет
-  activateFieldset();
+  // активируем 1й филдсет
+  activateFieldset(fieldsetList);
   // меняем кнопки
   // "назад" -> "отмена"
   removeClass(btnLeft, classForActiveBtn);
@@ -104,6 +107,15 @@ btnSubmitMemberForm.addEventListener('click', function(evt) {
   submitMembershipPopup(evt);
 });
 
+// const fieldsetTemplate = formMembership.querySelector(`template-${name}`).content.querySelector('.membership__fieldset-container');
+
+// ф-я создания филдсета из шаблона (name - тип шаблона, который нам нужен - food, study, party, another)
+function makeFieldset(name) {
+  const fieldsetTemplate = pageMembership.querySelector(`#template-${name}`).content.querySelector('.membership__fieldset-container');
+  const templateCopy = fieldsetTemplate.cloneNode(true); // клонируем содержимое шаблона
+  return templateCopy;
+}
+
 
 // карусель формы
 const fieldsetList = formMembership.querySelectorAll('.membership__fieldset');
@@ -117,7 +129,23 @@ fieldsetList[0].classList.add('membership__fieldset_selected');
 
 // описываем поведение при щелчке "далее"
 btnRight.addEventListener('click', () => {
+  let currentFieldsetList = fieldsetList;
   if (currentFieldsetIndex == 0) { // если переход с 1 на 2 филдсет, то:
+    const choice = formMembership.querySelector('.membership__radio-input:checked'); // radio-input, который выбрал пользователь
+    const containerName = choice.id;
+    const currentContainer = formMembership.querySelector('.membership__fieldset-container');
+
+    // если текущие филдсеты НЕ совпадают с выбором пользователя, то:
+    if (!currentContainer.classList.contains(`membership__fieldset-container_type_${containerName}`)) {
+      console.log(containerName);
+      // клонируем нужный шаблон
+      const newFieldset = makeFieldset(containerName);
+      // и заменяем текущие филдсеты на клонированный шаблон
+      currentContainer.replaceWith(newFieldset);
+      // (в ином случае - оставляем текущий контейнер с филдсетами)
+    }
+
+    // в любом случае:
     // меняем "отмена" на "назад"
     btnCloseMemberForm.classList.remove('membership__form-btn_active');
     btnLeft.classList.add('membership__form-btn_active');
@@ -126,17 +154,20 @@ btnRight.addEventListener('click', () => {
     btnRight.classList.remove('membership__form-btn_active');
     btnSubmitMemberForm.classList.add('membership__form-btn_active');
   }
+  // обновляем элемент с филдсетами, так как они могли поменяться
+  currentFieldsetList = formMembership.querySelectorAll('.membership__fieldset');
 
   // при клике "далее" индекс увеличивается
   currentFieldsetIndex += 1;
 
   // выбираем нужный филдсет
-  activateFieldset();
+  activateFieldset(currentFieldsetList);
 });
 
 
 // описываем поведение при щелчке "назад"
 btnLeft.addEventListener('click', () => {
+  let currentFieldsetList = fieldsetList;
   if (currentFieldsetIndex == 1) { // если переход с 2 на 1 филдсет, то:
     // меняем "назад" на "отмена"
     btnLeft.classList.remove('membership__form-btn_active');
@@ -146,12 +177,14 @@ btnLeft.addEventListener('click', () => {
     btnSubmitMemberForm.classList.remove('membership__form-btn_active');
     btnRight.classList.add('membership__form-btn_active');
   }
+  // обновляем элемент с филдсетами, так как они могли поменяться
+  currentFieldsetList = formMembership.querySelectorAll('.membership__fieldset');
 
   // при клике "назад" индекс уменьшается
   currentFieldsetIndex -= 1;
 
   // выбираем нужный филдсет
-  activateFieldset();
+  activateFieldset(currentFieldsetList);
 });
 
 

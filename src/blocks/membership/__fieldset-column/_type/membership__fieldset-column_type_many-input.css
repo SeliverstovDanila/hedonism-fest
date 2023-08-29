@@ -1,0 +1,12 @@
+.membership__fieldset-column_type_many-input {
+  position: relative;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_many-input {
+    margin-top: 20px;
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+}
