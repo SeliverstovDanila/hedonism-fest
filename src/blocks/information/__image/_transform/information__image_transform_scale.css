@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .information__image_transform_scale {
+    transform: scale(-1, 1);
+  }
+}

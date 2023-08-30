@@ -1,0 +1,11 @@
+.information__column {
+  padding: 51.5px 0;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .information__column {
+    grid-row-start: 2;
+    gap: 12px;
+  }
+}

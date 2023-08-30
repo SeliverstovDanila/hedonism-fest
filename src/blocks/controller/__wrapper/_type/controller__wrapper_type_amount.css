@@ -1,6 +1,11 @@
 .controller__wrapper_type_amount {
-  flex-direction: row;
-  width: 136px;
-  height: 44px;
-  background-color: #7100FF;
+  max-width: 192px;
+  height: 48px;
+}
+
+@media screen and (max-width:768px){
+  .controller__wrapper_type_amount{
+    max-width: 136px;
+    height: 44px;
+  }
 }

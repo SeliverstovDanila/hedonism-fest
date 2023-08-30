@@ -1,5 +1,7 @@
 .participators__item {
+  background-color: transparent;
   object-fit: contain;
+  max-width: 170px;
   opacity: 40%;
 }
 .participators__item:last-of-type {

@@ -1,9 +1,17 @@
 .controller__amount-square {
+  border: 2px solid #7100ff;
+  box-sizing: border-box;
+  width: 96px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
-  height: 42px;
   color: #96949E;
-  background-color: #fff;
+}
+
+@media screen and (max-width:768px){
+  .controller__amount-square{
+    width: 46px;
+    height: 44px;
+  }
 }

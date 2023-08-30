@@ -1,6 +1,6 @@
 .title_type_card {
   max-height: 45%;
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
   font-size: 24px;
   line-height: 24px;
   padding-bottom: 8px;

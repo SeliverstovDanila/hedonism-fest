@@ -1,5 +1,5 @@
 export default class Card {
-  constructor(card, template) {
+  constructor(card, template, cardActions) {
     this._photo = card.photo;
     this._type = card.type;
     this._date = card.date;
@@ -9,6 +9,7 @@ export default class Card {
     this._address = card.address;
     this._additional = card.additional;
     this._cardTemplate = template;
+    this._zoomCard = cardActions.zoomCard;
   }
 
   _getCard() {
@@ -45,5 +46,6 @@ export default class Card {
 
   _setEventHandlers() {
     this._cardLikeBtn.addEventListener('click', () => this._like());
+    this._card.addEventListener("click", () => this._zoomCard());
   }
 }
