@@ -1,0 +1,17 @@
+.popup__container_type_cardform {
+  width: 700px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+.popup__container_type_cardform::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (max-width: 768px) {
+  .popup__container_type_cardform {
+    width: 100%;
+  }
+}

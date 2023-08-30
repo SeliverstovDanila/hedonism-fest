@@ -1,0 +1,7 @@
+.popup__burger-menu-container-logo{
+  margin: 174px auto 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,51 @@
+.header__menu-burger-icon {
+  z-index: 3;
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.header__menu-burger-icon:before,
+.header__menu-burger-icon:after {
+  content: '';
+  position: absolute;
+  background-color: #3B3748;
+  width: 100%;
+  height: 2px;
+  transition: all .5s;
+}
+.header__menu-burger-icon:before {
+  top: 0;
+}
+.header__menu-burger-icon:after {
+  bottom: 0;
+}
+.header__menu-burger-icon span {
+  position: absolute;
+  top: 9px;
+  background-color: #3B3748;
+  width: 100%;
+  height: 2px;
+  transition: all .5s;
+  }
+
+.header__menu-burger-icon_active:before {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.header__menu-burger-icon_active:after {
+  bottom: 9px;
+  transform: rotate(-45deg);
+}
+.header__menu-burger-icon_active span {
+  transform: scale(0);
+}
+
+
+@media screen and (max-width:1024px){
+  .header__menu-burger-icon{
+      display: block;
+  }
+}

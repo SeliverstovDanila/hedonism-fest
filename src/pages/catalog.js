@@ -2,7 +2,9 @@ import "../pages/index.css";
 import cardsArray from "../components/cards.json";
 import createCard from "../components/card.js";
 import { eventFilter, updateCardsCounter } from "../components/event-filter.js";
-
+cardsArray.forEach((point) => {
+  console.log(point)
+})
 export const eventsCardsContainer = document.querySelector(
   ".catalog__cards-container"
 );
@@ -47,9 +49,11 @@ for (const cardDate of cardsDate) {
   const buttonDate = eventFilter("date", cardDate);
   buttonDateContainer.append(buttonDate);
 }
-
 import { init } from "./Map";
+
 ymaps.ready(init);
+
+
 
 function windowSwitch(catalog1, catalog2, button1, button2) {
   catalog1.classList.add("disabled");
