@@ -1,1 +1,1 @@
-import "../pages/ui-kit.css";
+import "../pages/index.css";

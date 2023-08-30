@@ -1,1 +1,1 @@
-import "../pages/festival.css";
+import "../pages/index.css";
