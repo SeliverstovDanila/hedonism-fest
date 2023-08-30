@@ -11,8 +11,12 @@ const titleMembership = pageMembership.querySelector('.membership__title');
 const contentMembership = pageMembership.querySelector('.membership__content');
 const classForActiveBtn = 'membership__form-btn_active';
 
-const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург']
+// #todo - (?) реализовать заполнение списка в форме путем подтягивания городов из массива:
+const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург'];
+
+// какие значения могут быть в форме:
 const formRequestInfo = {
+  "category": '', // выбранная категория 1го филдсета
   "city": '', // город
   "full-name": '', // контактное лицо
   "adress": [], // адрес заведения
@@ -70,6 +74,7 @@ function activateFieldset(currFieldsetList) {
  function submitMembershipPopup(evt) {
   evt.preventDefault();
 
+  // формируем объект с данными заполненной формы
   const formData = new FormData(formMembership);
   // выводим данные заполненной формы (в реальности тут должен быть fetch-запрос отправки данных)
   for (let [key, value] of formData) {
@@ -106,8 +111,6 @@ btnCloseMemberForm.addEventListener('click', closeMembershipPopup);
 btnSubmitMemberForm.addEventListener('click', function(evt) {
   submitMembershipPopup(evt);
 });
-
-// const fieldsetTemplate = formMembership.querySelector(`template-${name}`).content.querySelector('.membership__fieldset-container');
 
 // ф-я создания филдсета из шаблона (name - тип шаблона, который нам нужен - food, study, party, another)
 function makeFieldset(name) {
@@ -188,7 +191,7 @@ btnLeft.addEventListener('click', () => {
 });
 
 
-// замена текста внутри окна загрузки фотографий
+// #todo - (сделать) замена текста внутри окна загрузки фотографий
 const inputTypeFile = pageMembership.querySelector('.input_type_file');
 const messagePhotoLoad = pageMembership.querySelector('.input__context_type_file');
 
