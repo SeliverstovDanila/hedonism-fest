@@ -4,6 +4,7 @@ import { openPopup, closePopup} from "../components/popup";
 
 import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
+
 const cardTemplate = document.querySelector("#card-template").content;
 const eventsCardsContainer = document.querySelector(".events__cards-container");
 const locationBtn = document.querySelector(".header__location-button");
