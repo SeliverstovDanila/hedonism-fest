@@ -1,6 +1,6 @@
 .catalog__control-panel {
   background-color: #FCFAF7;
-  width: 1070px;
+  max-width: 1070px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

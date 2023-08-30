@@ -240,11 +240,16 @@
 @import url('../blocks/catalog/__control-panel/catalog__control-panel.css');
 @import url('../blocks/catalog/__tab-switcher/catalog__tab-switcher.css');
 @import url('../blocks/catalog/tab-button-disabled/catalog__tab-button-disabled.css');
+@import url('../blocks/catalog/__oops/catalog__oops.css');
+@import url('../blocks/catalog/catalog__oops-img/catalog__oops-img.css');
+@import url('../blocks/catalog/catalog__oops-text/catalog__oops-text.css');
+@import url('../blocks/catalog/__list-container/catalog__list-container.css');
 @import url('../blocks/catalog-filters/catalog-filters.css');
 @import url('../blocks/catalog-filters/__filter-block/catalog-filters__filter-block.css');
 @import url('../blocks/catalog-filters/__filter-buttons/catalog-filters__filter-buttons.css');
 @import url('../blocks/catalog-filters/__title-container/catalog-filters__title-container.css');
 @import url('../blocks/catalog-filters/__ad/catalog-filters__ad.css');
+
 
 
 @import url('../blocks/disabled/disabled.css');

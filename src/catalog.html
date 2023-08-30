@@ -64,13 +64,13 @@
         <h1 class="title title_type_section catalog-filters__title-container">куда пойти</h1>
         <div class="catalog-filters__filter-block">
           <h2 class="title title_type_block">тип события</h2>
-          <div class="catalog-filters__filter-buttons" id="filter-types">
+          <div class="catalog-filters__filter-buttons" id="type">
 
           </div>
         </div>
         <div class="catalog-filters__filter-block">
           <h2 class="title title_type_block">дни</h2>
-          <div class="catalog-filters__filter-buttons"  id="filter-date">
+          <div class="catalog-filters__filter-buttons"  id="date">
 
           </div>
         </div>
@@ -87,7 +87,7 @@
           </a>
         </div>
       </div>
-      <div>
+      <div class="catalog__list-container">
         <div class="catalog__control-panel">
           <div class="catalog__tab-switcher">
             <button class="text text_type_button btn btn_type_violet catalog__tab-button-disabled" type="button">
@@ -126,7 +126,16 @@
           </div>
           <p class="text text_type_main" id="cardsCounter"></p>
         </div>
-        <div class="catalog__cards-container"></div>
+        <div class="catalog__cards-container">
+        </div>
+        <div class="catalog__oops disabled">
+          <div class="catalog__oops-text">
+            <h2 class="title title_type_block">ой!</h2>
+            <p class="title title_type_card">в вашем списке сохранённых событий пока что пусто</p>
+            <button class="text text_type_button btn btn_type_violet" id="oopsBtn">смотреть все события</button>
+          </div>
+          <div class="catalog__oops-img"></div>
+        </div>
       </div>
     </section>
   </main>

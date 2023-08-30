@@ -1,16 +1,18 @@
 const _eventButtonTemplate = document.querySelector('#event-button-template').content;
 const cardsCounter = document.querySelector('#cardsCounter');
-import {eventsCardsContainer, buttonFilterContainer, renderedCards} from '../pages/catalog.js';
+const oops = document.querySelector('.catalog__oops');
+import {eventsCardsContainer, renderedCards} from '../pages/catalog.js';
 import createCard from '../components/card.js';
 
 let currentFilters = {
   type: [],
   date: [],
-  liked: []
+  liked: [],
+  all: []
 };
 
 //Создание кнопок по фильтрам
-export function eventFilter(key, param) {
+export function eventFilter(key, param, container) {
 
   const filterButton = _eventButtonTemplate.querySelector('#button-filter-template').cloneNode(true);
 
@@ -20,39 +22,84 @@ export function eventFilter(key, param) {
   filterButton.setAttribute("data-state", "inactive");
 
   filterButton.addEventListener("click", (evt) =>
-    handleButtonClick(evt, key, param)
+    handleButtonClick(evt, key, param, container)
   );
+
+  if(key === 'all') {
+    filterButton.innerHTML = param;
+    filterButton.setAttribute("data-state", "active");
+    filterButton.classList.add('btn_type_violet');
+    filterButton.classList.remove('btn_type_bordered')
+  }
 
   return filterButton;
 }
 
-const handleButtonClick = (e, key, param) => {
-  const button = e.target;
+
+//Хэндлер нажатия кнопки
+const handleButtonClick = (evt, key, param, container) => {
+  const button = evt.target;
   const buttonState = button.getAttribute("data-state");
   const btnIcon = button.querySelector('.btn__icon');
+
+  if(key == 'all') {
+    const filterButtons = container.querySelectorAll('.btn:not([data-type="все"])');
+    filterButtons.forEach(button => {
+      button.setAttribute("data-state", "inactive");
+      button.querySelector('.btn__icon').classList.add('disabled');
+      button.classList.remove('btn_type_violet');
+      button.classList.add('btn_type_bordered');
+    })
+    button.setAttribute("data-state", "active");
+    button.classList.add('btn_type_violet');
+    button.classList.remove('btn_type_bordered')
+    currentFilters[key].push(param);
+    handleFilterCards(currentFilters, container);
+    return
+  }
+  else {
+    const btnFilterAll = container.querySelector('[data-type="все"]');
+    btnFilterAll.setAttribute("data-state", "inactive");
+    btnFilterAll.classList.remove('btn_type_violet');
+    btnFilterAll.classList.add('btn_type_bordered')
+  }
+
   if (buttonState == "inactive") {
     btnIcon.classList.remove("disabled");
     button.setAttribute("data-state", "active");
+    button.classList.add('btn_type_violet');
+    button.classList.remove('btn_type_bordered')
     currentFilters[key].push(param);
-    handleFilterPosts(currentFilters);
+    handleFilterCards(currentFilters, container);
   } else {
     btnIcon.classList.add("disabled");
     button.setAttribute("data-state", "inactive");
+    button.classList.remove('btn_type_violet');
+    button.classList.add('btn_type_bordered')
     currentFilters[key] = currentFilters[key].filter((item) => item !== param);
-    handleFilterPosts(currentFilters);
+    handleFilterCards(currentFilters, container);
   }
 };
 
-const handleFilterPosts = (filters) => {
+
+//Хэнлдер фильтрации карточек после клика на фильтр
+const handleFilterCards = (filters, container) => {
   let filteredCards = [...renderedCards];
   let filterKeys = Object.keys(filters);
 
-  console.log(filters);
+  if(filters['all'].length > 0) {
+    eventsCardsContainer.textContent = "";
+    filters[container.id].length = 0;
+    filters['all'].length -= 1;
+    if(container.id === 'type') {
+      filters['liked'].length = 0;
+    }
+  }
 
   filterKeys.forEach((key) => {
     let currentKey = filters[key];
     if (currentKey.length <= 0) {
-      return;
+      return
     }
     filteredCards = filteredCards.filter((card) => {
       let currentValue = card.dataset[key];
@@ -65,9 +112,12 @@ const handleFilterPosts = (filters) => {
   updateCardsCounter(filteredCards.length, renderedCards.length);
 
   if (filteredCards.length == 0) {
-    eventsCardsContainer.textContent = "Ничего нет";
-    return;
+    eventsCardsContainer.classList.add('disabled');
+    eventsCardsContainer.textContent = "";
+    oops.classList.remove('disabled');
   } else {
+    oops.classList.add('disabled');
+    eventsCardsContainer.classList.remove('disabled');
     eventsCardsContainer.textContent = "";
   }
 
@@ -77,6 +127,8 @@ const handleFilterPosts = (filters) => {
   });
 };
 
+
+//Функция для апдейта счётчика карточек вверху контейнера
 export function updateCardsCounter(amount, total) {
   cardsCounter.textContent = 'показано ' + amount + ' из ' + total;
 }
