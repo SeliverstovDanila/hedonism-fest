@@ -31,15 +31,15 @@
   transition: all .5s;
   }
 
-  .header__menu-burger-icon:before {
+.header__menu-burger-icon_active:before {
   top: 9px;
   transform: rotate(45deg);
 }
-.header__menu-burger-icon:after {
+.header__menu-burger-icon_active:after {
   bottom: 9px;
   transform: rotate(-45deg);
 }
-.header__menu-burger-icon span {
+.header__menu-burger-icon_active span {
   transform: scale(0);
 }
 

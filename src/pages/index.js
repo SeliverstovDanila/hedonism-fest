@@ -43,7 +43,7 @@ locationBtn.addEventListener("click", function () {
 });
 
 burgerMenuBtn.addEventListener("click", function () {
-  burgerMenuBtn.classList.toggle("menu-burger-icon_active");
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
   popupBurgerMenu.classList.toggle("popup_opened");
   if (popupChoiseCity.classList.contains("popup_opened")) {
     closePopup(popupChoiseCity);
