@@ -2,6 +2,7 @@
 @import url('../vendor/fonts.css');
 @import url('../blocks/page/page.css');
 
+
 /*UI-kit*/
 @import url('../blocks/title/title.css');
 @import url('../blocks/title/_type/title_type_page.css');
@@ -85,16 +86,6 @@
 @import url('../blocks/hedonism/__button/hedonism__button.css');
 @import url('../blocks/hedonism/__about/hedonism__about.css');
 
-
-/*BUTTON*/
-@import url('../blocks/button/button.css');
-    /* @import url('../blocks/button/_type/button_type_transparent.css'); */
-    /* @import url('../blocks/button/_type/button_type_violet.css'); */
-/* @import url('../blocks/button/__arrow/button__arrow.css'); */
-@import url('../blocks/button/_type/button_type_transparent.css');
-@import url('../blocks/button/_type/button_type_violet.css');
-@import url('../blocks/button/__donate/button__donate.css');
-
 /*EVENTS*/
 @import url('../blocks/events/events.css');
 @import url('../blocks/events/__heading-container/events__heading-container.css');
@@ -111,6 +102,7 @@
 @import url('../blocks/card/__like/_active/card__like_active.css');
 @import url('../blocks/card/__text/card__text.css');
 @import url('../blocks/card/__text-optional/card__text-optional.css');
+@import url('../blocks/card/__hidden/card__hidden.css');
 
 /*DIGITS*/
 @import url('../blocks/digits/digits.css');
@@ -238,3 +230,21 @@
 /* СТРАНИЦА UI KIT */
 /* в процессе работы, структура css-файлов будет создана чуть позже */
 @import url('../blocks/ui-kit/ui-kit.css');
+
+
+
+
+/* СТРАНИЦА CATALOG */
+@import url('../blocks/catalog/catalog.css');
+@import url('../blocks/catalog/__cards-container/catalog__cards-container.css');
+@import url('../blocks/catalog/__control-panel/catalog__control-panel.css');
+@import url('../blocks/catalog/__tab-switcher/catalog__tab-switcher.css');
+@import url('../blocks/catalog/tab-button-disabled/catalog__tab-button-disabled.css');
+@import url('../blocks/catalog-filters/catalog-filters.css');
+@import url('../blocks/catalog-filters/__filter-block/catalog-filters__filter-block.css');
+@import url('../blocks/catalog-filters/__filter-buttons/catalog-filters__filter-buttons.css');
+@import url('../blocks/catalog-filters/__title-container/catalog-filters__title-container.css');
+@import url('../blocks/catalog-filters/__ad/catalog-filters__ad.css');
+
+
+@import url('../blocks/disabled/disabled.css');

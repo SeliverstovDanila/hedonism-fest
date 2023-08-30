@@ -1,18 +1,31 @@
 [
   {
-    "photo": "photo",
-    "type": "type",
-    "date": "date",
-    "title": "title",
-    "about": "about",
-    "description": "description",
-    "address": "address",
-    "additional": "additional"
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
+    "type": "еда и напитки",
+    "date": "Пн-Вс",
+    "time": "10:00-22:00",
+    "title": "Ярмарка фруктов и овощей",
+    "about": "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
+    "description": "Описание события",
+    "address": "Малая Конюшенная улица",
+    "additional": "+ ещё 4"
+  },
+  {
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
+    "type": "кафе",
+    "date": "среда",
+    "time": "13:00",
+    "title": "Кафешка",
+    "about": "Кафешка у дома",
+    "description": "Описание события",
+    "address": "Малая Конюшенная улица",
+    "additional": "+ ещё 4"
   },
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
     "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
+    "date": "Пн-Вс",
+    "time": "10:00-22:00",
     "title": "Ярмарка фруктов и овощей",
     "about": "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
     "description": "Описание события",
@@ -22,9 +35,10 @@
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
     "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
+    "date": "Пн-Вс",
+    "time": "10:00-22:00",
     "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
+    "about": "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
     "description": "Описание события",
     "address": "Малая Конюшенная улица",
     "additional": "+ ещё 4"
@@ -32,69 +46,10 @@
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
     "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
+    "date": "Пн-Вс",
+    "time": "10:00-22:00",
     "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
-    "description": "Описание события",
-    "address": "Малая Конюшенная улица",
-    "additional": "+ ещё 4"
-  },
-  {
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-    "type": "еда и напитки",
-    "date": "Пн-Вс, 10:00-22:00",
-    "title": "Ярмарка фруктов и овощей",
-    "about": "Фрукты и овощи с большими скидками",
+    "about": "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
     "description": "Описание события",
     "address": "Малая Конюшенная улица",
     "additional": "+ ещё 4"

@@ -1,49 +1,35 @@
-export default class Card {
-  constructor(card, template) {
-    this._photo = card.photo;
-    this._type = card.type;
-    this._date = card.date;
-    this._title = card.title;
-    this._about = card.about;
-    this._description = card.description;
-    this._address = card.address;
-    this._additional = card.additional;
-    this._cardTemplate = template;
-  }
+const _cardElementTemplate = document.querySelector('#card-template').content;
 
-  _getCard() {
-    const cardElement = this._cardTemplate.querySelector('.card').cloneNode(true);
+export default function createCard(card) {
+  const _cardElement = _cardElementTemplate.querySelector('.card').cloneNode(true);
+  _cardElement.dataset.type = card.type;
+  _cardElement.dataset.date = card.date;
+  const _cardImage = _cardElement.querySelector('.card__image');
+  _cardImage.src = card.photo;
+  const _cardType = _cardElement.querySelector('#card-type');
+  _cardType.textContent = card.type;
+  const _cardDate = _cardElement.querySelector('#card-date');
+  _cardDate.textContent = card.date + ', ' + card.time;
+  const _cardTitle = _cardElement.querySelector('#card-title');
+  _cardTitle.textContent = card.title;
+  const _cardAbout = _cardElement.querySelector('#card-lector');
+  _cardAbout.textContent = card.about;
+  const _cardAddress = _cardElement.querySelector('#card-address');
+  _cardAddress.textContent = card.address;
+  const _cardAdditional = _cardElement.querySelector('#card-additional');
+  _cardAdditional.textContent = card.additional;
+  const _cardLikeBtn = _cardElement.querySelector('.card__like');
+  _cardLikeBtn.addEventListener('click', () => {
+    _cardLikeBtn.classList.toggle('card__like_active');
 
-    return cardElement;
-  }
+    if(_cardLikeBtn.classList.contains('card__like_active')) {
+      _cardElement.dataset.liked = 'хочу пойти';
+    }
+    else {
+      delete _cardElement.dataset.liked;
+    }
+  });
 
-  _like() {
-    this._cardLikeBtn.classList.toggle('card__like_active');
-  }
-
-  createCard() {
-    this._card = this._getCard();
-    this._cardImage = this._card.querySelector('.card__image');
-    this._cardImage.src = this._photo;
-    this._cardType = this._card.querySelector('#card-type');
-    this._cardType.textContent = this._type;
-    this._cardDate = this._card.querySelector('#card-date');
-    this._cardDate.textContent = this._date;
-    this._cardTitle = this._card.querySelector('#card-title');
-    this._cardTitle.textContent = this._title;
-    this._cardAbout = this._card.querySelector('#card-lector');
-    this._cardAbout.textContent = this._about;
-    this._cardAddress = this._card.querySelector('#card-address');
-    this._cardAddress.textContent = this._address;
-    this._cardAdditional = this._card.querySelector('#card-additional');
-    this._cardAdditional.textContent = this._additional;
-    this._cardLikeBtn = this._card.querySelector('.card__like');
-    this._setEventHandlers();
-
-    return this._card;
-  }
-
-  _setEventHandlers() {
-    this._cardLikeBtn.addEventListener('click', () => this._like());
-  }
+  return _cardElement;
 }
+

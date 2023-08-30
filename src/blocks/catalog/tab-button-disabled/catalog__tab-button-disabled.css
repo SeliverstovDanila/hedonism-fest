@@ -1,0 +1,9 @@
+.catalog__tab-button-disabled {
+  color: #96949E;
+  background-color: #EBE9ED;
+}
+
+.catalog__tab-button-disabled:hover {
+  color: #96949E;
+  background-color: #EBE9ED;
+}
