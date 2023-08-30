@@ -1,0 +1,14 @@
+.popup__burger-menu-button-location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border: none;
+  background-color: transparent;
+}
+
+
+.popup__burger-menu-button-location:hover{
+  opacity: 0.5;
+  transition: all 0.5s ease 0s;
+}

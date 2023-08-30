@@ -1,5 +1,6 @@
 .popup__inactive-input_email{
   margin: 16px auto 32px;
+  max-width: 532px;
 }
 
 
