@@ -1,0 +1,6 @@
+.catalog__tab-switcher {
+  background-color: #EBE9ED;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 24px;
+}

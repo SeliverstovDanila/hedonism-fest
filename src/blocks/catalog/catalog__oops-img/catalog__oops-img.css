@@ -1,0 +1,6 @@
+.catalog__oops-img {
+  width: 410px;
+  height: 316px;
+  flex-shrink: 0;
+  background-image: url('../../../images/oops.png');
+}

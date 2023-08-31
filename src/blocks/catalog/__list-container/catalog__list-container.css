@@ -1,0 +1,5 @@
+.catalog__list-container {
+  max-width: 1070px;
+  display: flex;
+  flex-flow: column wrap;
+}

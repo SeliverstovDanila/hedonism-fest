@@ -1,9 +1,10 @@
 .btn_type_formButton {
-  width: 304px;
+  min-width: 304px;
   margin-right: 12px;
 }
 @media screen and (max-width: 1024px) {
   .btn_type_formButton {
-    width: 154px;
+    min-width: 154px;
+    height: 44px;
   }
 }

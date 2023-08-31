@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const pages = ['application', 'error', 'festival', 'index', /* 'catalog',*/ 'ui-kit', 'help', 'membership'];
+const pages = ['application', 'error', 'festival', 'index', 'catalog', 'ui-kit', 'help', 'membership'];
+
 
 module.exports = {
   entry: pages.reduce((config, page) => {

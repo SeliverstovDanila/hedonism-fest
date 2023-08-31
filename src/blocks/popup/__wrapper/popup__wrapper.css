@@ -1,5 +1,6 @@
 .popup__wrapper{
   padding: 40px 40px 0;
+  overflow-y: scroll;
 }
 
 

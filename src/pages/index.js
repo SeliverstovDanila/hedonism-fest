@@ -1,31 +1,35 @@
 import "../pages/index.css";
 import { cardFormData, cardForm, likeBTN, participateButton } from "../components/CardForm";
-import { openPopup, closePopup } from "../components/popup";
+import { openPopup, closePopup} from "../components/popup";
 
 import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
+
 const cardTemplate = document.querySelector("#card-template").content;
 const eventsCardsContainer = document.querySelector(".events__cards-container");
 const locationBtn = document.querySelector(".header__location-button");
 
-const popupBurgerMenu = document.querySelector(".popup__menu-burger");
-const popupChoiseCity = document.querySelector(".popup__choise-city");
+const popupBurgerMenu = document.querySelector('.popup__menu-burger');
+const popupChoiseCity = document.querySelector('.popup__choise-city');
 const popupDonate = document.querySelector('.popup__donate-form');
-const burgerMenuBtn = document.querySelector(".menu-burger-icon");
-const btnChoiseCity = document.querySelector(".burger-menu__button-location");
-const btnChoiseCityBack = document.querySelector(".burger-menu__button-back");
+const closeButton = document.querySelector(".popup__close-cardform");
+const burgerMenuBtn = document.querySelector(".header__menu-burger-icon");
+const btnChoiseCity = document.querySelector(".popup__burger-menu-button-location");
+const btnChoiseCityBack = document.querySelector(".popup__burger-menu-button-back");
 const btnDonate = document.querySelector('.btn__donate');
 const closeBtnDonate = document.querySelector('.popup__close-donate');
 const closeBtnTickets = document.querySelector('.popup__close-buy-ticket');
-const burgerCityText = document.querySelector(".burger-menu__city-name");
+const burgerCityText = document.querySelector(".popup__burger-menu-city-name");
 const headerDropdown = document.querySelector(".header__dropdown");
 const headerText = document.querySelector(".header__text");
 const labelCity = document.querySelectorAll(".form-city__list");
 const btnSupport = document.querySelector('.btn__support');
+const btnMinus = document.querySelector('.controller_el_amount-minus');
+const btnPlus = document.querySelector('.controller_el_amount-plus');
+const amount = document.querySelector('.controller__amount-square');
+const sumTickets = document.querySelector('.popup__sum-ticket');
 
 // открытие карты события
-
-const closeButton = document.querySelector(".popup__close-cardform");
 closeButton.addEventListener("click", () => {
   closePopup(cardForm);
 });
@@ -33,13 +37,14 @@ closeButton.addEventListener("click", () => {
 participateButton.addEventListener("click", () => {
   likeBTN.classList.toggle("card__like_active");
 });
+
 // всплывающее окно
 locationBtn.addEventListener("click", function () {
   headerDropdown.classList.toggle("header__dropdown_active");
 });
 
 burgerMenuBtn.addEventListener("click", function () {
-  burgerMenuBtn.classList.toggle("menu-burger-icon_active");
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
   popupBurgerMenu.classList.toggle("popup_opened");
   if (popupChoiseCity.classList.contains("popup_opened")) {
     closePopup(popupChoiseCity);
@@ -74,14 +79,14 @@ closeBtnTickets.addEventListener('click', function(){
   closePopup(popupBuyTickets)
 })
 
-for (const cardElement of cardsArray) {
-  const card = new Card(cardElement, cardTemplate, {
-    zoomCard: () => {
-      cardFormData(cardElement);
-    },
-  }).createCard();
-  eventsCardsContainer.append(card);
-}
+// for (const cardElement of cardsArray) {
+//   const card = new Card(cardElement, cardTemplate, {
+//     zoomCard: () => {
+//       cardFormData(cardElement);
+//     },
+//   }).createCard();
+//   eventsCardsContainer.append(card);
+// }
 
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {
@@ -142,3 +147,16 @@ function changeCity(e) {
 }
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
+// счетчик (покупка билетов)
+btnMinus.addEventListener('click', function(){
+    const result = Number(amount.textContent) - 1;
+    if(result > 0){
+      amount.textContent = result;
+      sumTickets.textContent = 500 * result + '₽';
+    }
+})
+btnPlus.addEventListener('click', function(){
+    const result = Number(amount.textContent) + 1;
+    amount.textContent = result;
+    sumTickets.textContent = 500 * result + '₽';
+})
