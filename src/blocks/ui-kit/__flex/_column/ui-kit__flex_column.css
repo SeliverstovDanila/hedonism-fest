@@ -1,0 +1,4 @@
+.ui-kit__flex_column {
+  justify-content: flex-start;
+  flex-direction: column;
+}

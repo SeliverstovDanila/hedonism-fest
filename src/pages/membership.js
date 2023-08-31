@@ -1,21 +1,22 @@
 import '../pages/index.css';
 import {openPopup, closePopup} from '../components/utils.js';
+import {validationSettings, enableValidation} from '../components/validate.js';
 
-const pageMembership = document.querySelector('.membership');
-const btnOpenMemberForm = pageMembership.querySelector('.membership__btn'); // заполнить форму
-const formMembership = pageMembership.querySelector('.membership__form');
-const btnCloseMemberForm = pageMembership.querySelector('.membership__form-btn_type_close'); // отмена
-const btnSubmitMemberForm = pageMembership.querySelector('.membership__form-btn_type_submit'); // завершить
-const popupMembership = pageMembership.querySelector('.membership__popup');
-const titleMembership = pageMembership.querySelector('.membership__title');
-const contentMembership = pageMembership.querySelector('.membership__content');
-const classForActiveBtn = 'membership__form-btn_active';
+export const pageMembership = document.querySelector('.membership');
+export const btnOpenMemberForm = pageMembership.querySelector('.membership__btn'); // заполнить форму
+export const formMembership = pageMembership.querySelector('.membership__form');
+export const btnCloseMemberForm = pageMembership.querySelector('.membership__form-btn_type_close'); // отмена
+export const btnSubmitMemberForm = pageMembership.querySelector('.membership__form-btn_type_submit'); // завершить
+export const popupMembership = pageMembership.querySelector('.membership__popup');
+export const titleMembership = pageMembership.querySelector('.membership__title');
+export const contentMembership = pageMembership.querySelector('.membership__content');
+export const classForActiveBtn = 'membership__form-btn_active';
 
 // #todo - (?) реализовать заполнение списка в форме путем подтягивания городов из массива:
-const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург'];
+export const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург'];
 
 // какие значения могут быть в форме:
-const formRequestInfo = {
+export const formRequestInfo = {
   "category": '', // выбранная категория 1го филдсета
   "city": '', // город
   "full-name": '', // контактное лицо
@@ -39,39 +40,39 @@ const formRequestInfo = {
 };
 
 // ф-я открытия формы на странице membership
-function openMembershipPopup() {
+export function openMembershipPopup() {
   openPopup(popupMembership, 'membership__popup_opened');
   titleMembership.classList.add('membership__title_hidden');
   contentMembership.classList.add('membership__content_hidden');
 }
 
 // ф-я закрытия формы на странице membership
-function closeMembershipPopup() {
+export function closeMembershipPopup() {
   closePopup(popupMembership, 'membership__popup_opened');
   titleMembership.classList.remove('membership__title_hidden');
   contentMembership.classList.remove('membership__content_hidden');
 }
 
 // ф-я, выбирающая нужный филдсет
-function activateFieldset(currFieldsetList) {
+export function activateFieldset(currFieldsetList) {
   // снимаем со всех филдсетов выделение
   currFieldsetList.forEach(item => item.classList.remove('membership__fieldset_selected'));
   // добавляем текущему элементу выделение
   currFieldsetList[currentFieldsetIndex].classList.add('membership__fieldset_selected');
 }
 
-  // ф-я для добавления класса элементу
-  function addClass(element, className) {
-    element.classList.add(className);
-  }
+// ф-я для добавления класса элементу
+export function addClass(element, className) {
+  element.classList.add(className);
+}
 
-  // ф-я для добавления класса элементу
-  function removeClass(element, className) {
-    element.classList.remove(className);
-  }
+// ф-я для добавления класса элементу
+export function removeClass(element, className) {
+  element.classList.remove(className);
+}
 
- // ф-я сабмита формы на странице membership
- function submitMembershipPopup(evt) {
+// ф-я сабмита формы на странице membership
+export function submitMembershipPopup(evt) {
   evt.preventDefault();
 
   // формируем объект с данными заполненной формы
@@ -99,6 +100,9 @@ function activateFieldset(currFieldsetList) {
 
   // закрыть попап
   closeMembershipPopup();
+
+  // перенаправляем на страницу "спасибо за заявку"
+  window.location.href = 'application.html'
 }
 
 
@@ -113,7 +117,7 @@ btnSubmitMemberForm.addEventListener('click', function(evt) {
 });
 
 // ф-я создания филдсета из шаблона (name - тип шаблона, который нам нужен - food, study, party, another)
-function makeFieldset(name) {
+export function makeFieldset(name) {
   const fieldsetTemplate = pageMembership.querySelector(`#template-${name}`).content.querySelector('.membership__fieldset-container');
   const templateCopy = fieldsetTemplate.cloneNode(true); // клонируем содержимое шаблона
   return templateCopy;
@@ -121,11 +125,11 @@ function makeFieldset(name) {
 
 
 // карусель формы
-const fieldsetList = formMembership.querySelectorAll('.membership__fieldset');
-const btnLeft = document.querySelector('.membership__form-btn_type_left'); // назад
-const btnRight = document.querySelector('.membership__form-btn_type_right'); // далее
+export const fieldsetList = formMembership.querySelectorAll('.membership__fieldset');
+export const btnLeft = document.querySelector('.membership__form-btn_type_left'); // назад
+export const btnRight = document.querySelector('.membership__form-btn_type_right'); // далее
 
-let currentFieldsetIndex = 0;
+export let currentFieldsetIndex = 0;
 
 //  default - при загрузке страницы выбран 1й fieldset
 fieldsetList[0].classList.add('membership__fieldset_selected');
@@ -149,6 +153,8 @@ btnRight.addEventListener('click', () => {
     }
 
     // в любом случае:
+    // проверяем получившуюся форму на валидность
+    enableValidation(validationSettings, pageMembership);
     // меняем "отмена" на "назад"
     btnCloseMemberForm.classList.remove('membership__form-btn_active');
     btnLeft.classList.add('membership__form-btn_active');
@@ -192,6 +198,112 @@ btnLeft.addEventListener('click', () => {
 
 
 // #todo - (сделать) замена текста внутри окна загрузки фотографий
-const inputTypeFile = pageMembership.querySelector('.input_type_file');
-const messagePhotoLoad = pageMembership.querySelector('.input__context_type_file');
+// const inputTypeFile = pageMembership.querySelector('.input_type_file');
+// const messagePhotoLoad = pageMembership.querySelector('.input__context_type_file');
+
+// LOADING PHOTO
+// import {uploadButton, chosenImage, fileName, container, error, imageDisplay, fileHandler} from '../components/photo-load.js';
+export const btnCloseImage = pageMembership.querySelector('.input__close-btn');
+
+export function activateCloseBtn() {
+  addClass(btnCloseImage, 'input__close-btn_active');
+  btnCloseImage.addEventListener('click', deactivateCloseBtn);
+}
+
+export function deactivateCloseBtn() {
+  removeClass(btnCloseImage, 'input__close-btn_active');
+  btnCloseImage.removeEventListener('click', deactivateCloseBtn);
+  // и очищаем контейнер от картинок
+  imageDisplay.innerHTML = '';
+}
+
+
+export let uploadButton = pageMembership.querySelector(".input_type_file");
+export let container = pageMembership.querySelector(".input__wrapper_type_file");
+export let error = pageMembership.querySelector(".input__error_type_images"); // input__error_type_images
+export let imageDisplay = pageMembership.querySelector(".input__image-display");
+export let containerActiveClass = 'input__wrapper_active';
+
+export const fileHandler = (file, name, type) => {
+  if(type.split("/")[0] !== "image") {
+    error.innerText = "Загрузить можно только файлы типа 'изображение'";
+    error.classList.add(validationSettings.errorClass);
+    return false;
+  }
+  error.innerText = "";
+  error.classList.remove(validationSettings.errorClass);
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onloadend = () => {
+    // image and file name
+    let imageContainer = document.createElement("figure");
+    let img = document.createElement("img");
+    img.src = reader.result;
+    imageContainer.appendChild(img);
+    imageContainer.innerHTML += `<figcaption>${name}</figcaption>`;
+    imageDisplay.appendChild(imageContainer);
+    activateCloseBtn();
+  };
+};
+
+
+
+uploadButton.addEventListener("change", () => {
+  imageDisplay.innerHTML = "";
+  Array.from(uploadButton.files).forEach((file) => {
+    fileHandler(file, file.name, file.type);
+  });
+})
+
+// смена визуального отображения при перетаскивании
+container.addEventListener(
+  "dragenter",
+  (evt) => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    container.classList.add(containerActiveClass);
+},
+false
+);
+
+container.addEventListener(
+  "dragleave",
+  (evt) => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    container.classList.remove(containerActiveClass);
+},
+false
+);
+
+container.addEventListener(
+  "dragover",
+  (evt) => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    container.classList.add(containerActiveClass);
+},
+false
+);
+
+// перетаскивание внутрь области (вместо открытия в отдельном окне)
+container.addEventListener(
+  "drop",
+  (evt) => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    container.classList.remove(containerActiveClass);
+    let draggedData = evt.dataTransfer;
+    let files = draggedData.files;
+    imageDisplay.innerHTML = "";
+    Array.from(files).forEach((file) => {
+      fileHandler(file, file.name, file.type);
+    })
+},
+false
+);
+
+window.onload = () => {
+  error.innerText = "";
+}
 

@@ -1,8 +1,36 @@
-.input__wrapper_type_file::before {
-  content: '';
-  position: absolute;
-  top: 8px;
+.input__wrapper_type_file {
+  box-sizing: border-box;
+  margin: 8px 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 298px;
+  height: 298px;
+  background-color: transparent;
   border: 2px solid #96949e;
+  color: #3b3748;
+  border-radius: 22px;
+  cursor: pointer;
+
+  outline: 0;
+  width: 100%;
+  max-width: 531px;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+
+.input__wrapper_type_file::before {
+  content: 'перетащите фото сюда или загрузите с устройства';
+  position: absolute;
+  top: 24px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../../images/icons/cloud-upload_grey.svg');
+  background-position: top 107px center;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 298px;
   border-radius: 22px
@@ -10,4 +38,19 @@
 
 .input__wrapper_type_file:hover::before {
   border-color: #7100FF;
+}
+
+@media (max-width: 768px) {
+  .input__wrapper_type_file {
+    max-width: 728px;
+    height: 220px;
+    min-height: 220px;
+    margin-bottom: 20px;
+  }
+
+  .input__wrapper_type_file::before {
+    content: 'загрузить с устройства';
+    min-height: 220px;
+    background-position: top 70px center;
+  }
 }

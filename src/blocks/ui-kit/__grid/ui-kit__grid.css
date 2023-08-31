@@ -1,0 +1,7 @@
+.ui-kit__grid {
+  padding: 10px 20px 40px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
