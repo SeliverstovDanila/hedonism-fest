@@ -1,0 +1,16 @@
+.popup__container_type_donate-form{
+  box-shadow: 0px 4px 12px 0px #3B37481F;
+  border-radius: 24px;
+  margin: 108px auto 0;
+  padding-bottom: 20px;
+}
+
+
+@media screen  and (min-width:768px){
+  .popup__container_type_donate-form{
+    max-height: 780px;
+    padding-bottom: 40px;
+    max-width: 612px;
+    margin: 110px auto 0;
+  }
+}

@@ -1,0 +1,7 @@
+.popup__burger-menu-text{
+  padding: 0 20px 8px;
+}
+
+.popup__burger-menu-text:last-of-type{
+  margin: 20px 0 0;
+}
