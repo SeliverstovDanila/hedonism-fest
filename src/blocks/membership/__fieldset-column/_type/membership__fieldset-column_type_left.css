@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_left {
+    padding-bottom: 20px;
+    box-shadow: 0px -1px 0px 0px #EBE9ED inset;
+  }
+}

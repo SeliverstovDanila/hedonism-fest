@@ -1,0 +1,16 @@
+/* значок каретки вниз в поле выбора */
+.input__wrapper_type_select::after {
+  content: url('../../../../images/icons/caret-down.svg');
+  position: absolute;
+  right: 22px;
+  margin-top: -42px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .input__wrapper_type_select::after {
+    width: 20px;
+    height: 20px;
+    right: 18px;
+  }
+}

@@ -1,0 +1,9 @@
+.membership__fieldset-column_type_right {
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_right {
+    margin-top: 20px;
+  }
+}

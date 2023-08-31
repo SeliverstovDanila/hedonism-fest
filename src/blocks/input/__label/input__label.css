@@ -1,0 +1,11 @@
+.input__label {
+  display: flex;
+  padding: 0 24px;
+  color: #96949E;
+}
+
+@media (max-width: 768px) {
+  .input__label {
+    padding: 0 20px;
+  }
+}

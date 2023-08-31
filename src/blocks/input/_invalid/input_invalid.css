@@ -1,0 +1,8 @@
+.input_invalid {
+  border-color: #F40934;
+}
+
+.input_invalid:focus {
+  border-color: #F40934;
+}
+

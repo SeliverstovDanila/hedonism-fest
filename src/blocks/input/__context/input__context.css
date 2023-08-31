@@ -1,0 +1,11 @@
+.input__context {
+  display: flex;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .input__context {
+    padding: 0 20px;
+  }
+}

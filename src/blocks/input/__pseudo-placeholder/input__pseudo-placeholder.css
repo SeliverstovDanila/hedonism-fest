@@ -1,0 +1,8 @@
+.input__pseudo-placeholder {
+  position: absolute;
+  top: 119px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

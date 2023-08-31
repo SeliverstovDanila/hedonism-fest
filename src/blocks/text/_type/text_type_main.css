@@ -1,7 +1,6 @@
 .text_type_main {
   font-size: 18px;
   line-height: 24px;
-  max-width: max-content;
 }
 
 @media (max-width: 768px) {

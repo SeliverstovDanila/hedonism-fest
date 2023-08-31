@@ -1,0 +1,10 @@
+.membership__selected-item {
+  margin-top: 12px;
+}
+
+@media (max-width: 768px){
+  .membership__selected-item {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}

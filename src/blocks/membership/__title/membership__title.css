@@ -1,0 +1,9 @@
+.membership__title {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .membership__title {
+    margin: 20px 20px 40px;
+  }
+}

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hedonism-fest</title>
-  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
+  <title>ГедонизмФест</title>
+  <meta name="keywords" content="гедонизм-фест, гедонизм фест, ночлежка, помощь бездомным, просто приятно помогать">
 </head>
 
 <body class="page">
@@ -54,7 +54,7 @@
     <nav>
       <ul class="header__menu-links">
         <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">куда пойти</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="./membership.html" class="header__menu-link">стать участником</a></li>
         <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
       </ul>
     </nav>
@@ -91,13 +91,9 @@
     <div class="hedonism__arc hedonism__arc_left"></div>
     <div class="hedonism__arc hedonism__arc_top"></div>
     <p class="hedonism__text text text_type_main">узнать больше</p>
-    <a class="btn button_type_violet  hedonism__button" href="#about" aria-label="кнопка к блоку о фестивале"></a>
+    <!-- стрелка вниз -->
+    <a id="about" class="controller controller_el_arrow-down" href="#about"></a>
   </section>
-  <!-- update 1 -->
-  <h2>Ссылки на страницы ошибка 404, спасибо за помощь и спасибо за заявку</h2>
-  <a href="error.html">ошибка</a>
-  <a href="help.html">помощь</a>
-  <a href="application.html">заявка</a>
   <article class="column column_type_double hedonism__about" id="about">
     <h2 class="title title_type_section">просто приятно помогать</h2>
     <div class="column column_type_single">
@@ -107,8 +103,8 @@
       <p class="text text_type_main">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена
         в&nbsp;пользу бездомных.</p>
       <!-- перейти на страницу festival -->
-      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html" target="_blank">стать
-        участником</a>
+      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html" target="_blank">узнать
+        подробнее</a>
     </div>
   </article>
   <!-- секция events -->
@@ -119,7 +115,8 @@
     <div class="events__button-container">
       <a class="text text_type_button btn btn_type_bordered" href="#">
         посетить мастер-класс
-        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
           <path
             d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
             fill="currentColor" />
@@ -127,7 +124,8 @@
       </a>
       <a class="text text_type_button btn btn_type_bordered" href="#">
         выпить кофе
-        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
           <path
             d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
             fill="currentColor" />
@@ -168,7 +166,7 @@
           устройте мастер-класс по&nbsp;вязанию
           или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
         <!-- переход на страницу стать участником -->
-        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./ui-kit.html"
+        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./membership.html"
           target="_blank">стать участником</a>
       </div>
     </article>
@@ -330,11 +328,12 @@
           <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
             <span>3000 ₽</span>
           </button>
-          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey" placeholder="другая сумма"
-            name="other-sum" id="input-other-sum">
+          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey"
+            placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
-        <input type="email" class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
+        <input type="email"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">

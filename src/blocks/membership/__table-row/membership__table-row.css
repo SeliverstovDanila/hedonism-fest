@@ -1,0 +1,14 @@
+.membership__table-row {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 5.4fr;
+  gap: 40px;
+  box-shadow: 0px -1px 0px 0px #EBE9ED inset;
+}
+
+@media (max-width: 768px) {
+  .membership__table-row {
+    grid-template-columns: 1fr 4.5fr;
+    gap: 16px;
+  }
+}

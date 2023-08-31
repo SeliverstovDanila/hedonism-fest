@@ -29,19 +29,47 @@
 @import url("../blocks/btn/_type/btn_type_width.css");
 @import url('../blocks/btn/__donate/btn__donate.css');
 
+/* inputs */
+@import url('../blocks/input/input.css');
+@import url('../blocks/input/_invalid/input_invalid.css');
+@import url('../blocks/input/_type/input_type_textarea.css');
+@import url('../blocks/input/_type/input_type_select.css');
+@import url('../blocks/input/_type/input_type_file.css');
+@import url('../blocks/input/__wrapper/input__wrapper.css');
+@import url('../blocks/input/__wrapper/_type/input__wrapper_type_select.css');
+@import url('../blocks/input/__wrapper/_type/input__wrapper_type_file.css');
+@import url('../blocks/input/__wrapper/_active/input__wrapper_active.css');
+@import url('../blocks/input/__label/input__label.css');
+@import url('../blocks/input/__label/_type/input__label_type_file.css');
+@import url('../blocks/input/__pseudo-el/input__pseudo-el.css');
+@import url('../blocks/input/__pseudo-el/_checked/input__pseudo-ellipse_checked.css');
+@import url('../blocks/input/__pseudo-el/_type/input__pseudo-el_type_ellipse.css');
+@import url('../blocks/input/__pseudo-el/_type/input__pseudo-el_type_circle.css');
+@import url('../blocks/input/__select-option/input__select-option.css');
+@import url('../blocks/input/__context/input__context.css');
+@import url('../blocks/input/__context/_type/input__context_type_file.css');
+@import url('../blocks/input/__error/input__error.css');
+@import url('../blocks/input/__error/_type/input__error_type_images.css');
+@import url('../blocks/input/__error/_visible/input__error_visible.css');
+@import url('../blocks/input/__pseudo-placeholder/input__pseudo-placeholder.css');
+@import url('../blocks/input/__image-display/input__image-display.css');
+@import url('../blocks/input/__close-btn/input__close-btn.css');
+@import url('../blocks/input/__close-btn/_active/input__close-btn_active.css');
+
 /* controllers */
-@import url("../blocks/controller/controller.css");
-@import url("../blocks/controller/__wrapper/controller__wrapper.css");
-@import url("../blocks/controller/__amount-square/controller__amount-square.css");
-@import url("../blocks/controller/__wrapper/_type/controller__wrapper_type_amount.css");
-@import url("../blocks/controller/__wrapper/_type/controller__wrapper_type_zoom.css");
-@import url("../blocks/controller/_el/controller_el_arrow-up.css");
-@import url("../blocks/controller/_el/controller_el_arrow-down.css");
-@import url("../blocks/controller/_el/controller_el_nav.css");
-@import url("../blocks/controller/_el/controller_el_amount-minus.css");
-@import url("../blocks/controller/_el/controller_el_amount-plus.css");
-@import url("../blocks/controller/_el/controller_el_zoom-minus.css");
-@import url("../blocks/controller/_el/controller_el_zoom-plus.css");
+@import url('../blocks/controller/controller.css');
+@import url('../blocks/controller/__wrapper/controller__wrapper.css');
+@import url('../blocks/controller/__amount-square/controller__amount-square.css');
+@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_amount.css');
+@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_zoom.css');
+@import url('../blocks/controller/_floating-btn/controller_floating-btn.css');
+@import url('../blocks/controller/_el/controller_el_arrow-up.css');
+@import url('../blocks/controller/_el/controller_el_arrow-down.css');
+@import url('../blocks/controller/_el/controller_el_nav.css');
+@import url('../blocks/controller/_el/controller_el_amount-minus.css');
+@import url('../blocks/controller/_el/controller_el_amount-plus.css');
+@import url('../blocks/controller/_el/controller_el_zoom-minus.css');
+@import url('../blocks/controller/_el/controller_el_zoom-plus.css');
 
 /* Round card */
 @import url("../blocks/round-card/round-card.css");
@@ -55,12 +83,12 @@
 @import url("../blocks/round-card/__info/_align/round-card__info_align_right.css");
 @import url("../blocks/round-card/__info/_align/round-card__info_align_left.css");
 
-/* column */
-@import url("../blocks/column/column.css");
-@import url("../blocks/column/_type/column_type_double.css");
-@import url("../blocks/column/_type/column_type_single.css");
-@import url("../blocks/column/__shifted-paragraph/column__shifted-paragraph.css");
-@import url("../blocks/column/__btn/column__btn.css");
+/* columns */
+@import url('../blocks/column/column.css');
+@import url('../blocks/column/_type/column_type_double.css');
+@import url('../blocks/column/_type/column_type_single.css');
+@import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
+@import url('../blocks/column/__btn/column__btn.css');
 
 /*HEADER*/
 @import url("../blocks/header/header.css");
@@ -295,5 +323,50 @@
 
 @import url('../blocks/disabled/disabled.css');
 
+/* СТРАНИЦА MEMBERSHIP */
+@import url('../blocks/membership/membership.css');
+@import url('../blocks/membership/__title/membership__title.css');
+@import url('../blocks/membership/__title/_hidden/membership__title_hidden.css');
+@import url('../blocks/membership/__content/membership__content.css');
+@import url('../blocks/membership/__content/_hidden/membership__content_hidden.css');
+@import url('../blocks/membership/__subtitle/membership__subtitle.css');
+@import url('../blocks/membership/__table/membership__table.css');
+@import url('../blocks/membership/__table-row/membership__table-row.css');
+@import url('../blocks/membership/__table-row/_shadow-up/membership__table-row_shadow-up.css');
+@import url('../blocks/membership/__table-text/membership__table-text.css');
+@import url('../blocks/membership/__selected-item/membership__selected-item.css');
+@import url('../blocks/membership/__selected-item/_box-shadow/membership__selected-item_box-shadow.css');
+@import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
+@import url('../blocks/membership/__btn/membership__btn.css');
+/* membership__popup */
+@import url('../blocks/membership/__popup/membership__popup.css');
+@import url('../blocks/membership/__popup/_opened/membership__popup_opened.css');
+@import url('../blocks/membership/__form/membership__form.css');
+@import url('../blocks/membership/__fieldset/membership__fieldset.css');
+@import url('../blocks/membership/__fieldset/_selected/membership__fieldset_selected.css');
+@import url('../blocks/membership/__fieldset-row/membership__fieldset-row.css');
+@import url('../blocks/membership/__fieldset-column/membership__fieldset-column.css');
+@import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_left.css');
+@import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_right.css');
+@import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_many-input.css');
+@import url('../blocks/membership/__list/membership__list.css');
+@import url('../blocks/membership/__list-item/membership__list-item.css');
+@import url('../blocks/membership/__radio-wrapper/membership__radio-wrapper.css');
+@import url('../blocks/membership/__radio-wrapper/_party/membership__radio-wrapper_party.css');
+@import url('../blocks/membership/__radio-input/membership__radio-input.css');
+@import url('../blocks/membership/__radio-input/_type/membership__radio-input_type_ellipse.css');
+@import url('../blocks/membership/__radio-input/_type/membership__radio-input_type_circle.css');
+@import url('../blocks/membership/__form-btn/membership__form-btn.css');
+@import url('../blocks/membership/__form-btn/_active/membership__form-btn_active.css');
+
 /* ui-kit */
 @import url("../blocks/ui-kit/ui-kit.css");
+@import url("../blocks/ui-kit/__grid/ui-kit__grid.css");
+@import url("../blocks/ui-kit/__grid/_type/ui-kit__grid_type_1-3columns.css");
+@import url("../blocks/ui-kit/__grid/_type/ui-kit__grid_type_7x7.css");
+@import url("../blocks/ui-kit/__grid/_auto-flow-column/ui-kit__grid_auto-flow-column.css");
+@import url("../blocks/ui-kit/__grid/_colored/ui-kit__grid_colored.css");
+@import url("../blocks/ui-kit/__grid-title/ui-kit__grid-title.css");
+@import url("../blocks/ui-kit/__flex/ui-kit__flex.css");
+@import url("../blocks/ui-kit/__flex/_column/ui-kit__flex_column.css");
+

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hedonism-fest</title>
+  <title>UI kit</title>
 </head>
 
 <body class="page">
@@ -14,6 +14,7 @@
   <main class="ui-kit">
     <h1 class="title title_type_page">ui kit</h1>
 
+    <h2 class="title title_type_block">типографика</h2>
     <section class="ui-kit__grid ui-kit__grid_type_1-3columns" aria-label="Стили текста">
 
       <p class="text">заголовок страницы h1 -></p>
@@ -37,12 +38,14 @@
         домашние посиделки с друзьями — и помогайте бездомным! перечислена в пользу бездомных.</p>
     </section>
 
+    <h2 class="title title_type_block">Интерактивные элементы</h2>
     <section class="ui-kit__grid ui-kit__grid_type_1-3columns" aria-label="Мелкие элементы">
 
       <section class="ui-kit__grid" aria-label="Интерактивные элементы: кнопки и ссылки">
 
-        <h2 class="text text_type_main ui-kit__grid-title">Интерактивные элементы (ссылки/кнопки)</h2>
+        <h2 class="title title_type_block ui-kit__grid-title">Ссылки/кнопки</h2>
         <p class="text text_type_optional">вид по дефолту и при клике</p>
+        <p class="text text_type_optional">(узкие)</p>
         <!-- иконка может быть ЛЮБОЙ, стоять до или после текста, вставляется svg (брать из раздела "Иконки" ниже на этой странице) -->
 
         <!-- ТОЛЬКО кнопки, для фильтра в Каталог - куда пойти (х4) -->
@@ -75,6 +78,7 @@
         </button>
 
 
+        <p class="text text_type_optional">(стандартные)</p>
         <!-- фиолетовые х3 -->
         <button class="text text_type_button btn btn_type_violet" type="button">
           <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -167,13 +171,15 @@
       <!-- правая колонка -->
       <div class="ui-kit__grid">
         <section class="ui-kit__grid ui-kit__grid_auto-flow-column" aria-label="Контроллеры">
-        <h2 class="text text_type_main ui-kit__grid-title">контроллеры</h2>
+        <h2 class="title title_type_block ui-kit__grid-title">контроллеры</h2>
 
         <!-- стрелка вверх -->
         <button class="controller controller_el_arrow-up" type="button"></button>
+        <a class="controller controller_el_arrow-up" href="#"></a>
 
         <!-- стрелка вниз -->
         <button class="controller controller_el_arrow-down" type="button"></button>
+        <a class="controller controller_el_arrow-down" href="#"></a>
 
         <!-- элемент навигации -->
         <button class="controller controller_el_nav" type="button"></button>
@@ -195,7 +201,7 @@
 
 
         <section class="ui-kit__grid ui-kit__grid_type_7x7" aria-label="Иконки">
-          <h2 class="text text_type_main ui-kit__grid-title">иконки</h2>
+          <h2 class="title title_type_block ui-kit__grid-title">иконки</h2>
 
           <!-- для того чтобы цвет иконки менялся по родителю: вставлять в виде <svg> в нужные места,
             внутри path svg уже прописано fill="currentColor" (в виде background не работает) -->
@@ -953,8 +959,707 @@
       <!-- конец секции Мелкие элементы -->
     </section>
 
+    <!-- секциями с инпутами -->
+    <h2 class="title title_type_block">секциями с инпутами</h2>
+    <section class="ui-kit__flex">
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">1 - обычное текстовое поле</p>
+        <!-- 1 - обычное текстовое поле -->
+        <label class="text text_type_main">
+          <input
+            class="input"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+        </label>
+
+        <p class="text text_type_main">2 - текстовое поле с названием</p>
+        <!-- 2 - текстовое поле с названием -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <input
+            class="input"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+        </label>
+
+        <p class="text text_type_main">3 - текстовое поле с сообщением</p>
+        <!-- 3 - текстовое поле с сообщением -->
+        <label class="text text_type_main">
+          <input
+            class="input"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+            <span class="text text_type_main input__context">
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                  fill="currentColor" />
+              </svg>
+              контекстное сообщение
+            </span>
+        </label>
+
+        <p class="text text_type_main">4 - текстовое поле (название + сообщение)</p>
+        <!-- 4 - текстовое поле (название + сообщение) -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <input
+            class="input"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+            <span class="text text_type_main input__context">
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                  fill="currentColor" />
+              </svg>
+              контекстное сообщение
+            </span>
+        </label>
+
+        <p class="text text_type_main">5 - список (поле ввода с иконкой)</p>
+        <!-- 5 - список (поле ввода с иконкой) -->
+        <label class="text text_type_main">
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+        </label>
+
+        <p class="text text_type_main">6 - список (поле ввода с иконкой) с названием</p>
+        <!-- 6 - список (поле ввода с иконкой) с названием -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+        </label>
+
+        <p class="text text_type_main">7 - список (поле ввода с иконкой) с сообщением</p>
+        <!-- 7 - список (поле ввода с иконкой) с сообщением -->
+        <label class="text text_type_main">
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+            <span class="text text_type_main input__context">
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                  fill="currentColor" />
+              </svg>
+              контекстное сообщение
+            </span>
+        </label>
+
+        <p class="text text_type_main">8 - поле ввода с иконкой (название + сообщение)</p>
+        <!-- 8 - поле ввода с иконкой (название + сообщение) -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+            <span class="text text_type_main input__context">
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                  fill="currentColor" />
+                <path
+                  d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                  fill="currentColor" />
+              </svg>
+              контекстное сообщение
+            </span>
+        </label>
+
+      </div>
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">1 - текстовое поле с ошибкой</p>
+        <!-- 1 - текстовое поле с ошибкой -->
+        <label class="text text_type_main">
+          <input
+            class="input input_invalid"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+        </label>
+
+        <p class="text text_type_main">2.1 - текстовое поле с ошибкой и сообщением</p>
+        <!-- 2 - текстовое поле с ошибкой и сообщением -->
+        <label class="text text_type_main">
+          <input
+            class="input input_invalid"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+            <!-- input__error_type_ - на конце name инпута -->
+            <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+        </label>
+
+        <p class="text text_type_main">2.2 - текст. поле с ошибкой и сообщением (без svg)</p>
+        <!-- 2 - текстовое поле с ошибкой и сообщением -->
+        <label class="text text_type_main">
+          <input
+            class="input input_invalid"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required>
+          <span class="text text_type_main input__error input__error_visible">сообщение об ошибке</span>
+        </label>
+
+        <p class="text text_type_main">3 - поле ввода в несколько строк с ошибкой</p>
+        <!-- 3 - поле ввода в несколько строк с ошибкой -->
+        <label class="text text_type_main">
+          <textarea
+            class="input input_type_textarea input_invalid"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+        </label>
+
+        <p class="text text_type_main">4 - поле ввода в несколько строк с ошибкой и сообщением</p>
+        <!-- 4 - поле ввода в несколько строк с ошибкой и сообщением -->
+        <label class="text text_type_main">
+          <textarea
+            class="input input_type_textarea input_invalid"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+          <!-- input__error_type_ - на конце name инпута -->
+          <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+        </label>
+
+        <p class="text text_type_main">5 - список (поле ввода с иконкой) с ошибкой</p>
+        <!-- 5 - список (поле ввода с иконкой) с ошибкой -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select input_invalid"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+        </label>
+
+        <p class="text text_type_main">6 - список (поле ввода с иконкой) с ошибкой и сообщением</p>
+        <!-- 6 - список (поле ввода с иконкой) с ошибкой и сообщением -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+            <select
+              class="input input_type_select input_invalid"
+              name=""
+              required>
+              <option class="input__select-option" value="" selected disabled>поле ввода с иконкой</option>
+              <option class="input__select-option" value="Москва">Москва</option>
+              <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+              <option class="input__select-option" value="Сочи">Сочи</option>
+              <option class="input__select-option" value="Калуга">Калуга</option>
+              <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+          </select>
+          </div>
+          <!-- input__error_type_ - на конце name инпута -->
+          <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+        </label>
+
+      </div>
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">1 - обычное поле ввода в несколько строк</p>
+        <!-- 1 - обычное поле ввода в несколько строк -->
+        <label class="text text_type_main">
+          <textarea
+            class="input input_type_textarea"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+        </label>
+
+        <p class="text text_type_main">2 - поле ввода в несколько строк с названием</p>
+        <!-- 2 - поле ввода в несколько строк с названием -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <textarea
+            class="input input_type_textarea"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+        </label>
+
+        <p class="text text_type_main">3 - поле ввода в несколько строк с сообщением</p>
+        <!-- 3 - поле ввода в несколько строк с сообщением -->
+        <label class="text text_type_main">
+          <textarea
+            class="input input_type_textarea"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+          <span class="text text_type_main input__context">
+            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                fill="currentColor" />
+              <path
+                d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                fill="currentColor" />
+              <path
+                d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                fill="currentColor" />
+            </svg>
+            контекстное сообщение
+          </span>
+        </label>
+
+        <p class="text text_type_main">4 - поле ввода в несколько строк (название + сообщение)</p>
+        <!-- 4 - поле ввода в несколько строк (название + сообщение) -->
+        <label class="text text_type_main">
+          <span class="input__label">название поля</span>
+          <textarea
+            class="input input_type_textarea"
+            name=""
+            type="text"
+            value=""
+            placeholder="поле ввода в несколько строк"
+            minlength="2" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\s\-]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+            required></textarea>
+          <span class="text text_type_main input__context">
+            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0V0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z"
+                fill="currentColor" />
+              <path
+                d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z"
+                fill="currentColor" />
+              <path
+                d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z"
+                fill="currentColor" />
+            </svg>
+            контекстное сообщение
+          </span>
+        </label>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- конкретные инпуты в филдсетах "Стать участником" -->
+    <h2 class="title title_type_block">все уникальные инпуты формы "Стать участником"</h2>
+    <section class="ui-kit__flex">
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">шаг 2 из 4</p>
+
+          <!-- список -->
+          <label class="text text_type_main">
+            <span class="input__label">город</span>
+            <div class="input__wrapper input__wrapper_type_select">
+              <select
+                class="input input_type_select"
+                name="city"
+                required>
+                <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                <option class="input__select-option" value="Москва">Москва</option>
+                <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                <option class="input__select-option" value="Сочи">Сочи</option>
+                <option class="input__select-option" value="Калуга">Калуга</option>
+                <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+            </select>
+            </div>
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">название заведения</span>
+            <input
+              class="input"
+              name="place-name"
+              type="text"
+              value=""
+              placeholder="введите название заведения"
+              minlength="2" maxlength="30">
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">контактное лицо</span>
+            <input
+              class="input"
+              name="full-name"
+              type="text"
+              value=""
+              placeholder="введите ФИО"
+              minlength="5" maxlength="50"
+              pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+              data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">телефон для связи с организатором</span>
+            <input
+              class="input"
+              name="organizer-phone"
+              type="tel"
+              value="+7("
+              placeholder="введите номер телефона"
+              minlength="17" maxlength="17"
+              pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">описание</span>
+            <textarea
+              class="input input_type_textarea"
+              name="about_menu"
+              type="text"
+              value=""
+              placeholder="Укажите, что из меню будет принимать участие в акции"
+              minlength="2" maxlength="255"></textarea>
+          </label>
+
+        <!-- недостающие варианты 2-4 разновидностей 2 шага -->
+        <!-- радиокнопки (онлайн/офлайн) -->
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="онлайн">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+          </label>
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="оффлайн">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+          </label>
+
+          <!-- радиокнопки (открытое/закрытое мероприятие) -->
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="открытое мероприятие">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">открытое мероприятие</span>
+            <span class="text text_type_main input__label">адрес отобразим в карточке события</span>
+          </label>
+          <label class="membership__form-label">
+            <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="закрытое мероприятие">
+            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">закрытое мероприятие</span>
+            <span class="text text_type_main input__label">адрес увидят только, те кому вы оправите ссылку на событие</span>
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">название мероприятия</span>
+            <input
+              class="input"
+              name="event-title"
+              type="text"
+              value=""
+              placeholder="введите название"
+              minlength="2" maxlength="30">
+          </label>
+
+          <label class="text text_type_main">
+            <span class="input__label">дата проведения</span>
+            <input
+              class="input"
+              name="date"
+              type="text"
+              value=""
+              placeholder="укажите дату в формате дд.мм.гггг"
+              minlength="10" maxlength="10"
+              pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
+              data-custom-message="Укажите дату в формате дд.мм.гггг">
+          </label>
+
+      </div>
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">шаг 3 из 4</p>
+
+      <!-- 1-я разновидность филдсета для 3-го шага (кафе/бар/ресторан) -->
+        <label class="text text_type_main">
+          <span class="input__label">часы работы заведения</span>
+          <input
+            class="input"
+            name="place-hours"
+            type="text"
+            value=""
+            placeholder="например: 10:00-13:00, 13:00-19:00"
+            minlength="11" maxlength="11"
+            pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
+            data-custom-message="Укажите время в формате хх:хх-хх:хх">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">адрес заведения</span>
+          <input
+            class="input"
+            name="adress"
+            type="text"
+            value=""
+            placeholder="каждый адрес с новой строки"
+            minlength="10" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">номер телефона заведения</span>
+          <input
+            class="input"
+            name="place-phone"
+            type="text"
+            value="+7("
+            placeholder="введите номер телефона"
+            minlength="17" maxlength="17"
+            pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">ссылка на сайт</span>
+          <input
+            class="input"
+            name="website"
+            type="url"
+            value="https://"
+            placeholder="введите ссылку">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">ссылки на соцсети</span>
+          <input
+            class="input"
+            name="social-network-list"
+            type="url"
+            value=""
+            placeholder="каждую ссылку с новой строки">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">описание</span>
+          <textarea
+            class="input input_type_textarea"
+            name="about"
+            type="text"
+            value=""
+            placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
+            minlength="30" maxlength="255"></textarea>
+        </label>
+      </div>
+
+      <div class="ui-kit__flex ui-kit__flex_column">
+        <p class="text text_type_main">еще разновидности 3го шага</p>
+        <!-- 2-я разновидность филдсета для 3 шага (лекция/мастер-класс) -->
+        <label class="text text_type_main">
+          <span class="input__label">время проведения</span>
+          <input
+            class="input"
+            name="event-hours"
+            type="text"
+            value=""
+            placeholder="например: 18:00-22:00"
+            minlength="11" maxlength="11"
+            pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
+            data-custom-message="Укажите время в формате хх:хх-хх:хх">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">адрес проведения</span>
+          <input
+            class="input"
+            name="event-place"
+            type="text"
+            value=""
+            placeholder="каждый адрес с новой строки"
+            minlength="10" maxlength="255"
+            pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
+            data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы.">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">номер телефона для бронирования</span>
+          <input
+            class="input"
+            name="reserve-phone"
+            type="text"
+            value="+7("
+            placeholder="введите номер телефона"
+            minlength="17" maxlength="17"
+            pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)-ххх-хх-хх">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">стоимость участия</span>
+          <input
+            class="input"
+            name="price"
+            type="text"
+            value=""
+            placeholder="укажите стоимость в рублях"
+            minlength="2"
+            pattern="[\-\,\d\s]+"
+            data-custom-message="Разрешены только цифры, знаки дефиса, запятые и пробелы">
+        </label>
+
+        <label class="text text_type_main">
+          <span class="input__label">описание</span>
+          <textarea
+            class="input input_type_textarea"
+            name="about"
+            type="text"
+            value=""
+            placeholder="Напишите небольшой анонс вашего местер-класса или лекции. Чем мероприятие будет полезно, чему посвящено"
+            minlength="30" maxlength="255"></textarea>
+        </label>
+
+      <!-- недостающий вариант для 3-й разновидности филдсета 3 шага (посиделки/вечеринка) -->
+        <label class="text text_type_main">
+          <span class="input__label">описание</span>
+          <textarea
+            class="input input_type_textarea"
+            name="about"
+            type="text"
+            value=""
+            placeholder="Напишите небольшой анонс вашего мероприятия. Чем оно будет полезно/чему посвящено"
+            minlength="30" maxlength="255"></textarea>
+        </label>
+      </div>
+
+
+
+    </section>
+
     <section class="ui-kit__grid" aria-label="Header, footer">
-      <h2 class="text text_type_main ui-kit__grid-title">Header</h2>
+      <h2 class="title title_type_block ui-kit__grid-title">Header</h2>
       <p class="text">&lt;- будет тут -></p>
 
       <h2 class="text text_type_main ui-kit__grid-title">Footer</h2>
@@ -962,20 +1667,62 @@
 
     </section>
 
-    <section class="ui-kit__grid ui-kit__grid_auto-flow-column" aria-label="Крупные элементы">
+    <section class="" aria-label="Крупные элементы">
+
+      <h2 class="title title_type_block">примеры article</h2>
+
+      <div class="ui-kit__grid ui-kit__grid_type_1-3columns">
+        <p class="text text_type_main">column column_type_double:</p>
+
+        <!-- статья (блок column) -->
+        <!-- тип: две колонки -->
+        <article class="column column_type_double">
+          <h2 class="title title_type_section">примите акцию у&nbsp;себя</h2>
+          <div class="column column_type_single">
+            <p class="text text_type_main column__shifted-paragraph">Кто может принять участие в&nbsp;акции?</p>
+            <p class="text text_type_main">Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте мастер-класс по&nbsp;вязанию
+              или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
+              <!-- переход на страницу стать участником -->
+            <a class="btn btn_type_bordered text text_type_button column__btn" href="#" target="_blank">стать участником</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="ui-kit__grid ui-kit__grid_type_1-3columns">
+        <p class="text text_type_main">column column_type_single:</p>
+
+        <!-- тип: одна колонка -->
+        <article class="column column_type_single">
+          <h2 class="title title_type_section">зачем мы&nbsp;это делаем?</h2>
+
+            <div class="column column_type_single">
+              <p class="text text_type_main column__shifted-paragraph">Бездомному человеку намного проще возвращаться к&nbsp;обычной жизни,
+                когда есть возможность не&nbsp;волноваться каждый день о&nbsp;том, где сегодня ночевать и&nbsp;что сегодня есть.</p>
+              <p class="text text_type_main">Жизнь в&nbsp;человеческих условиях, поддержка наших специалистов по&nbsp;социальной работе,
+                юристов и&nbsp;психологов&nbsp;&mdash; это всё элементы реабилитации после травм и&nbsp;тяжести уличных месяцев или лет.</p>
+            </div>
+
+            <a class="btn btn_type_bordered text text_type_button column__btn" href="#">наши проекты
+              <svg width="24" height="14" viewBox="0 0 24 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M23.124 4.90699L19.245 1.02899C19.0575 0.841521 18.8032 0.736206 18.538 0.736206C18.2728 0.736206 18.0185 0.841521 17.831 1.02899C17.6435 1.21652 17.5382 1.47083 17.5382 1.73599C17.5382 2.00116 17.6435 2.25546 17.831 2.44299L21.386 5.99999H1C0.734784 5.99999 0.48043 6.10535 0.292893 6.29289C0.105357 6.48042 0 6.73478 0 6.99999H0C0 7.26521 0.105357 7.51956 0.292893 7.7071C0.48043 7.89464 0.734784 7.99999 1 7.99999H21.447L17.831 11.615C17.738 11.7079 17.6643 11.8182 17.6139 11.9396C17.5636 12.061 17.5377 12.1911 17.5377 12.3225C17.5377 12.4539 17.5636 12.584 17.6139 12.7054C17.6643 12.8268 17.738 12.9371 17.831 13.03C18.0185 13.2175 18.2728 13.3228 18.538 13.3228C18.8032 13.3228 19.0575 13.2175 19.245 13.03L23.125 9.15099C23.6859 8.58716 24.0007 7.82412 24.0006 7.02879C24.0004 6.23345 23.6852 5.47056 23.124 4.90699Z"
+                fill="currentColor" />
+            </svg></a>
+        </article>
+
+      </div>
+
+
       <div>
-        <h2 class="text text_type_main ui-kit__grid-title">Статья</h2>
+        <h2 class="title title_type_block ui-kit__grid-title">Карточка</h2>
         <p class="text">&lt;- будет тут -></p>
       </div>
 
-      <div>
-        <h2 class="text text_type_main ui-kit__grid-title">Карточка</h2>
-        <p class="text">&lt;- будет тут -></p>
-      </div>
-
 
       <div>
-        <h2 class="text text_type_main ui-kit__grid-title">Круглая карточка</h2>
+        <h2 class="title title_type_block ui-kit__grid-title">Круглая карточка</h2>
         <p class="text">&lt;- будет тут -></p>
       </div>
 

@@ -1,0 +1,22 @@
+/* чтобы на мобильном растянулись на всю ширину несмотря на паддинги */
+@media (max-width: 768px){
+  .membership__radio-wrapper_party::before {
+    top: 226px;
+  }
+
+  .membership__radio-wrapper_party::after {
+    top: 402px;
+  }
+}
+
+@media (max-width: 552px){
+  .membership__radio-wrapper_party::after {
+    top: 422px;
+  }
+}
+
+@media (max-width: 370px){
+  .membership__radio-wrapper_party::after {
+    top: 442px;
+  }
+}

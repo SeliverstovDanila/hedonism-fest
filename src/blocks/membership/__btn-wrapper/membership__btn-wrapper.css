@@ -1,0 +1,14 @@
+.membership__btn-wrapper {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .membership__btn-wrapper {
+    margin-top: 0;
+    gap: 12px;
+    padding: 20px;
+    box-shadow: 0px -8px 32px 0px rgba(59, 55, 72, 0.12);
+  }
+}
