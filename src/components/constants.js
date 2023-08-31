@@ -1,7 +1,5 @@
-export const cardTemplate = document.querySelector("#card-template").content;
-export const eventsCardsContainer = document.querySelector(".events__cards-container");
-export const locationBtn = document.querySelector(".header__location-button");
 
+export const locationBtn = document.querySelector(".header__location-button");
 export const popupBurgerMenu = document.querySelector('.popup__menu-burger');
 export const popupChoiseCity = document.querySelector('.popup__choise-city');
 export const popupDonate = document.querySelector('.popup__donate-form');
@@ -21,5 +19,4 @@ export const btnMinus = document.querySelector('.controller_el_amount-minus');
 export const btnPlus = document.querySelector('.controller_el_amount-plus');
 export const amount = document.querySelector('.controller__amount-square');
 export const sumTickets = document.querySelector('.popup__sum-ticket');
-export const cardList = document.querySelectorAll(".card");
 export const popupOpenedSelector = 'popup_opened';
