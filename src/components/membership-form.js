@@ -1,10 +1,9 @@
 import {pageMembership, formMembership, btnCloseMemberForm, btnSubmitMemberForm,
   popupMembership, titleMembership, contentMembership, classForActiveBtn, fieldsetList,
   btnLeft, btnRight, open, close, addClass, removeClass} from '../components/utils.js';
-
+import {currentFieldsetIndex} from "../pages/membership.js"
 // функции для работы с формой страницы membership
 // {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset}
-export let currentFieldsetIndex = 0;
 
 // ф-я открытия формы на странице membership
 export function openMembershipPopup() {

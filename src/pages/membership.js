@@ -8,7 +8,7 @@ import {fileHandler} from '../components/photo-load.js';
 import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
-
+export let currentFieldsetIndex = 0;
 
 // #todo - (?) реализовать заполнение списка в форме путем подтягивания городов из массива:
 export const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург'];
