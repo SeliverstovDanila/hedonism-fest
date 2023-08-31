@@ -23,17 +23,17 @@ export let containerActiveClass = 'input__wrapper_active';
 // все константы:
 // {pageMembership, btnOpenMemberForm, formMembership, btnCloseMemberForm, btnSubmitMemberForm, popupMembership, titleMembership, contentMembership, classForActiveBtn, fieldsetList, btnLeft, btnRight, btnCloseImage, uploadButton, container, error, imageDisplay, containerActiveClass}
 // все функции:
-// {openPopup, closePopup, addClass, removeClass}
+// {open, close, addClass, removeClass}
 
 // УНИВЕРСАЛЬНЫЕ ФУНКЦИИ
 
-//  Открытие popup
-export function openPopup(popup, className){
+// просто открыть
+export function open(popup, className){
   popup.classList.add(className)
 }
 
-// Закрытие popup
-export function closePopup(popup, className){
+// просто закрыть
+export function close(popup, className){
 popup.classList.remove(className)
 }
 

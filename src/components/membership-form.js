@@ -1,6 +1,6 @@
 import {pageMembership, formMembership, btnCloseMemberForm, btnSubmitMemberForm,
   popupMembership, titleMembership, contentMembership, classForActiveBtn, fieldsetList,
-  btnLeft, btnRight, openPopup, closePopup, addClass, removeClass} from '../components/utils.js';
+  btnLeft, btnRight, open, close, addClass, removeClass} from '../components/utils.js';
 
 // функции для работы с формой страницы membership
 // {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset}
@@ -8,14 +8,14 @@ export let currentFieldsetIndex = 0;
 
 // ф-я открытия формы на странице membership
 export function openMembershipPopup() {
-  openPopup(popupMembership, 'membership__popup_opened');
+  open(popupMembership, 'membership__popup_opened');
   titleMembership.classList.add('membership__title_hidden');
   contentMembership.classList.add('membership__content_hidden');
 }
 
 // ф-я закрытия формы на странице membership
 export function closeMembershipPopup() {
-  closePopup(popupMembership, 'membership__popup_opened');
+  close(popupMembership, 'membership__popup_opened');
   titleMembership.classList.remove('membership__title_hidden');
   contentMembership.classList.remove('membership__content_hidden');
 }
