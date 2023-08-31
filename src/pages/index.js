@@ -1,33 +1,48 @@
 import "../pages/index.css";
-import { cardFormData, cardForm, likeBTN, participateButton } from "../components/CardForm";
-import { openPopup, closePopup} from "../components/popup";
+import {
+  cardFormData,
+  cardForm,
+  likeBTN,
+  participateButton,
+} from "../components/CardForm";
+import { openPopup, closePopup } from "../components/popup";
 
 import cardsArray from "../components/cards.json";
-import Card from "../components/card.js";
-
-const cardTemplate = document.querySelector("#card-template").content;
+import createCard from "../components/card.js";
+const renderedCards = [];
 const eventsCardsContainer = document.querySelector(".events__cards-container");
 const locationBtn = document.querySelector(".header__location-button");
 
-const popupBurgerMenu = document.querySelector('.popup__menu-burger');
-const popupChoiseCity = document.querySelector('.popup__choise-city');
-const popupDonate = document.querySelector('.popup__donate-form');
-const closeButton = document.querySelector(".popup__close-cardform");
+for (const cardElement of cardsArray) {
+  const card = createCard(cardElement);
+  eventsCardsContainer.append(card);
+  renderedCards.push(card);
+  cardFormData(cardElement)
+}
+
+const popupBurgerMenu = document.querySelector(".popup__menu-burger");
+const popupChoiseCity = document.querySelector(".popup__choise-city");
+const popupDonate = document.querySelector(".popup__donate-form");
+ const closeButton = document.querySelector(".popup__close-cardform");
 const burgerMenuBtn = document.querySelector(".header__menu-burger-icon");
-const btnChoiseCity = document.querySelector(".popup__burger-menu-button-location");
-const btnChoiseCityBack = document.querySelector(".popup__burger-menu-button-back");
-const btnDonate = document.querySelector('.btn__donate');
-const closeBtnDonate = document.querySelector('.popup__close-donate');
-const closeBtnTickets = document.querySelector('.popup__close-buy-ticket');
+const btnChoiseCity = document.querySelector(
+  ".popup__burger-menu-button-location"
+);
+const btnChoiseCityBack = document.querySelector(
+  ".popup__burger-menu-button-back"
+);
+const btnDonate = document.querySelector(".btn__donate");
+const closeBtnDonate = document.querySelector(".popup__close-donate");
+const closeBtnTickets = document.querySelector(".popup__close-buy-ticket");
 const burgerCityText = document.querySelector(".popup__burger-menu-city-name");
 const headerDropdown = document.querySelector(".header__dropdown");
 const headerText = document.querySelector(".header__text");
 const labelCity = document.querySelectorAll(".form-city__list");
-const btnSupport = document.querySelector('.btn__support');
-const btnMinus = document.querySelector('.controller_el_amount-minus');
-const btnPlus = document.querySelector('.controller_el_amount-plus');
-const amount = document.querySelector('.controller__amount-square');
-const sumTickets = document.querySelector('.popup__sum-ticket');
+const btnSupport = document.querySelector(".btn__support");
+const btnMinus = document.querySelector(".controller_el_amount-minus");
+const btnPlus = document.querySelector(".controller_el_amount-plus");
+const amount = document.querySelector(".controller__amount-square");
+const sumTickets = document.querySelector(".popup__sum-ticket");
 
 // открытие карты события
 closeButton.addEventListener("click", () => {
@@ -62,31 +77,22 @@ btnChoiseCityBack.addEventListener("click", function () {
   openPopup(popupBurgerMenu);
 });
 
-btnSupport.addEventListener('click', function(){
-  openPopup(popupDonate)
-})
+btnSupport.addEventListener("click", function () {
+  openPopup(popupDonate);
+});
 
-btnDonate.addEventListener('click', function(){
-openPopup(popupDonate)
-closePopup(popupBurgerMenu)
-})
+btnDonate.addEventListener("click", function () {
+  openPopup(popupDonate);
+  closePopup(popupBurgerMenu);
+});
 
-closeBtnDonate.addEventListener('click', function(){
-closePopup(popupDonate)
-})
+closeBtnDonate.addEventListener("click", function () {
+  closePopup(popupDonate);
+});
 
-closeBtnTickets.addEventListener('click', function(){
-  closePopup(popupBuyTickets)
-})
-
-// for (const cardElement of cardsArray) {
-//   const card = new Card(cardElement, cardTemplate, {
-//     zoomCard: () => {
-//       cardFormData(cardElement);
-//     },
-//   }).createCard();
-//   eventsCardsContainer.append(card);
-// }
+closeBtnTickets.addEventListener("click", function () {
+  closePopup(popupBuyTickets);
+});
 
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {
@@ -148,15 +154,15 @@ function changeCity(e) {
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 // счетчик (покупка билетов)
-btnMinus.addEventListener('click', function(){
-    const result = Number(amount.textContent) - 1;
-    if(result > 0){
-      amount.textContent = result;
-      sumTickets.textContent = 500 * result + '₽';
-    }
-})
-btnPlus.addEventListener('click', function(){
-    const result = Number(amount.textContent) + 1;
+btnMinus.addEventListener("click", function () {
+  const result = Number(amount.textContent) - 1;
+  if (result > 0) {
     amount.textContent = result;
-    sumTickets.textContent = 500 * result + '₽';
-})
+    sumTickets.textContent = 500 * result + "₽";
+  }
+});
+btnPlus.addEventListener("click", function () {
+  const result = Number(amount.textContent) + 1;
+  amount.textContent = result;
+  sumTickets.textContent = 500 * result + "₽";
+});

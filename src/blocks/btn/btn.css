@@ -11,7 +11,31 @@
   min-height: 40px;
   cursor: pointer;
 }
-
+.popup__name {
+  display:inline;
+  padding-right: 70%;
+}
+.popup__name:nth-last-of-type(2) {
+  padding-right: 0%;
+}
+.popup__row {
+  height: 48px;
+}
+@media (max-width: 768px){
+  .popup__row {
+    height: 36px;
+  }
+}
+@media (max-width: 500px){
+  .popup__name {
+    padding-right: 63%;
+  }
+}
+@media (max-width: 413px){
+  .popup__name {
+    padding-right: 55%;
+  }
+}
 .btn:disabled {
   color: #96949E;
   background-color: #FFFFFF;
@@ -31,5 +55,6 @@
 @media (max-width: 768px){
   .btn {
     padding: 12px 20px;
+    gap: 4px;
   }
 }

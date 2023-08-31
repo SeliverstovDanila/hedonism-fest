@@ -1,4 +1,5 @@
 const eventDuration = document.querySelector(".popup__duration");
+const eventDate = document.querySelector('.popup__date')
 const eventCost = document.querySelector(".popup__cost");
 const eventPlace = document.querySelector(".popup__place");
 const eventAddress = document.querySelector(".popup__address");
@@ -22,5 +23,6 @@ function cardFormData(data) {
   eventType.textContent = data.type;
   eventTitle.textContent = data.title;
   eventAdditonal.textContent = data.additional;
+  eventDate.textContent = data.date + ', ' + data.time;
 }
 export {cardFormData, cardForm, likeBTN, participateButton}

@@ -1,60 +1,115 @@
-import '../pages/index.css';
-import cardsArray from '../components/cards.json';
-import createCard from '../components/card.js';
-import {eventFilter, updateCardsCounter} from '../components/event-filter.js';
+import "../pages/index.css";
+import cardsArray from "../components/cards.json";
+import createCard from "../components/card.js";
+import { eventFilter, updateCardsCounter } from "../components/event-filter.js";
+import {
+  cardFormData,
+  cardForm,
+  likeBTN,
+  participateButton,
+} from "../components/CardForm";
+import { openPopup, closePopup } from "../components/popup";
+const closeButton = document.querySelector(".popup__close-cardform");
 
-export const eventsCardsContainer = document.querySelector('.catalog__cards-container');
+// const eventsMapContainer = document.querySelector(".catalog__map-container");
+
+export const eventsCardsContainer = document.querySelector(
+  ".catalog__cards-container"
+);
 const eventTypes = [];
 const eventDates = [];
-const buttonFilterContainer = document.querySelector('#type');
-const buttonDateContainer = document.querySelector('#date');
+const buttonFilterContainer = document.querySelector("#type");
+const buttonDateContainer = document.querySelector("#date");
 export const renderedCards = [];
 
-const oopsBtn = document.querySelector('#oopsBtn');
+const oopsBtn = document.querySelector("#oopsBtn");
 
 //Отрисовка карточек на странице
-for(const cardElement of cardsArray) {
+for (const cardElement of cardsArray) {
   const card = createCard(cardElement);
   eventsCardsContainer.append(card);
   renderedCards.push(card);
+  cardFormData(cardElement);
 }
 
 updateCardsCounter(cardsArray.length, cardsArray.length);
 
 //Создание кнопки для случаев, нет фильтруемых предметов
-oopsBtn.addEventListener('click', () => {
+oopsBtn.addEventListener("click", () => {
   location.reload();
-})
+});
 
 //Создание кнопок все и хочу пойти для контейнера с типами
-buttonFilterContainer.append(eventFilter('all', 'все', buttonFilterContainer));
-buttonFilterContainer.append(eventFilter('liked', 'хочу пойти', buttonFilterContainer));
+buttonFilterContainer.append(eventFilter("all", "все", buttonFilterContainer));
+buttonFilterContainer.append(
+  eventFilter("liked", "хочу пойти", buttonFilterContainer)
+);
 
 //Создание массива с type для фильтра
-for(let i=0; i < cardsArray.length; i++) {
-  eventTypes.push(cardsArray[i].type)
+for (let i = 0; i < cardsArray.length; i++) {
+  eventTypes.push(cardsArray[i].type);
 }
 
 const cardsType = [...new Set(eventTypes)];
 
-for(const cardType of cardsType) {
-  const buttonType = eventFilter('type', cardType, buttonFilterContainer);
+for (const cardType of cardsType) {
+  const buttonType = eventFilter("type", cardType, buttonFilterContainer);
   buttonFilterContainer.append(buttonType);
 }
 
 //Создание кнопки все для дней
-buttonDateContainer.append(eventFilter('all', 'все', buttonDateContainer));
+buttonDateContainer.append(eventFilter("all", "все", buttonDateContainer));
 
 //Создание массива с date для фильтра
-for(let i=0; i < cardsArray.length; i++) {
-  eventDates.push(cardsArray[i].date)
+for (let i = 0; i < cardsArray.length; i++) {
+  eventDates.push(cardsArray[i].date);
 }
 
 const cardsDate = [...new Set(eventDates)];
 
-for(const cardDate of cardsDate) {
-  const buttonDate = eventFilter('date', cardDate, buttonDateContainer);
+for (const cardDate of cardsDate) {
+  const buttonDate = eventFilter("date", cardDate, buttonDateContainer);
   buttonDateContainer.append(buttonDate);
 }
 
+// function windowSwitch(catalog1, catalog2, button1, button2) {
+//   catalog1.classList.add("disabled");
+//   catalog2.classList.remove("disabled");
+//   button1.classList.add("catalog__tab-button-disabled");
+//   button2.classList.remove("catalog__tab-button-disabled");
+// }
+// const mapButton = document.querySelector(".map");
+// const cardsButton = document.querySelector(".cards");
+// mapButton.addEventListener("click", () => {
+//   windowSwitch(
+//     eventsCardsContainer,
+//     eventsMapContainer,
+//     cardsButton,
+//     mapButton
+//   );
+// });
+// cardsButton.addEventListener("click", () => {
+//   windowSwitch(
+//     eventsMapContainer,
+//     eventsCardsContainer,
+//     mapButton,
+//     cardsButton
+//   );
+// });
+closeButton.addEventListener("click", () => {
+  closePopup(cardForm);
+});
+participateButton.addEventListener("click", () => {
+  likeBTN.classList.toggle("card__like_active");
+});
+const cardList = document.querySelectorAll(".card");
+cardList.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (!event.target.classList.contains("card__like")) {
+      openPopup(cardForm);
+    }
+  });
+});
+// import { init } from "./Map";
 
+// ymaps.ready(init);
