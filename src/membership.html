@@ -10,7 +10,8 @@
 </head>
 
 <body class="page" id="#membership">
-  <!-- <header class="header">
+  <!-- начало хедера -->
+  <header class="header">
     <div class="header__logo-location">
       <a href="index.html"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
           class="header__logo"></a>
@@ -26,7 +27,7 @@
         </svg>
         <span class="text text_type_button header__text">Санкт-Петербург</span>
       </button>
-
+      <!-- всплывающее окно -->
       <div class="header__dropdown">
         <form name="сhoise-city" class="form-city">
           <label class="form-city__list" for="moscow">
@@ -51,7 +52,6 @@
           </label>
         </form>
       </div>
-
     </div>
     <nav>
       <ul class="header__menu-links">
@@ -77,58 +77,7 @@
       </div>
     </div>
   </header>
-  <div class="header__logo-location">
-    <a href="index.html"><img src="<%=require('./images/header-logo.svg')%>" alt="логотип гедонизм-фест"
-        class="header__logo"></a>
-    <button class="header__location-button" type="button">
-      <img src="<%=require('./images/location-icon.svg')%>" alt="кнопка локации" class="header__icon-location">
-      <span class="text text_type_button header__text">Санкт-Петербург</span>
-    </button>
-
-    <div class="header__dropdown">
-      <form name="сhoise-city" class="form-city">
-        <label class="form-city__list" for="moscow">
-          <span>Moсква</span>
-          <input type="radio" name="city" id="moscow" class="form-city__list-item" value="Moсква">
-        </label>
-        <label class="form-city__list" for="saint-Petersburg">
-          <span>Санкт-Петербург</span>
-          <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
-        </label>
-        <label class="form-city__list" for="sochi">
-          <span>Сочи</span>
-          <input type="radio" name="city" id="sochi" class="form-city__list-item" value="Сочи">
-        </label>
-        <label class="form-city__list" for="kaluga">
-          <span>Калуга</span>
-          <input type="radio" name="city" id="kaluga" class="form-city__list-item" value="Калуга">
-        </label>
-        <label class="form-city__list" for="ekaterinburg">
-          <span>Екатеринбург</span>
-          <input type="radio" name="city" id="ekaterinburg" class="form-city__list-item" value="Екатеринбург">
-        </label>
-      </form>
-    </div>
-  </div>
-  <nav>
-    <ul class="header__menu-links">
-      <li class="header__menu-item"><a href="#" class="header__menu-link">куда пойти</a></li>
-      <li class="header__menu-item"><a href="#" class="header__menu-link">стать участником</a></li>
-      <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
-    </ul>
-  </nav>
-  <div class="header__user-action">
-    <button class="header__agree-button" type="button">
-      <img src="<%=require('./images/like-icon.svg')%>" alt="кнопка лайк" class="header__icon-like">
-      <span class="text text_type_button">хочу пойти</span>
-    </button>
-    <button class="button button_type_vanish button_type_violet" type="button"><span
-        class="text text_type_button text_color_white">поддержать</span></button>
-    <div class="menu-burger-icon">
-      <span></span>
-    </div>
-  </div>
-  </header> -->
+  <!-- конец хедера -->
 
   <!-- секция festival -->
   <main class="membership">
@@ -433,8 +382,8 @@
       </form>
     </div>
 
-
-    <!-- <footer class="footer">
+    <!-- начало футера -->
+    <footer class="footer">
       <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
       <nav class="footer__info">
         <h2 class="title title_type_block">организатор:</h2>
@@ -468,42 +417,15 @@
         </ul>
       </nav>
     </footer>
-      <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
-      <nav class="footer__info">
-        <h2 class="title title_type_block">организатор:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Ночлежка<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="info@hedonismfest.ru"
-              class="footer__link footer__link_email">info@hedonismfest.ru</a></li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">сделано с любовью:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Fastsol Digital<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">shishki.collective<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">студентами Яндекс.Практикума<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">мы в соцсетях:</h2>
-        <ul class="footer__list footer__list-social">
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/facebook.svg')%>" alt="иконка facebook" class="footer__icon-social"></a></li>
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/instagram.svg')%>" alt="иконка instagram" class="footer__icon-social"></a></li>
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/vk.svg')%>" alt="иконка vk" class="footer__icon-social"></a></li>
-        </ul>
-      </nav>
-    </footer> -->
+    <!-- конец футера -->
 
+
+
+
+  </main>
+<!-- шаблоны для хедера -->
   <!-- бургер меню -->
-  <!-- <div class="popup popup__menu-burger">
+  <div class="popup popup__menu-burger">
     <div class="popup__container  popup__container_type_burger-menu">
       <div class="popup__content">
         <p class="text text_type_optional text_color_grey popup__burger-menu-text">ваш город:</p>
@@ -530,9 +452,9 @@
             class="text text_type_button text_color_white">пожертвовать</span></button>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- бургер меню (смена города) -->
-  <!-- <div class="popup popup__choise-city">
+  <div class="popup popup__choise-city">
     <div class="popup__container  popup__container_type_burger-menu">
       <div class="popup__content">
         <button type="button" class="popup__burger-menu-button-back">
@@ -565,9 +487,9 @@
         </form>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- форма пожертвования -->
-  <!-- <div class="popup popup__donate-form">
+  <div class="popup popup__donate-form">
     <div class="popup__container popup__container_type_donate-form">
       <form class="popup__wrapper" name="payment-method" id="form-payment">
         <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none"
@@ -630,9 +552,9 @@
         <span>перейти к оплате</span>
       </button>
     </div>
-  </div> -->
+  </div>
   <!-- форма купить билет -->
-  <!-- <div class="popup popup__buy-ticket">
+  <div class="popup popup__buy-ticket">
     <div class="popup__container popup__container_type_buy-ticket">
       <form class="popup__wrapper" name="payment-method" id="form-buy-ticket">
         <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none"
@@ -658,8 +580,8 @@
           </div>
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
-        <input type="email" disabled
-          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
+        <input type="email"
+          class="btn btn_type_bordered btn_type_grey text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
@@ -684,9 +606,7 @@
         <span>перейти к оплате</span>
       </button>
     </div>
-  </div> -->
-
-  </main>
+  </div>
 
 
     <!-- заменяющийся контейнер с филдсетами -->

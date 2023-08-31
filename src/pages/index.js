@@ -1,21 +1,13 @@
 import "../pages/index.css";
 import { cardFormData, cardForm, likeBTN, participateButton } from "../components/CardForm";
 import { openPopup, closePopup,changeCity} from "../components/popup";
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,closeButton,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,cardList} from "../components/constants.js"
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,closeButton,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js";
+import {cardTemplate, eventsCardsContainer, cardList} from "../components/carusel.js";
 import cardsArray from "../components/cards.json";
 import Card from "../components/card.js";
 
 
 // начало функционала header
-// открытие карты события
-closeButton.addEventListener("click", () => {
-  closePopup(cardForm);
-});
-
-participateButton.addEventListener("click", () => {
-  likeBTN.classList.toggle("card__like_active");
-});
-
 // всплывающее окно
 locationBtn.addEventListener("click", function () {
   headerDropdown.classList.toggle("header__dropdown_active");
@@ -75,6 +67,15 @@ btnPlus.addEventListener('click', function(){
 })
 
 // конец
+
+// открытие карты события
+closeButton.addEventListener("click", () => {
+  closePopup(cardForm);
+});
+
+participateButton.addEventListener("click", () => {
+  likeBTN.classList.toggle("card__like_active");
+});
 
 // for (const cardElement of cardsArray) {
 //   const card = new Card(cardElement, cardTemplate, {
