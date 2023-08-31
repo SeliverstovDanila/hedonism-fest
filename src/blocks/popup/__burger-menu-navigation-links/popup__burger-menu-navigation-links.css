@@ -1,0 +1,7 @@
+.popup__burger-menu-navigation-links{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

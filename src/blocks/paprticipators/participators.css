@@ -3,16 +3,17 @@
   margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 80px;
+  padding-left: 40px;
 }
 @media (max-width: 768px) {
   .participators {
     background-color: rgba(235, 233, 237, 1);
     max-width: 100%;
+    padding-left: 20px;
   }
 }
 @media (max-width: 1024px) {
   .participators {
-    width: 100%;
     margin-top: 60px;
     margin-bottom: 0;
     padding-top: 40px;
