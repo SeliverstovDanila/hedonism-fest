@@ -273,6 +273,7 @@
 @import url('../blocks/popup/__burger-menu-navigation-link/popup__burger-menu-navigation-link.css');
 @import url('../blocks/popup/__burger-menu-button-back/popup__burger-menu-button-back.css');
 @import url('../blocks/popup/__burger-menu-text-back/popup__burger-menu-text-back.css');
+@import url('../blocks/btn/_type/btn_type_grey.css');
 
 /* ui-kit */
 @import url("../blocks/ui-kit/ui-kit.css");
