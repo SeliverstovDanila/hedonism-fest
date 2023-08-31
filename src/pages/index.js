@@ -1,58 +1,13 @@
 import "../pages/index.css";
-import {
-  cardFormData,
-  cardForm,
-  likeBTN,
-  participateButton,
-} from "../components/CardForm";
-import { openPopup, closePopup } from "../components/popup";
-
+import { cardFormData, cardForm, likeBTN, participateButton } from "../components/CardForm";
+import { openPopup, closePopup,changeCity} from "../components/popup";
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,closeButton,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js";
+import {cardTemplate, eventsCardsContainer, cardList} from "../components/carusel.js";
 import cardsArray from "../components/cards.json";
-import createCard from "../components/card.js";
-const renderedCards = [];
-const eventsCardsContainer = document.querySelector(".events__cards-container");
-const locationBtn = document.querySelector(".header__location-button");
+import Card from "../components/card.js";
 
-for (const cardElement of cardsArray) {
-  const card = createCard(cardElement);
-  eventsCardsContainer.append(card);
-  renderedCards.push(card);
-  cardFormData(cardElement)
-}
 
-const popupBurgerMenu = document.querySelector(".popup__menu-burger");
-const popupChoiseCity = document.querySelector(".popup__choise-city");
-const popupDonate = document.querySelector(".popup__donate-form");
- const closeButton = document.querySelector(".popup__close-cardform");
-const burgerMenuBtn = document.querySelector(".header__menu-burger-icon");
-const btnChoiseCity = document.querySelector(
-  ".popup__burger-menu-button-location"
-);
-const btnChoiseCityBack = document.querySelector(
-  ".popup__burger-menu-button-back"
-);
-const btnDonate = document.querySelector(".btn__donate");
-const closeBtnDonate = document.querySelector(".popup__close-donate");
-const closeBtnTickets = document.querySelector(".popup__close-buy-ticket");
-const burgerCityText = document.querySelector(".popup__burger-menu-city-name");
-const headerDropdown = document.querySelector(".header__dropdown");
-const headerText = document.querySelector(".header__text");
-const labelCity = document.querySelectorAll(".form-city__list");
-const btnSupport = document.querySelector(".btn__support");
-const btnMinus = document.querySelector(".controller_el_amount-minus");
-const btnPlus = document.querySelector(".controller_el_amount-plus");
-const amount = document.querySelector(".controller__amount-square");
-const sumTickets = document.querySelector(".popup__sum-ticket");
-
-// открытие карты события
-closeButton.addEventListener("click", () => {
-  closePopup(cardForm);
-});
-
-participateButton.addEventListener("click", () => {
-  likeBTN.classList.toggle("card__like_active");
-});
-
+// начало функционала header
 // всплывающее окно
 locationBtn.addEventListener("click", function () {
   headerDropdown.classList.toggle("header__dropdown_active");
@@ -90,11 +45,48 @@ closeBtnDonate.addEventListener("click", function () {
   closePopup(popupDonate);
 });
 
-closeBtnTickets.addEventListener("click", function () {
-  closePopup(popupBuyTickets);
+closeBtnTickets.addEventListener('click', function(){
+  closePopup(popupBuyTickets)
+})
+
+
+labelCity.forEach((item) => item.addEventListener("change", changeCity));
+
+// счетчик (покупка билетов)
+btnMinus.addEventListener('click', function(){
+  const result = Number(amount.textContent) - 1;
+  if(result > 0){
+    amount.textContent = result;
+    sumTickets.textContent = 500 * result + '₽';
+  }
+})
+btnPlus.addEventListener('click', function(){
+  const result = Number(amount.textContent) + 1;
+  amount.textContent = result;
+  sumTickets.textContent = 500 * result + '₽';
+})
+
+// конец
+
+// открытие карты события
+closeButton.addEventListener("click", () => {
+  closePopup(cardForm);
 });
 
-const cardList = document.querySelectorAll(".card");
+participateButton.addEventListener("click", () => {
+  likeBTN.classList.toggle("card__like_active");
+});
+
+// for (const cardElement of cardsArray) {
+//   const card = new Card(cardElement, cardTemplate, {
+//     zoomCard: () => {
+//       cardFormData(cardElement);
+//     },
+//   }).createCard();
+//   eventsCardsContainer.append(card);
+// }
+
+
 cardList.forEach((card) => {
   card.addEventListener("click", (event) => {
     if (!event.target.classList.contains("card__like")) {
@@ -103,66 +95,43 @@ cardList.forEach((card) => {
   });
 });
 
-document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
-  const items = carousel.querySelectorAll(".fest-images__image");
-  const buttonsHtml = Array.from(items, () => {
-    return `<span class="fest-images__button"></span>`;
-  });
 
-  carousel.insertAdjacentHTML(
-    "beforeend",
-    `
-          <div class="fest-images__nav">
-              ${buttonsHtml.join("")}
-          </div>
-      `
-  );
+// document.querySelectorAll(".fest-images__grid").forEach((carousel) => {
+//   const items = carousel.querySelectorAll(".fest-images__image");
+//   const buttons = carousel.querySelectorAll(".fest-images__button");
+//   const buttonsHtml = Array.from(items, () => {
+//     return `<span class="fest-images__button"></span>`;
+//   });
 
-  const buttons = carousel.querySelectorAll(".fest-images__button");
+//   carousel.insertAdjacentHTML(
+//     "beforeend",
+//     `
+//           <div class="fest-images__nav">
+//               ${buttonsHtml.join("")}
+//           </div>
+//       `
+//   );
 
-  buttons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-      items.forEach((item) =>
-        item.classList.remove("fest-images__image_selected")
-      );
-      buttons.forEach((button) =>
-        button.classList.remove("fest-images__button_selected")
-      );
 
-      items[i].classList.add("fest-images__image_selected");
-      button.classList.add("fest-images__button_selected");
-    });
-  });
 
-  items[0].classList.add("fest-images__image_selected");
-  buttons[0].classList.add("fest-images__button_selected");
-});
+//   buttons.forEach((button, i) => {
+//     button.addEventListener("click", () => {
+//       items.forEach((item) =>
+//         item.classList.remove("fest-images__image_selected")
+//       );
+//       buttons.forEach((button) =>
+//         button.classList.remove("fest-images__button_selected")
+//       );
 
-//изменить город
-function changeCity(e) {
-  if (
-    (headerText.textContent = e.target
-      .closest("label")
-      .querySelector("span").textContent)
-  );
-  if (
-    (burgerCityText.textContent = e.target
-      .closest("label")
-      .querySelector("span").textContent)
-  );
-}
-labelCity.forEach((item) => item.addEventListener("change", changeCity));
+//       items[i].classList.add("fest-images__image_selected");
+//       button.classList.add("fest-images__button_selected");
+//     });
+//   });
 
-// счетчик (покупка билетов)
-btnMinus.addEventListener("click", function () {
-  const result = Number(amount.textContent) - 1;
-  if (result > 0) {
-    amount.textContent = result;
-    sumTickets.textContent = 500 * result + "₽";
-  }
-});
-btnPlus.addEventListener("click", function () {
-  const result = Number(amount.textContent) + 1;
-  amount.textContent = result;
-  sumTickets.textContent = 500 * result + "₽";
-});
+//   items[0].classList.add("fest-images__image_selected");
+//   buttons[0].classList.add("fest-images__button_selected");
+// });
+
+
+
+

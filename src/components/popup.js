@@ -1,6 +1,7 @@
 import "../pages/index.css";
+import {popupOpenedSelector,headerText,burgerCityText} from "../components/constants.js"
 
-const popupOpenedSelector = 'popup_opened';
+
 
 function openPopup(popupSelector) {
   popupSelector.classList.add("popup_opened");
@@ -28,5 +29,20 @@ function  keyHandlerEsc(evt) {
       popupActive && closePopup(popupActive)
   }
 }
-export { openPopup, closePopup, keyHandlerEsc,keyHandlerOverlay};
+
+//изменить город
+function changeCity(e) {
+  if (
+    (headerText.textContent = e.target
+      .closest("label")
+      .querySelector("span").textContent)
+  );
+  if (
+    (burgerCityText.textContent = e.target
+      .closest("label")
+      .querySelector("span").textContent)
+  );
+}
+
+export { openPopup, closePopup, keyHandlerEsc,keyHandlerOverlay, changeCity};
 
