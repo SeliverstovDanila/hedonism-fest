@@ -79,14 +79,14 @@ closeBtnTickets.addEventListener('click', function(){
   closePopup(popupBuyTickets)
 })
 
-for (const cardElement of cardsArray) {
-  const card = new Card(cardElement, cardTemplate, {
-    zoomCard: () => {
-      cardFormData(cardElement);
-    },
-  }).createCard();
-  eventsCardsContainer.append(card);
-}
+// for (const cardElement of cardsArray) {
+//   const card = new Card(cardElement, cardTemplate, {
+//     zoomCard: () => {
+//       cardFormData(cardElement);
+//     },
+//   }).createCard();
+//   eventsCardsContainer.append(card);
+// }
 
 const cardList = document.querySelectorAll(".card");
 cardList.forEach((card) => {

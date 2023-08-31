@@ -1,0 +1,8 @@
+.catalog__cards-container {
+  box-sizing: border-box;
+  max-width: 1070px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 35px;
+  gap: 20px;
+}

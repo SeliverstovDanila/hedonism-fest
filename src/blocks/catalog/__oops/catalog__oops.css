@@ -1,0 +1,8 @@
+.catalog__oops {
+  display: flex;
+  max-width: 1070px;
+  padding: 160px 80px;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 40px;
+}

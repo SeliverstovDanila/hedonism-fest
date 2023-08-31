@@ -1,0 +1,7 @@
+.catalog-filters__ad {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 12px;
+  padding: 40px;
+  margin-top: 16px;
+}

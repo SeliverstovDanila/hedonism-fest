@@ -1,0 +1,6 @@
+.catalog-filters__filter-block {
+  padding: 16px 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+}

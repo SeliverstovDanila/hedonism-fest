@@ -110,14 +110,16 @@
 @import url("../blocks/events/__cards-container/events__cards-container.css");
 
 /*CARDS*/
-@import url("../blocks/card/card.css");
-@import url("../blocks/card/__image/card__image.css");
-@import url("../blocks/card/__content/card__content.css");
-@import url("../blocks/card/__optional-container/card__optional-container.css");
-@import url("../blocks/card/__content-container/card__content-container.css");
-@import url("../blocks/card/__like/card__like.css");
-@import url("../blocks/card/__text/card__text.css");
-@import url("../blocks/card/__text-optional/card__text-optional.css");
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__image/card__image.css');
+@import url('../blocks/card/__content/card__content.css');
+@import url('../blocks/card/__optional-container/card__optional-container.css');
+@import url('../blocks/card/__content-container/card__content-container.css');
+@import url('../blocks/card/__like/card__like.css');
+@import url('../blocks/card/__like/_active/card__like_active.css');
+@import url('../blocks/card/__text/card__text.css');
+@import url('../blocks/card/__text-optional/card__text-optional.css');
+@import url('../blocks/card/__hidden/card__hidden.css');
 
 /*DIGITS*/
 @import url("../blocks/digits/digits.css");
@@ -275,10 +277,23 @@
 @import url('../blocks/popup/__burger-menu-text-back/popup__burger-menu-text-back.css');
 @import url('../blocks/btn/_type/btn_type_grey.css');
 
+/* СТРАНИЦА CATALOG */
+@import url('../blocks/catalog/catalog.css');
+@import url('../blocks/catalog/__cards-container/catalog__cards-container.css');
+@import url('../blocks/catalog/__control-panel/catalog__control-panel.css');
+@import url('../blocks/catalog/__tab-switcher/catalog__tab-switcher.css');
+@import url('../blocks/catalog/tab-button-disabled/catalog__tab-button-disabled.css');
+@import url('../blocks/catalog/__oops/catalog__oops.css');
+@import url('../blocks/catalog/catalog__oops-img/catalog__oops-img.css');
+@import url('../blocks/catalog/catalog__oops-text/catalog__oops-text.css');
+@import url('../blocks/catalog/__list-container/catalog__list-container.css');
+@import url('../blocks/catalog-filters/catalog-filters.css');
+@import url('../blocks/catalog-filters/__filter-block/catalog-filters__filter-block.css');
+@import url('../blocks/catalog-filters/__filter-buttons/catalog-filters__filter-buttons.css');
+@import url('../blocks/catalog-filters/__title-container/catalog-filters__title-container.css');
+@import url('../blocks/catalog-filters/__ad/catalog-filters__ad.css');
+
+@import url('../blocks/disabled/disabled.css');
+
 /* ui-kit */
 @import url("../blocks/ui-kit/ui-kit.css");
-
-
-
-
-
