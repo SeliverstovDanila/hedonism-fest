@@ -29,7 +29,6 @@ for (const cardElement of cardsArray) {
   const card = createCard(cardElement);
   eventsCardsContainer.append(card);
   renderedCards.push(card);
-  cardFormData(cardElement);
 }
 
 updateCardsCounter(cardsArray.length, cardsArray.length);

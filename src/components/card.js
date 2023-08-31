@@ -1,5 +1,11 @@
 const _cardElementTemplate = document.querySelector('#card-template').content;
-
+import {
+  cardFormData,
+  cardForm,
+  likeBTN,
+  participateButton,
+} from "../components/CardForm";
+import { openPopup, closePopup, changeCity } from "../components/popup";
 export default function createCard(card) {
   const _cardElement = _cardElementTemplate.querySelector('.card').cloneNode(true);
   _cardElement.dataset.type = card.type;
@@ -21,7 +27,6 @@ export default function createCard(card) {
   const _cardLikeBtn = _cardElement.querySelector('.card__like');
   _cardLikeBtn.addEventListener('click', () => {
     _cardLikeBtn.classList.toggle('card__like_active');
-
     if(_cardLikeBtn.classList.contains('card__like_active')) {
       _cardElement.dataset.liked = 'хочу пойти';
     }
@@ -29,6 +34,10 @@ export default function createCard(card) {
       delete _cardElement.dataset.liked;
     }
   });
+  _cardElement.addEventListener('click', () => {
+    openPopup(cardForm)
+    cardFormData(card)
+  })
 
   return _cardElement;
 }
