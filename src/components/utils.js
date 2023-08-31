@@ -20,6 +20,9 @@ export let error = pageMembership.querySelector(".input__error_type_images"); //
 export let imageDisplay = pageMembership.querySelector(".input__image-display");
 export let containerActiveClass = 'input__wrapper_active';
 
+
+// {cardTemplate,eventsCardsContainer,locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,closeButton,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,burgerCityText,headerDropdown,headerText,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,buttons,cardList,popupOpenedSelector}
+
 // все константы:
 // {pageMembership, btnOpenMemberForm, formMembership, btnCloseMemberForm, btnSubmitMemberForm, popupMembership, titleMembership, contentMembership, classForActiveBtn, fieldsetList, btnLeft, btnRight, btnCloseImage, uploadButton, container, error, imageDisplay, containerActiveClass}
 // все функции:
