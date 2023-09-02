@@ -1,9 +1,23 @@
 import {pageMembership, formMembership, btnCloseMemberForm, btnSubmitMemberForm,
   popupMembership, titleMembership, contentMembership, classForActiveBtn, fieldsetList,
   btnLeft, btnRight, open, close, addClass, removeClass} from '../components/utils.js';
-import {currentFieldsetIndex} from "../pages/membership.js"
+
 // функции для работы с формой страницы membership
 // {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset}
+// {getCurrIndex, plusCurrIndex, minusCurrIndex}
+export let currentFieldsetIndex = 0;
+
+export function getCurrIndex() {
+  return currentFieldsetIndex;
+}
+
+export function plusCurrIndex() {
+  currentFieldsetIndex += 1;
+}
+
+export function minusCurrIndex() {
+  currentFieldsetIndex -= 1;
+}
 
 // ф-я открытия формы на странице membership
 export function openMembershipPopup() {
@@ -63,7 +77,7 @@ export function submitMembershipPopup(evt) {
 
 // ф-я создания филдсета из шаблона (name - тип шаблона, который нам нужен - food, study, party, another)
 export function makeFieldset(name) {
-  const fieldsetTemplate = pageMembership.querySelector(`#template-${name}`).content.querySelector('.membership__fieldset-container');
+  const fieldsetTemplate = document.querySelector(`#template-${name}`).content.querySelector('.membership__fieldset-container');
   const templateCopy = fieldsetTemplate.cloneNode(true); // клонируем содержимое шаблона
   return templateCopy;
 }

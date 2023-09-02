@@ -1,5 +1,5 @@
 import {btnCloseImage, error, imageDisplay, addClass, removeClass} from '../components/utils.js';
-// import {validationSettings} from '../components/validate.js';
+import {validationSettings} from '../components/validate.js';
 // функции для работы с drag'n'drop загрузки изображений
 // {activateCloseBtn, deactivateCloseBtn, fileHandler}
 
