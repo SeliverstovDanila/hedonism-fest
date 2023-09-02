@@ -3,12 +3,13 @@ import {pageMembership, btnOpenMemberForm, formMembership, btnCloseMemberForm,
   btnSubmitMemberForm, fieldsetList, btnLeft, btnRight, uploadButton, container,
   error, imageDisplay, containerActiveClass, addClass, removeClass} from '../components/utils.js';
 import {validationSettings, enableValidation} from '../components/validate.js';
-import {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset} from '../components/membership-form.js';
+import {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset,
+  getCurrIndex, plusCurrIndex, minusCurrIndex} from '../components/membership-form.js';
 import {fileHandler} from '../components/photo-load.js';
 import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
-export let currentFieldsetIndex = 0;
+
 
 // #todo - (?) реализовать заполнение списка в форме путем подтягивания городов из массива:
 export const cityList = ['Moсква', 'Санкт-Петербург', 'Сочи', 'Калуга', 'Екатеринбург'];
@@ -55,7 +56,7 @@ fieldsetList[0].classList.add('membership__fieldset_selected');
 // описываем поведение при щелчке "далее"
 btnRight.addEventListener('click', () => {
   let currentFieldsetList = fieldsetList;
-  if (currentFieldsetIndex == 0) { // если переход с 1 на 2 филдсет, то:
+  if (getCurrIndex() == 0) { // если переход с 1 на 2 филдсет, то:
     const choice = formMembership.querySelector('.membership__radio-input:checked'); // radio-input, который выбрал пользователь
     const containerName = choice.id;
     const currentContainer = formMembership.querySelector('.membership__fieldset-container');
@@ -75,7 +76,7 @@ btnRight.addEventListener('click', () => {
     // меняем "отмена" на "назад"
     btnCloseMemberForm.classList.remove('membership__form-btn_active');
     btnLeft.classList.add('membership__form-btn_active');
-  } else if (currentFieldsetIndex == fieldsetList.length-2) { // если переход с предпоследнего на последний филдсет, то:
+  } else if (getCurrIndex() == fieldsetList.length-2) { // если переход с предпоследнего на последний филдсет, то:
     // меняем "далее" на "завершить"
     btnRight.classList.remove('membership__form-btn_active');
     btnSubmitMemberForm.classList.add('membership__form-btn_active');
@@ -84,7 +85,7 @@ btnRight.addEventListener('click', () => {
   currentFieldsetList = formMembership.querySelectorAll('.membership__fieldset');
 
   // при клике "далее" индекс увеличивается
-  currentFieldsetIndex += 1;
+  plusCurrIndex();
 
   // выбираем нужный филдсет
   activateFieldset(currentFieldsetList);
@@ -94,11 +95,11 @@ btnRight.addEventListener('click', () => {
 // описываем поведение при щелчке "назад"
 btnLeft.addEventListener('click', () => {
   let currentFieldsetList = fieldsetList;
-  if (currentFieldsetIndex == 1) { // если переход с 2 на 1 филдсет, то:
+  if (getCurrIndex() == 1) { // если переход с 2 на 1 филдсет, то:
     // меняем "назад" на "отмена"
     btnLeft.classList.remove('membership__form-btn_active');
     btnCloseMemberForm.classList.add('membership__form-btn_active');
-  } else if (currentFieldsetIndex == fieldsetList.length-1) { // если переход с последний на предпоследний филдсет, то:
+  } else if (getCurrIndex() == fieldsetList.length-1) { // если переход с последний на предпоследний филдсет, то:
     // меняем "завершить" на "далее"
     btnSubmitMemberForm.classList.remove('membership__form-btn_active');
     btnRight.classList.add('membership__form-btn_active');
@@ -107,7 +108,7 @@ btnLeft.addEventListener('click', () => {
   currentFieldsetList = formMembership.querySelectorAll('.membership__fieldset');
 
   // при клике "назад" индекс уменьшается
-  currentFieldsetIndex -= 1;
+  minusCurrIndex();
 
   // выбираем нужный филдсет
   activateFieldset(currentFieldsetList);
