@@ -3,3 +3,9 @@
   max-height: max-content;
   background-color: #FCFAF7;
 }
+
+@media screen and (max-width: 768px) {
+  .catalog-filters {
+    display: none;
+  }
+}

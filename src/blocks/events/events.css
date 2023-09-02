@@ -1,6 +1,9 @@
 .events {
   padding: 80px 40px;
   background-color: #EBE9ED;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {

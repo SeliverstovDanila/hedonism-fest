@@ -315,6 +315,10 @@
 @import url('../blocks/catalog/catalog__oops-img/catalog__oops-img.css');
 @import url('../blocks/catalog/catalog__oops-text/catalog__oops-text.css');
 @import url('../blocks/catalog/__list-container/catalog__list-container.css');
+@import url('../blocks/catalog/__cards-counter/catalog__cards-counter.css');
+@import url('../blocks/catalog/__filter-btn/catalog__filter-btn.css');
+@import url('../blocks/catalog/__list-icon/catalog__list-icon.css');
+@import url('../blocks/catalog/__map-icon/catalog__map-icon.css');
 @import url('../blocks/catalog-filters/catalog-filters.css');
 @import url('../blocks/catalog-filters/__filter-block/catalog-filters__filter-block.css');
 @import url('../blocks/catalog-filters/__filter-buttons/catalog-filters__filter-buttons.css');
