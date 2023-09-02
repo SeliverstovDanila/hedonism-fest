@@ -1,5 +1,4 @@
 import cardsArray from "../components/cards.json";
-console.log(cardsArray);
 const center = [55.66, 37.48];
 const eventsMapContainer = document.querySelector(".catalog__map-container");
 
@@ -7,6 +6,7 @@ export function init() {
   let myMap = new ymaps.Map(eventsMapContainer, {
     center: center,
     zoom: 17,
+    controls: [],
   });
   // Создаем коллекцию.
   let myCollection = new ymaps.GeoObjectCollection(),
@@ -14,8 +14,9 @@ export function init() {
     myPoints = cardsArray;
 
   // Заполняем коллекцию данными.
+
   const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div class="balloon">' +
+    '<div class="ballon">' +
       '<p class="balloon__type">{{properties.type}}</p>' +
       '<h1 class="balloon__name">{{properties.name}}</h1>' +
       '<p class="balloon__date">{{properties.date}}</p>' +
@@ -28,21 +29,17 @@ export function init() {
   for (var i = 0, l = myPoints.length; i < l; i++) {
     var point = myPoints[i];
     myCollection.add(
-      new ymaps.GeoObject(
+      new ymaps.Placemark(
+        point.cord,
         {
-          geometry: {
-            type: "Point",
-            coordinates: point.cord,
-          },
-          properties: {
-            name: point.title,
-            type: point.type,
-            date: point.date + ", " + point.time,
-            add: point.additional,
-            address: point.address
-          },
+          name: point.title,
+          type: point.type,
+          date: point.date + ", " + point.time,
+          add: point.additional,
+          address: point.address,
         },
         {
+          balloonCloseButton:false,
           balloonContentLayout: BalloonContentLayout,
           iconLayout: "default#image",
           iconImageHref:
@@ -51,6 +48,7 @@ export function init() {
         }
       )
     );
+    // Отобразим объекты на карте.
   }
   myMap.controls.remove("geolocationControl"); // удаляем геолокацию
   myMap.controls.remove("searchControl"); // удаляем поиск

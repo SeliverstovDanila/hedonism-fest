@@ -6,7 +6,10 @@
 }
 .catalog__map-container {
   width: 1070px;
-  height: 1128px;
+  height: 600px;
+}
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 24px;
 }
 @media (max-width: 767px) {
   .popup__text-field {
