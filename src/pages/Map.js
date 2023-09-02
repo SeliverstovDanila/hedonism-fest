@@ -1,4 +1,6 @@
-const center = [55.7, 37.5];
+import cardsArray from "../components/cards.json";
+console.log(cardsArray);
+const center = [55.66, 37.48];
 const eventsMapContainer = document.querySelector(".catalog__map-container");
 
 export function init() {
@@ -9,96 +11,45 @@ export function init() {
   // Создаем коллекцию.
   let myCollection = new ymaps.GeoObjectCollection(),
     // Создаем массив с данными.
-    myPoints = [
-      {
-        photo:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-        type: "еда и напитки",
-        date: "Пн-Вс",
-        time: "10:00-22:00",
-        title: "Ярмарка фруктов и овощей",
-        about:
-          "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
-        description: "Описание события",
-        address: "Малая Конюшенная улица",
-        additional: "+ ещё 4",
-        cord: [55.77, 37.46],
-      },
-      {
-        photo:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-        type: "кафе",
-        date: "среда",
-        time: "13:00",
-        title: "ХУЙ",
-        about: "Кафешка у дома",
-        description: "Описание события",
-        address: "Малая Конюшенная улица",
-        additional: "+ ещё 4",
-        cord: [55.66, 37.48],
-      },
-      {
-        photo:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-        type: "еда и напитки",
-        date: "Пн-Вс",
-        time: "10:00-22:00",
-        title: "ДЖОДЖО",
-        about:
-          "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
-        description: "Описание события",
-        address: "Малая Конюшенная улица",
-        additional: "+ ещё 4",
-        cord: [55.65, 37.42],
-      },
-      {
-        photo:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-        type: "еда и напитки",
-        date: "Пн-Вс",
-        time: "10:00-22:00",
-        title: "СЕКС",
-        about:
-          "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
-        description: "Описание события",
-        address: "Малая Конюшенная улица",
-        additional: "+ ещё 4",
-        cord: [55.64, 37.54],
-      },
-      {
-        photo:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
-        type: "еда и напитки",
-        date: "Пн-Вс",
-        time: "10:00-22:00",
-        title: "АНИМЕ",
-        about:
-          "Фрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидкамиФрукты и овощи с большими скидками",
-        description: "Описание события",
-        address: "Малая Конюшенная улица",
-        additional: "+ ещё 4",
-        cord: [55.54, 37.52],
-      },
-    ];
+    myPoints = cardsArray;
 
   // Заполняем коллекцию данными.
+  const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div class="balloon">' +
+      '<p class="balloon__type">{{properties.type}}</p>' +
+      '<h1 class="balloon__name">{{properties.name}}</h1>' +
+      '<p class="balloon__date">{{properties.date}}</p>' +
+      '<p class="balloon__address">{{properties.address}}</p>' +
+      '<p class="balloon__additional">{{properties.add}}</p>' +
+      '<button class="btn btn_type_violet text text_type_button">подробнее</button>' +
+      "</div>"
+  );
 
   for (var i = 0, l = myPoints.length; i < l; i++) {
     var point = myPoints[i];
     myCollection.add(
-      new ymaps.Placemark(point.cord, {
-        balloonContent: `
-
-//     <div class="balloon">
-//         <h1 class="balloon__name"></h1>
-//         <div class="date"></div>
-//         <div class="adress"></div>
-//         <div class="balloon__contacts">
-//             <a href="tel:+7999999999">+7999999999</a>
-//         </div>
-//     </div>
-// `,
-})
+      new ymaps.GeoObject(
+        {
+          geometry: {
+            type: "Point",
+            coordinates: point.cord,
+          },
+          properties: {
+            name: point.title,
+            type: point.type,
+            date: point.date + ", " + point.time,
+            add: point.additional,
+            address: point.address
+          },
+        },
+        {
+          balloonContentLayout: BalloonContentLayout,
+          iconLayout: "default#image",
+          iconImageHref:
+            "https://cdn.icon-icons.com/icons2/1949/PNG/512/free-30-instagram-stories-icons46_122593.png",
+          iconImageSize: [50, 50],
+        }
+      )
     );
   }
   myMap.controls.remove("geolocationControl"); // удаляем геолокацию
@@ -111,4 +62,3 @@ export function init() {
   // Добавляем коллекцию меток на карту.
   myMap.geoObjects.add(myCollection);
 }
-
