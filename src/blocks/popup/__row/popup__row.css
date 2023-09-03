@@ -1,0 +1,8 @@
+.popup__row {
+    height: 48px;
+  }
+  @media (max-width: 768px){
+    .popup__row {
+      height: 36px;
+    }
+  }

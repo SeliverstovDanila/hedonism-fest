@@ -247,6 +247,8 @@
 @import url("../blocks/text/_location/tex_location_right.css");
 @import url('../blocks/text/_type/text_type_yellow.css');
 @import url('../blocks/popup/__sign/popup__sign.css');
+@import url('../blocks/popup/__name/popup__name.css');
+@import url('../blocks/popup/__row/popup__row.css');
 
 /* СТРАНИЦЫ ERROR HELP AND APPLICATION */
 @import url('../blocks/information/information.css');
@@ -324,7 +326,7 @@
 @import url('../blocks/catalog-filters/__filter-buttons/catalog-filters__filter-buttons.css');
 @import url('../blocks/catalog-filters/__title-container/catalog-filters__title-container.css');
 @import url('../blocks/catalog-filters/__ad/catalog-filters__ad.css');
-
+@import url('../blocks/catalog/__map-container/catalog__map-container.css');
 @import url('../blocks/disabled/disabled.css');
 
 /* СТРАНИЦА MEMBERSHIP */

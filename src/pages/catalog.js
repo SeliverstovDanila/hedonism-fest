@@ -101,14 +101,7 @@ closeButton.addEventListener("click", () => {
 participateButton.addEventListener("click", () => {
   likeBTN.classList.toggle("card__like_active");
 });
-const cardList = document.querySelectorAll(".card");
-cardList.forEach((card) => {
-  card.addEventListener("click", (event) => {
-    if (!event.target.classList.contains("card__like")) {
-      openPopup(cardForm);
-    }
-  });
-});
-import { init } from "./Map";
+
+import { init } from "../components/Map";
 
 ymaps.ready(init);

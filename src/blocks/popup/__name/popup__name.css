@@ -1,0 +1,18 @@
+.popup__name {
+    display:inline;
+    padding-right: 70%;
+  }
+  .popup__name:nth-last-of-type(2) {
+    padding-right: 0%;
+  }
+  
+  @media (max-width: 500px){
+    .popup__name {
+      padding-right: 63%;
+    }
+  }
+  @media (max-width: 413px){
+    .popup__name {
+      padding-right: 55%;
+    }
+  }
