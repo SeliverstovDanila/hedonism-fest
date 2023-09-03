@@ -59,4 +59,7 @@ export function init() {
   myMap.controls.remove("rulerControl"); // удаляем контрол правил
   // Добавляем коллекцию меток на карту.
   myMap.geoObjects.add(myCollection);
+  myMap.events.add('click', function() {
+    myMap.balloon.close();
+});
 }
