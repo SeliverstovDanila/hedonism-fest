@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+  .catalog__map-icon {
+    display: none;
+  }
+}

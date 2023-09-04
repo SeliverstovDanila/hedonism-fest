@@ -7,4 +7,11 @@
   padding: 20px 40px;
   box-sizing: border-box;
   align-items: center;
+  column-gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .catalog__control-panel {
+    padding: 12px 20px;
+  }
 }

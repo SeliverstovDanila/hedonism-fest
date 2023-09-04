@@ -6,3 +6,16 @@
   padding: 20px 35px;
   gap: 20px;
 }
+
+@media screen and (max-width: 1024px) {
+  .catalog__cards-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalog__cards-container {
+    justify-content: center;
+    padding: 0;
+  }
+}

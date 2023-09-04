@@ -13,7 +13,8 @@
     "place": "Coffee wood",
     "number": "+7 (996) 776-21-22",
     "socials": "instagram.com/psihologi_v_bare",
-    "additional": "+ ещё 4"
+    "additional": "+ ещё 4",
+    "cord": [55.77, 37.46]
   },
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
@@ -29,7 +30,8 @@
     "place": "Coffee wood",
     "number": "+7 (996) 776-21-22",
     "socials": "instagram.com/psihologi_v_bare",
-    "additional": "+ ещё 4"
+    "additional": "+ ещё 4",
+    "cord": [55.66, 37.48]
   },
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
@@ -45,7 +47,9 @@
     "place": "Coffee wood",
     "number": "+7 (996) 776-21-22",
     "socials": "instagram.com/psihologi_v_bare",
-    "additional": "+ ещё 4"
+    "additional": "+ ещё 4",
+    "cord": [55.65, 37.42]
+
   },
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
@@ -61,7 +65,9 @@
     "place": "Coffee wood",
     "number": "+7 (996) 776-21-22",
     "socials": "instagram.com/psihologi_v_bare",
-    "additional": "+ ещё 4"
+    "additional": "+ ещё 4",
+    "cord": [55.64, 37.54]
+
   },
   {
     "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
@@ -77,6 +83,8 @@
     "place": "Coffee wood",
     "number": "+7 (996) 776-21-22",
     "socials": "instagram.com/psihologi_v_bare",
-    "additional": "+ ещё 4"
+    "additional": "+ ещё 4",
+    "cord": [55.54, 37.52]
+
   }
 ]

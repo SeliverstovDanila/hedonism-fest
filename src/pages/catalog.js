@@ -11,7 +11,7 @@ import {
 import { openPopup, closePopup } from "../components/popup";
 const closeButton = document.querySelector(".popup__close-cardform");
 
-// const eventsMapContainer = document.querySelector(".catalog__map-container");
+const eventsMapContainer = document.querySelector(".catalog__map-container");
 
 export const eventsCardsContainer = document.querySelector(
   ".catalog__cards-container"
@@ -71,44 +71,37 @@ for (const cardDate of cardsDate) {
   buttonDateContainer.append(buttonDate);
 }
 
-// function windowSwitch(catalog1, catalog2, button1, button2) {
-//   catalog1.classList.add("disabled");
-//   catalog2.classList.remove("disabled");
-//   button1.classList.add("catalog__tab-button-disabled");
-//   button2.classList.remove("catalog__tab-button-disabled");
-// }
-// const mapButton = document.querySelector(".map");
-// const cardsButton = document.querySelector(".cards");
-// mapButton.addEventListener("click", () => {
-//   windowSwitch(
-//     eventsCardsContainer,
-//     eventsMapContainer,
-//     cardsButton,
-//     mapButton
-//   );
-// });
-// cardsButton.addEventListener("click", () => {
-//   windowSwitch(
-//     eventsMapContainer,
-//     eventsCardsContainer,
-//     mapButton,
-//     cardsButton
-//   );
-// });
+function windowSwitch(catalog1, catalog2, button1, button2) {
+  catalog1.classList.add("disabled");
+  catalog2.classList.remove("disabled");
+  button1.classList.add("catalog__tab-button-disabled");
+  button2.classList.remove("catalog__tab-button-disabled");
+}
+const mapButton = document.querySelector(".map");
+const cardsButton = document.querySelector(".cards");
+mapButton.addEventListener("click", () => {
+  windowSwitch(
+    eventsCardsContainer,
+    eventsMapContainer,
+    cardsButton,
+    mapButton
+  );
+});
+cardsButton.addEventListener("click", () => {
+  windowSwitch(
+    eventsMapContainer,
+    eventsCardsContainer,
+    mapButton,
+    cardsButton
+  );
+});
 closeButton.addEventListener("click", () => {
   closePopup(cardForm);
 });
 participateButton.addEventListener("click", () => {
   likeBTN.classList.toggle("card__like_active");
 });
-const cardList = document.querySelectorAll(".card");
-cardList.forEach((card) => {
-  card.addEventListener("click", (event) => {
-    if (!event.target.classList.contains("card__like")) {
-      openPopup(cardForm);
-    }
-  });
-});
-// import { init } from "./Map";
 
-// ymaps.ready(init);
+import { init } from "../components/Map";
+
+ymaps.ready(init);
