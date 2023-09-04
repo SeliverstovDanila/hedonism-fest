@@ -2,18 +2,12 @@
   width: 1070px;
   height: 600px;
 }
-.ballon {
-    width: 100%;
-}
-.btn_type_balloon {
-    width: 100%;
 
-}
 @media (max-width: 1070px) {
-    .catalog__map-container {
-      max-width: 500px;
-    }
+  .catalog__map-container {
+    max-width: 500px;
   }
+}
 @media (max-width: 500px) {
   .catalog__map-container {
     max-width: 360px;

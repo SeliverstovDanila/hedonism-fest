@@ -18,14 +18,14 @@ export function init() {
 
   const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
     '<div class="ballon">' +
-      '<p class="text card__text-optional">{{properties.type}}</p>' +
+      '<p class="text card__text-optional balloon__text">{{properties.type}}</p>' +
       '<h1 class="title title_type_card">{{properties.name}}</h1>' +
-      '<p class="text text_type_main">{{properties.date}}</p>' +
-      '<div class="card__optional-container">'+
+      '<p class="text text_type_main balloon__text">{{properties.date}}</p>' +
+      '<div class="card__optional-container balloon__text">'+
       '<p class="text card__text-optional">{{properties.address}}</p>' +
       '<p class="text card__text-optional">{{properties.add}}</p>' +
       '</div>' +
-      '<button class="btn btn_type_violet text text_type_button btn_type_balloon">подробнее</button>' +
+      '<button class="btn btn_type_violet text text_type_button btn_type_width">подробнее</button>' +
       "</div>"
   );
 
@@ -64,4 +64,6 @@ export function init() {
   myMap.events.add("click", function () {
     myMap.balloon.close();
   });
+  console.log(myMap.balloon.parentElement)
+
 }

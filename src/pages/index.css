@@ -376,3 +376,6 @@
 @import url("../blocks/ui-kit/__flex/ui-kit__flex.css");
 @import url("../blocks/ui-kit/__flex/_column/ui-kit__flex_column.css");
 
+/* BALLOON */
+@import url('../blocks/balloon/balloon.css');
+@import url('../blocks/balloon/__text/balloon__text.css');
