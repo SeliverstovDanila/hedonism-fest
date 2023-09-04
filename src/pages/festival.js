@@ -44,7 +44,6 @@ closeBtnTickets.addEventListener('click', function(){
   closePopup(popupBuyTickets)
 })
 
-
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 // счетчик (покупка билетов)

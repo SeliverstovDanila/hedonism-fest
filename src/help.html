@@ -192,38 +192,47 @@
 <div class="popup popup__donate-form">
   <div class="popup__container popup__container_type_donate-form">
     <form class="popup__wrapper" name="payment-method" id="form-payment">
-      <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="4" rx="2" fill="#96949E"/>
+      <svg class="popup__sticky-part" width="40" height="4" viewBox="0 0 40 4" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="4" rx="2" fill="#96949E" />
       </svg>
       <div class="popup__payment-window">
         <h2 class="title title_type_section">пожертвовать</h2>
-        <button class="popup__close popup__close-donate" aria-label="Закрыть" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
-            fill="currentColor"/>
-        </svg></button>
+        <button class="popup__close popup__close-donate" aria-label="Закрыть" type="button"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
+              fill="currentColor" />
+          </svg></button>
       </div>
       <h3 class="title title_type_block popup__text">сумма</h3>
       <div class="popup__sum-options">
-        <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-          <span>100 ₽</span>
-        </button>
-        <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-          <span>300 ₽</span>
-        </button>
-        <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-          <span>500 ₽</span>
-        </button>
-        <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-          <span>1000 ₽</span>
-        </button>
-        <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-          <span>3000 ₽</span>
-        </button>
-        <input type="text" disabled class="btn btn_type_bordered text text_type_main btn_type_width" placeholder="другая сумма" name="other-sum" id="input-other-sum">
+        <label class="popup__sum-form">
+          <input type="radio" class="popup__sum-input" name="sum-choose" value="100 ₽">
+          <span class="text text_type_button popup__input-element">100 ₽</span>
+        </label>
+        <label class="popup__sum-form">
+          <input type="radio" class="popup__sum-input" name="sum-choose" value="300 ₽">
+          <span class="text text_type_button popup__input-element">300 ₽</span>
+        </label>
+        <label class="popup__sum-form">
+          <input type="radio" class="popup__sum-input" name="sum-choose" value="500 ₽">
+          <span class="text text_type_button popup__input-element">500 ₽</span>
+        </label>
+        <label class="popup__sum-form">
+          <input type="radio" class="popup__sum-input" name="sum-choose" value="1000 ₽">
+          <span class="text text_type_button popup__input-element">1000 ₽</span>
+        </label>
+        <label class="popup__sum-form">
+          <input type="radio" class="popup__sum-input" name="sum-choose" value="3000 ₽">
+          <span class="text text_type_button popup__input-element">3000 ₽</span>
+        </label>
+        <input type="text" class="popup__sum-input_type_inactive text text_type_main" placeholder="другая сумма" name="other-sum" id="input-other-sum">
       </div>
       <h3 class="title title_type_block popup__text">email</h3>
-      <input type="email" disabled class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email" placeholder="укажите почту для отправки чека" name="email" id="input-email">
+      <input type="email"
+        class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
+        placeholder="укажите почту для отправки чека" name="email" id="input-email">
       <h3 class="title title_type_block popup__text">способ оплаты</h3>
       <fieldset class="popup__fieldset">
         <label class="form-payment__list text text_type_button" for="input-card-bank">
@@ -237,9 +246,13 @@
           <span>PayPal</span>
         </label>
       </fieldset>
-      <p class="text text_type_optional text_color_grey popup__text">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#" class="text_type_link">оферты</a>, <a href="#" class="text_type_link">политики</a> в отношении обработки и защиты персональных данных и даёте <a href="#" class="text_type_link">согласие</a> на их обработку</p>
+      <p class="text text_type_optional text_color_grey popup__text">Нажимая кнопку «пожертвовать» вы соглашаетесь с
+        условиями <a href="#" class="text_type_link">оферты</a>, <a href="#" class="text_type_link">политики</a> в
+        отношении обработки и защиты персональных данных и даёте <a href="#" class="text_type_link">согласие</a> на их
+        обработку</p>
     </form>
-    <button type="button" aria-label="Перейдите к оплате" class="btn btn_type_violet btn_type_width text text_type_button popup__button">
+    <button type="button" aria-label="Перейдите к оплате"
+      class="btn btn_type_violet btn_type_width text text_type_button popup__button">
       <span>перейти к оплате</span>
     </button>
   </div>
