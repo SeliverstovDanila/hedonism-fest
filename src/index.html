@@ -313,27 +313,31 @@
         </div>
         <h3 class="title title_type_block popup__text">сумма</h3>
         <div class="popup__sum-options">
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>100 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>300 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>500 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>1000 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>3000 ₽</span>
-          </button>
-          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey"
-            placeholder="другая сумма" name="other-sum" id="input-other-sum">
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="100 ₽">
+            <span class="text text_type_button popup__input-element">100 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="300 ₽">
+            <span class="text text_type_button popup__input-element">300 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="500 ₽">
+            <span class="text text_type_button popup__input-element">500 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="1000 ₽">
+            <span class="text text_type_button popup__input-element">1000 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="3000 ₽">
+            <span class="text text_type_button popup__input-element">3000 ₽</span>
+          </label>
+          <input type="text" class="popup__sum-input_type_inactive text text_type_main" placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
@@ -387,7 +391,7 @@
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered btn_type_grey text text_type_main btn_type_width popup__inactive-input_email"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
