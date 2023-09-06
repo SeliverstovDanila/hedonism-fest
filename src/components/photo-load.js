@@ -5,13 +5,13 @@ import {validationSettings} from '../components/validate.js';
 
 // ф-я показать крестик и повесить слушатель клика
 export function activateCloseBtn() {
-  addClass(btnCloseImage, 'input__close-btn_active');
+  addClass(btnCloseImage, 'membership__close-btn_active');
   btnCloseImage.addEventListener('click', deactivateCloseBtn);
 }
 
 // ф-я скрыть крестик, убрать слушатель клика и очистить инпут от загруженных картинок
 export function deactivateCloseBtn() {
-  removeClass(btnCloseImage, 'input__close-btn_active');
+  removeClass(btnCloseImage, 'membership__close-btn_active');
   btnCloseImage.removeEventListener('click', deactivateCloseBtn);
   // и очищаем контейнер от картинок
   imageDisplay.innerHTML = '';

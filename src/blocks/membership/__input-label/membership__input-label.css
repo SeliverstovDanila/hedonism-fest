@@ -1,0 +1,11 @@
+.membership__input-label {
+  display: flex;
+  padding: 0 24px;
+  color: #96949E;
+}
+
+@media (max-width: 768px) {
+  .membership__input-label {
+    padding: 0 20px;
+  }
+}
