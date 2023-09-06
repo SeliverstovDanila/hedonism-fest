@@ -41,11 +41,11 @@
 @import url('../blocks/input/__pseudo-placeholder/input__pseudo-placeholder.css');
 
 /* controllers */
+@import url('../blocks/controller-wrapper/controller-wrapper.css');
+@import url('../blocks/controller-wrapper/_type/controller-wrapper_type_amount.css');
+@import url('../blocks/controller-wrapper/_type/controller-wrapper_type_zoom.css');
+@import url('../blocks/controller-wrapper/__amount-square/controller-wrapper__amount-square.css');
 @import url('../blocks/controller/controller.css');
-@import url('../blocks/controller/__wrapper/controller__wrapper.css');
-@import url('../blocks/controller/__amount-square/controller__amount-square.css');
-@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_amount.css');
-@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_zoom.css');
 @import url('../blocks/controller/_floating-btn/controller_floating-btn.css');
 @import url('../blocks/controller/_el/controller_el_arrow-up.css');
 @import url('../blocks/controller/_el/controller_el_arrow-down.css');
