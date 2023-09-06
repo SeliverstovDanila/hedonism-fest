@@ -13,12 +13,12 @@ export const fieldsetList = formMembership.querySelectorAll('.membership__fields
 export const btnLeft = document.querySelector('.membership__form-btn_type_left'); // назад
 export const btnRight = document.querySelector('.membership__form-btn_type_right'); // далее
 // loading photo
-export const btnCloseImage = pageMembership.querySelector('.input__close-btn');
+export const btnCloseImage = pageMembership.querySelector('.membership__close-btn');
 export let uploadButton = pageMembership.querySelector(".input_type_file");
-export let container = pageMembership.querySelector(".input__wrapper_type_file");
-export let error = pageMembership.querySelector(".input__error_type_images"); // input__error_type_images
-export let imageDisplay = pageMembership.querySelector(".input__image-display");
-export let containerActiveClass = 'input__wrapper_active';
+export let container = pageMembership.querySelector(".membership__input-wrapper_type_file");
+export let error = pageMembership.querySelector(".membership__input-error_type_images"); // ошибка для инпута загрузки изобр-й
+export let imageDisplay = pageMembership.querySelector(".membership__image-display");
+export let containerActiveClass = 'membership__input-wrapper_active';
 
 
 // {cardTemplate,eventsCardsContainer,locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,closeButton,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,burgerCityText,headerDropdown,headerText,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,buttons,cardList,popupOpenedSelector}

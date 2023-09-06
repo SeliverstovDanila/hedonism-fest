@@ -1,0 +1,43 @@
+.membership__image-display {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.membership__image-display figure {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 296px;
+  position: relative;
+}
+
+.membership__image-display img {
+  display: block;
+  width: 100%;
+  height: 296px;
+  object-fit: cover;
+}
+
+.membership__image-display figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  font-size: .8em;
+  text-align: center;
+  color: #3b3748;
+  text-shadow: #fff;
+}
+
+@media (max-width: 768px) {
+  .membership__image-display figure,
+  .membership__image-display img {
+    height: 218px;
+  }
+}

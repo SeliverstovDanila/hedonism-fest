@@ -1,0 +1,15 @@
+.membership__pseudo-el_type_ellipse {
+  justify-content: center;
+
+  padding: 10px 22px;
+  border-radius: 26px;
+  border: 2px solid #3b3748;
+  background-color: transparent;
+  color: #3b3748;
+}
+
+@media (max-width: 768px){
+  .membership__pseudo-el_type_ellipse {
+    padding: 10px 18px;
+  }
+}

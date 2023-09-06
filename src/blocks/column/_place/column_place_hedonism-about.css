@@ -1,0 +1,10 @@
+.column_place_hedonism-about {
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .column_place_hedonism-about {
+    margin-bottom: 40px;
+  }
+}
