@@ -1,5 +1,5 @@
 import '../pages/index.css';
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js"
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 // начало функционала header
@@ -32,8 +32,8 @@ btnSupport.addEventListener('click', function(){
 })
 
 btnDonate.addEventListener('click', function(){
-openPopup(popupDonate)
-closePopup(popupBurgerMenu)
+ openPopup(popupDonate)
+ closePopup(popupBurgerMenu)
 })
 
 closeBtnDonate.addEventListener('click', function(){

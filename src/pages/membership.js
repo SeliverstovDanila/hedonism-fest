@@ -6,7 +6,7 @@ import {validationSettings, enableValidation} from '../components/validate.js';
 import {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset,
   getCurrIndex, plusCurrIndex, minusCurrIndex} from '../components/membership-form.js';
 import {fileHandler} from '../components/photo-load.js';
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js"
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 

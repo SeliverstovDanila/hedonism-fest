@@ -6,7 +6,6 @@
   padding: 12px 24px;
 }
 
-
 @media screen  and (max-width:768px){
   .popup__inactive-input_email{
     max-width: 320px;

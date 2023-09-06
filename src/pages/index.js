@@ -24,7 +24,7 @@ import {
   btnMinus,
   btnPlus,
   amount,
-  sumTickets
+  sumTickets,popupBuyTickets
 } from "../components/constants.js";
 import { eventsCardsContainer, cardList } from "../components/carusel.js";
 import cardsArray from "../components/cards.json";
@@ -71,6 +71,7 @@ btnSupport.addEventListener("click", function () {
 btnDonate.addEventListener("click", function () {
   openPopup(popupDonate);
   closePopup(popupBurgerMenu);
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
 });
 
 closeBtnDonate.addEventListener("click", function () {

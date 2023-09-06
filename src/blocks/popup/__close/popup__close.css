@@ -2,3 +2,8 @@
   border: none;
   background-color: transparent;
 }
+
+
+.popup__close:hover{
+  cursor: pointer;
+}
