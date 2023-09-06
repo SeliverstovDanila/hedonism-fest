@@ -1,6 +1,6 @@
 .events__cards-container {
   width: calc(100% + 40px);
-  margin-bottom: 32px;
+  margin-bottom: 100px;
   padding: 40px 0 24px;
   display: flex;
   flex-flow: row nowrap;

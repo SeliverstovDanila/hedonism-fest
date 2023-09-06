@@ -1,11 +1,11 @@
 .hedonism__squiggle {
   background-image: url(../../../images/squiggle.svg);
   background-size: cover;
-  width: 150px;
-  height: 132px;
+  width: 127px;
+  height: 112px;
   position: absolute;
-  top: 270px;
-  right: 344px;
+  top: 279px;
+  right: 360px;
 }
 
 @media screen and (max-width: 1280px) {

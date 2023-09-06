@@ -5,7 +5,10 @@
 
 @media screen and (max-width: 1024px) {
   .hedonism__arc_left {
+    transform: rotate(-11.23deg);
     top: 143px;
-    left: -30px;
+    left: -28px;
+    width: 81px;
+    height: 111px;
   }
 }
