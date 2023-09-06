@@ -17,6 +17,6 @@ export const labelCity = document.querySelectorAll(".form-city__list");
 export const btnSupport = document.querySelector('.btn__support');
 export const btnMinus = document.querySelector('.controller_el_amount-minus');
 export const btnPlus = document.querySelector('.controller_el_amount-plus');
-export const amount = document.querySelector('.controller__amount-square');
+export const amount = document.querySelector('.controller-wrapper__amount-square');
 export const sumTickets = document.querySelector('.popup__sum-ticket');
 export const popupOpenedSelector = 'popup_opened';

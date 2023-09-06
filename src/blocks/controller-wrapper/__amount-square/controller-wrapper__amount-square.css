@@ -1,4 +1,4 @@
-.controller__amount-square {
+.controller-wrapper__amount-square {
   border: 2px solid #7100ff;
   box-sizing: border-box;
   width: 96px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width:768px){
-  .controller__amount-square{
+  .controller-wrapper__amount-square{
     width: 46px;
     height: 44px;
   }
