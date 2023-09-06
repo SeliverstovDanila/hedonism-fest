@@ -5,6 +5,6 @@
 
 @media (max-width: 768px) {
   .hedonism__about {
-    margin-bottom: 40px;
+    margin: 40px 0 40px;
   }
 }

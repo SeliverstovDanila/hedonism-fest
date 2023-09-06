@@ -1,9 +1,9 @@
-.column__paragraph_shifted {
+.column__shifted-paragraph {
   margin-top: 8px;
 }
 
 @media (max-width: 768px) {
-  .column__paragraph_shifted {
+  .column__shifted-paragraph {
     margin-top: 0;
   }
 }
