@@ -2,11 +2,11 @@
   grid-template-columns: auto;
   min-width: 320px;
   max-width: 537px;
-  gap: 21px;
+  gap: 18px;
 }
 
 @media (max-width: 768px) {
   .column_type_single {
-    gap: 14px;
+    gap: 12px;
   }
 }
