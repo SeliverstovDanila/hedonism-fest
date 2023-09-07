@@ -32,19 +32,14 @@ import createCard from "../components/card.js";
 let renderedCards = [];
 // начало функционала header
 // всплывающее окно
-locationBtn.addEventListener("click", function () {
+locationBtn.addEventListener("click", function (e) {
   headerDropdown.classList.toggle("header__dropdown_active");
 });
-// list.forEach((card) => {
-//   card.addEventListener("click", (event) => {
-//     if (!event.target.classList.contains("card__like")) {
-//       openPopup(cardForm);
-//     }
-//   });
-// });
+
 closeButton.addEventListener("click", () => {
   closePopup(cardForm);
 });
+
 burgerMenuBtn.addEventListener("click", function () {
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
   popupBurgerMenu.classList.toggle("popup_opened");

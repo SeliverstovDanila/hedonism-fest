@@ -1,5 +1,12 @@
 .form-payment{
-  display: flex;
-  flex-direction: column;
-  margin: 16px 0;
+  border: none;
+  padding: 0;
+  margin: 16px auto;
 }
+
+@media screen and (max-width:768px){
+  .form-payment{
+    max-width: 320px;
+  }
+}
+

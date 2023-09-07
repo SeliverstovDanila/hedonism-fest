@@ -27,7 +27,7 @@
 @import url("../blocks/btn/_size/btn_size_small.css");
 @import url("../blocks/btn/__arrow/btn__arrow.css");
 @import url("../blocks/btn/_type/btn_type_width.css");
-@import url('../blocks/btn/__donate/btn__donate.css');
+@import url('../blocks/btn/_function/btn_function_donate.css');
 
 /* inputs */
 @import url('../blocks/input/input.css');
@@ -219,17 +219,18 @@
 @import url("../blocks/popup/__grey-row/popup__grey-row.css");
 @import url("../blocks/popup/__social/popup__social.css");
 @import url("../blocks/popup/__icons/popup__icons.css");
+@import url('../blocks/popup/__icon/popup__icon.css');
 @import url("../blocks/popup/__copy/popup__copy.css");
 @import url("../blocks/popup/__button-container/popup__button-container.css");
 @import url("../blocks/btn/_type/btn_type_formButton.css");
 @import url("../blocks/popup/__container/_type/popup__container_type_cardform.css");
 @import url("../blocks/title/_type/title_type_cardform.css");
 @import url("../blocks/popup/__table/popup__table.css");
-@import url("../blocks/popup/__cardform/popup__cardform.css");
-@import url('../blocks/btn/_type/btn_type_like.css');
+@import url("../blocks/popup/_type/popup_type_cardform.css");
+@import url('../blocks/btn/__like/btn__like.css');
 @import url("../blocks/card/__like/_active/card__like_active.css");
-@import url("../blocks/text/_location/tex_location_left.css");
-@import url("../blocks/text/_location/tex_location_right.css");
+@import url("../blocks/text/_location/text_location_left.css");
+@import url("../blocks/text/_location/text_location_right.css");
 @import url('../blocks/text/_type/text_type_yellow.css');
 @import url('../blocks/popup/__sign/popup__sign.css');
 @import url('../blocks/popup/__name/popup__name.css');
@@ -247,41 +248,35 @@
 
 /* POPUP */
 @import url("../blocks/popup/popup.css");
+@import url('../blocks/popup/_type/popup_type_menu-burger.css');
+@import url('../blocks/popup/_type/popup_type-donate-form.css');
+@import url('../blocks/popup/_type/popup_type_buy-ticket.css');
 @import url("../blocks/popup/_opened/popup_opened.css");
 @import url("../blocks/popup/__close/popup__close.css");
 @import url('../blocks/popup/__payment-window/popup__payment-window.css');
-@import url('../blocks/popup/__fieldset/popup__fieldset.css');
-@import url("../blocks/popup/__menu-burger/popup__menu-burger.css");
-@import url("../blocks/popup/__choise-city/popup__choise-city.css");
+@import url("../blocks/popup/_type/popup_type_choise-city.css");
 @import url("../blocks/popup/__copy-field/popup__copy-field.css");
 @import url('../blocks/popup/__sticky-part/popup__sticky-part.css');
 @import url('../blocks/popup/__payment-window/popup__payment-window.css');
-@import url('../blocks/popup/__fieldset/popup__fieldset.css');
 @import url('../blocks/popup/__wrapper/popup__wrapper.css');
 @import url('../blocks/popup/__sum-options/popup__sum-options.css');
-@import url('../blocks/popup/__inactive-input/popup__inactive-input.css');
-@import url('../blocks/popup/__inactive-input/_email/popup__inactive-input_email.css');
+@import url('../blocks/popup/__email-input-inactive/popup__email-input-inactive.css');
 @import url('../blocks/popup/__sum-amount/popup__sum-amount.css');
 @import url('../blocks/popup/__sum-ticket/popup__sum-ticket.css');
 @import url('../blocks/popup/__button/popup__button.css');
 @import url('../blocks/popup/__text/popup__text.css');
 @import url('../blocks/popup/__payment-window/popup__payment-window.css');
-@import url('../blocks/popup/__fieldset/popup__fieldset.css');
 @import url('../blocks/popup/__wrapper/popup__wrapper.css');
 @import url('../blocks/popup/__sum-options/popup__sum-options.css');
-@import url('../blocks/popup/__inactive-input/popup__inactive-input.css');
-@import url('../blocks/popup/__inactive-input/_email/popup__inactive-input_email.css');
 @import url('../blocks/popup/__sum-amount/popup__sum-amount.css');
 @import url('../blocks/popup/__sum-ticket/popup__sum-ticket.css');
 @import url('../blocks/popup/__sum-form/popup__sum-form.css');
 @import url('../blocks/popup/__sum-input/popup__sum-input.css');
 @import url('../blocks/popup/__input-element/popup__input-element.css');
-@import url('../blocks/popup/__sum-input/_type/popup__sum-input_type_inactive.css');
+@import url('../blocks/popup/__sum-input-inactive/popup__sum-input-inactive.css');
 @import url('../blocks/popup/__content/popup__content.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_donate-form.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_buy-ticket.css');
-@import url('../blocks/popup/__donate-form/popup__donate-form.css');
-@import url('../blocks/popup/__buy-ticket/popup__buy-ticket.css');
 /* POPUP BURGER_MENU */
 @import url('../blocks/popup/__container/_type/popup__container_type_burger-menu.css');
 @import url('../blocks/popup/__burger-menu-text/popup__burger-menu-text.css');

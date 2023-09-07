@@ -38,6 +38,7 @@ btnSupportList.forEach(btn => {
 btnDonate.addEventListener('click', function(){
   openPopup(popupDonate)
   closePopup(popupBurgerMenu)
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
 })
 
 closeBtnDonate.addEventListener('click', function(){
