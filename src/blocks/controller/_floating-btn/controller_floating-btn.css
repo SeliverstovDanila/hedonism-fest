@@ -1,5 +1,5 @@
 .controller_floating-btn {
-  z-index: 10;
+  z-index: 3;
   position: fixed;
   bottom: 40px;
   right: 40px;
