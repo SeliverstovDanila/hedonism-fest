@@ -2,12 +2,12 @@
   position: relative;
   min-width: 320px;
   max-width: 1360px;
-  margin: 0 auto;
+  margin: 80px auto 0;
   background-color: linear-gradient(0deg, #3b3748, #3b3748);
-  margin-top: 80px;
 }
 @media (max-width: 1024px) {
   .fest-images {
     max-width: 90%;
+    margin: 38px auto 0;
   }
 }

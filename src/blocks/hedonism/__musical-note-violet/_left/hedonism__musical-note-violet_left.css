@@ -1,6 +1,6 @@
 .hedonism__musical-note-violet_left {
-  top: 57px;
-  left: 119px;
+  top: 62px;
+  left: 117px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -11,8 +11,8 @@
 
 @media screen and (max-width: 360px) {
   .hedonism__musical-note-violet_left {
-    top: 34px;
-    left: 293px;
+    top: 38px;
+    left: 294px;
     width: 36px;
     height: 33px;
     transform: rotate(44.23deg);

@@ -11,6 +11,6 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-  
-    z-index: 2;
+
+    z-index: 3;
   }

@@ -1,5 +1,7 @@
 import '../pages/index.css';
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets} from "../components/constants.js"
+import {locationBtn, popupBurgerMenu, popupChoiseCity, popupDonate, burgerMenuBtn,
+  btnChoiseCity, btnChoiseCityBack, btnDonate, closeBtnDonate, closeBtnTickets,
+  headerDropdown, labelCity, btnSupportList, btnMinus, btnPlus, amount, sumTickets, popupBuyTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 // начало функционала header
@@ -27,23 +29,24 @@ btnChoiseCityBack.addEventListener("click", function () {
   openPopup(popupBurgerMenu);
 });
 
-btnSupport.addEventListener('click', function(){
-  openPopup(popupDonate)
+btnSupportList.forEach(btn => {
+  btn.addEventListener('click', function(){
+    openPopup(popupDonate)
+  })
 })
 
 btnDonate.addEventListener('click', function(){
-openPopup(popupDonate)
-closePopup(popupBurgerMenu)
+  openPopup(popupDonate)
+  closePopup(popupBurgerMenu)
 })
 
 closeBtnDonate.addEventListener('click', function(){
-closePopup(popupDonate)
+  closePopup(popupDonate)
 })
 
 closeBtnTickets.addEventListener('click', function(){
   closePopup(popupBuyTickets)
 })
-
 
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 

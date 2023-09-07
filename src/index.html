@@ -34,7 +34,7 @@
           </label>
           <label class="form-city__list" for="saint-Petersburg">
             <span>Санкт-Петербург</span>
-            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi">
             <span>Сочи</span>
@@ -54,7 +54,7 @@
     <nav>
       <ul class="header__menu-links">
         <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">куда пойти</a></li>
-        <li class="header__menu-item"><a href="./membership.html" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="membership.html" class="header__menu-link">стать участником</a></li>
         <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
       </ul>
     </nav>
@@ -66,9 +66,9 @@
             d="M17.5 1.91699C16.374 1.93451 15.2725 2.24885 14.3068 2.82826C13.3411 3.40768 12.5454 4.23166 12 5.21699C11.4547 4.23166 10.659 3.40768 9.69326 2.82826C8.72756 2.24885 7.62607 1.93451 6.50002 1.91699C4.70496 1.99498 3.01373 2.78025 1.7958 4.10122C0.577879 5.4222 -0.0677312 7.17152 1.93259e-05 8.96699C1.93259e-05 13.514 4.78602 18.48 8.80002 21.847C9.69624 22.6001 10.8294 23.013 12 23.013C13.1707 23.013 14.3038 22.6001 15.2 21.847C19.214 18.48 24 13.514 24 8.96699C24.0678 7.17152 23.4222 5.4222 22.2042 4.10122C20.9863 2.78025 19.2951 1.99498 17.5 1.91699ZM13.915 20.317C13.379 20.7684 12.7008 21.0159 12 21.0159C11.2993 21.0159 10.621 20.7684 10.085 20.317C4.94702 16.006 2.00002 11.87 2.00002 8.96699C1.93166 7.70171 2.36639 6.46072 3.20938 5.51469C4.05238 4.56866 5.23525 3.99434 6.50002 3.91699C7.76479 3.99434 8.94766 4.56866 9.79066 5.51469C10.6337 6.46072 11.0684 7.70171 11 8.96699C11 9.23221 11.1054 9.48656 11.2929 9.6741C11.4804 9.86164 11.7348 9.96699 12 9.96699C12.2652 9.96699 12.5196 9.86164 12.7071 9.6741C12.8947 9.48656 13 9.23221 13 8.96699C12.9317 7.70171 13.3664 6.46072 14.2094 5.51469C15.0524 4.56866 16.2353 3.99434 17.5 3.91699C18.7648 3.99434 19.9477 4.56866 20.7907 5.51469C21.6337 6.46072 22.0684 7.70171 22 8.96699C22 11.87 19.053 16.006 13.915 20.313V20.317Z"
             fill="#3B3748" />
         </svg>
-        <span class="text text_type_button">хочу пойти</span>
+        <a href="catalog.html" class="text text_type_button">хочу пойти</a>
       </button>
-      <button class="btn btn_type_violet btn_type_hide btn__support" type="button"><span
+      <button class="btn btn_type_violet btn_type_hide btn_function_support" type="button"><span
           class="text text_type_button text_color_white">поддержать</span></button>
       <div class="header__menu-burger-icon">
         <span></span>
@@ -76,34 +76,34 @@
     </div>
   </header>
   <!-- секция hedonism -->
-  <section class="hedonism">
+  <section class="hedonism" aria-label="ГедонизмФест">
     <img class="hedonism__logo" src="<%=require('./images/logo.svg')%>" alt="логотип">
-    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left"></div>
-    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right"></div>
-    <div class="hedonism__musical-note-single hedonism__musical-note-single_left"></div>
-    <div class="hedonism__musical-note-single hedonism__musical-note-single_right"></div>
-    <div class="hedonism__musical-note-yellow"></div>
-    <div class="hedonism__musical-note-single-reverse"></div>
-    <div class="hedonism__squiggle"></div>
-    <div class="hedonism__man-violet"></div>
-    <div class="hedonism__man-green"></div>
-    <div class="hedonism__man-red"></div>
-    <div class="hedonism__arc hedonism__arc_left"></div>
-    <div class="hedonism__arc hedonism__arc_top"></div>
+    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left rotation"></div>
+    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right rotation"></div>
+    <div class="hedonism__musical-note-single hedonism__musical-note-single_left rotation"></div>
+    <div class="hedonism__musical-note-single hedonism__musical-note-single_right rotation"></div>
+    <div class="hedonism__musical-note-yellow rotation"></div>
+    <div class="hedonism__musical-note-single-reverse rotation"></div>
+    <div class="hedonism__squiggle rotation"></div>
+    <div class="hedonism__man-violet rotation"></div>
+    <div class="hedonism__man-green rotation"></div>
+    <div class="hedonism__man-red rotation"></div>
+    <div class="hedonism__arc hedonism__arc_left rotation"></div>
+    <div class="hedonism__arc hedonism__arc_top rotation"></div>
     <p class="hedonism__text text text_type_main">узнать больше</p>
     <!-- стрелка вниз -->
     <a id="about" class="controller controller_el_arrow-down" href="#about"></a>
   </section>
-  <article class="column column_type_double hedonism__about" id="about">
-    <h2 class="title title_type_section">просто приятно помогать</h2>
+  <article class="column column_type_double column_place_hedonism-about">
+    <h2 class="hedonism__title title title_type_section">просто приятно помогать</h2>
     <div class="column column_type_single">
       <p class="text text_type_main column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях, посещайте
         интересные мероприятия,
-        устраивайте домашние посиделки с&nbsp;друзьями&nbsp;&mdash; и&nbsp;помогайте бездомным!</p>
+        устраивайте домашние посиделки&nbsp;с друзьями&nbsp;&mdash; и помогайте бездомным!</p>
       <p class="text text_type_main">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена
         в&nbsp;пользу бездомных.</p>
       <!-- перейти на страницу festival -->
-      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html" target="_blank">узнать
+      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html">узнать
         подробнее</a>
     </div>
   </article>
@@ -131,6 +131,33 @@
             fill="currentColor" />
         </svg>
       </a>
+      <a class="text text_type_button btn btn_type_bordered" href="catalog.html">
+        не выходить из дома
+        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
+          <path
+            d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+      <a class="text text_type_button btn btn_type_bordered" href="catalog.html">
+        сходить на экскурсию
+        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
+          <path
+            d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+      <a class="text text_type_button btn btn_type_bordered" href="catalog.html">
+        побывать в музее
+        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none">
+          <path
+            d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
     <div class="events__cards-container"></div>
     <a href="catalog.html" class="text text_type_button btn btn_type_violet">смотреть все события</a>
@@ -150,7 +177,7 @@
         <div class="round-card__back round-card__back_type_drinks"></div>
         <div class="round-card__info round-card__info_align_left">
           <h3 class="title title_type_section">15 000</h3>
-          <p class="text text_type_main">cтолько печенья продали в&nbsp;поддержку акции</p>
+          <p class="text text_type_main">cтолько печенья продали&nbsp;в поддержку акции</p>
         </div>
       </article>
     </div>
@@ -166,8 +193,7 @@
           устройте мастер-класс по&nbsp;вязанию
           или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
         <!-- переход на страницу стать участником -->
-        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./membership.html"
-          target="_blank">стать участником</a>
+        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./membership.html">стать участником</a>
       </div>
     </article>
   </section>
@@ -184,16 +210,16 @@
     </div>
   </section>
   <section class="participators">
-    <h1 class="title title_type_section">уже в комманде</h1>
+    <h1 class="title title_type_section">уже в команде</h1>
     <div class="participators__grid-logo">
-      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/Рынок лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/Рынок лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/surf лого.png')%>" />
-      <img class="participators__item" src="<%=require('./images/Галерея лого.png')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Рынок лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/surf лого.svg')%>" />
+      <img class="participators__item" src="<%=require('./images/Галерея лого.svg')%>" />
     </div>
   </section>
   <footer class="footer">
@@ -242,9 +268,9 @@
         <p class="text text_type_optional text_color_grey popup__burger-menu-text">навигация</p>
         <nav class="popup__burger-menu-navigation">
           <ul class="popup__burger-menu-navigation-links">
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">куда
+            <li class="popup__burger-menu-navigation-item"><a href="catalog.html" class="popup__burger-menu-navigation-link">куда
                 пойти</a></li>
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">стать
+            <li class="popup__burger-menu-navigation-item"><a href="membership.html" class="popup__burger-menu-navigation-link">стать
                 участником</a></li>
             <li class="popup__burger-menu-navigation-item"><a href="festival.html"
                 class="popup__burger-menu-navigation-link">о фестивале</a></li>
@@ -276,7 +302,7 @@
           <label class="form-city__list" for="saint-Petersburg-burger">
             <span>Санкт-Петербург</span>
             <input type="radio" name="city" id="saint-Petersburg-burger" class="form-city__list-item"
-              value="Санкт-Петербург">
+              value="Санкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi-burger">
             <span>Сочи</span>
@@ -313,32 +339,36 @@
         </div>
         <h3 class="title title_type_block popup__text">сумма</h3>
         <div class="popup__sum-options">
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>100 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>300 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>500 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>1000 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>3000 ₽</span>
-          </button>
-          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey"
-            placeholder="другая сумма" name="other-sum" id="input-other-sum">
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="100 ₽">
+            <span class="text text_type_button popup__input-element">100 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="300 ₽">
+            <span class="text text_type_button popup__input-element">300 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="500 ₽">
+            <span class="text text_type_button popup__input-element">500 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="1000 ₽">
+            <span class="text text_type_button popup__input-element">1000 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="3000 ₽">
+            <span class="text text_type_button popup__input-element">3000 ₽</span>
+          </label>
+          <input type="text" class="popup__sum-input_type_inactive text text_type_main" placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="input-card-bank">
-            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank">
+            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -353,10 +383,7 @@
           отношении обработки и защиты персональных данных и даёте <a href="#" class="text_type_link">согласие</a> на их
           обработку</p>
       </form>
-      <button type="button" aria-label="Перейдите к оплате"
-        class="btn btn_type_violet btn_type_width text text_type_button popup__button">
-        <span>перейти к оплате</span>
-      </button>
+      <a class="btn btn_type_violet btn_type_width text text_type_button popup__button" href="./help.html">перейти к оплате</a>
     </div>
   </div>
   <!-- форма купить билет -->
@@ -379,20 +406,20 @@
         <h3 class="title title_type_block popup__text">сумма и количество</h3>
         <div class="popup__sum-amount">
           <p class="popup__sum-ticket title title_type_section">500 ₽</p>
-          <div class="controller__wrapper controller__wrapper_type_amount">
+          <div class="controller-wrapper controller-wrapper_type_amount">
             <button class="controller controller_el_amount-minus"></button>
-            <p class="controller__amount-square text text_type_optional">1</p>
+            <p class="controller-wrapper__amount-square text text_type_optional">1</p>
             <button class="controller controller_el_amount-plus"></button>
           </div>
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered btn_type_grey text text_type_main btn_type_width popup__inactive-input_email"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="card-buy-ticket">
-            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket">
+            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -411,6 +438,7 @@
         class="btn btn_type_violet btn_type_width text text_type_button popup__button">
         <span>перейти к оплате</span>
       </button>
+      <a class="btn btn_type_violet btn_type_width text text_type_button popup__button" href="./application.html">перейти к оплате</a>
     </div>
   </div>
   <!-- cardform modal -->

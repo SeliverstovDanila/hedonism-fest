@@ -1,0 +1,17 @@
+.popup__input-element{
+  background-color: transparent;
+  border: 2px solid #3b3748;
+  border-radius: 26px;
+  color: #3b3748;
+  padding: 12px 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .popup__input-element {
+    padding: 12px 20px;
+  }
+}

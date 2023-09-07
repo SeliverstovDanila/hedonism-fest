@@ -1,7 +1,7 @@
 .hedonism__arc_top {
-  top: 75px;
-  right: 650px;
-  transform: rotate(-88deg);
+  top: 68px;
+  right: 645px;
+  transform: scale(-1, 1) rotate(-117deg);
 }
 
 @media screen and (max-width: 1280px) {

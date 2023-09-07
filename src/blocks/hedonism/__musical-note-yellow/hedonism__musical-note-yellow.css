@@ -1,11 +1,11 @@
 .hedonism__musical-note-yellow {
   background-image: url(../../../images/musical-note-yellow.svg);
   background-size: cover;
-  width: 55px;
-  height: 48px;
+  width: 59px;
+  height: 50px;
   position: absolute;
-  top: 225px;
-  right: 61px;
+  top: 222px;
+  right: 56px;
 }
 
 @media screen and (max-width: 360px) {

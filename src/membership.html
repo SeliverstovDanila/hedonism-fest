@@ -36,7 +36,7 @@
           </label>
           <label class="form-city__list" for="saint-Petersburg">
             <span>Санкт-Петербург</span>
-            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi">
             <span>Сочи</span>
@@ -56,7 +56,7 @@
     <nav>
       <ul class="header__menu-links">
         <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">куда пойти</a></li>
-        <li class="header__menu-item"><a href="./membership.html" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="membership.html" class="header__menu-link">стать участником</a></li>
         <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
       </ul>
     </nav>
@@ -68,9 +68,9 @@
             d="M17.5 1.91699C16.374 1.93451 15.2725 2.24885 14.3068 2.82826C13.3411 3.40768 12.5454 4.23166 12 5.21699C11.4547 4.23166 10.659 3.40768 9.69326 2.82826C8.72756 2.24885 7.62607 1.93451 6.50002 1.91699C4.70496 1.99498 3.01373 2.78025 1.7958 4.10122C0.577879 5.4222 -0.0677312 7.17152 1.93259e-05 8.96699C1.93259e-05 13.514 4.78602 18.48 8.80002 21.847C9.69624 22.6001 10.8294 23.013 12 23.013C13.1707 23.013 14.3038 22.6001 15.2 21.847C19.214 18.48 24 13.514 24 8.96699C24.0678 7.17152 23.4222 5.4222 22.2042 4.10122C20.9863 2.78025 19.2951 1.99498 17.5 1.91699ZM13.915 20.317C13.379 20.7684 12.7008 21.0159 12 21.0159C11.2993 21.0159 10.621 20.7684 10.085 20.317C4.94702 16.006 2.00002 11.87 2.00002 8.96699C1.93166 7.70171 2.36639 6.46072 3.20938 5.51469C4.05238 4.56866 5.23525 3.99434 6.50002 3.91699C7.76479 3.99434 8.94766 4.56866 9.79066 5.51469C10.6337 6.46072 11.0684 7.70171 11 8.96699C11 9.23221 11.1054 9.48656 11.2929 9.6741C11.4804 9.86164 11.7348 9.96699 12 9.96699C12.2652 9.96699 12.5196 9.86164 12.7071 9.6741C12.8947 9.48656 13 9.23221 13 8.96699C12.9317 7.70171 13.3664 6.46072 14.2094 5.51469C15.0524 4.56866 16.2353 3.99434 17.5 3.91699C18.7648 3.99434 19.9477 4.56866 20.7907 5.51469C21.6337 6.46072 22.0684 7.70171 22 8.96699C22 11.87 19.053 16.006 13.915 20.313V20.317Z"
             fill="#3B3748" />
         </svg>
-        <span class="text text_type_button">хочу пойти</span>
+        <a href="catalog.html" class="text text_type_button">хочу пойти</a>
       </button>
-      <button class="btn btn_type_violet btn_type_hide btn__support" type="button"><span
+      <button class="btn btn_type_violet btn_type_hide btn_function_support" type="button"><span
           class="text text_type_button text_color_white">поддержать</span></button>
       <div class="header__menu-burger-icon">
         <span></span>
@@ -79,7 +79,7 @@
   </header>
   <!-- конец хедера -->
 
-  <!-- секция festival -->
+  <!-- основной контент страницы membership -->
   <main class="membership">
 
     <!-- когда открывается форма - membership__title_hidden -->
@@ -154,25 +154,24 @@
                 <input class="membership__radio-input membership__radio-input_type_ellipse" id="food" type="radio"
                   name="category" value="кафе/бар/ресторан" checked>
                 <span
-                  class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">кафе/бар/ресторан</span>
+                  class="text text_type_button membership__pseudo-el membership__pseudo-el_type_ellipse">кафе/бар/ресторан</span>
               </label>
               <label class="membership__form-label">
                 <input class="membership__radio-input membership__radio-input_type_ellipse" id="study" type="radio"
                   name="category" value="мастер-класс/лекция">
                 <span
-                  class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">мастер-класс/лекция</span>
+                  class="text text_type_button membership__pseudo-el membership__pseudo-el_type_ellipse">мастер-класс/лекция</span>
               </label>
               <label class="membership__form-label">
                 <input class="membership__radio-input membership__radio-input_type_ellipse" id="party" type="radio"
                   name="category" value="посиделки/вечеринка">
                 <span
-                  class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">посиделки/вечеринка</span>
+                  class="text text_type_button membership__pseudo-el membership__pseudo-el_type_ellipse">посиделки/вечеринка</span>
               </label>
               <label class="membership__form-label">
                 <input class="membership__radio-input membership__radio-input_type_ellipse" id="another" type="radio"
                   name="category" value="другое">
-                <span class="text text_type_button input__pseudo-el input__pseudo-el_type_ellipse">другое</span>
-                <form>
+                <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_ellipse">другое</span>
               </label>
             </div>
           </div>
@@ -203,54 +202,54 @@
 
                 <!-- выбранная категория с предыдущего филдсета -->
                 <div class="membership__selected-item membership__selected-item_box-shadow">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">кафе/бар/ресторан</span>
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_checked">кафе/бар/ресторан</span>
+                </div>
+
+                <div class="membership__input-wrapper membership__input-wrapper_type_select">
+                  <label class="text text_type_main">
+                    <span class="membership__input-label">город</span>
+                      <select class="input input_type_select" name="city" required>
+                        <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                        <option class="input__select-option" value="Москва">Москва</option>
+                        <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option class="input__select-option" value="Сочи">Сочи</option>
+                        <option class="input__select-option" value="Калуга">Калуга</option>
+                        <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                      </select>
+                    <span class="text text_type_main membership__input-error membership__input-error_type_city"></span>
+                  </label>
                 </div>
 
                 <label class="text text_type_main">
-                  <span class="input__label">город</span>
-                  <div class="input__wrapper input__wrapper_type_select">
-                    <select class="input input_type_select" name="city" required>
-                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                      <option class="input__select-option" value="Москва">Москва</option>
-                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                      <option class="input__select-option" value="Сочи">Сочи</option>
-                      <option class="input__select-option" value="Калуга">Калуга</option>
-                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                    </select>
-                  </div>
-                  <span class="text text_type_main input__error input__error_type_city"></span>
-                </label>
-
-                <label class="text text_type_main">
-                  <span class="input__label">название заведения</span>
+                  <span class="membership__input-label">название заведения</span>
                   <input class="input" name="place-name" type="text" value="" placeholder="введите название заведения"
                     minlength="2" maxlength="30">
-                  <span class="text text_type_main input__error input__error_type_place-name"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_place-name"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">контактное лицо</span>
+                  <span class="membership__input-label">контактное лицо</span>
                   <input class="input" name="full-name" type="text" value="" placeholder="введите ФИО" minlength="5"
                     maxlength="50" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                     data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                  <span class="text text_type_main input__error input__error_type_full-name"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_full-name"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">телефон для связи с организатором</span>
+                  <span class="membership__input-label">телефон для связи с организатором</span>
                   <input class="input" name="organizer-phone" type="tel" value="+7("
                     placeholder="введите номер телефона" minlength="16" maxlength="16"
                     pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                     data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                  <span class="text text_type_main input__error input__error_type_organizer-phone"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_organizer-phone"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">описание</span>
-                  <textarea class="input input_type_textarea" name="about_menu" type="text" value=""
+                  <span class="membership__input-label">описание</span>
+                  <textarea class="input input_type_textarea" name="about_menu"
                     placeholder="Укажите, что из меню будет принимать участие в акции" minlength="2"
                     maxlength="255"></textarea>
-                  <span class="text text_type_main input__error input__error_type_about_menu"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_about_menu"></span>
                 </label>
 
               </div>
@@ -272,49 +271,49 @@
 
               <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
                 <label class="text text_type_main">
-                  <span class="input__label">часы работы заведения</span>
+                  <span class="membership__input-label">часы работы заведения</span>
                   <input class="input" name="place-hours" type="text" value=""
                     placeholder="например: 10:00-13:00, 13:00-19:00" minlength="11" maxlength="11"
                     pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
                     data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                  <span class="text text_type_main input__error input__error_type_place-hours"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_place-hours"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">адрес заведения</span>
+                  <span class="membership__input-label">адрес заведения</span>
                   <input class="input" name="adress" type="text" value="" placeholder="каждый адрес с новой строки"
                     minlength="10" maxlength="255" pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
                     data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы">
-                  <span class="text text_type_main input__error input__error_type_adress"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_adress"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">номер телефона заведения</span>
+                  <span class="membership__input-label">номер телефона заведения</span>
                   <input class="input" name="place-phone" type="text" value="+7(" placeholder="введите номер телефона"
                     minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                     data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                  <span class="text text_type_main input__error input__error_type_place-phone"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_place-phone"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">ссылка на сайт</span>
-                  <input class="input" name="website" type="url" value="https://" placeholder="введите ссылку">
-                  <span class="text text_type_main input__error input__error_type_website"></span>
+                  <span class="membership__input-label">ссылка на сайт</span>
+                  <input class="input" name="website" type="url" value="" placeholder="введите ссылку">
+                  <span class="text text_type_main membership__input-error membership__input-error_type_website"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">ссылки на соцсети</span>
+                  <span class="membership__input-label">ссылки на соцсети</span>
                   <input class="input" name="social-network-list" type="url" value=""
                     placeholder="каждую ссылку с новой строки">
-                  <span class="text text_type_main input__error input__error_type_social-network-list"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_social-network-list"></span>
                 </label>
 
                 <label class="text text_type_main">
-                  <span class="input__label">описание</span>
-                  <textarea class="input input_type_textarea" name="about" type="text" value=""
+                  <span class="membership__input-label">описание</span>
+                  <textarea class="input input_type_textarea" name="about"
                     placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
                     minlength="30" maxlength="255"></textarea>
-                  <span class="text text_type_main input__error input__error_type_about"></span>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_about"></span>
                 </label>
 
 
@@ -348,14 +347,14 @@
             <div class="membership__fieldset-column membership__fieldset-column_type_right">
 
               <!-- drag'n'drop загрузка изображения -->
-              <div class="input__wrapper input__wrapper_type_file text text_type_main">
-                <button class="input__close-btn" type="button"></button>
+              <div class="membership__input-wrapper membership__input-wrapper_type_file text text_type_main">
+                <button class="membership__close-btn" type="button"></button>
                 <input id="upload-button" class="input input_type_file" name="images" type="file" accept="image/*">
-                <label for="upload-button" class="text text_type_main input__label input__label_type_file">
+                <label for="upload-button" class="text text_type_main membership__input-label membership__input-label_type_file">
                 </label>
-                <span class="text text_type_main input__error input__error_type_images input__error_visible">сообщение
+                <span class="text text_type_main membership__input-error membership__input-error_type_images membership__input-error_visible">сообщение
                   об ошибке</span>
-                <div class="input__image-display"></div>
+                <div class="membership__image-display"></div>
               </div>
 
             </div>
@@ -381,48 +380,46 @@
 
       </form>
     </div>
+<!-- конец основного контента -->
+  </main>
 
     <!-- начало футера -->
-    <!-- <footer class="footer">
-      <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
-      <nav class="footer__info">
-        <h2 class="title title_type_block">организатор:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Ночлежка<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="info@hedonismfest.ru"
-              class="footer__link footer__link_email">info@hedonismfest.ru</a></li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">сделано с любовью:</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Fastsol Digital<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">shishki.collective<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">студентами Яндекс.Практикума<img
-                src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
-        </ul>
-      </nav>
-      <nav class="footer__info">
-        <h2 class="title title_type_block">мы в соцсетях:</h2>
-        <ul class="footer__list footer__list-social">
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/facebook.svg')%>" alt="иконка facebook" class="footer__icon-social"></a></li>
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/instagram.svg')%>" alt="иконка instagram" class="footer__icon-social"></a></li>
-          <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
-                src="<%=require('./images/vk.svg')%>" alt="иконка vk" class="footer__icon-social"></a></li>
-        </ul>
-      </nav>
-    </footer> -->
+  <footer class="footer">
+    <img src="<%=require('./images/footer-illustration.svg')%>" alt="Иллюстрация" class="footer__image">
+    <nav class="footer__info">
+      <h2 class="title title_type_block">организатор:</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__link">Ночлежка<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="info@hedonismfest.ru"
+            class="footer__link footer__link_email">info@hedonismfest.ru</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="title title_type_block">сделано с любовью:</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__link">Fastsol Digital<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">shishki.collective<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+        <li class="footer__list-item"><a href="#" class="footer__link">студентами Яндекс.Практикума<img
+              src="<%=require('./images/footer-icon.svg')%>" alt="иконка перехода" class="footer__icon"></a></li>
+      </ul>
+    </nav>
+    <nav class="footer__info">
+      <h2 class="title title_type_block">мы в соцсетях:</h2>
+      <ul class="footer__list footer__list-social">
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/facebook.svg')%>" alt="иконка facebook" class="footer__icon-social"></a></li>
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/instagram.svg')%>" alt="иконка instagram" class="footer__icon-social"></a></li>
+        <li class="footer__list-item footer__list-item-social"><a href="#" class="footer__link"><img
+              src="<%=require('./images/vk.svg')%>" alt="иконка vk" class="footer__icon-social"></a></li>
+      </ul>
+    </nav>
+  </footer>
     <!-- конец футера -->
 
-
-
-
-  </main>
 <!-- шаблоны для хедера -->
   <!-- бургер меню -->
   <div class="popup popup__menu-burger">
@@ -436,9 +433,9 @@
         <p class="text text_type_optional text_color_grey popup__burger-menu-text">навигация</p>
         <nav class="popup__burger-menu-navigation">
           <ul class="popup__burger-menu-navigation-links">
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">куда
+            <li class="popup__burger-menu-navigation-item"><a href="catalog.html" class="popup__burger-menu-navigation-link">куда
                 пойти</a></li>
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">стать
+            <li class="popup__burger-menu-navigation-item"><a href="membership.html" class="popup__burger-menu-navigation-link">стать
                 участником</a></li>
             <li class="popup__burger-menu-navigation-item"><a href="festival.html"
                 class="popup__burger-menu-navigation-link">о фестивале</a></li>
@@ -470,7 +467,7 @@
           <label class="form-city__list" for="saint-Petersburg-burger">
             <span>Санкт-Петербург</span>
             <input type="radio" name="city" id="saint-Petersburg-burger" class="form-city__list-item"
-              value="Санкт-Петербург">
+              value="Санкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi-burger">
             <span>Сочи</span>
@@ -507,32 +504,36 @@
         </div>
         <h3 class="title title_type_block popup__text">сумма</h3>
         <div class="popup__sum-options">
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>100 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>300 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>500 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>1000 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>3000 ₽</span>
-          </button>
-          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey"
-            placeholder="другая сумма" name="other-sum" id="input-other-sum">
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="100 ₽">
+            <span class="text text_type_button popup__input-element">100 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="300 ₽">
+            <span class="text text_type_button popup__input-element">300 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="500 ₽">
+            <span class="text text_type_button popup__input-element">500 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="1000 ₽">
+            <span class="text text_type_button popup__input-element">1000 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="3000 ₽">
+            <span class="text text_type_button popup__input-element">3000 ₽</span>
+          </label>
+          <input type="text" class="popup__sum-input_type_inactive text text_type_main" placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="input-card-bank">
-            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank">
+            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -573,20 +574,20 @@
         <h3 class="title title_type_block popup__text">сумма и количество</h3>
         <div class="popup__sum-amount">
           <p class="popup__sum-ticket title title_type_section">500 ₽</p>
-          <div class="controller__wrapper controller__wrapper_type_amount">
+          <div class="controller-wrapper controller-wrapper_type_amount">
             <button class="controller controller_el_amount-minus"></button>
-            <p class="controller__amount-square text text_type_optional">1</p>
+            <p class="controller-wrapper__amount-square text text_type_optional">1</p>
             <button class="controller controller_el_amount-plus"></button>
           </div>
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered btn_type_grey text text_type_main btn_type_width popup__inactive-input_email"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="card-buy-ticket">
-            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket">
+            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -643,53 +644,53 @@
 
               <!-- выбранная категория с предыдущего филдсета -->
               <div class="membership__selected-item membership__selected-item_box-shadow">
-                <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">кафе/бар/ресторан</span>
+                <span class="text text_type_button membership__pseudo-el membership__pseudo-el_checked">кафе/бар/ресторан</span>
+              </div>
+
+              <div class="membership__input-wrapper membership__input-wrapper_type_select">
+                <label class="text text_type_main">
+                  <span class="membership__input-label">город</span>
+                    <select class="input input_type_select" name="city" required>
+                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                      <option class="input__select-option" value="Москва">Москва</option>
+                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option class="input__select-option" value="Сочи">Сочи</option>
+                      <option class="input__select-option" value="Калуга">Калуга</option>
+                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                    </select>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_city"></span>
+                </label>
               </div>
 
               <label class="text text_type_main">
-                <span class="input__label">город</span>
-                <div class="input__wrapper input__wrapper_type_select">
-                  <select class="input input_type_select" name="city" required>
-                    <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                    <option class="input__select-option" value="Москва">Москва</option>
-                    <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                    <option class="input__select-option" value="Сочи">Сочи</option>
-                    <option class="input__select-option" value="Калуга">Калуга</option>
-                    <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                  </select>
-                </div>
-                <span class="text text_type_main input__error input__error_type_city"></span>
-              </label>
-
-              <label class="text text_type_main">
-                <span class="input__label">название заведения</span>
+                <span class="membership__input-label">название заведения</span>
                 <input class="input" name="place-name" type="text" value="" placeholder="введите название заведения"
                   minlength="2" maxlength="30">
-                <span class="text text_type_main input__error input__error_type_place-name"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_place-name"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">контактное лицо</span>
+                <span class="membership__input-label">контактное лицо</span>
                 <input class="input" name="full-name" type="text" value="" placeholder="введите ФИО" minlength="5"
                   maxlength="50" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                <span class="text text_type_main input__error input__error_type_full-name"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_full-name"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">телефон для связи с организатором</span>
+                <span class="membership__input-label">телефон для связи с организатором</span>
                 <input class="input" name="organizer-phone" type="tel" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_organizer-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_organizer-phone"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">описание</span>
-                <textarea class="input input_type_textarea" name="about_menu" type="text" value=""
+                <span class="membership__input-label">описание</span>
+                <textarea class="input input_type_textarea" name="about_menu"
                   placeholder="Укажите, что из меню будет принимать участие в акции" minlength="2"
                   maxlength="255"></textarea>
-                <span class="text text_type_main input__error input__error_type_about_menu"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_about_menu"></span>
               </label>
 
             </div>
@@ -711,49 +712,49 @@
 
             <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
               <label class="text text_type_main">
-                <span class="input__label">часы работы заведения</span>
+                <span class="membership__input-label">часы работы заведения</span>
                 <input class="input" name="place-hours" type="text" value=""
                   placeholder="например: 10:00-13:00, 13:00-19:00" minlength="11" maxlength="11"
                   pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
                   data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                <span class="text text_type_main input__error input__error_type_place-hours"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_place-hours"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">адрес заведения</span>
+                <span class="membership__input-label">адрес заведения</span>
                 <input class="input" name="adress" type="text" value="" placeholder="каждый адрес с новой строки"
                   minlength="10" maxlength="255" pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы">
-                <span class="text text_type_main input__error input__error_type_adress"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_adress"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона заведения</span>
+                <span class="membership__input-label">номер телефона заведения</span>
                 <input class="input" name="place-phone" type="text" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_place-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_place-phone"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">ссылка на сайт</span>
-                <input class="input" name="website" type="url" value="https://" placeholder="введите ссылку">
-                <span class="text text_type_main input__error input__error_type_website"></span>
+                <span class="membership__input-label">ссылка на сайт</span>
+                <input class="input" name="website" type="url" value="" placeholder="введите ссылку">
+                <span class="text text_type_main membership__input-error membership__input-error_type_website"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">ссылки на соцсети</span>
+                <span class="membership__input-label">ссылки на соцсети</span>
                 <input class="input" name="social-network-list" type="url" value=""
                   placeholder="каждую ссылку с новой строки">
-                <span class="text text_type_main input__error input__error_type_social-network-list"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_social-network-list"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">описание</span>
-                <textarea class="input input_type_textarea" name="about" type="text" value=""
+                <span class="membership__input-label">описание</span>
+                <textarea class="input input_type_textarea" name="about"
                   placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
                   minlength="30" maxlength="255"></textarea>
-                <span class="text text_type_main input__error input__error_type_about"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_about"></span>
               </label>
 
 
@@ -787,7 +788,7 @@
 
               <!-- выбранная категория с предыдущего филдсета -->
               <div class="membership__selected-item">
-                <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">мастер-класс/лекция</span>
+                <span class="text text_type_button membership__pseudo-el membership__pseudo-el_checked">мастер-класс/лекция</span>
               </div>
 
               <!-- радиокнопки (онлайн/офлайн) -->
@@ -795,59 +796,59 @@
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="онлайн">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">онлайн</span>
                 </label>
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="оффлайн">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">оффлайн</span>
+                </label>
+              </div>
+
+              <div class="membership__input-wrapper membership__input-wrapper_type_select">
+                <label class="text text_type_main">
+                  <span class="membership__input-label">город</span>
+                    <select class="input input_type_select" name="city" required>
+                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                      <option class="input__select-option" value="Москва">Москва</option>
+                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option class="input__select-option" value="Сочи">Сочи</option>
+                      <option class="input__select-option" value="Калуга">Калуга</option>
+                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                    </select>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_city"></span>
                 </label>
               </div>
 
               <label class="text text_type_main">
-                <span class="input__label">город</span>
-                <div class="input__wrapper input__wrapper_type_select">
-                  <select class="input input_type_select" name="city" required>
-                    <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                    <option class="input__select-option" value="Москва">Москва</option>
-                    <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                    <option class="input__select-option" value="Сочи">Сочи</option>
-                    <option class="input__select-option" value="Калуга">Калуга</option>
-                    <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                  </select>
-                </div>
-                <span class="text text_type_main input__error input__error_type_city"></span>
-              </label>
-
-              <label class="text text_type_main">
-                <span class="input__label">название мероприятия</span>
+                <span class="membership__input-label">название мероприятия</span>
                 <input class="input" name="event-title" type="text" value="" placeholder="введите название"
                   minlength="2" maxlength="30">
-                <span class="text text_type_main input__error input__error_type_event-title"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-title"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">дата проведения</span>
+                <span class="membership__input-label">дата проведения</span>
                 <input class="input" name="date" type="text" value="" placeholder="укажите дату в формате дд.мм.гггг"
                   minlength="10" maxlength="10" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
                   data-custom-message="Укажите дату в формате дд.мм.гггг">
-                <span class="text text_type_main input__error input__error_type_date"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_date"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">контактное лицо</span>
+                <span class="membership__input-label">контактное лицо</span>
                 <input class="input" name="full-name" type="text" value="" placeholder="введите ФИО" minlength="5"
                   maxlength="50" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                <span class="text text_type_main input__error input__error_type_full-name"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_full-name"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона для связи с организатором</span>
+                <span class="membership__input-label">номер телефона для связи с организатором</span>
                 <input class="input" name="organizer-phone" type="tel" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_organizer-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_organizer-phone"></span>
               </label>
 
             </div>
@@ -870,44 +871,44 @@
             <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
               <label class="text text_type_main">
-                <span class="input__label">время проведения</span>
+                <span class="membership__input-label">время проведения</span>
                 <input class="input" name="event-hours" type="text" value="" placeholder="например: 18:00-22:00"
                   minlength="11" maxlength="11"
                   pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
                   data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                <span class="text text_type_main input__error input__error_type_event-hours"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-hours"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">адрес проведения</span>
+                <span class="membership__input-label">адрес проведения</span>
                 <input class="input" name="event-place" type="text" value="" placeholder="каждый адрес с новой строки"
                   minlength="10" maxlength="255" pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы.">
-                <span class="text text_type_main input__error input__error_type_event-place"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-place"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона для бронирования</span>
+                <span class="membership__input-label">номер телефона для бронирования</span>
                 <input class="input" name="reserve-phone" type="text" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_reserve-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_reserve-phone"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">стоимость участия</span>
+                <span class="membership__input-label">стоимость участия</span>
                 <input class="input" name="price" type="text" value="" placeholder="укажите стоимость в рублях"
                   minlength="2" pattern="[\-\,\d\s]+"
                   data-custom-message="Разрешены только цифры, знаки дефиса, запятые и пробелы">
-                <span class="text text_type_main input__error input__error_type_price"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_price"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">описание</span>
-                <textarea class="input input_type_textarea" name="about" type="text" value=""
+                <span class="membership__input-label">описание</span>
+                <textarea class="input input_type_textarea" name="about"
                   placeholder="Напишите небольшой анонс вашего местер-класса или лекции. Чем мероприятие будет полезно, чему посвящено"
                   minlength="30" maxlength="255"></textarea>
-                <span class="text text_type_main input__error input__error_type_about"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_about"></span>
               </label>
 
             </div>
@@ -940,29 +941,29 @@
 
               <!-- выбранная категория с предыдущего филдсета -->
               <div class="membership__selected-item membership__selected-item_box-shadow">
-                <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">посиделки/вечеринка</span>
+                <span class="text text_type_button membership__pseudo-el membership__pseudo-el_checked">посиделки/вечеринка</span>
+              </div>
+
+              <div class="membership__input-wrapper membership__input-wrapper_type_select">
+                <label class="text text_type_main">
+                  <span class="membership__input-label">город</span>
+                    <select class="input input_type_select" name="city" required>
+                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                      <option class="input__select-option" value="Москва">Москва</option>
+                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option class="input__select-option" value="Сочи">Сочи</option>
+                      <option class="input__select-option" value="Калуга">Калуга</option>
+                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                    </select>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_city"></span>
+                </label>
               </div>
 
               <label class="text text_type_main">
-                <span class="input__label">город</span>
-                <div class="input__wrapper input__wrapper_type_select">
-                  <select class="input input_type_select" name="city" required>
-                    <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                    <option class="input__select-option" value="Москва">Москва</option>
-                    <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                    <option class="input__select-option" value="Сочи">Сочи</option>
-                    <option class="input__select-option" value="Калуга">Калуга</option>
-                    <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                  </select>
-                </div>
-                <span class="text text_type_main input__error input__error_type_city"></span>
-              </label>
-
-              <label class="text text_type_main">
-                <span class="input__label">название мероприятия</span>
+                <span class="membership__input-label">название мероприятия</span>
                 <input class="input" name="event-title" type="text" value="" placeholder="введите название"
                   minlength="2" maxlength="30">
-                <span class="text text_type_main input__error input__error_type_event-title"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-title"></span>
               </label>
 
               <!-- радиокнопки (открытое/закрытое мероприятие) -->
@@ -970,43 +971,43 @@
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="открытое мероприятие">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">открытое
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">открытое
                     мероприятие</span>
-                  <span class="text text_type_main input__label">адрес отобразим в карточке события</span>
+                  <span class="text text_type_main membership__input-label">адрес отобразим в карточке события</span>
                 </label>
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="закрытое мероприятие">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">закрытое
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">закрытое
                     мероприятие</span>
-                  <span class="text text_type_main input__label">адрес увидят только, те кому вы оправите ссылку на
+                  <span class="text text_type_main membership__input-label">адрес увидят только, те кому вы оправите ссылку на
                     событие</span>
                 </label>
               </div>
 
 
               <label class="text text_type_main">
-                <span class="input__label">дата проведения</span>
+                <span class="membership__input-label">дата проведения</span>
                 <input class="input" name="date" type="text" value="" placeholder="укажите дату в формате дд.мм.гггг"
                   minlength="10" maxlength="10" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
                   data-custom-message="Укажите дату в формате дд.мм.гггг">
-                <span class="text text_type_main input__error input__error_type_date"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_date"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">контактное лицо</span>
+                <span class="membership__input-label">контактное лицо</span>
                 <input class="input" name="full-name" type="text" value="" placeholder="введите ФИО" minlength="5"
                   maxlength="50" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                <span class="text text_type_main input__error input__error_type_full-name"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_full-name"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">телефон для связи с организатором</span>
+                <span class="membership__input-label">телефон для связи с организатором</span>
                 <input class="input" name="organizer-phone" type="tel" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_organizer-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_organizer-phone"></span>
               </label>
 
             </div>
@@ -1029,57 +1030,57 @@
             <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
               <label class="text text_type_main">
-                <span class="input__label">время проведения</span>
+                <span class="membership__input-label">время проведения</span>
                 <input class="input" name="event-hours" type="text" value="" placeholder="например: 18:00-22:00"
                   minlength="11" maxlength="11"
                   pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
                   data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                <span class="text text_type_main input__error input__error_type_event-hours"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-hours"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">адрес проведения</span>
+                <span class="membership__input-label">адрес проведения</span>
                 <input class="input" name="event-place" type="text" value="" placeholder="каждый адрес с новой строки"
                   minlength="10" maxlength="255" pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы.">
-                <span class="text text_type_main input__error input__error_type_event-place"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-place"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона для бронирования</span>
+                <span class="membership__input-label">номер телефона для бронирования</span>
                 <input class="input" name="reserve-phone" type="text" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_reserve-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_reserve-phone"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">стоимость участия</span>
+                <span class="membership__input-label">стоимость участия</span>
                 <input class="input" name="price" type="text" value="" placeholder="укажите стоимость в рублях"
                   minlength="2" pattern="[\-\,\d\s]+"
                   data-custom-message="Разрешены только цифры, знаки дефиса, запятые и пробелы">
-                <span class="text text_type_main input__error input__error_type_price"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_price"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">ссылка на сайт</span>
-                <input class="input" name="website" type="url" value="https://" placeholder="введите ссылку">
-                <span class="text text_type_main input__error input__error_type_website"></span>
+                <span class="membership__input-label">ссылка на сайт</span>
+                <input class="input" name="website" type="url" value="" placeholder="введите ссылку">
+                <span class="text text_type_main membership__input-error membership__input-error_type_website"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">ссылки на соцсети</span>
+                <span class="membership__input-label">ссылки на соцсети</span>
                 <input class="input" name="social-network-list" type="url" value=""
                   placeholder="каждую ссылку с новой строки">
-                <span class="text text_type_main input__error input__error_type_social-network-list"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_social-network-list"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">описание</span>
-                <textarea class="input input_type_textarea" name="about" type="text" value=""
+                <span class="membership__input-label">описание</span>
+                <textarea class="input input_type_textarea" name="about"
                   placeholder="Напишите небольшой анонс вашего мероприятия. Чем оно будет полезно/чему посвящено"
                   minlength="30" maxlength="255"></textarea>
-                <span class="text text_type_main input__error input__error_type_about"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_about"></span>
               </label>
 
             </div>
@@ -1112,7 +1113,7 @@
 
               <!-- выбранная категория с предыдущего филдсета -->
               <div class="membership__selected-item">
-                <span class="text text_type_button input__pseudo-el input__pseudo-el_checked">другое</span>
+                <span class="text text_type_button membership__pseudo-el membership__pseudo-el_checked">другое</span>
               </div>
 
               <!-- радиокнопки (онлайн/офлайн) -->
@@ -1120,59 +1121,59 @@
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="онлайн">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">онлайн</span>
                 </label>
                 <label class="membership__form-label">
                   <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type"
                     value="оффлайн">
-                  <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+                  <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">оффлайн</span>
+                </label>
+              </div>
+
+              <div class="membership__input-wrapper membership__input-wrapper_type_select">
+                <label class="text text_type_main">
+                  <span class="membership__input-label">город</span>
+                    <select class="input input_type_select" name="city" required>
+                      <option class="input__select-option" value="" selected disabled>выберите из списка</option>
+                      <option class="input__select-option" value="Москва">Москва</option>
+                      <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option class="input__select-option" value="Сочи">Сочи</option>
+                      <option class="input__select-option" value="Калуга">Калуга</option>
+                      <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
+                    </select>
+                  <span class="text text_type_main membership__input-error membership__input-error_type_city"></span>
                 </label>
               </div>
 
               <label class="text text_type_main">
-                <span class="input__label">город</span>
-                <div class="input__wrapper input__wrapper_type_select">
-                  <select class="input input_type_select" name="city" required>
-                    <option class="input__select-option" value="" selected disabled>выберите из списка</option>
-                    <option class="input__select-option" value="Москва">Москва</option>
-                    <option class="input__select-option" value="Санкт-Петербург">Санкт-Петербург</option>
-                    <option class="input__select-option" value="Сочи">Сочи</option>
-                    <option class="input__select-option" value="Калуга">Калуга</option>
-                    <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
-                  </select>
-                </div>
-                <span class="text text_type_main input__error input__error_type_city"></span>
-              </label>
-
-              <label class="text text_type_main">
-                <span class="input__label">название мероприятия</span>
+                <span class="membership__input-label">название мероприятия</span>
                 <input class="input" name="event-title" type="text" value="" placeholder="введите название"
                   minlength="2" maxlength="30">
-                <span class="text text_type_main input__error input__error_type_event-title"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-title"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">дата проведения</span>
+                <span class="membership__input-label">дата проведения</span>
                 <input class="input" name="date" type="text" value="" placeholder="укажите дату в формате дд.мм.гггг"
                   minlength="10" maxlength="10" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
                   data-custom-message="Укажите дату в формате дд.мм.гггг">
-                <span class="text text_type_main input__error input__error_type_date"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_date"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">контактное лицо</span>
+                <span class="membership__input-label">контактное лицо</span>
                 <input class="input" name="full-name" type="text" value="" placeholder="введите ФИО" minlength="5"
                   maxlength="50" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
-                <span class="text text_type_main input__error input__error_type_full-name"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_full-name"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона для связи с организатором</span>
+                <span class="membership__input-label">номер телефона для связи с организатором</span>
                 <input class="input" name="organizer-phone" type="tel" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_organizer-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_organizer-phone"></span>
               </label>
 
             </div>
@@ -1195,44 +1196,44 @@
             <div class="membership__fieldset-column membership__fieldset-column_type_many-input">
 
               <label class="text text_type_main">
-                <span class="input__label">время проведения</span>
+                <span class="membership__input-label">время проведения</span>
                 <input class="input" name="event-hours" type="text" value="" placeholder="например: 18:00-22:00"
                   minlength="11" maxlength="11"
                   pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
                   data-custom-message="Укажите время в формате хх:хх-хх:хх">
-                <span class="text text_type_main input__error input__error_type_event-hours"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-hours"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">адрес проведения</span>
+                <span class="membership__input-label">адрес проведения</span>
                 <input class="input" name="event-place" type="text" value="" placeholder="каждый адрес с новой строки"
                   minlength="10" maxlength="255" pattern="[а-яА-Яa-zA-Zё\.\,\-\(\)\/\d\s]+"
                   data-custom-message="Разрешены только латинские, кириллические буквы, знаки (.,\-) и пробелы.">
-                <span class="text text_type_main input__error input__error_type_event-place"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_event-place"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">номер телефона для бронирования</span>
+                <span class="membership__input-label">номер телефона для бронирования</span>
                 <input class="input" name="reserve-phone" type="text" value="+7(" placeholder="введите номер телефона"
                   minlength="16" maxlength="16" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                   data-custom-message="Необходимо ввести номер телефона в формате +7(ххх)ххх-хх-хх">
-                <span class="text text_type_main input__error input__error_type_reserve-phone"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_reserve-phone"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">стоимость участия</span>
+                <span class="membership__input-label">стоимость участия</span>
                 <input class="input" name="price" type="text" value="" placeholder="укажите стоимость в рублях"
                   minlength="2" pattern="[\-\,\d\s]+"
                   data-custom-message="Разрешены только цифры, знаки дефиса, запятые и пробелы">
-                <span class="text text_type_main input__error input__error_type_price"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_price"></span>
               </label>
 
               <label class="text text_type_main">
-                <span class="input__label">описание</span>
-                <textarea class="input input_type_textarea" name="about" type="text" value=""
+                <span class="membership__input-label">описание</span>
+                <textarea class="input input_type_textarea" name="about"
                   placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
                   minlength="30" maxlength="255"></textarea>
-                <span class="text text_type_main input__error input__error_type_about"></span>
+                <span class="text text_type_main membership__input-error membership__input-error_type_about"></span>
               </label>
 
             </div>

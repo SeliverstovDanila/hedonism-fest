@@ -1,0 +1,13 @@
+.popup__sum-input_type_inactive{
+  border: 2px solid var(--dark-secondary, #96949E);
+  border-radius: 26px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.popup__sum-input_type_inactive:hover{
+  border: 2px solid var(--color-primary);
+}

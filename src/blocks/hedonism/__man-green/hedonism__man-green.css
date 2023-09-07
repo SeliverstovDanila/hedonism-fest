@@ -1,12 +1,12 @@
 .hedonism__man-green {
   background-image: url(../../../images/man-green.svg);
   background-size: cover;
-  width: 420px;
-  height: 250px;
+  width: 417px;
+  height: 265px;
   position: absolute;
-  bottom: 160px;
-  left: 84px;
-  transform: rotate(2.23deg);
+  bottom: 146px;
+  left: 87px;
+  transform: rotate(-0.77deg);
 }
 
 @media screen and (max-width: 1024px) {
@@ -18,11 +18,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .hedonism__man-green {
+    width: 293px;
+    height: 203px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .hedonism__man-green {
-    width: 302px;
-    height: 168px;
-    bottom: 528px;
-    left: 3px;
+    bottom: 488px;
+    left: 8px;
   }
 }

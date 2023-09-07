@@ -35,33 +35,17 @@
 @import url('../blocks/input/_type/input_type_textarea.css');
 @import url('../blocks/input/_type/input_type_select.css');
 @import url('../blocks/input/_type/input_type_file.css');
-@import url('../blocks/input/__wrapper/input__wrapper.css');
-@import url('../blocks/input/__wrapper/_type/input__wrapper_type_select.css');
-@import url('../blocks/input/__wrapper/_type/input__wrapper_type_file.css');
-@import url('../blocks/input/__wrapper/_active/input__wrapper_active.css');
-@import url('../blocks/input/__label/input__label.css');
-@import url('../blocks/input/__label/_type/input__label_type_file.css');
-@import url('../blocks/input/__pseudo-el/input__pseudo-el.css');
-@import url('../blocks/input/__pseudo-el/_checked/input__pseudo-ellipse_checked.css');
-@import url('../blocks/input/__pseudo-el/_type/input__pseudo-el_type_ellipse.css');
-@import url('../blocks/input/__pseudo-el/_type/input__pseudo-el_type_circle.css');
 @import url('../blocks/input/__select-option/input__select-option.css');
 @import url('../blocks/input/__context/input__context.css');
 @import url('../blocks/input/__context/_type/input__context_type_file.css');
-@import url('../blocks/input/__error/input__error.css');
-@import url('../blocks/input/__error/_type/input__error_type_images.css');
-@import url('../blocks/input/__error/_visible/input__error_visible.css');
 @import url('../blocks/input/__pseudo-placeholder/input__pseudo-placeholder.css');
-@import url('../blocks/input/__image-display/input__image-display.css');
-@import url('../blocks/input/__close-btn/input__close-btn.css');
-@import url('../blocks/input/__close-btn/_active/input__close-btn_active.css');
 
 /* controllers */
+@import url('../blocks/controller-wrapper/controller-wrapper.css');
+@import url('../blocks/controller-wrapper/_type/controller-wrapper_type_amount.css');
+@import url('../blocks/controller-wrapper/_type/controller-wrapper_type_zoom.css');
+@import url('../blocks/controller-wrapper/__amount-square/controller-wrapper__amount-square.css');
 @import url('../blocks/controller/controller.css');
-@import url('../blocks/controller/__wrapper/controller__wrapper.css');
-@import url('../blocks/controller/__amount-square/controller__amount-square.css');
-@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_amount.css');
-@import url('../blocks/controller/__wrapper/_type/controller__wrapper_type_zoom.css');
 @import url('../blocks/controller/_floating-btn/controller_floating-btn.css');
 @import url('../blocks/controller/_el/controller_el_arrow-up.css');
 @import url('../blocks/controller/_el/controller_el_arrow-down.css');
@@ -87,6 +71,7 @@
 @import url('../blocks/column/column.css');
 @import url('../blocks/column/_type/column_type_double.css');
 @import url('../blocks/column/_type/column_type_single.css');
+@import url("../blocks/column/_place/column_place_hedonism-about.css");
 @import url('../blocks/column/__shifted-paragraph/column__shifted-paragraph.css');
 @import url('../blocks/column/__btn/column__btn.css');
 
@@ -107,11 +92,10 @@
 
 
 /*HEDONISM*/
-@import url("../blocks/container/container.css");
-@import url("../blocks/centering/centering.css");
 @import url("../blocks/rotation/rotation.css");
 @import url("../blocks/hedonism/hedonism.css");
 @import url("../blocks/hedonism/__logo/hedonism__logo.css");
+@import url('../blocks/hedonism/__title/hedonism__title.css');
 @import url("../blocks/hedonism/__musical-note-violet/hedonism__musical-note-violet.css");
 @import url("../blocks/hedonism/__musical-note-violet/_left/hedonism__musical-note-violet_left.css");
 @import url("../blocks/hedonism/__musical-note-violet/_right/hedonism__musical-note-violet_right.css");
@@ -129,7 +113,6 @@
 @import url("../blocks/hedonism/__man-red/hedonism__man-red.css");
 @import url("../blocks/hedonism/__text/hedonism__text.css");
 @import url("../blocks/hedonism/__button/hedonism__button.css");
-@import url("../blocks/hedonism/__about/hedonism__about.css");
 
 /*EVENTS*/
 @import url("../blocks/events/events.css");
@@ -288,10 +271,15 @@
 @import url('../blocks/popup/__inactive-input/_email/popup__inactive-input_email.css');
 @import url('../blocks/popup/__sum-amount/popup__sum-amount.css');
 @import url('../blocks/popup/__sum-ticket/popup__sum-ticket.css');
+@import url('../blocks/popup/__sum-form/popup__sum-form.css');
+@import url('../blocks/popup/__sum-input/popup__sum-input.css');
+@import url('../blocks/popup/__input-element/popup__input-element.css');
+@import url('../blocks/popup/__sum-input/_type/popup__sum-input_type_inactive.css');
 @import url('../blocks/popup/__content/popup__content.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_donate-form.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_buy-ticket.css');
-
+@import url('../blocks/popup/__donate-form/popup__donate-form.css');
+@import url('../blocks/popup/__buy-ticket/popup__buy-ticket.css');
 /* POPUP BURGER_MENU */
 @import url('../blocks/popup/__container/_type/popup__container_type_burger-menu.css');
 @import url('../blocks/popup/__burger-menu-text/popup__burger-menu-text.css');
@@ -305,7 +293,8 @@
 @import url('../blocks/popup/__burger-menu-navigation-link/popup__burger-menu-navigation-link.css');
 @import url('../blocks/popup/__burger-menu-button-back/popup__burger-menu-button-back.css');
 @import url('../blocks/popup/__burger-menu-text-back/popup__burger-menu-text-back.css');
-@import url('../blocks/btn/_type/btn_type_grey.css');
+
+
 
 /* СТРАНИЦА CATALOG */
 @import url('../blocks/catalog/catalog.css');
@@ -344,6 +333,22 @@
 @import url('../blocks/membership/__selected-item/_box-shadow/membership__selected-item_box-shadow.css');
 @import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
 @import url('../blocks/membership/__btn/membership__btn.css');
+@import url('../blocks/membership/__input-wrapper/membership__input-wrapper.css');
+@import url('../blocks/membership/__input-wrapper/_type/membership__input-wrapper_type_select.css');
+@import url('../blocks/membership/__input-wrapper/_type/membership__input-wrapper_type_file.css');
+@import url('../blocks/membership/__input-wrapper/_active/membership__input-wrapper_active.css');
+@import url('../blocks/membership/__input-label/membership__input-label.css');
+@import url('../blocks/membership/__input-label/_type/membership__input-label_type_file.css');
+@import url('../blocks/membership/__pseudo-el/membership__pseudo-el.css');
+@import url('../blocks/membership/__pseudo-el/_checked/membership__pseudo-ellipse_checked.css');
+@import url('../blocks/membership/__pseudo-el/_type/membership__pseudo-el_type_ellipse.css');
+@import url('../blocks/membership/__pseudo-el/_type/membership__pseudo-el_type_circle.css');
+@import url('../blocks/membership/__input-error/membership__input-error.css');
+@import url('../blocks/membership/__input-error/_type/membership__input-error_type_images.css');
+@import url('../blocks/membership/__input-error/_visible/membership__input-error_visible.css');
+@import url('../blocks/membership/__image-display/membership__image-display.css');
+@import url('../blocks/membership/__close-btn/membership__close-btn.css');
+@import url('../blocks/membership/__close-btn/_active/membership__close-btn_active.css');
 /* membership__popup */
 @import url('../blocks/membership/__popup/membership__popup.css');
 @import url('../blocks/membership/__popup/_opened/membership__popup_opened.css');

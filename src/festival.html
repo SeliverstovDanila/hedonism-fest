@@ -35,7 +35,7 @@
           </label>
           <label class="form-city__list" for="saint-Petersburg">
             <span>Санкт-Петербург</span>
-            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург">
+            <input type="radio" name="city" id="saint-Petersburg" class="form-city__list-item" value="Cанкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi">
             <span>Сочи</span>
@@ -67,9 +67,9 @@
             d="M17.5 1.91699C16.374 1.93451 15.2725 2.24885 14.3068 2.82826C13.3411 3.40768 12.5454 4.23166 12 5.21699C11.4547 4.23166 10.659 3.40768 9.69326 2.82826C8.72756 2.24885 7.62607 1.93451 6.50002 1.91699C4.70496 1.99498 3.01373 2.78025 1.7958 4.10122C0.577879 5.4222 -0.0677312 7.17152 1.93259e-05 8.96699C1.93259e-05 13.514 4.78602 18.48 8.80002 21.847C9.69624 22.6001 10.8294 23.013 12 23.013C13.1707 23.013 14.3038 22.6001 15.2 21.847C19.214 18.48 24 13.514 24 8.96699C24.0678 7.17152 23.4222 5.4222 22.2042 4.10122C20.9863 2.78025 19.2951 1.99498 17.5 1.91699ZM13.915 20.317C13.379 20.7684 12.7008 21.0159 12 21.0159C11.2993 21.0159 10.621 20.7684 10.085 20.317C4.94702 16.006 2.00002 11.87 2.00002 8.96699C1.93166 7.70171 2.36639 6.46072 3.20938 5.51469C4.05238 4.56866 5.23525 3.99434 6.50002 3.91699C7.76479 3.99434 8.94766 4.56866 9.79066 5.51469C10.6337 6.46072 11.0684 7.70171 11 8.96699C11 9.23221 11.1054 9.48656 11.2929 9.6741C11.4804 9.86164 11.7348 9.96699 12 9.96699C12.2652 9.96699 12.5196 9.86164 12.7071 9.6741C12.8947 9.48656 13 9.23221 13 8.96699C12.9317 7.70171 13.3664 6.46072 14.2094 5.51469C15.0524 4.56866 16.2353 3.99434 17.5 3.91699C18.7648 3.99434 19.9477 4.56866 20.7907 5.51469C21.6337 6.46072 22.0684 7.70171 22 8.96699C22 11.87 19.053 16.006 13.915 20.313V20.317Z"
             fill="#3B3748" />
         </svg>
-        <span class="text text_type_button">хочу пойти</span>
+        <a href="catalog.html" class="text text_type_button">хочу пойти</a>
       </button>
-      <button class="btn btn_type_violet btn_type_hide btn__support" type="button"><span
+      <button class="btn btn_type_violet btn_type_hide btn_function_support" type="button"><span
           class="text text_type_button text_color_white">поддержать</span></button>
       <div class="header__menu-burger-icon">
         <span></span>
@@ -95,7 +95,7 @@
             С&nbsp;помощью специалистов по&nbsp;социальной работе, юристов и&nbsp;психологов 600 человек выбрались с&nbsp;улицы и&nbsp;начали новую жизнь.</p>
 
             <!-- появляется на мобильном -->
-          <article class="round-card round-card_align_right festival__mobile-card">
+          <article class="round-card round-card_align_right festival__mobile-card" aria-label="Сборы Ночлежки">
             <div class="round-card__back round-card__back_type_cup"></div>
             <div class="round-card__info round-card__info_align_left">
               <h3 class="title title_type_section">5&nbsp;744&nbsp;522&nbsp;₽</h3>
@@ -118,7 +118,7 @@
               когда есть возможность не&nbsp;волноваться каждый день о&nbsp;том, где сегодня ночевать и&nbsp;что сегодня есть.</p>
 
               <!-- появляется на мобильном -->
-            <article class="round-card round-card_align_right festival__mobile-card">
+            <article class="round-card round-card_align_right festival__mobile-card" aria-label="Новые возможности">
               <div class="round-card__back round-card__back_type_hugs"></div>
               <div class="round-card__info round-card__info_align_right">
                 <h3 class="title title_type_section">600</h3>
@@ -139,7 +139,7 @@
           </svg></a>
       </article>
 
-      <article class="round-card round-card_align_right festival__desktop-card">
+      <article class="round-card round-card_align_right festival__desktop-card" aria-label="Сборы Ночлежки">
         <div class="round-card__back round-card__back_type_cup"></div>
         <div class="round-card__info round-card__info_align_left">
           <h3 class="title title_type_section">5&nbsp;744&nbsp;522&nbsp;₽</h3>
@@ -160,11 +160,9 @@
             справиться с&nbsp;проблемами, которые привели человека на&nbsp;улицу.</p>
 
             <!-- появляется на мобильном -->
-          <article class="round-card round-card_align_right festival__mobile-card">
+          <article class="round-card round-card_align_right festival__mobile-card" aria-label="Карточка с цветком">
             <div class="round-card__back round-card__back_type_flower"></div>
             <div class="round-card__info round-card__info_align_right">
-              <h3 class="title title_type_section">600</h3>
-              <p class="text text_type_main">человек выбрались с&nbsp;улицы и&nbsp;начали новую жизнь</p>
             </div>
           </article>
 
@@ -172,10 +170,10 @@
             была последняя регистрация и&nbsp;какое у&nbsp;него гражданство. Мы&nbsp;помогаем всем, кому можем помочь.</p>
         </div>
 
-          <button class="btn btn_type_violet text text_type_button column__btn festival__btn" type="button">поддержать</button>
+          <button class="btn btn_type_violet text text_type_button btn_function_support column__btn festival__btn" type="button">поддержать</button>
       </article>
 
-      <article class="round-card round-card_align_right festival__desktop-card">
+      <article class="round-card round-card_align_right festival__desktop-card" aria-label="Новые возможности">
         <div class="round-card__back round-card__back_type_hugs"></div>
         <div class="round-card__info round-card__info_align_right">
           <h3 class="title title_type_section">600</h3>
@@ -205,7 +203,7 @@
           </a>
       </article>
 
-      <article class="round-card round-card_align_right festival__desktop-card festival__wide-img">
+      <article class="round-card round-card_align_right festival__desktop-card festival__wide-img" aria-label="Карточка с цветком без фона">
         <div class="round-card__back round-card__back_type_flower-left"></div>
       </article>
     </div>
@@ -261,9 +259,9 @@
         <p class="text text_type_optional text_color_grey popup__burger-menu-text">навигация</p>
         <nav class="popup__burger-menu-navigation">
           <ul class="popup__burger-menu-navigation-links">
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">куда
+            <li class="popup__burger-menu-navigation-item"><a href="catalog.html" class="popup__burger-menu-navigation-link">куда
                 пойти</a></li>
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">стать
+            <li class="popup__burger-menu-navigation-item"><a href="membership.html" class="popup__burger-menu-navigation-link">стать
                 участником</a></li>
             <li class="popup__burger-menu-navigation-item"><a href="festival.html"
                 class="popup__burger-menu-navigation-link">о фестивале</a></li>
@@ -295,7 +293,7 @@
           <label class="form-city__list" for="saint-Petersburg-burger">
             <span>Санкт-Петербург</span>
             <input type="radio" name="city" id="saint-Petersburg-burger" class="form-city__list-item"
-              value="Санкт-Петербург">
+              value="Санкт-Петербург" checked>
           </label>
           <label class="form-city__list" for="sochi-burger">
             <span>Сочи</span>
@@ -332,32 +330,36 @@
         </div>
         <h3 class="title title_type_block popup__text">сумма</h3>
         <div class="popup__sum-options">
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>100 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>300 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>500 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>1000 ₽</span>
-          </button>
-          <button type="button" aria-label="Выбрать сумму" class="btn btn_type_bordered text text_type_button">
-            <span>3000 ₽</span>
-          </button>
-          <input type="text" class="btn btn_type_bordered text text_type_main btn_type_width btn_type_grey"
-            placeholder="другая сумма" name="other-sum" id="input-other-sum">
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="100 ₽">
+            <span class="text text_type_button popup__input-element">100 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="300 ₽">
+            <span class="text text_type_button popup__input-element">300 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="500 ₽">
+            <span class="text text_type_button popup__input-element">500 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="1000 ₽">
+            <span class="text text_type_button popup__input-element">1000 ₽</span>
+          </label>
+          <label class="popup__sum-form">
+            <input type="radio" class="popup__sum-input" name="sum-choose" value="3000 ₽">
+            <span class="text text_type_button popup__input-element">3000 ₽</span>
+          </label>
+          <input type="text" class="popup__sum-input_type_inactive text text_type_main" placeholder="другая сумма" name="other-sum" id="input-other-sum">
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email btn_type_grey"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="input-card-bank">
-            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank">
+            <input type="radio" class="form-payment__item" name="payment" id="input-card-bank" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>
@@ -398,20 +400,20 @@
         <h3 class="title title_type_block popup__text">сумма и количество</h3>
         <div class="popup__sum-amount">
           <p class="popup__sum-ticket title title_type_section">500 ₽</p>
-          <div class="controller__wrapper controller__wrapper_type_amount">
+          <div class="controller-wrapper controller-wrapper_type_amount">
             <button class="controller controller_el_amount-minus"></button>
-            <p class="controller__amount-square text text_type_optional">1</p>
+            <p class="controller-wrapper__amount-square text text_type_optional">1</p>
             <button class="controller controller_el_amount-plus"></button>
           </div>
         </div>
         <h3 class="title title_type_block popup__text">email</h3>
         <input type="email"
-          class="btn btn_type_bordered btn_type_grey text text_type_main btn_type_width popup__inactive-input_email"
+          class="btn btn_type_bordered text text_type_main btn_type_width popup__inactive-input_email"
           placeholder="укажите почту для отправки чека" name="email" id="input-email">
         <h3 class="title title_type_block popup__text">способ оплаты</h3>
         <fieldset class="popup__fieldset">
           <label class="form-payment__list text text_type_button" for="card-buy-ticket">
-            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket">
+            <input type="radio" class="form-payment__item" name="payment" id="card-buy-ticket" checked>
             <span class="form-payment__icon form-payment__icon-active"></span>
             <span>банковской картой</span>
           </label>

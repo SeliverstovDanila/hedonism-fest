@@ -24,7 +24,7 @@ import {
   btnMinus,
   btnPlus,
   amount,
-  sumTickets,
+  sumTickets,popupBuyTickets
 } from "../components/constants.js";
 import { eventsCardsContainer, cardList } from "../components/carusel.js";
 import cardsArray from "../components/cards.json";
@@ -71,6 +71,7 @@ btnSupport.addEventListener("click", function () {
 btnDonate.addEventListener("click", function () {
   openPopup(popupDonate);
   closePopup(popupBurgerMenu);
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
 });
 
 closeBtnDonate.addEventListener("click", function () {
@@ -80,7 +81,6 @@ closeBtnDonate.addEventListener("click", function () {
 closeBtnTickets.addEventListener("click", function () {
   closePopup(popupBuyTickets);
 });
-
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 // счетчик (покупка билетов)
@@ -96,7 +96,6 @@ btnPlus.addEventListener("click", function () {
   amount.textContent = result;
   sumTickets.textContent = 500 * result + "₽";
 });
-
 // конец
 
 participateButton.addEventListener("click", () => {

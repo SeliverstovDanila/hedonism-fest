@@ -6,7 +6,8 @@
   "nature beuty beuty ."
   ". beuty beuty cock"
   "img streetart . .";
-  gap: 20px;
+  row-gap: 30px;
+  column-gap: 40px;
   margin-top: 40px;
 }
 @media (max-width: 767px) {

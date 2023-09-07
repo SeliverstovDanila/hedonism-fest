@@ -1,0 +1,38 @@
+.membership__close-btn {
+  z-index: 1;
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 100px;
+  background-color: #FCFAF7;
+
+  cursor: pointer;
+  transition: all .35s ease-out;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-image: url('../../../images/icons/close-image.svg');
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.membership__close-btn:hover {
+  opacity: .6;
+}
+
+@media (max-width: 768px) {
+  .membership__close-btn {
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    background-image: url('../../../images/icons/close-image-mobile.svg');
+    background-size: 20px;
+  }
+}
+

@@ -7,7 +7,7 @@
   height: 100vh; */
   background-color: #FCFAF7;
 
-  display: flex;
+  display: none;
   justify-content: center;
   /* align-items: flex-start; */
   visibility: hidden;

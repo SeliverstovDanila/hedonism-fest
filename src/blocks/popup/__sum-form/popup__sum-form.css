@@ -1,0 +1,9 @@
+.popup__sum-form{
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.popup__sum-form:hover{
+  cursor: pointer;
+}
