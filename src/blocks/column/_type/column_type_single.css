@@ -7,6 +7,6 @@
 
 @media (max-width: 768px) {
   .column_type_single {
-    gap: 12px;
+    gap: 10px;
   }
 }

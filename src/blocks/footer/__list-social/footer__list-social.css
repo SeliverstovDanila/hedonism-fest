@@ -1,3 +1,10 @@
 .footer__list-social{
     display: flex;
+    margin-top: 21px;
+}
+
+@media screen  and (max-width:768px){
+  .footer__list-social{
+    margin-top: 10px;
+}
 }
