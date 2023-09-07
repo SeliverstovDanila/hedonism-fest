@@ -1,12 +1,14 @@
 import '../pages/index.css';
 import {pageMembership, btnOpenMemberForm, formMembership, btnCloseMemberForm,
   btnSubmitMemberForm, fieldsetList, btnLeft, btnRight, uploadButton, container,
-  error, imageDisplay, containerActiveClass, addClass, removeClass} from '../components/utils.js';
+  error, imageDisplay, containerActiveClass, urlFirstInput, addClass, removeClass} from '../components/utils.js';
 import {validationSettings, enableValidation} from '../components/validate.js';
 import {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembershipPopup, makeFieldset,
   getCurrIndex, plusCurrIndex, minusCurrIndex} from '../components/membership-form.js';
 import {fileHandler} from '../components/photo-load.js';
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets} from "../components/constants.js"
+import {locationBtn, popupBurgerMenu, popupChoiseCity, popupDonate, burgerMenuBtn, btnChoiseCity,
+  btnChoiseCityBack, btnDonate, closeBtnDonate, closeBtnTickets, headerDropdown, labelCity, btnSupport,
+  btnMinus, btnPlus, amount, sumTickets, popupBuyTickets} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 
@@ -52,6 +54,7 @@ btnSubmitMemberForm.addEventListener('click', function(evt) {
 
 //  default - при загрузке страницы выбран 1й fieldset
 fieldsetList[0].classList.add('membership__fieldset_selected');
+urlFirstInput.value = 'https://';
 
 // описываем поведение при щелчке "далее"
 btnRight.addEventListener('click', () => {
@@ -67,6 +70,9 @@ btnRight.addEventListener('click', () => {
       const newFieldset = makeFieldset(containerName);
       // и заменяем текущие филдсеты на клонированный шаблон
       currentContainer.replaceWith(newFieldset);
+      // чтобы избежать ошибки валидатора html-файлов, вставляем вручную:
+      const urlInput = document.querySelector('input[name="website"]');
+      urlInput.value = 'https://';
       // (в ином случае - оставляем текущий контейнер с филдсетами)
     }
 

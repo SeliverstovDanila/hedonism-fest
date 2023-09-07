@@ -8,6 +8,7 @@ export const popupMembership = pageMembership.querySelector('.membership__popup'
 export const titleMembership = pageMembership.querySelector('.membership__title');
 export const contentMembership = pageMembership.querySelector('.membership__content');
 export const classForActiveBtn = 'membership__form-btn_active';
+export const urlFirstInput = pageMembership.querySelector('input[name="website"]');
 // карусель формы
 export const fieldsetList = formMembership.querySelectorAll('.membership__fieldset');
 export const btnLeft = document.querySelector('.membership__form-btn_type_left'); // назад
