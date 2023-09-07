@@ -1,16 +1,17 @@
 /* значок каретки вниз в поле выбора */
-.membership__input-wrapper_type_select::after {
+.membership__input-wrapper_type_select::before {
   content: url('../../../../images/icons/caret-down.svg');
   position: absolute;
   right: 22px;
-  margin-top: -42px;
+  top: 46px;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
-  .membership__input-wrapper_type_select::after {
+  .membership__input-wrapper_type_select::before {
     width: 20px;
     height: 20px;
     right: 18px;
+    top: 42px;
   }
 }
