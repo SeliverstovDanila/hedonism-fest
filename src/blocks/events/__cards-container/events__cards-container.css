@@ -1,7 +1,7 @@
 .events__cards-container {
   width: calc(100% + 40px);
-  margin-bottom: 100px;
-  padding: 40px 0 24px;
+  margin-bottom: 33px;
+  padding: 41px 0 23px;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 20px;
@@ -27,7 +27,8 @@
     position: relative;
     top: 0;
     left: -20px;
-    padding: 20px 0 20px;
+    padding: 41px 0 18px;
+    margin-bottom: 49px;
   }
 
   .events__cards-container::-webkit-scrollbar-track {

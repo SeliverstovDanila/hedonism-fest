@@ -3,6 +3,7 @@
   grid-template-columns: repeat(8, max-content);
   grid-template-rows: 170px;
   gap: 24px;
+  align-items: center;
   overflow: hidden;
   margin-top: 12px;
 }

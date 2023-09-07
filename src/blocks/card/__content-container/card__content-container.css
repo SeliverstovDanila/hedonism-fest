@@ -1,7 +1,13 @@
 .card__content-container {
   max-width: 280px;
-  height: 96px;
+  height: 98px;
   padding: 16px 0 16px;
   display: flex;
   flex-flow: column nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .card__content-container {
+    height: 85px;
+  }
 }

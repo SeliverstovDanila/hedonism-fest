@@ -1,9 +1,9 @@
 .card__like {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 48px;
-  height: 48px;
+  top: 11px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
   background-image: url('../../../images/card-like.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -11,4 +11,11 @@
   border: none;
   border-radius: 100%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card__like {
+    top: 7px;
+    right: 8px;
+  }
 }

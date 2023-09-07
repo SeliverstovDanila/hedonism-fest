@@ -2,13 +2,15 @@
   display: flex;
   flex-flow: row wrap;
   width: 60%;
-  column-gap: 12px;
-  row-gap: 16px;
+  column-gap: 14px;
+  row-gap: 19px;
   padding-top: 16px;
 }
 
 @media screen and (max-width: 768px) {
   .events__button-container {
     width: 100%;
+    row-gap: 13px;
+    padding-top: 20px;
   }
 }

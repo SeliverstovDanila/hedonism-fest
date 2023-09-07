@@ -92,8 +92,6 @@
 
 
 /*HEDONISM*/
-@import url("../blocks/container/container.css");
-@import url("../blocks/centering/centering.css");
 @import url("../blocks/rotation/rotation.css");
 @import url("../blocks/hedonism/hedonism.css");
 @import url("../blocks/hedonism/__logo/hedonism__logo.css");
