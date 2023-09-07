@@ -185,14 +185,14 @@
         <button class="controller controller_el_nav" type="button"></button>
 
         <!-- кнопка количества (рабочая, для взаимодействия с "+" и "-") -->
-        <div class="controller__wrapper controller__wrapper_type_amount">
+        <div class="controller-wrapper controller-wrapper_type_amount">
           <button class="controller controller_el_amount-minus"></button>
-          <span class="controller__amount-square text text_type_optional">1</span>
+          <span class="controller-wrapper__amount-square text text_type_optional">1</span>
           <button class="controller controller_el_amount-plus"></button>
         </div>
 
         <!-- кнопка zoom (рабочая, для взаимодействия с "+" и "-") -->
-        <div class="controller__wrapper controller__wrapper_type_zoom">
+        <div class="controller-wrapper controller-wrapper_type_zoom">
           <button class="controller controller_el_zoom-plus"></button>
           <button class="controller controller_el_zoom-minus"></button>
         </div>
@@ -982,7 +982,7 @@
         <p class="text text_type_main">2 - текстовое поле с названием</p>
         <!-- 2 - текстовое поле с названием -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
+          <span class="membership__input-label">название поля</span>
           <input
             class="input"
             name=""
@@ -1027,7 +1027,7 @@
         <p class="text text_type_main">4 - текстовое поле (название + сообщение)</p>
         <!-- 4 - текстовое поле (название + сообщение) -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
+          <span class="membership__input-label">название поля</span>
           <input
             class="input"
             name=""
@@ -1057,7 +1057,7 @@
         <p class="text text_type_main">5 - список (поле ввода с иконкой)</p>
         <!-- 5 - список (поле ввода с иконкой) -->
         <label class="text text_type_main">
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select"
               name=""
@@ -1075,8 +1075,8 @@
         <p class="text text_type_main">6 - список (поле ввода с иконкой) с названием</p>
         <!-- 6 - список (поле ввода с иконкой) с названием -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <span class="membership__input-label">название поля</span>
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select"
               name=""
@@ -1094,7 +1094,7 @@
         <p class="text text_type_main">7 - список (поле ввода с иконкой) с сообщением</p>
         <!-- 7 - список (поле ввода с иконкой) с сообщением -->
         <label class="text text_type_main">
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select"
               name=""
@@ -1126,8 +1126,8 @@
         <p class="text text_type_main">8 - поле ввода с иконкой (название + сообщение)</p>
         <!-- 8 - поле ввода с иконкой (название + сообщение) -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <span class="membership__input-label">название поля</span>
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select"
               name=""
@@ -1187,8 +1187,8 @@
             pattern="[а-яА-Яa-zA-Zё\s\-]+"
             data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
             required>
-            <!-- input__error_type_ - на конце name инпута -->
-            <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+            <!-- membership__input-error_type_ - на конце name инпута -->
+            <span class="text text_type_main membership__input-error membership__input-error_type_ membership__input-error_visible">сообщение об ошибке</span>
         </label>
 
         <p class="text text_type_main">2.2 - текст. поле с ошибкой и сообщением (без svg)</p>
@@ -1204,7 +1204,7 @@
             pattern="[а-яА-Яa-zA-Zё\s\-]+"
             data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
             required>
-          <span class="text text_type_main input__error input__error_visible">сообщение об ошибке</span>
+          <span class="text text_type_main membership__input-error membership__input-error_visible">сообщение об ошибке</span>
         </label>
 
         <p class="text text_type_main">3 - поле ввода в несколько строк с ошибкой</p>
@@ -1235,15 +1235,15 @@
             pattern="[а-яА-Яa-zA-Zё\s\-]+"
             data-custom-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
             required></textarea>
-          <!-- input__error_type_ - на конце name инпута -->
-          <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+          <!-- membership__input-error_type_ - на конце name инпута -->
+          <span class="text text_type_main membership__input-error membership__input-error_type_ membership__input-error_visible">сообщение об ошибке</span>
         </label>
 
         <p class="text text_type_main">5 - список (поле ввода с иконкой) с ошибкой</p>
         <!-- 5 - список (поле ввода с иконкой) с ошибкой -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <span class="membership__input-label">название поля</span>
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select input_invalid"
               name=""
@@ -1261,8 +1261,8 @@
         <p class="text text_type_main">6 - список (поле ввода с иконкой) с ошибкой и сообщением</p>
         <!-- 6 - список (поле ввода с иконкой) с ошибкой и сообщением -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
-          <div class="input__wrapper input__wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
+          <span class="membership__input-label">название поля</span>
+          <div class="membership__input-wrapper membership__input-wrapper_type_select"> <!-- для задания нестандартной стрелочки -->
             <select
               class="input input_type_select input_invalid"
               name=""
@@ -1275,8 +1275,8 @@
               <option class="input__select-option" value="Екатеринбург">Екатеринбург</option>
           </select>
           </div>
-          <!-- input__error_type_ - на конце name инпута -->
-          <span class="text text_type_main input__error input__error_type_ input__error_visible">сообщение об ошибке</span>
+          <!-- membership__input-error_type_ - на конце name инпута -->
+          <span class="text text_type_main membership__input-error membership__input-error_type_ membership__input-error_visible">сообщение об ошибке</span>
         </label>
 
       </div>
@@ -1300,7 +1300,7 @@
         <p class="text text_type_main">2 - поле ввода в несколько строк с названием</p>
         <!-- 2 - поле ввода в несколько строк с названием -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
+          <span class="membership__input-label">название поля</span>
           <textarea
             class="input input_type_textarea"
             name=""
@@ -1345,7 +1345,7 @@
         <p class="text text_type_main">4 - поле ввода в несколько строк (название + сообщение)</p>
         <!-- 4 - поле ввода в несколько строк (название + сообщение) -->
         <label class="text text_type_main">
-          <span class="input__label">название поля</span>
+          <span class="membership__input-label">название поля</span>
           <textarea
             class="input input_type_textarea"
             name=""
@@ -1387,8 +1387,8 @@
 
           <!-- список -->
           <label class="text text_type_main">
-            <span class="input__label">город</span>
-            <div class="input__wrapper input__wrapper_type_select">
+            <span class="membership__input-label">город</span>
+            <div class="membership__input-wrapper membership__input-wrapper_type_select">
               <select
                 class="input input_type_select"
                 name="city"
@@ -1404,7 +1404,7 @@
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">название заведения</span>
+            <span class="membership__input-label">название заведения</span>
             <input
               class="input"
               name="place-name"
@@ -1415,7 +1415,7 @@
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">контактное лицо</span>
+            <span class="membership__input-label">контактное лицо</span>
             <input
               class="input"
               name="full-name"
@@ -1428,7 +1428,7 @@
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">телефон для связи с организатором</span>
+            <span class="membership__input-label">телефон для связи с организатором</span>
             <input
               class="input"
               name="organizer-phone"
@@ -1441,7 +1441,7 @@
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">описание</span>
+            <span class="membership__input-label">описание</span>
             <textarea
               class="input input_type_textarea"
               name="about_menu"
@@ -1455,27 +1455,27 @@
         <!-- радиокнопки (онлайн/офлайн) -->
           <label class="membership__form-label">
             <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="онлайн">
-            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">онлайн</span>
+            <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">онлайн</span>
           </label>
           <label class="membership__form-label">
             <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="оффлайн">
-            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">оффлайн</span>
+            <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">оффлайн</span>
           </label>
 
           <!-- радиокнопки (открытое/закрытое мероприятие) -->
           <label class="membership__form-label">
             <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="открытое мероприятие">
-            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">открытое мероприятие</span>
-            <span class="text text_type_main input__label">адрес отобразим в карточке события</span>
+            <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">открытое мероприятие</span>
+            <span class="text text_type_main membership__input-label">адрес отобразим в карточке события</span>
           </label>
           <label class="membership__form-label">
             <input class="membership__radio-input membership__radio-input_type_circle" type="radio" name="type" value="закрытое мероприятие">
-            <span class="text text_type_button input__pseudo-el input__pseudo-el_type_circle">закрытое мероприятие</span>
-            <span class="text text_type_main input__label">адрес увидят только, те кому вы оправите ссылку на событие</span>
+            <span class="text text_type_button membership__pseudo-el membership__pseudo-el_type_circle">закрытое мероприятие</span>
+            <span class="text text_type_main membership__input-label">адрес увидят только, те кому вы оправите ссылку на событие</span>
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">название мероприятия</span>
+            <span class="membership__input-label">название мероприятия</span>
             <input
               class="input"
               name="event-title"
@@ -1486,7 +1486,7 @@
           </label>
 
           <label class="text text_type_main">
-            <span class="input__label">дата проведения</span>
+            <span class="membership__input-label">дата проведения</span>
             <input
               class="input"
               name="date"
@@ -1505,7 +1505,7 @@
 
       <!-- 1-я разновидность филдсета для 3-го шага (кафе/бар/ресторан) -->
         <label class="text text_type_main">
-          <span class="input__label">часы работы заведения</span>
+          <span class="membership__input-label">часы работы заведения</span>
           <input
             class="input"
             name="place-hours"
@@ -1518,7 +1518,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">адрес заведения</span>
+          <span class="membership__input-label">адрес заведения</span>
           <input
             class="input"
             name="adress"
@@ -1531,7 +1531,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">номер телефона заведения</span>
+          <span class="membership__input-label">номер телефона заведения</span>
           <input
             class="input"
             name="place-phone"
@@ -1544,7 +1544,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">ссылка на сайт</span>
+          <span class="membership__input-label">ссылка на сайт</span>
           <input
             class="input"
             name="website"
@@ -1554,7 +1554,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">ссылки на соцсети</span>
+          <span class="membership__input-label">ссылки на соцсети</span>
           <input
             class="input"
             name="social-network-list"
@@ -1564,7 +1564,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">описание</span>
+          <span class="membership__input-label">описание</span>
           <textarea
             class="input input_type_textarea"
             name="about"
@@ -1579,7 +1579,7 @@
         <p class="text text_type_main">еще разновидности 3го шага</p>
         <!-- 2-я разновидность филдсета для 3 шага (лекция/мастер-класс) -->
         <label class="text text_type_main">
-          <span class="input__label">время проведения</span>
+          <span class="membership__input-label">время проведения</span>
           <input
             class="input"
             name="event-hours"
@@ -1592,7 +1592,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">адрес проведения</span>
+          <span class="membership__input-label">адрес проведения</span>
           <input
             class="input"
             name="event-place"
@@ -1605,7 +1605,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">номер телефона для бронирования</span>
+          <span class="membership__input-label">номер телефона для бронирования</span>
           <input
             class="input"
             name="reserve-phone"
@@ -1618,7 +1618,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">стоимость участия</span>
+          <span class="membership__input-label">стоимость участия</span>
           <input
             class="input"
             name="price"
@@ -1631,7 +1631,7 @@
         </label>
 
         <label class="text text_type_main">
-          <span class="input__label">описание</span>
+          <span class="membership__input-label">описание</span>
           <textarea
             class="input input_type_textarea"
             name="about"
@@ -1643,7 +1643,7 @@
 
       <!-- недостающий вариант для 3-й разновидности филдсета 3 шага (посиделки/вечеринка) -->
         <label class="text text_type_main">
-          <span class="input__label">описание</span>
+          <span class="membership__input-label">описание</span>
           <textarea
             class="input input_type_textarea"
             name="about"
@@ -1683,7 +1683,7 @@
             <p class="text text_type_main">Абсолютно все. Продавайте кофе в&nbsp;своем кафе, устройте мастер-класс по&nbsp;вязанию
               или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
               <!-- переход на страницу стать участником -->
-            <a class="btn btn_type_bordered text text_type_button column__btn" href="#" target="_blank">стать участником</a>
+            <a class="btn btn_type_bordered text text_type_button column__btn" href="#">стать участником</a>
           </div>
         </article>
 

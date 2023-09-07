@@ -2,7 +2,7 @@
   grid-template-columns: auto;
   min-width: 320px;
   max-width: 537px;
-  gap: 24px;
+  gap: 18px;
 }
 
 @media (max-width: 768px) {

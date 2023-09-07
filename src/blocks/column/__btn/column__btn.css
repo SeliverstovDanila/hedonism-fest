@@ -1,4 +1,10 @@
 .column__btn {
-  margin-top: 8px;
+  margin-top: 14px;
   justify-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .column__btn {
+    margin-top: 10px;
+  }
 }

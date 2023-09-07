@@ -1,0 +1,17 @@
+.controller-wrapper__amount-square {
+  border: 2px solid #7100ff;
+  box-sizing: border-box;
+  width: 96px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #96949E;
+}
+
+@media screen and (max-width:768px){
+  .controller-wrapper__amount-square{
+    width: 46px;
+    height: 44px;
+  }
+}

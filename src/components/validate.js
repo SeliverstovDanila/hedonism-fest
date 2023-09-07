@@ -3,8 +3,8 @@ export const validationSettings = {
   inputSelector: '.input',
   submitButtonSelector: '.membership__form-btn_type_submit',
   inputErrorClass: 'input_invalid',
-  errorSelector: '.input__error_type_',
-  errorClass: 'input__error_visible'
+  errorSelector: '.membership__input-error_type_',
+  errorClass: 'membership__input-error_visible'
 }
 
 // показать ошибку

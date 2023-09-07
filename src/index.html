@@ -54,7 +54,7 @@
     <nav>
       <ul class="header__menu-links">
         <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">куда пойти</a></li>
-        <li class="header__menu-item"><a href="./membership.html" class="header__menu-link">стать участником</a></li>
+        <li class="header__menu-item"><a href="membership.html" class="header__menu-link">стать участником</a></li>
         <li class="header__menu-item"><a href="festival.html" class="header__menu-link">о фестивале</a></li>
       </ul>
     </nav>
@@ -78,23 +78,23 @@
   <!-- секция hedonism -->
   <section class="hedonism">
     <img class="hedonism__logo" src="<%=require('./images/logo.svg')%>" alt="логотип">
-    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left"></div>
-    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right"></div>
-    <div class="hedonism__musical-note-single hedonism__musical-note-single_left"></div>
-    <div class="hedonism__musical-note-single hedonism__musical-note-single_right"></div>
-    <div class="hedonism__musical-note-yellow"></div>
-    <div class="hedonism__musical-note-single-reverse"></div>
-    <div class="hedonism__squiggle"></div>
-    <div class="hedonism__man-violet"></div>
-    <div class="hedonism__man-green"></div>
-    <div class="hedonism__man-red"></div>
-    <div class="hedonism__arc hedonism__arc_left"></div>
-    <div class="hedonism__arc hedonism__arc_top"></div>
+    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_left rotation"></div>
+    <div class="hedonism__musical-note-violet hedonism__musical-note-violet_right rotation"></div>
+    <div class="hedonism__musical-note-single hedonism__musical-note-single_left rotation"></div>
+    <div class="hedonism__musical-note-single hedonism__musical-note-single_right rotation"></div>
+    <div class="hedonism__musical-note-yellow rotation"></div>
+    <div class="hedonism__musical-note-single-reverse rotation"></div>
+    <div class="hedonism__squiggle rotation"></div>
+    <div class="hedonism__man-violet rotation"></div>
+    <div class="hedonism__man-green rotation"></div>
+    <div class="hedonism__man-red rotation"></div>
+    <div class="hedonism__arc hedonism__arc_left rotation"></div>
+    <div class="hedonism__arc hedonism__arc_top rotation"></div>
     <p class="hedonism__text text text_type_main">узнать больше</p>
     <!-- стрелка вниз -->
     <a id="about" class="controller controller_el_arrow-down" href="#about"></a>
   </section>
-  <article class="column column_type_double hedonism__about" id="about">
+  <article class="column column_type_double column_place_hedonism-about">
     <h2 class="title title_type_section">просто приятно помогать</h2>
     <div class="column column_type_single">
       <p class="text text_type_main column__shifted-paragraph">Пейте кофе в&nbsp;любимых заведениях, посещайте
@@ -103,7 +103,7 @@
       <p class="text text_type_main">Целую неделю 26&nbsp;апреля&nbsp;&mdash; 2&nbsp;мая вся выручка будет перечислена
         в&nbsp;пользу бездомных.</p>
       <!-- перейти на страницу festival -->
-      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html" target="_blank">узнать
+      <a class="btn btn_type_bordered text text_type_button column__btn" href="./festival.html">узнать
         подробнее</a>
     </div>
   </article>
@@ -166,8 +166,7 @@
           устройте мастер-класс по&nbsp;вязанию
           или соберите друзей у&nbsp;себя дома. Помогать просто, узнайте подробности и&nbsp;заполните форму</p>
         <!-- переход на страницу стать участником -->
-        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./membership.html"
-          target="_blank">стать участником</a>
+        <a class="btn btn_type_bordered text text_type_button column__btn offer-promo__btn" href="./membership.html">стать участником</a>
       </div>
     </article>
   </section>
@@ -383,9 +382,9 @@
         <h3 class="title title_type_block popup__text">сумма и количество</h3>
         <div class="popup__sum-amount">
           <p class="popup__sum-ticket title title_type_section">500 ₽</p>
-          <div class="controller__wrapper controller__wrapper_type_amount">
+          <div class="controller-wrapper controller-wrapper_type_amount">
             <button class="controller controller_el_amount-minus"></button>
-            <p class="controller__amount-square text text_type_optional">1</p>
+            <p class="controller-wrapper__amount-square text text_type_optional">1</p>
             <button class="controller controller_el_amount-plus"></button>
           </div>
         </div>

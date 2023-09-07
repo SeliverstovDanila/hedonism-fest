@@ -1,4 +1,4 @@
-/* @keyframes rotation {
+@keyframes rotation {
   from {
       transform: rotate(0deg);
   }
@@ -7,7 +7,12 @@
   }
 }
 
-.rotation  {
-  animation: rotation 20s infinite linear;
+.rotation:hover  {
+  animation: rotation 2s infinite linear;
 }
- */
+
+@media screen and (max-width: 768px) {
+  .rotation:hover  {
+    animation: rotation 0s infinite linear;
+  }
+}
