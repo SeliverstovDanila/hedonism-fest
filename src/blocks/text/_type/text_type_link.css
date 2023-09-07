@@ -2,3 +2,8 @@
   text-decoration: none;
   color: #7100FF;
 }
+
+.text_type_link:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}

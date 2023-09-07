@@ -8,11 +8,8 @@ import {
   likeBTN,
   participateButton,
 } from "../components/CardForm";
-import { openPopup, closePopup, changeCity } from "../components/popup";
-// импорты для работы хедера:
-import {locationBtn, popupBurgerMenu, popupChoiseCity, popupDonate, burgerMenuBtn,
-  btnChoiseCity, btnChoiseCityBack, btnDonate, closeBtnDonate, closeBtnTickets, headerDropdown,
-  labelCity, btnSupport, btnMinus, btnPlus, amount, sumTickets} from "../components/constants.js"
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets} from "../components/constants.js"
+import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 
 const closeButton = document.querySelector(".popup__close-cardform");
@@ -112,7 +109,6 @@ import { init } from "../components/Map";
 
 ymaps.ready(init);
 
-
 // начало функционала header
 // всплывающее окно
 locationBtn.addEventListener("click", function () {
@@ -171,5 +167,4 @@ btnPlus.addEventListener('click', function(){
   amount.textContent = result;
   sumTickets.textContent = 500 * result + '₽';
 })
-
 // конец

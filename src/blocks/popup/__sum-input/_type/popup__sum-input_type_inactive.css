@@ -8,3 +8,6 @@
 }
 
 
+.popup__sum-input_type_inactive:hover{
+  border: 2px solid var(--color-primary);
+}

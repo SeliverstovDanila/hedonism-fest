@@ -15,7 +15,7 @@ function closePopup(popupSelector) {
   document.removeEventListener('keydown',  keyHandlerEsc)
 }
 
-// Закрытие по нажатию на оверлей
+// Закрытие popup по нажатию на оверлей
 function keyHandlerOverlay(evt) {
   if (evt.target.classList.remove(popupOpenedSelector)) {
     closePopup()

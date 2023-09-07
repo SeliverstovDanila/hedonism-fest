@@ -280,7 +280,8 @@
 @import url('../blocks/popup/__content/popup__content.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_donate-form.css');
 @import url('../blocks/popup/__container/_type/popup__container_type_buy-ticket.css');
-
+@import url('../blocks/popup/__donate-form/popup__donate-form.css');
+@import url('../blocks/popup/__buy-ticket/popup__buy-ticket.css');
 /* POPUP BURGER_MENU */
 @import url('../blocks/popup/__container/_type/popup__container_type_burger-menu.css');
 @import url('../blocks/popup/__burger-menu-text/popup__burger-menu-text.css');
@@ -294,6 +295,7 @@
 @import url('../blocks/popup/__burger-menu-navigation-link/popup__burger-menu-navigation-link.css');
 @import url('../blocks/popup/__burger-menu-button-back/popup__burger-menu-button-back.css');
 @import url('../blocks/popup/__burger-menu-text-back/popup__burger-menu-text-back.css');
+
 
 
 /* СТРАНИЦА CATALOG */
