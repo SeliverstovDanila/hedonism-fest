@@ -5,3 +5,9 @@
   padding: 40px;
   margin-top: 16px;
 }
+@media (max-width: 768px) {
+  .catalog-filters__ad {
+    padding: 0;
+    text-align: left;
+  }
+}
