@@ -10,6 +10,6 @@
 @media screen and (max-width:768px){
   .popup__payment-window{
     max-width: 320px;
-    margin-bottom: 32px;
+    margin: 27px auto 31px;
   }
 }

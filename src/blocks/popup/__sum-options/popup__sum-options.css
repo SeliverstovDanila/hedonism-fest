@@ -1,7 +1,8 @@
 .popup__sum-options{
-  margin: 16px 0 32px;
+  margin: 16px 0 28px;
   display: grid;
-  gap: 12px;
+  column-gap: 12px;
+  row-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   max-width: 532px;

@@ -1,5 +1,5 @@
 .popup__sum-amount{
-  margin: 16px auto 32px;
+  margin: 16px auto 29px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
 
 @media screen and (max-width:768px){
   .popup__sum-amount{
-    margin-bottom: 16px;
+    margin-bottom: 34px;
     max-width: 320px;
   }
 }
