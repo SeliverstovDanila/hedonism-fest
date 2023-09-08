@@ -369,6 +369,8 @@
 @import url('../blocks/membership/__radio-input/_type/membership__radio-input_type_circle.css');
 @import url('../blocks/membership/__form-btn/membership__form-btn.css');
 @import url('../blocks/membership/__form-btn/_active/membership__form-btn_active.css');
+/* Фильтр на мобилке */
+@import url('../blocks/popup/_type/popup_type_filter.css');
 
 /* ui-kit */
 @import url("../blocks/ui-kit/ui-kit.css");
@@ -384,3 +386,4 @@
 /* BALLOON */
 @import url('../blocks/balloon/balloon.css');
 @import url('../blocks/balloon/__text/balloon__text.css');
+

@@ -3,14 +3,19 @@
   grid-template-columns: repeat(8, max-content);
   grid-template-rows: 170px;
   gap: 24px;
-  align-items: center;
-  overflow: hidden;
+  overflow-x: scroll;
   margin-top: 12px;
+}
+.participators__grid-logo::-webkit-scrollbar {
+  height: 5px;
+}
+.participators__grid-logo::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.4);
+  
 }
 @media (max-width: 768px) {
   .participators__grid-logo {
     grid-template-rows: 170px;
-    overflow: hidden;
     gap: 20px;
   }
 }
