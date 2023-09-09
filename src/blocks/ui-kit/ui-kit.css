@@ -21,9 +21,8 @@
 
 
 .ui-kit {
-  outline: 2px solid var(--warning-error);
+  /* outline: 2px solid var(--warning-error); */
   max-width: 1440px;
   min-width: 360px;
   padding: 40px;
 }
-

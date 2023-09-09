@@ -1,5 +1,6 @@
 .membership__btn-wrapper {
-  margin-top: 32px;
+  margin-top: 8px;
+  gap: 12px;
   display: flex;
   justify-content: flex-end;
 }

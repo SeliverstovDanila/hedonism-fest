@@ -1,7 +1,8 @@
 .membership__input-error_type_images {
   cursor: auto;
  position: absolute;
- bottom: -36px;
+ /* bottom: -36px; */
+ bottom: 0;
 }
 
 @media (max-width: 768px) {

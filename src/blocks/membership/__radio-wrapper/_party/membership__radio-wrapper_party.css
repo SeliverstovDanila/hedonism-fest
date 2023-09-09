@@ -1,7 +1,7 @@
 /* чтобы на мобильном растянулись на всю ширину несмотря на паддинги */
 @media (max-width: 768px){
   .membership__radio-wrapper_party::before {
-    top: 226px;
+    top: 240px;
   }
 
   .membership__radio-wrapper_party::after {
