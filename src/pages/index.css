@@ -332,6 +332,7 @@
 @import url('../blocks/membership/__selected-item/membership__selected-item.css');
 @import url('../blocks/membership/__selected-item/_box-shadow/membership__selected-item_box-shadow.css');
 @import url('../blocks/membership/__btn-wrapper/membership__btn-wrapper.css');
+@import url('../blocks/membership/__btn-wrapper/_type/membership__btn-wrapper_type_wide.css');
 @import url('../blocks/membership/__btn/membership__btn.css');
 @import url('../blocks/membership/__input-wrapper/membership__input-wrapper.css');
 @import url('../blocks/membership/__input-wrapper/_type/membership__input-wrapper_type_select.css');
@@ -360,6 +361,7 @@
 @import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_left.css');
 @import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_right.css');
 @import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_many-input.css');
+@import url('../blocks/membership/__fieldset-column/_type/membership__fieldset-column_type_tall.css');
 @import url('../blocks/membership/__list/membership__list.css');
 @import url('../blocks/membership/__list-item/membership__list-item.css');
 @import url('../blocks/membership/__radio-wrapper/membership__radio-wrapper.css');

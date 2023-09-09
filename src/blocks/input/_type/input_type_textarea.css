@@ -2,3 +2,9 @@
   resize: none;
   min-height: 136px;
 }
+
+@media (max-width: 768px){
+  .input_type_textarea {
+    min-height: 100px;
+  }
+}

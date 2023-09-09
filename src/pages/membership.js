@@ -70,9 +70,12 @@ btnRight.addEventListener('click', () => {
       const newFieldset = makeFieldset(containerName);
       // и заменяем текущие филдсеты на клонированный шаблон
       currentContainer.replaceWith(newFieldset);
-      // чтобы избежать ошибки валидатора html-файлов, вставляем вручную:
-      const urlInput = document.querySelector('input[name="website"]');
-      urlInput.value = 'https://';
+
+      if (containerName == 'party' || containerName == 'food') {
+        // чтобы избежать ошибки валидатора html-файлов, вставляем вручную:
+        const urlInput = document.querySelector('input[name="website"]');
+        urlInput.value = 'https://';
+      }
       // (в ином случае - оставляем текущий контейнер с филдсетами)
     }
 
