@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .footer_type_membership {
+    display: none;
+  }
+}

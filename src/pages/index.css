@@ -95,7 +95,6 @@
 @import url("../blocks/rotation/rotation.css");
 @import url("../blocks/hedonism/hedonism.css");
 @import url("../blocks/hedonism/__logo/hedonism__logo.css");
-@import url('../blocks/hedonism/__title/hedonism__title.css');
 @import url("../blocks/hedonism/__musical-note-violet/hedonism__musical-note-violet.css");
 @import url("../blocks/hedonism/__musical-note-violet/_left/hedonism__musical-note-violet_left.css");
 @import url("../blocks/hedonism/__musical-note-violet/_right/hedonism__musical-note-violet_right.css");
@@ -165,6 +164,7 @@
 
 /* FOOTER */
 @import url("../blocks/footer/footer.css");
+@import url("../blocks/footer/_type/footer_type_membership.css");
 @import url("../blocks/footer/__icon/footer__icon.css");
 @import url("../blocks/footer/__icon-social/footer__icon-social.css");
 @import url("../blocks/footer/__image/footer__image.css");
@@ -382,6 +382,8 @@
 @import url("../blocks/ui-kit/__grid-title/ui-kit__grid-title.css");
 @import url("../blocks/ui-kit/__flex/ui-kit__flex.css");
 @import url("../blocks/ui-kit/__flex/_column/ui-kit__flex_column.css");
+@import url("../blocks/ui-kit/__title/ui-kit__title.css");
+@import url("../blocks/ui-kit/__link/ui-kit__link.css");
 
 /* BALLOON */
 @import url('../blocks/balloon/balloon.css');
