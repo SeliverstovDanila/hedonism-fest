@@ -8,7 +8,7 @@ import {
   likeBTN,
   participateButton,
 } from "../components/CardForm";
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets} from "../components/constants.js"
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets,activeDropdownClass} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 
@@ -111,9 +111,20 @@ ymaps.ready(init);
 
 // начало функционала header
 // всплывающее окно
-locationBtn.addEventListener("click", function () {
-  headerDropdown.classList.toggle("header__dropdown_active");
+locationBtn.addEventListener("click", function (e) {
+  e.stopPropagation()
+  if (!headerDropdown.classList.contains(activeDropdownClass)) {
+    headerDropdown.classList.add(activeDropdownClass)
+    document.addEventListener('click', hideTooltip)
+  } else {
+    hideTooltip()
+  }
 });
+
+function hideTooltip() {
+  headerDropdown.classList.remove("header__dropdown_active");
+  document.removeEventListener('click', hideTooltip)
+}
 
 burgerMenuBtn.addEventListener("click", function () {
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
