@@ -1,5 +1,5 @@
-.popup__email-input-inactive{
-  margin: 16px auto 32px;
+.popup__inactive-input_email{
+  margin: 10px auto 32px;
   max-width: 532px;
   border: 2px solid var(--dark-secondary, #96949E);
   color: #96949E;
@@ -9,5 +9,6 @@
 @media screen  and (max-width:768px){
   .popup__email-input-inactive{
     max-width: 320px;
+    margin: 10px auto 32px;
   }
 }

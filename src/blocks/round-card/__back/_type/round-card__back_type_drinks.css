@@ -1,10 +1,10 @@
 .round-card__back_type_drinks {
-  background-image: url('../../../../images/girl-with-drinks.svg'),
+  background: url('../../../../images/girl-with-drinks.svg') top 47px right 3% / 114% no-repeat,
                     url('../../../../images/circle-yellow.svg');
 }
 
 @media (max-width: 768px) {
   .round-card__back_type_drinks {
-    background-image: url('../../../../images/girl-with-drinks-circled.svg');
+    background: url('../../../../images/girl-with-drinks-circled.svg');
   }
 }

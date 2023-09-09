@@ -11,7 +11,8 @@ const eventTitle = document.querySelector(".title_type_cardform");
 const eventAdditonal = document.querySelector(".popup__additional");
 const cardForm = document.querySelector(".popup_type_cardform");
 const participateButton = cardForm.querySelector('.btn_type_formButton')
-const likeBTN = participateButton.querySelector('.btn__like')
+const likeBTN = participateButton.querySelector('.btn_type_like')
+const eventAbout = document.querySelector('.popup__about')
 function cardFormData(data) {
   eventDuration.textContent = data.duration;
   eventCost.textContent = data.cost;
@@ -24,5 +25,6 @@ function cardFormData(data) {
   eventTitle.textContent = data.title;
   eventAdditonal.textContent = data.additional;
   eventDate.textContent = data.date + ', ' + data.time;
+  eventAbout.textContent = data.about
 }
 export {cardFormData, cardForm, likeBTN, participateButton}
