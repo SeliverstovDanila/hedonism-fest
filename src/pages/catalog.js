@@ -2,31 +2,15 @@ import "../pages/index.css";
 import cardsArray from "../components/cards.json";
 import createCard from "../components/card.js";
 import { eventFilter, updateCardsCounter } from "../components/event-filter.js";
-import { cardForm, likeBTN, participateButton } from "../components/CardForm";
 import {
-  locationBtn,
-  popupBurgerMenu,
-  popupChoiseCity,
-  popupDonate,
-  burgerMenuBtn,
-  btnChoiseCity,
-  btnChoiseCityBack,
-  btnDonate,
-  closeBtnDonate,
-  closeBtnTickets,
-  headerDropdown,
-  labelCity,
-  btnSupport,
-  btnMinus,
-  btnPlus,
-  amount,
-  sumTickets,
-  popupBuyTickets,
-  filterButton,
-  filterPopup,
-  filterPopupClose,
-} from "../components/constants.js";
-import { openPopup, closePopup, changeCity } from "../components/popup.js";
+  cardFormData,
+  cardForm,
+  likeBTN,
+  participateButton,
+} from "../components/CardForm";
+import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets,activeDropdownClass} from "../components/constants.js"
+import { openPopup, closePopup, changeCity} from '../components/popup.js';
+
 
 const closeButton = document.querySelector(".popup__close-cardform");
 
@@ -37,8 +21,8 @@ export const eventsCardsContainer = document.querySelector(
 );
 const eventTypes = [];
 const eventDates = [];
-const buttonFilterContainer = document.querySelectorAll("#type");
-const buttonDateContainer = document.querySelectorAll("#date");
+const buttonFilterContainer = document.querySelector("#type");
+const buttonDateContainer = document.querySelector("#date");
 export const renderedCards = [];
 
 const oopsBtn = document.querySelector("#oopsBtn");
@@ -56,35 +40,27 @@ updateCardsCounter(cardsArray.length, cardsArray.length);
 oopsBtn.addEventListener("click", () => {
   location.reload();
 });
+
+//Создание кнопок все и хочу пойти для контейнера с типами
+buttonFilterContainer.append(eventFilter("all", "все", buttonFilterContainer));
+buttonFilterContainer.append(
+  eventFilter("liked", "хочу пойти", buttonFilterContainer)
+);
+
+//Создание массива с type для фильтра
 for (let i = 0; i < cardsArray.length; i++) {
   eventTypes.push(cardsArray[i].type);
 }
 
 const cardsType = [...new Set(eventTypes)];
-//Создание кнопок все и хочу пойти для контейнера с типами
-buttonFilterContainer.forEach((item) => {
-  item.append(eventFilter("all", "все", item));
-  item.append(eventFilter("liked", "хочу пойти", item));
-});
-
-// buttonFilterContainer.append(eventFilter("all", "все", buttonFilterContainer));
-// buttonFilterContainer.append(
-//   eventFilter("liked", "хочу пойти", buttonFilterContainer)
-// );
-
-//Создание массива с type для фильтра
 
 for (const cardType of cardsType) {
-  buttonFilterContainer.forEach((item) => {
-    const buttonType = eventFilter("type", cardType, item);
-    item.append(buttonType);
-  });
+  const buttonType = eventFilter("type", cardType, buttonFilterContainer);
+  buttonFilterContainer.append(buttonType);
 }
 
 //Создание кнопки все для дней
-buttonDateContainer.forEach((item) => {
-  item.append(eventFilter("all", "все", item));
-});
+buttonDateContainer.append(eventFilter("all", "все", buttonDateContainer));
 
 //Создание массива с date для фильтра
 for (let i = 0; i < cardsArray.length; i++) {
@@ -94,10 +70,8 @@ for (let i = 0; i < cardsArray.length; i++) {
 const cardsDate = [...new Set(eventDates)];
 
 for (const cardDate of cardsDate) {
-  buttonDateContainer.forEach((item) => {
-    const buttonDate = eventFilter("date", cardDate, item);
-    item.append(buttonDate);
-  });
+  const buttonDate = eventFilter("date", cardDate, buttonDateContainer);
+  buttonDateContainer.append(buttonDate);
 }
 
 function windowSwitch(catalog1, catalog2, button1, button2) {
@@ -137,9 +111,20 @@ ymaps.ready(init);
 
 // начало функционала header
 // всплывающее окно
-locationBtn.addEventListener("click", function () {
-  headerDropdown.classList.toggle("header__dropdown_active");
+locationBtn.addEventListener("click", function (e) {
+  e.stopPropagation()
+  if (!headerDropdown.classList.contains(activeDropdownClass)) {
+    headerDropdown.classList.add(activeDropdownClass)
+    document.addEventListener('click', hideTooltip)
+  } else {
+    hideTooltip()
+  }
 });
+
+function hideTooltip() {
+  headerDropdown.classList.remove("header__dropdown_active");
+  document.removeEventListener('click', hideTooltip)
+}
 
 burgerMenuBtn.addEventListener("click", function () {
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
@@ -160,43 +145,38 @@ btnChoiseCityBack.addEventListener("click", function () {
   openPopup(popupBurgerMenu);
 });
 
-btnSupport.addEventListener("click", function () {
-  openPopup(popupDonate);
-});
+btnSupport.addEventListener('click', function(){
+  openPopup(popupDonate)
+})
 
-btnDonate.addEventListener("click", function () {
-  openPopup(popupDonate);
-  closePopup(popupBurgerMenu);
-});
+btnDonate.addEventListener('click', function(){
+  openPopup(popupDonate)
+  closePopup(popupBurgerMenu)
+  burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
+})
 
-closeBtnDonate.addEventListener("click", function () {
-  closePopup(popupDonate);
-});
+closeBtnDonate.addEventListener('click', function(){
+closePopup(popupDonate)
+})
 
-closeBtnTickets.addEventListener("click", function () {
-  closePopup(popupBuyTickets);
-});
+closeBtnTickets.addEventListener('click', function(){
+  closePopup(popupBuyTickets)
+})
+
 
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 // счетчик (покупка билетов)
-btnMinus.addEventListener("click", function () {
+btnMinus.addEventListener('click', function(){
   const result = Number(amount.textContent) - 1;
-  if (result > 0) {
+  if(result > 0){
     amount.textContent = result;
-    sumTickets.textContent = 500 * result + "₽";
+    sumTickets.textContent = 500 * result + '₽';
   }
-});
-btnPlus.addEventListener("click", function () {
+})
+btnPlus.addEventListener('click', function(){
   const result = Number(amount.textContent) + 1;
   amount.textContent = result;
-  sumTickets.textContent = 500 * result + "₽";
-});
+  sumTickets.textContent = 500 * result + '₽';
+})
 // конец
-filterButton.addEventListener("click", () => {
-  openPopup(filterPopup);
-});
-
-filterPopupClose.addEventListener("click", () => {
-  closePopup(filterPopup);
-});

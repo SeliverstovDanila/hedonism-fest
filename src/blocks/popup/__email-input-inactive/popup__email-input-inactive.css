@@ -7,7 +7,7 @@
 }
 
 @media screen  and (max-width:768px){
-  .popup__inactive-input_email{
+  .popup__email-input-inactive{
     max-width: 320px;
     margin: 10px auto 32px;
   }

@@ -1,14 +1,15 @@
 
 export const locationBtn = document.querySelector(".header__location-button");
-export const popupBurgerMenu = document.querySelector('.popup__menu-burger');
-export const popupChoiseCity = document.querySelector('.popup__choise-city');
-export const popupDonate = document.querySelector('.popup__donate-form');
-export const popupBuyTickets = document.querySelector('.popup__buy-ticket')
+export const popupBurgerMenu = document.querySelector('.popup_type_menu-burger');
+export const popupChoiseCity = document.querySelector('.popup_type_choise-city');
+export const popupDonate = document.querySelector('.popup_type_donate-form');
+export const activeDropdownClass = "header__dropdown_active"
+export const popupBuyTickets = document.querySelector('.popup_type_buy-ticket')
 export const closeButton = document.querySelector(".popup__close-cardform");
 export const burgerMenuBtn = document.querySelector(".header__menu-burger-icon");
 export const btnChoiseCity = document.querySelector(".popup__burger-menu-button-location");
 export const btnChoiseCityBack = document.querySelector(".popup__burger-menu-button-back");
-export const btnDonate = document.querySelector('.btn__donate');
+export const btnDonate = document.querySelector('.btn_function_donate');
 export const closeBtnDonate = document.querySelector('.popup__close-donate');
 export const closeBtnTickets = document.querySelector('.popup__close-buy-ticket');
 export const burgerCityText = document.querySelector(".popup__burger-menu-city-name");

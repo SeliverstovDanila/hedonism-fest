@@ -24,27 +24,34 @@ import {
   btnMinus,
   btnPlus,
   amount,
-  sumTickets,popupBuyTickets
+  sumTickets,popupBuyTickets,activeDropdownClass
 } from "../components/constants.js";
 import { eventsCardsContainer, cardList } from "../components/carusel.js";
 import cardsArray from "../components/cards.json";
 import createCard from "../components/card.js";
 let renderedCards = [];
 // начало функционала header
-// всплывающее окно
-locationBtn.addEventListener("click", function () {
-  headerDropdown.classList.toggle("header__dropdown_active");
-});
-// list.forEach((card) => {
-//   card.addEventListener("click", (event) => {
-//     if (!event.target.classList.contains("card__like")) {
-//       openPopup(cardForm);
-//     }
-//   });
-// });
+
+
 closeButton.addEventListener("click", () => {
   closePopup(cardForm);
 });
+// всплывающее окно
+locationBtn.addEventListener("click", function (e) {
+  e.stopPropagation()
+  if (!headerDropdown.classList.contains(activeDropdownClass)) {
+    headerDropdown.classList.add(activeDropdownClass)
+    document.addEventListener('click', hideTooltip)
+  } else {
+    hideTooltip()
+  }
+});
+
+function hideTooltip() {
+  headerDropdown.classList.remove("header__dropdown_active");
+  document.removeEventListener('click', hideTooltip)
+}
+
 burgerMenuBtn.addEventListener("click", function () {
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
   popupBurgerMenu.classList.toggle("popup_opened");

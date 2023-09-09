@@ -8,7 +8,7 @@ import {openMembershipPopup, closeMembershipPopup, activateFieldset, submitMembe
 import {fileHandler} from '../components/photo-load.js';
 import {locationBtn, popupBurgerMenu, popupChoiseCity, popupDonate, burgerMenuBtn, btnChoiseCity,
   btnChoiseCityBack, btnDonate, closeBtnDonate, closeBtnTickets, headerDropdown, labelCity, btnSupport,
-  btnMinus, btnPlus, amount, sumTickets, popupBuyTickets} from "../components/constants.js"
+  btnMinus, btnPlus, amount, sumTickets, popupBuyTickets,activeDropdownClass} from "../components/constants.js"
 import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 
@@ -186,9 +186,20 @@ window.onload = () => {
 
 // начало функционала header
 // всплывающее окно
-locationBtn.addEventListener("click", function () {
-  headerDropdown.classList.toggle("header__dropdown_active");
+locationBtn.addEventListener("click", function (e) {
+  e.stopPropagation()
+  if (!headerDropdown.classList.contains(activeDropdownClass)) {
+    headerDropdown.classList.add(activeDropdownClass)
+    document.addEventListener('click', hideTooltip)
+  } else {
+    hideTooltip()
+  }
 });
+
+function hideTooltip() {
+  headerDropdown.classList.remove("header__dropdown_active");
+  document.removeEventListener('click', hideTooltip)
+}
 
 burgerMenuBtn.addEventListener("click", function () {
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
@@ -216,6 +227,7 @@ btnSupport.addEventListener('click', function(){
 btnDonate.addEventListener('click', function(){
 openPopup(popupDonate)
 closePopup(popupBurgerMenu)
+burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
 })
 
 closeBtnDonate.addEventListener('click', function(){

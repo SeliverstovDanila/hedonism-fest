@@ -1,5 +1,4 @@
 .header__dropdown{
-  display: none;
   position: fixed;
   top: 72px;
   left: 172px;
@@ -11,4 +10,6 @@
   width: 100%;
   padding: 24px 0;
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
 }
