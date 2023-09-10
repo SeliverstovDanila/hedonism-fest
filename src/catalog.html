@@ -259,7 +259,7 @@
           <ul class="popup__burger-menu-navigation-links">
             <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">куда
                 пойти</a></li>
-            <li class="popup__burger-menu-navigation-item"><a href="#" class="popup__burger-menu-navigation-link">стать
+            <li class="popup__burger-menu-navigation-item"><a href="membership.html" class="popup__burger-menu-navigation-link">стать
                 участником</a></li>
             <li class="popup__burger-menu-navigation-item"><a href="festival.html"
                 class="popup__burger-menu-navigation-link">о фестивале</a></li>
@@ -436,94 +436,78 @@
         <span>перейти к оплате</span>
       </button>
     </div>
-
-    <!-- cardform modal -->
-    <div class="popup popup_type_cardform">
-      <div class=" popup__container popup__container_type_cardform">
-        <button type="button" class="popup__close-cardform" aria-label="закрыть"></button>
-        <img alt="Картинка в модальном окне октрыть карточку" class="popup__cover" src="">
-        <div class="popup__yellow-line">
-          <img alt="Иконка в модальном окне октрыть карточку" class='popup__sign'
-            src="<%=require('./images/icon.png')%>">
-          <p class="text text_type_optional text_type_yellow">
-            перечисляем в пользу Ночлежки 10% от выручки
-          </p>
-        </div>
-        <div class="popup__text-field">
-          <p class="text text_type_main text_color_grey popup__name"></p>
-          <p class="text text_type_main text_color_grey popup__name  popup__date"> </p>
-          <h2 class="title title_type_block title_type_cardform">
-          </h2>
-          <p class="text text_type_main popup__about">
-            Мы думаем и общаемся с помощью нарратива - историй. Вся наша жизнь
-            состоит из их множества, каждая из них совершенно по разному влияет
-            на нас, какие-то из них легко заметить, а какие-то могут годами
-            прятаться. Далеко не в каждой из этих историй мы являемся авторами,
-            но никогда не поздно обратить на это внимание и переписать их,
-            сделав подлинно своими. <br></br>
-            С психологом Марией Бархатовой рассмотрим идентичность с позиции
-            нарративной практики:<br></br>
-            На встрече поищем ваши желаемые черты и сделаем первые шаги к их
-            укреплению. А домой заберём инструменты для успешного продолжения.
-          </p>
-          <table class="popup__table">
-            <tr class="popup__grey-row popup__row">
-              <th class="text text_type_main text_location_left">длительность</th>
-              <td class="text text_type_main text_location_right popup__duration"></td>
-            </tr>
-            <tr class="popup__row">
-              <th class="text text_type_main text_location_left">стоимость</th>
-              <td class="text text_type_main popup__cost text_location_right"></td>
-            </tr>
-            <tr class="popup__grey-row popup__row">
-              <th class="text text_type_main text_location_left">площадка</th>
-              <td class="text text_type_main popup__place text_location_right"></td>
-            </tr>
-            <tr class="popup__row">
-              <th class="text text_type_main text_location_left">адрес</th>
-              <td class="text text_type_main popup__address text_location_right"></td>
-            </tr>
-            <tr>
-              <th class="text text_type_main text_location_left"></th>
-              <td class="text text_type_main text_location_right"><a class='popup__additional' href="#"></a></td>
-            </tr>
-            <tr class="popup__grey-row popup__row">
-              <th class="text text_type_main text_location_left">телефон</th>
-              <td class="text text_type_main popup__number text_location_right"></td>
-            </tr>
-            <tr class="popup__row">
-              <th class="text text_type_main text_location_left">соц.сети</th>
-              <td class="text text_type_main popup__socials text_location_right"></td>
-            </tr>
-          </table>
-          <article class="popup__social">
-            <p class="text text_type_main">поделитесь событием в соцсетях:</p>
-            <div class="popup__links">
-              <div class="popup__icons">
-              
-                <a href="#"><img src="<%=require('./images/vk.png')%>" alt="иконка ВК"/></a>
-
-                <a href="#"><img src="<%=require('./images/tg.png')%>" alt="иконка телеграма"/></a>
-              </div>
-              <div class="popup__copy-field">
-                <img alt="Иконка скопировать в модальном окне открыть карточку" class="popup__copy"
-                  src="<%=require('./images/Vector.png')%>">
-                <p class="text text_type_main">скопировать ссылку</p>
-              </div>
-          </article>
-          <div class="popup__button-container">
-            <button class="btn btn_type_bordered text text_type_button btn_type_formButton" type="button">
-              <div class="btn_type_like"></div>
-              хочу пойти
-            </button>
-            <button class="btn btn_type_violet text text_type_button btn_type_formButton text_color_white"
-              type="button">
-              купить билет
-            </button>
+<!-- cardform modal -->
+<div class="popup popup_type_cardform">
+  <div class=" popup__container popup__container_type_cardform">
+    <button type="button" class="popup__close-cardform" aria-label="закрыть"></button>
+    <img alt="Картинка в модальном окне октрыть карточку" class="popup__cover" src="">
+    <div class="popup__yellow-line">
+      <img alt="Иконка в модальном окне октрыть карточку" class='popup__sign' src="<%=require('./images/icon.png')%>">
+      <p class="text text_type_optional text_type_yellow">
+        перечисляем в пользу Ночлежки 10% от выручки
+      </p>
+    </div>
+    <div class="popup__text-field">
+      <p class="text text_type_main text_color_grey popup__name"></p>
+      <p class="text text_type_main text_color_grey popup__name  popup__date"> </p>
+      <h2 class="title title_type_block title_type_cardform">
+      </h2>
+      <p class="text text_type_main popup__about"></p>
+      <table class="popup__table">
+        <tr class="popup__grey-row popup__row ">
+          <th class="text text_type_main text_location_left">длительность</th>
+          <td class="text text_type_main text_location_right popup__duration"></td>
+        </tr>
+        <tr class="popup__row">
+          <th class="text text_type_main text_location_left">стоимость</th>
+          <td class="text text_type_main popup__cost text_location_right"></td>
+        </tr>
+        <tr class="popup__grey-row popup__row">
+          <th class="text text_type_main text_location_left">площадка</th>
+          <td class="text text_type_main popup__place text_location_right"></td>
+        </tr>
+        <tr class="popup__row">
+          <th class="text text_type_main text_location_left">адрес</th>
+          <td class="text text_type_main popup__address text_location_right"></td>
+        </tr>
+        <tr>
+          <th class="text text_type_main text_location_left"></th>
+          <td class="text text_type_main text_location_right"><a class='popup__additional' href="#"></a></td>
+        </tr>
+        <tr class="popup__grey-row popup__row">
+          <th class="text text_type_main text_location_left">телефон</th>
+          <td class="text text_type_main popup__number text_location_right"></td>
+        </tr>
+        <tr class="popup__row">
+          <th class="text text_type_main text_location_left">соц.сети</th>
+          <td class="text text_type_main popup__socials text_location_right"></td>
+        </tr>
+      </table>
+      <article class="popup__social">
+        <p class="text text_type_main">поделитесь событием в соцсетях:</p>
+        <div class="popup__links">
+          <div class="popup__icons">
+            <a href="#"><img class="popup__icon" src="<%=require('./images/vk.png')%>" alt="иконка вконтакте"></a>
+            <a href="#"><img class="popup__icon" src="<%=require('./images/tg.png')%>" alt="иконка телеграмма"></a>
+          </div>
+          <div class="popup__copy-field">
+            <img alt="Иконка скопировать в модальном окне открыть карточку" class="popup__copy"
+              src="<%=require('./images/Vector.png')%>">
+            <p class="text text_type_main">скопировать ссылку</p>
           </div>
         </div>
+      </article>
+      <div class="popup__button-container">
+        <button class="btn btn_type_bordered text text_type_button btn_type_formButton" type="button">
+          <div class='btn__like'></div>хочу пойти
+        </button>
+        <button class="btn btn_type_violet text text_type_button btn_type_formButton text_color_white" type="button">
+          купить билет
+        </button>
       </div>
     </div>
+  </div>
+</div>
     <!-- Template карточки -->
     <template id="card-template">
       <article class="card">
@@ -550,6 +534,82 @@
       <button class="text text_type_main btn btn_type_bordered btn_size_small" id="button-filter-template"></button>
     </template>
   </div>
+  <!-- фильтр форма -->
+  <div class="popup popup_type_filter">
+    <div class="popup__container popup__container_type_donate-form">
+      <div class="popup__wrapper">
+        <svg
+          class="popup__sticky-part"
+          width="40"
+          height="4"
+          viewBox="0 0 40 4"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="4" rx="2" fill="#96949E" />
+        </svg>
+        <div class="popup__payment-window">
+          <h2 class="title title_type_section">фильтры</h2>
+          <button
+            class="popup__close popup__close-filtr"
+            aria-label="Закрыть"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M23.707 0.293C23.5195 0.105529 23.2652 0.000213623 23 0.000213623C22.7348 0.000213623 22.4805 0.105529 22.293 0.293L12 10.586L1.707 0.293C1.51947 0.105529 1.26516 0.000213623 1 0.000213623C0.734836 0.000213623 0.480528 0.105529 0.293 0.293C0.105529 0.480528 0.000213623 0.734836 0.000213623 1C0.000213623 1.26516 0.105529 1.51947 0.293 1.707L10.586 12L0.293 22.293C0.105529 22.4805 0.000213623 22.7348 0.000213623 23C0.000213623 23.2652 0.105529 23.5195 0.293 23.707C0.480528 23.8945 0.734836 23.9998 1 23.9998C1.26516 23.9998 1.51947 23.8945 1.707 23.707L12 13.414L22.293 23.707C22.4805 23.8945 22.7348 23.9998 23 23.9998C23.2652 23.9998 23.5195 23.8945 23.707 23.707C23.8945 23.5195 23.9998 23.2652 23.9998 23C23.9998 22.7348 23.8945 22.4805 23.707 22.293L13.414 12L23.707 1.707C23.8945 1.51947 23.9998 1.26516 23.9998 1C23.9998 0.734836 23.8945 0.480528 23.707 0.293Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <h3 class="title title_type_block popup__text">тип события</h3>
+        <div class="catalog-filters__filter-block ">
+          <div class="catalog-filters__filter-buttons" id="type"></div>
+        </div>
+        <h2 class="title title_type_block popup__text">дни</h3>
+        <div class="catalog-filters__filter-block">
+          <div class="catalog-filters__filter-buttons" id="date"></div>
+        </div>
+        <div class="catalog-filters__ad">
+          <h2 class="title title_type_block">
+            хотите принять участие в акции?
+          </h2>
+          <p class="text text_type_main">
+            заполните заявку, и мы с вами обязательно свяжемся.
+          </p>
+          <a class="text text_type_button btn btn_type_bordered" href="./membership.html">
+            узнать подробности
+            <svg
+              class="btn__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M23.124 9.90699L19.245 6.02899C19.0575 5.84152 18.8032 5.73621 18.538 5.73621C18.2728 5.73621 18.0185 5.84152 17.831 6.02899C17.6435 6.21652 17.5382 6.47083 17.5382 6.73599C17.5382 7.00116 17.6435 7.25546 17.831 7.44299L21.386 11H1C0.734784 11 0.48043 11.1053 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12H0C0 12.2652 0.105357 12.5196 0.292893 12.7071C0.48043 12.8946 0.734784 13 1 13H21.447L17.831 16.615C17.738 16.7079 17.6643 16.8182 17.6139 16.9396C17.5636 17.061 17.5377 17.1911 17.5377 17.3225C17.5377 17.4539 17.5636 17.584 17.6139 17.7054C17.6643 17.8268 17.738 17.9371 17.831 18.03C18.0185 18.2175 18.2728 18.3228 18.538 18.3228C18.8032 18.3228 19.0575 18.2175 19.245 18.03L23.125 14.151C23.6859 13.5872 24.0007 12.8241 24.0006 12.0288C24.0004 11.2335 23.6852 10.4706 23.124 9.90699Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <button
+        type="button"
+        aria-label="Показать все фильтры"
+        class="btn btn_type_violet btn_type_width text text_type_button popup__button"
+      >
+        <span>показать</span>
+      </button>
+    </div>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 .popup_type_cardform {
-  z-index: 3;
+  opacity: 1;
   height: 100%;
-  display: flex;
   justify-content: flex-end;
+
 }
