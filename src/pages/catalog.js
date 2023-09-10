@@ -3,26 +3,49 @@ import cardsArray from "../components/cards.json";
 import createCard from "../components/card.js";
 import { eventFilter, updateCardsCounter } from "../components/event-filter.js";
 import {
-  cardFormData,
   cardForm,
-  likeBTN,
   participateButton,
+  likeBTN,
 } from "../components/CardForm";
-import {locationBtn,popupBurgerMenu,popupChoiseCity,popupDonate,burgerMenuBtn,btnChoiseCity,btnChoiseCityBack,btnDonate,closeBtnDonate,closeBtnTickets,headerDropdown,labelCity,btnSupport,btnMinus,btnPlus,amount,sumTickets,popupBuyTickets,activeDropdownClass} from "../components/constants.js"
-import { openPopup, closePopup, changeCity} from '../components/popup.js';
-
+import {
+  locationBtn,
+  popupBurgerMenu,
+  popupChoiseCity,
+  popupDonate,
+  burgerMenuBtn,
+  btnChoiseCity,
+  btnChoiseCityBack,
+  btnDonate,
+  closeBtnDonate,
+  closeBtnTickets,
+  headerDropdown,
+  labelCity,
+  btnSupport,
+  btnMinus,
+  btnPlus,
+  amount,
+  sumTickets,
+  popupBuyTickets,
+  activeDropdownClass,
+  filterButton,
+  filterPopup,
+  filterPopupClose,
+} from "../components/constants.js";
+import { openPopup, closePopup, changeCity } from "../components/popup.js";
 
 const closeButton = document.querySelector(".popup__close-cardform");
 
-export const eventsMapContainer = document.querySelector(".catalog__map-container");
+export const eventsMapContainer = document.querySelector(
+  ".catalog__map-container"
+);
 
 export const eventsCardsContainer = document.querySelector(
   ".catalog__cards-container"
 );
 const eventTypes = [];
 const eventDates = [];
-const buttonFilterContainer = document.querySelector("#type");
-const buttonDateContainer = document.querySelector("#date");
+const buttonFilterContainer = document.querySelectorAll("#type");
+const buttonDateContainer = document.querySelectorAll("#date");
 export const renderedCards = [];
 
 const oopsBtn = document.querySelector("#oopsBtn");
@@ -42,10 +65,10 @@ oopsBtn.addEventListener("click", () => {
 });
 
 //Создание кнопок все и хочу пойти для контейнера с типами
-buttonFilterContainer.append(eventFilter("all", "все", buttonFilterContainer));
-buttonFilterContainer.append(
-  eventFilter("liked", "хочу пойти", buttonFilterContainer)
-);
+buttonFilterContainer.forEach((item) => {
+  item.append(eventFilter("all", "все", item));
+  item.append(eventFilter("liked", "хочу пойти", item));
+});
 
 //Создание массива с type для фильтра
 for (let i = 0; i < cardsArray.length; i++) {
@@ -55,13 +78,16 @@ for (let i = 0; i < cardsArray.length; i++) {
 const cardsType = [...new Set(eventTypes)];
 
 for (const cardType of cardsType) {
-  const buttonType = eventFilter("type", cardType, buttonFilterContainer);
-  buttonFilterContainer.append(buttonType);
+  buttonFilterContainer.forEach((item) => {
+    const buttonType = eventFilter("type", cardType, item);
+    item.append(buttonType);
+  });
 }
 
 //Создание кнопки все для дней
-buttonDateContainer.append(eventFilter("all", "все", buttonDateContainer));
-
+buttonDateContainer.forEach((item) => {
+  item.append(eventFilter("all", "все", item));
+});
 //Создание массива с date для фильтра
 for (let i = 0; i < cardsArray.length; i++) {
   eventDates.push(cardsArray[i].date);
@@ -70,8 +96,10 @@ for (let i = 0; i < cardsArray.length; i++) {
 const cardsDate = [...new Set(eventDates)];
 
 for (const cardDate of cardsDate) {
-  const buttonDate = eventFilter("date", cardDate, buttonDateContainer);
-  buttonDateContainer.append(buttonDate);
+  buttonDateContainer.forEach((item) => {
+    const buttonDate = eventFilter("date", cardDate, item);
+    item.append(buttonDate);
+  });
 }
 
 function windowSwitch(catalog1, catalog2, button1, button2) {
@@ -112,18 +140,18 @@ ymaps.ready(init);
 // начало функционала header
 // всплывающее окно
 locationBtn.addEventListener("click", function (e) {
-  e.stopPropagation()
+  e.stopPropagation();
   if (!headerDropdown.classList.contains(activeDropdownClass)) {
-    headerDropdown.classList.add(activeDropdownClass)
-    document.addEventListener('click', hideTooltip)
+    headerDropdown.classList.add(activeDropdownClass);
+    document.addEventListener("click", hideTooltip);
   } else {
-    hideTooltip()
+    hideTooltip();
   }
 });
 
 function hideTooltip() {
   headerDropdown.classList.remove("header__dropdown_active");
-  document.removeEventListener('click', hideTooltip)
+  document.removeEventListener("click", hideTooltip);
 }
 
 burgerMenuBtn.addEventListener("click", function () {
@@ -145,38 +173,53 @@ btnChoiseCityBack.addEventListener("click", function () {
   openPopup(popupBurgerMenu);
 });
 
-btnSupport.addEventListener('click', function(){
-  openPopup(popupDonate)
-})
+btnSupport.addEventListener("click", function () {
+  openPopup(popupDonate);
+});
 
-btnDonate.addEventListener('click', function(){
-  openPopup(popupDonate)
-  closePopup(popupBurgerMenu)
+btnDonate.addEventListener("click", function () {
+  openPopup(popupDonate);
+  closePopup(popupBurgerMenu);
   burgerMenuBtn.classList.toggle("header__menu-burger-icon_active");
-})
+});
 
-closeBtnDonate.addEventListener('click', function(){
-closePopup(popupDonate)
-})
+closeBtnDonate.addEventListener("click", function () {
+  closePopup(popupDonate);
+});
 
-closeBtnTickets.addEventListener('click', function(){
-  closePopup(popupBuyTickets)
-})
-
+closeBtnTickets.addEventListener("click", function () {
+  closePopup(popupBuyTickets);
+});
 
 labelCity.forEach((item) => item.addEventListener("change", changeCity));
 
 // счетчик (покупка билетов)
-btnMinus.addEventListener('click', function(){
+btnMinus.addEventListener("click", function () {
   const result = Number(amount.textContent) - 1;
   if(result >= 0){
     amount.textContent = result;
-    sumTickets.textContent = 500 * result + '₽';
+    sumTickets.textContent = 500 * result + "₽";
   }
-})
-btnPlus.addEventListener('click', function(){
+});
+btnPlus.addEventListener("click", function () {
   const result = Number(amount.textContent) + 1;
   amount.textContent = result;
-  sumTickets.textContent = 500 * result + '₽';
-})
+  sumTickets.textContent = 500 * result + "₽";
+});
 // конец
+filterButton.addEventListener("click", () => {
+  openPopup(filterPopup);
+});
+
+filterPopupClose.addEventListener("click", () => {
+  closePopup(filterPopup);
+});
+
+const cardList = document.querySelectorAll(".card");
+cardList.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (!event.target.classList.contains("card__like")) {
+      openPopup(cardForm);
+    }
+  });
+});

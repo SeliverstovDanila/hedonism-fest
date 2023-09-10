@@ -39,10 +39,8 @@ export default function createCard(card) {
     }
   });
   _cardElement.addEventListener("click", (event) => {
-    if (!event.target.classList.contains("card__like")) {
-      openPopup(cardForm);
       cardFormData(card);
-    }
+    
   });
 /*console.log(_cardElement.dataset.liked)*/
   return _cardElement;
