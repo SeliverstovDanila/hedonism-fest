@@ -146,11 +146,11 @@
 @import url("../blocks/paprticipators/participators.css");
 @import url("../blocks/paprticipators/__item/participators__item.css");
 @import url("../blocks/paprticipators/__grid-logo/participators__grid-logo.css");
-@import url("../blocks/fest-images/fest-images__image_box1.css");
-@import url("../blocks/fest-images/fest-images__image_box2.css");
-@import url("../blocks/fest-images/fest-images__image_box3.css");
-@import url("../blocks/fest-images/fest-images__image_box4.css");
-@import url("../blocks/fest-images/fest-images__image_box5.css");
+@import url("../blocks/fest-images/fest-images__image_box-one.css");
+@import url("../blocks/fest-images/fest-images__image_box-two.css");
+@import url("../blocks/fest-images/fest-images__image_box-three.css");
+@import url("../blocks/fest-images/fest-images__image_box-four.css");
+@import url("../blocks/fest-images/fest-images__image_box-five.css");
 @import url("../blocks/fest-images/__nav/fest-images__nav.css");
 @import url("../blocks/fest-images/__button/fest-images__button.css");
 @import url("../blocks/fest-images/__button/fest-images__button_selected.css");
