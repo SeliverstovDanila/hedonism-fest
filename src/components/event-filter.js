@@ -1,4 +1,5 @@
-import {cardsCounter, oops} from '../components/constants.js';
+const cardsCounter = document.querySelector('#cardsCounter');
+const oops = document.querySelector('.catalog__oops');
 export const _eventButtonTemplate = document.querySelector('#event-button-template').content;
 import {renderedCards} from '../pages/catalog.js';
 

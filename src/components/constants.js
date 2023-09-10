@@ -26,6 +26,3 @@ export const popupOpenedSelector = 'popup_opened';
 export const filterButton = document.querySelector('.catalog__filter-btn');
 export const filterPopup = document.querySelector('.popup_type_filter');
 export const filterPopupClose = document.querySelector('.popup__close-filtr');
-export const _cardElementTemplate = document.querySelector("#card-template").content;
-export const cardsCounter = document.querySelector('#cardsCounter');
-export const oops = document.querySelector('.catalog__oops');

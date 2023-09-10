@@ -1,4 +1,4 @@
-import { _cardElementTemplate } from "./constants";
+const _cardElementTemplate = document.querySelector("#card-template").content;
 import { cardFormData, cardForm } from "../components/CardForm";
 import { openPopup, closePopup, changeCity } from "../components/popup";
 export default function createCard(card) {
