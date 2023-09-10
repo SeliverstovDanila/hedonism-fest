@@ -14,7 +14,7 @@ import { openPopup, closePopup, changeCity} from '../components/popup.js';
 
 const closeButton = document.querySelector(".popup__close-cardform");
 
-const eventsMapContainer = document.querySelector(".catalog__map-container");
+export const eventsMapContainer = document.querySelector(".catalog__map-container");
 
 export const eventsCardsContainer = document.querySelector(
   ".catalog__cards-container"

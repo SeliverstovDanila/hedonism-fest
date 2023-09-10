@@ -147,7 +147,7 @@
             <p class="text text_type_main">
               заполните заявку, и мы с вами обязательно свяжемся.
             </p>
-            <a class="text text_type_button btn btn_type_bordered" href="#">
+            <a class="text text_type_button btn btn_type_bordered" href="festival.html">
               узнать подробности
               <svg
                 class="btn__icon"
@@ -231,10 +231,7 @@
                 список
               </button>
             </div>
-            <p
-              class="text text_type_main catalog__cards-counter"
-              id="cardsCounter"
-            ></p>
+            <p class="text text_type_main catalog__cards-counter" id="cardsCounter"></p>
             <button
               class="text text_type_button btn btn_type_bordered catalog__filter-btn"
             >
@@ -262,28 +259,27 @@
               <span>фильтры</span>
             </button>
           </div>
-          <div class="catalog__cards-container"></div>
-          <div
-            class="catalog__map-container disabled"
-            id="catalog__map-container"
-          >
+          <div class="catalog__cards-container">
+            <div class="catalog__oops disabled">
+              <div class="catalog__oops-text">
+                <h2 class="title title_type_block">ой!</h2>
+                <p class="title title_type_card">
+                  в вашем списке сохранённых событий пока что пусто
+                </p>
+                <button
+                  class="text text_type_button btn btn_type_violet"
+                  id="oopsBtn"
+                >
+                  смотреть все события
+                </button>
+              </div>
+              <div class="catalog__oops-img"></div>
+            </div>
+          </div>
+          <div class="catalog__map-container disabled" id="catalog__map-container">
             <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
           </div>
-          <div class="catalog__oops disabled">
-            <div class="catalog__oops-text">
-              <h2 class="title title_type_block">ой!</h2>
-              <p class="title title_type_card">
-                в вашем списке сохранённых событий пока что пусто
-              </p>
-              <button
-                class="text text_type_button btn btn_type_violet"
-                id="oopsBtn"
-              >
-                смотреть все события
-              </button>
-            </div>
-            <div class="catalog__oops-img"></div>
-          </div>
+
         </div>
       </section>
     </main>
