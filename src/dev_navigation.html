@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигация по сайту</title>
+</head>
+
+<body class="page">
+
+  <main class="ui-kit">
+    <h1 class="title title_type_page">Навигация по сайту</h1>
+
+    <!-- стрелка вверх -->
+    <a class="controller controller_el_arrow-up controller_floating-btn" href="#"></a>
+
+    <h2 class="title title_type_section">Список страниц:</h2>
+    <nav>
+      <ul>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./index.html" target="_blank">Главная (index.html)</a> |
+          <a class="ui-kit__link" href="#index">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./catalog.html" target="_blank">Куда пойти (catalog.html)</a> |
+          <a class="ui-kit__link" href="#catalog">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./membership.html" target="_blank">Стать участником (membership.html)</a> |
+          <a class="ui-kit__link" href="#membership">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./festival.html" target="_blank">О фестивале (festival.html)</a> |
+          <a class="ui-kit__link" href="#festival">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./application.html" target="_blank">Спасибо за заявку (application.html)</a> |
+          <a class="ui-kit__link" href="#application">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./help.html" target="_blank">Спасибо за помощь (help.html)</a> |
+          <a class="ui-kit__link" href="#help">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_main">
+          <a class="ui-kit__link" href="./error.html" target="_blank">Ошибка 404 (error.html)</a> |
+          <a class="ui-kit__link" href="#error">к разделу &#8595;</a>
+        </li>
+
+        <li class="text text_type_optional">
+          <a class="ui-kit__link" href="./dev_ui-kit.html" target="_blank">UI-kit (dev_ui-kit.html) [для разработки]</a> |
+          <a class="ui-kit__link" href="#ui-kit">к разделу &#8595;</a>
+        </li>
+        <li class="text text_type_optional">
+          <a class="ui-kit__link" href="./dev_navigation.html" target="_blank">Навигация по сайту (dev_navigation.html) [для разработки, текущая]</a> |
+          <a class="ui-kit__link" href="#navigation">к разделу &#8595;</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 class="title title_type_section">краткое описание</h2>
+    <p class="text text_type_main">Более подробную информацию смотрите <a href="https://www.notion.so/praktikum/e00621ea66de465ca2e38149bb322ab4">здесь</a></p>
+
+    <h3 id="index" class="title title_type_block">Главная</h3>
+    <p class="text text_type_main">Страница, с которой начинается знакомство пользователя с мероприятием ГедонизмФест.</p>
+
+    <p id="header" class="text text_type_main ui-kit__title">--- header ---</p>
+    <ul>
+      <li class="text text_type_optional">кликабельный логотип - ведет на главную страницу с любой другой</li>
+      <li class="text text_type_optional">отображение локации - при нажатии открывается выпадающий список выбора города; при выборе города, геолокация на сайте меняется</li>
+      <li class="text text_type_optional">навигация по сайту (куда пойти, стать участником, о фестивале), при нажатии происходит переход на соответствующие страницы сайта</li>
+      <li class="text text_type_optional">блок "хочу пойти"</li>
+      <li class="text text_type_optional">активная кнопка "поддержать" - при нажатии открывается “форма пожертвования”</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- секция hedonism ---</p>
+    <p class="text text_type_optional">Экран с логотипом в центре с активной стрелкой - при нажатии на стрелу страница пролистывается на блок “о фестивале”</p>
+    <p class="text text_type_optional">Блок “о фестивале” - при нажатии на активную кнопку “узнать подробнее” переход на страницу из меню “о фестивале”</p>
+
+    <p class="text text_type_main ui-kit__title">--- секция events ---</p>
+    <p class="text text_type_optional">Блок с ссылками на события</p>
+    <ul>
+      <li class="text text_type_optional">под надписью “гедонизм-фест - это…” - активные кнопки с переходом на страницу из меню “куда пойти”</li>
+      <li class="text text_type_optional">при нажатии активной кнопки "смотреть все события" - открывается “каталог/список” с выбранным мероприятием</li>
+      <li class="text text_type_optional">блок с карточками событий можно скроллить вправо-влево с помощью прогресс-бар</li>
+      <li class="text text_type_optional">в блоке с карточками событий можно выбрать событие, при нажатии переход на страницу из раздела меню “куда пойти” - на “карточку события”</li>
+      <li class="text text_type_optional">при нажатии на активную копку переход на страницу из раздела меню “куда пойти”</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- секция digits ---</p>
+    <p class="text text_type_optional">Карточки со значимыми цифрами дня</p>
+
+    <p class="text text_type_main ui-kit__title">--- секция offer-promo ---</p>
+    <p class="text text_type_optional">Краткое описание, как принять участие в акции, с активной кнопкой "стать участником"</p>
+    <p class="text text_type_optional">При нажатии на активную кнопку “стать участником” - переход на страницу из меню “стать участником”</p>
+
+    <p class="text text_type_main ui-kit__title">--- секция fest-images ---</p>
+    <p class="text text_type_optional">Подборка фотографий с хештегом #hedonismfest</p>
+
+    <p class="text text_type_main ui-kit__title">--- секция participators ---</p>
+    <p class="text text_type_optional">Блок со спонсорами феста</p>
+
+    <p id="footer" class="text text_type_main ui-kit__title">--- footer ---</p>
+    <ul>
+      <li class="text text_type_optional">блок “организатор” с ссылками на соответствующие сайты</li>
+      <li class="text text_type_optional">блок “сделано с любовью” с ссылками на соответствующие сайты</li>
+      <li class="text text_type_optional">блок “мы в соцсетях” - оставляем только ВК с ссылкой на соответствующий сайт</li>
+    </ul>
+
+
+
+    <h3 id="catalog" class="title title_type_block">Куда пойти</h3>
+    <p class="text text_type_main">При переходе на страницу сайта "куда пойти" - открывается catalog.html, tab switcher по умолчанию установлен на “список”</p>
+
+    <p id="header" class="text text_type_main ui-kit__title">--- header ---</p>
+    <p class="text text_type_optional">(аналогичен хедеру главной страницы) <a class="ui-kit__link" href="#header">к разделу &#8593;</a></p>
+
+    <p class="text text_type_main ui-kit__title">--- tab switcher ---</p>
+    <p class="text text_type_optional">при нажатии меняется тип отображения “каталог/карта”</p>
+
+    <p class="text text_type_main ui-kit__title">--- левый столбец с фильтрами ---</p>
+    <ul>
+      <li class="text text_type_optional">в левом меню - активные кнопки “тип события”, “дни”, при нажатии кнопки выделяются цветом, при нажатии на крестик кнопка становится не выделенной</li>
+      <li class="text text_type_optional">по умолчанию (когда не выбрано ни одно событие, день) в обоих блоках выделены кнопки “все” и справа в списке или на карте показываются все карточки событий и все дни</li>
+      <li class="text text_type_optional">при нажатии кнопки “события” и/или “дни” справа в окне со списком “каталог/список” отображается список событий с карточками, соответствующие выбору</li>
+      <li class="text text_type_optional">при нажатии кнопки “события” и/или “дни” справа в окне с картой “каталог/карта” отображаются соответствующие события с метками на карте</li>
+      <li class="text text_type_optional">в левом блоке “тип события” при выборе “хочу пойти” и если нет сохраненных событий открывается “каталог/список/пусто”</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- карта ---</p>
+    <ul>
+      <li class="text text_type_optional">на карте при нажатии на метку места, открывается информационное сообщение с активной кнопкой “подробнее”</li>
+      <li class="text text_type_optional">при нажатии на карточку события из списка в “каталог/список” и кнопку “подробнее” в “каталог/карта” открывается “карточка события”</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- в карточке события: ---</p>
+    <ul>
+      <li class="text text_type_optional">отображается вся информация по событию</li>
+      <li class="text text_type_optional">есть кликабельная ссылка на соц.сеть</li>
+      <li class="text text_type_optional">есть функция поделиться в соцсетях (оставляем только ВК, Telegram)</li>
+      <li class="text text_type_optional">есть функция скопировать ссылку</li>
+      <li class="text text_type_optional">есть активная кнопка “хочу пойти” (при нажатии событие сохраняется в блоке header “хочу пойти” и иконка выделяется цветом в карточке товара и в блоке header “хочу пойти”)</li>
+      <li class="text text_type_optional">есть активная кнопка “купить билет”, при нажатии открывается “форма покупки билета”</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- “хотите принять участие в акции? ---</p>
+    <p class="text text_type_optional">в левом блоке “куда пойти” внизу страницы есть блок с сообщением “хотите принять участие в акции?” и активная кнопка, при нажатии переход на страницу из меню 1.3.2. “стать участником”</p>
+
+    <p id="footer" class="text text_type_main ui-kit__title">--- footer ---</p>
+    <p class="text text_type_optional">(аналогичен футеру главной страницы) <a class="ui-kit__link" href="#footer">к разделу &#8593;</a></p>
+
+
+    <h3 id="membership" class="title title_type_block">Стать участником</h3>
+    <p class="text text_type_main">Информационная страница с активной кнопкой “заполнить форму”</p>
+
+    <p id="header" class="text text_type_main ui-kit__title">--- header ---</p>
+    <p class="text text_type_optional">(аналогичен хедеру главной страницы) <a class="ui-kit__link" href="#header">к разделу &#8593;</a></p>
+
+    <ul>
+      <li class="text text_type_optional">при нажатии на кнопку “заполнить форму” - открывается форма (1 из 4)</li>
+      <li class="text text_type_optional">при нажатии на любое поле из списка - выбранное поле выделяется цветом и внизу становится активная кнопка “далее”, при нажатии переход на 2 из 4</li>
+      <li class="text text_type_optional">при нажатии на кнопку “отмена” - выход из формы</li>
+    </ul>
+
+    <p class="text text_type_main ui-kit__title">--- описание полей для категории “кафе/бар/ресторан” ---</p>
+    <ul>
+      <li class="text text_type_optional">в первом поле отображается выбор из формы (1 из 4), нет функции изменить, поле выделено</li>
+      <li class="text text_type_optional">в поле выбора “город” выпадает список городов (соответствует городам из локации в header), при выборе города выпадающий список закрывается, название города отображается в поле “город”</li>
+      <li class="text text_type_optional">в поле ввода “название заведения”, “контактное лицо”, “описание” есть функция ввода (Произвольное количество слов. Корректные символы для ввода: пробел, кириллические, латинские)</li>
+      <li class="text text_type_optional">в поле ввода “телефон” сразу указан префикс «+7», который нельзя изменить. Корректные символы для ввода: только цифры и разделители «+», «(», «)» и «–»</li>
+
+      <li class="text text_type_optional">в поле ввода часы работы функция ввода времени в формате 00.00-00.00 (корректные символы для ввода цифры, “-”, “:”)</li>
+      <li class="text text_type_optional">в поле ввода “адрес заведения” функция ввода (Произвольное количество слов. Корректные символы для ввода: пробел, кириллические, латинские)</li>
+      <li class="text text_type_optional">в поле ввода “телефон” сразу указан префикс «+7», который нельзя изменить. Корректные символы для ввода: только цифры и разделители «+», «(», «)» и «–»</li>
+      <li class="text text_type_optional">поле ввода “ссылка на сайт”</li>
+      <li class="text text_type_optional">поле ввода “ссылка на соц.сети”</li>
+      <li class="text text_type_optional">в поле ввода “описание” есть функция ввода (Произвольное количество слов. Корректные символы для ввода: пробел, кириллические, латинские)</li>
+      <li class="text text_type_optional">внизу формы активная кнопка “далее” с переходом в форму (4 из 4) и активная кнопка “назад” с переходом на форму (2 из 4)</li>
+
+      <li class="text text_type_optional">в активном окне функция перетащить фото или загрузить</li>
+      <li class="text text_type_optional">внизу формы активная кнопка “назад” с переходом на форму (3 из 4) и активная кнопка “завершить” с переходом на страницу “спасибо за заявку”</li>
+    </ul>
+
+    <p id="footer" class="text text_type_main ui-kit__title">--- footer ---</p>
+    <p class="text text_type_optional">пропадает от разрешения 768px и ниже</p>
+    <p class="text text_type_optional">(в остальном аналогичен футеру главной страницы) <a class="ui-kit__link" href="#footer">к разделу &#8593;</a></p>
+
+
+    <h3 id="festival" class="title title_type_block">О фестивале</h3>
+    <p class="text text_type_main">Страница с подробным описанием фестиваля ГедонизмФест</p>
+    <p class="text text_type_optional">при нажатии активной кнопкой “поддержать” - открывается форма пожертвования</p>
+
+    <p id="header" class="text text_type_main ui-kit__title">--- header ---</p>
+    <p class="text text_type_optional">(аналогичен хедеру главной страницы) <a class="ui-kit__link" href="#header">к разделу &#8593;</a></p>
+
+    <p id="footer" class="text text_type_main ui-kit__title">--- footer ---</p>
+    <p class="text text_type_optional">(аналогичен футеру главной страницы) <a class="ui-kit__link" href="#footer">к разделу &#8593;</a></p>
+
+
+
+    <h3 id="application" class="title title_type_block">Спасибо за заявку</h3>
+    <p class="text text_type_main">Опциональная страница, которая открывается после завершения формы "стать участником" со страницы membership.</p>
+
+    <h3 id="help" class="title title_type_block">Спасибо за помощь</h3>
+    <p class="text text_type_main">Опциональная страница, которая открывается после завершения оплаты.</p>
+
+    <h3 id="error" class="title title_type_block">Ошибка 404</h3>
+    <p class="text text_type_main">Опциональная страница, которая открывается в случае неверного адреса.</p>
+
+    <h3 id="ui-kit" class="title title_type_block">UI-kit</h3>
+    <p class="text text_type_main">Страница с набором готовых решений пользовательского интерфейса для сайта ГедонизмФест. (только для внутреннего использования)</p>
+
+    <h3 id="navigation" class="title title_type_block">Навигация по сайту</h3>
+    <p class="text text_type_main">Страница с кратким описанием и навигацией по разделам сайта. (только для внутреннего использования)</p>
+  </main>
+</body>

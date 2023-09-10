@@ -1,10 +1,7 @@
-const _eventButtonTemplate = document.querySelector(
-  "#event-button-template"
-).content;
-const cardsCounter = document.querySelector("#cardsCounter");
-const oops = document.querySelector(".catalog__oops");
-import { eventsCardsContainer, renderedCards } from "../pages/catalog.js";
-import createCard from "../components/card.js";
+const cardsCounter = document.querySelector('#cardsCounter');
+const oops = document.querySelector('.catalog__oops');
+export const _eventButtonTemplate = document.querySelector('#event-button-template').content;
+import {renderedCards} from '../pages/catalog.js';
 
 let currentFilters = {
   type: [],
@@ -91,8 +88,13 @@ const handleFilterCards = (filters, container) => {
   let filteredCards = [...renderedCards];
   let filterKeys = Object.keys(filters);
 
-  if (filters["all"].length > 0) {
-    eventsCardsContainer.textContent = "";
+  oops.classList.add('disabled');
+
+  renderedCards.forEach((card) => {
+    card.classList.add('disabled');
+  })
+
+  if(filters['all'].length > 0) {
     filters[container.id].length = 0;
     filters["all"].length -= 1;
     if (container.id === "type") {
@@ -116,18 +118,13 @@ const handleFilterCards = (filters, container) => {
   updateCardsCounter(filteredCards.length, renderedCards.length);
 
   if (filteredCards.length == 0) {
-    eventsCardsContainer.classList.add("disabled");
-    eventsCardsContainer.textContent = "";
-    oops.classList.remove("disabled");
+    oops.classList.remove('disabled');
   } else {
-    oops.classList.add("disabled");
-    eventsCardsContainer.classList.remove("disabled");
-    eventsCardsContainer.textContent = "";
+    oops.classList.add('disabled');
   }
 
-  filteredCards.map((card) => {
-    createCard(card);
-    eventsCardsContainer.append(card);
+  filteredCards.forEach((card) => {
+    card.classList.toggle('disabled');
   });
 };
 

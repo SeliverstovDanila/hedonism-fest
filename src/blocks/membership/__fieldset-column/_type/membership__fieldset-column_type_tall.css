@@ -1,0 +1,11 @@
+.membership__fieldset-column_type_tall {
+  margin-top: 12px;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .membership__fieldset-column_type_tall {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}

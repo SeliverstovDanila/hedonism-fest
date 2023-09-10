@@ -1,0 +1,8 @@
+.ui-kit__link {
+  text-decoration: none;
+  color: #7100FF;
+}
+
+.ui-kit__link:hover {
+  color: #5100B8;
+}

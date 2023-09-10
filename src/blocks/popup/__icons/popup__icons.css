@@ -1,9 +1,12 @@
 .popup__icons {
   flex-basis: 350px;
+  display: flex;
+  gap: 24px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .popup__icons {
     flex-basis: 0;
+    gap: 16px;
   }
 }
