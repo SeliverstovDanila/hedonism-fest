@@ -1,15 +1,10 @@
 .catalog__map-container {
-  width: 1070px;
-  height: 600px;
+  width: 70vw;
+  min-height: 600px;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 768px) {
   .catalog__map-container {
-    max-width: 500px;
-  }
-}
-@media (max-width: 500px) {
-  .catalog__map-container {
-    max-width: 360px;
+    width: 100vw;
   }
 }
