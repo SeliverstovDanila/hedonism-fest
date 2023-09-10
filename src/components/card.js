@@ -1,4 +1,4 @@
-const _cardElementTemplate = document.querySelector("#card-template").content;
+import { _cardElementTemplate } from "./constants";
 import { cardFormData, cardForm } from "../components/CardForm";
 import { openPopup, closePopup, changeCity } from "../components/popup";
 export default function createCard(card) {
@@ -22,10 +22,11 @@ export default function createCard(card) {
   _cardAddress.textContent = card.address;
   const _cardAdditional = _cardElement.querySelector("#card-additional");
   _cardAdditional.textContent = card.additional;
-  const _cardLikeBtn = _cardElement.querySelector(".card__like")
-  console.log(localStorage.getItem(`${_cardElement.dataset.id}-like`))
+  const _cardLikeBtn = _cardElement.querySelector(".card__like");
+  /*console.log(localStorage.getItem(`${_cardElement.dataset.id}-like`));*/
   if(localStorage.getItem(`${_cardElement.dataset.id}-like`) !== null ) {
-    _cardLikeBtn.classList.add("card__like_active")
+    _cardLikeBtn.classList.add("card__like_active");
+    _cardElement.dataset.liked = "хочу пойти";
   }
   _cardLikeBtn.addEventListener("click", () => {
     _cardLikeBtn.classList.toggle("card__like_active");
@@ -43,6 +44,6 @@ export default function createCard(card) {
       cardFormData(card);
     }
   });
-console.log(_cardElement.dataset.liked)
+/*console.log(_cardElement.dataset.liked)*/
   return _cardElement;
 }
