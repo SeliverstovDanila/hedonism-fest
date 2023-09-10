@@ -5,7 +5,7 @@
 @media screen and (max-width:768px){
   .popup__sticky-part{
     display: block;
-    margin: 0 auto 16px;
+    margin: 0 auto;
     object-fit: cover;
   }
 }
