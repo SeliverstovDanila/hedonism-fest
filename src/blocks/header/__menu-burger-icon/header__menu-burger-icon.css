@@ -53,10 +53,5 @@
 @media screen and (max-width:768px){
   .header__menu-burger-icon{
     width: 20px;
-    height: 15px;
   }
-
-  .header__menu-burger-icon span {
-    top: 6px;
-    }
 }

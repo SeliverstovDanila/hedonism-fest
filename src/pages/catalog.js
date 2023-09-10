@@ -169,7 +169,7 @@ labelCity.forEach((item) => item.addEventListener("change", changeCity));
 // счетчик (покупка билетов)
 btnMinus.addEventListener('click', function(){
   const result = Number(amount.textContent) - 1;
-  if(result > 0){
+  if(result >= 0){
     amount.textContent = result;
     sumTickets.textContent = 500 * result + '₽';
   }
